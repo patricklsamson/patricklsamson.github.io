@@ -1,0 +1,92 @@
+@use "../abstracts" as *;
+
+html {
+  font: 16px/1.5 "arial", sans-serif;
+}
+
+@include elements(font) {
+  font: inherit;
+}
+
+@include elements(italic) {
+  font-style: italic;
+}
+
+@include elements(bold) {
+  font-weight: bold;
+}
+
+@include elements(monospace) {
+  font-family: monospace;
+}
+
+@include elements(small) {
+  font-size: 0.5em;
+}
+
+@for $i from 1 through 6 {
+  $rem: -0.25 * $i + 2.75rem;
+  $vw: -0.2 * $i + 1.4vw;
+
+  h#{$i},
+  .h#{$i} {
+    line-height: 1.2;
+    font-size: $rem;
+
+    @include mq(lgup) {
+      font-size: calc(#{$rem} + #{$vw});
+    }
+  }
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.fs-11 {
+  font-size: 1.1rem;
+}
+
+.fs-12 {
+  font-size: 1.2rem;
+}
+
+.fs-13 {
+  font-size: 1.3rem;
+}
+
+.fs-14 {
+  font-size: 1.4rem;
+}
+
+.fs-15 {
+  font-size: 1.5rem;
+}

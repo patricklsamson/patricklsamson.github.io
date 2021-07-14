@@ -1,0 +1,644 @@
+@use "variables" as *;
+@use "functions" as f;
+@use "sass:string" as s;
+
+/**
+ * Contents:
+ * - MEDIA QUERIES
+ * - FONTS
+ * - HELPERS
+ */
+
+// --------------------------------------------------
+// MEDIA QUERIES
+// --------------------------------------------------
+
+@mixin mq($size, $width: 425px, $max-width: 1024px) {
+  @if $size == xsup {
+    @media only screen and (min-width: $xs) {
+      @content;
+    }
+  } @else if $size == smup {
+    @media only screen and (min-width: $sm) {
+      @content;
+    }
+  } @else if $size == mdup {
+    @media only screen and (min-width: $md) {
+      @content;
+    }
+  } @else if $size == lgup {
+    @media only screen and (min-width: $lg) {
+      @content;
+    }
+  } @else if $size == xlup {
+    @media only screen and (min-width: $xl) {
+      @content;
+    }
+  } @else if $size == xxl {
+    @media only screen and (min-width: $xxl) {
+      @content;
+    }
+  }
+
+  @if $size == xxs {
+    @media only screen and (max-width: $xs - 1) {
+      @content;
+    }
+  } @else if $size == xs {
+    @media only screen and (max-width: $sm - 1) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media only screen and (max-width: $md - 1) {
+      @content;
+    }
+  } @else if $size == md {
+    @media only screen and (max-width: $lg - 1) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media only screen and (max-width: $xl - 1) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media only screen and (max-width: $xxl - 1) {
+      @content;
+    }
+  }
+
+  @if $size == max {
+    @media only screen and (max-width: $width) {
+      @content;
+    }
+  } @else if $size == min {
+    @media only screen and (min-width: $width) {
+      @content;
+    }
+  } @else if $size == min-max {
+    @media only screen and (min-width: $width) and (max-width: $max-width) {
+      @content;
+    }
+  }
+
+  @if $size == ipad {
+    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+      @content;
+    }
+  }
+}
+
+// --------------------------------------------------
+// FONTS
+// --------------------------------------------------
+
+@mixin font-face(
+  $font-family,
+  $file,
+  $font-weight: normal,
+  $font-size: normal
+) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$file}.eot");
+    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/#{$file}.woff") format("woff"),
+      url("../fonts/#{$file}.ttf") format("truetype"),
+      url("../fonts/#{$file}.svg?#webfont") format("svg");
+    font-weight: $font-weight;
+    font-style: $font-size;
+    font-display: swap;
+  }
+}
+
+// --------------------------------------------------
+// HELPERS
+// --------------------------------------------------
+
+@mixin elements($set: asterisk) {
+  @if $set == asterisk {
+    *,
+    *:before,
+    *:after {
+      @content;
+    }
+  } @else if $set == margin-padding {
+    blockquote,
+    body,
+    button,
+    dl,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ol,
+    p,
+    pre,
+    ul {
+      @content;
+    }
+  } @else if $set == legacy {
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    main,
+    nav,
+    section,
+    summary {
+      @content;
+    }
+  } @else if $set == cursor {
+    button,
+    [role="button"],
+    input[type="checkbox"],
+    input[type="checkbox"] + label,
+    input[type="radio"],
+    input[type="radio"] + label,
+    input[type="submit"],
+    input[type="reset"],
+    select,
+    summary {
+      @content;
+    }
+  } @else if $set == button {
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      @content;
+    }
+  } @else if $set == select {
+    input[type="checkbox"] + label,
+    input[type="radio"] + label {
+      @content;
+    }
+  } @else if $set == input {
+    [type="email"],
+    [type="password"],
+    [type="text"] {
+      @content;
+    }
+  } @else if $set == font {
+    a,
+    abbr,
+    address,
+    article,
+    aside,
+    b,
+    bdo,
+    blockquote,
+    body,
+    button,
+    caption,
+    cite,
+    data,
+    dd,
+    del,
+    details,
+    dfn,
+    dialog,
+    div,
+    dl,
+    dt,
+    em,
+    fieldset,
+    figcaption,
+    figure,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    i,
+    input,
+    ins,
+    label,
+    legend,
+    li,
+    main,
+    mark,
+    nav,
+    ol,
+    optgroup,
+    option,
+    output,
+    p,
+    pre,
+    q,
+    s,
+    samp,
+    section,
+    select,
+    small,
+    span,
+    strong,
+    sub,
+    summary,
+    sup,
+    table,
+    tbody,
+    td,
+    textarea,
+    tfoot,
+    th,
+    thead,
+    time,
+    tr,
+    u,
+    ul,
+    var {
+      @content;
+    }
+  } @else if $set == italic {
+    address,
+    em,
+    i,
+    var {
+      @content;
+    }
+  } @else if $set == bold {
+    b,
+    strong {
+      @content;
+    }
+  } @else if $set == monospace {
+    code,
+    kbd,
+    samp {
+      @content;
+    }
+  } @else if $set == small {
+    small,
+    sub,
+    sup {
+      @content;
+    }
+  }
+}
+
+@mixin head {
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6 {
+    @content;
+  }
+}
+
+@mixin all($value, $ampersand: f, $attribute: class) {
+  @if $ampersand == f {
+    [#{$attribute}*="#{$value}"] {
+      @content;
+    }
+  } @else if $ampersand == t {
+    &[#{$attribute}*="#{$value}"] {
+      @content;
+    }
+  } @else if $ampersand == ins {
+    & > [#{$attribute}*="#{$value}"] {
+      @content;
+    }
+  }
+}
+
+@mixin class($class: class) {
+  @if $class == sticky {
+    &.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: f.z("stky");
+    }
+  } @else if $class == lazy {
+    &.lazy {
+      background-image: none;
+    }
+  }
+}
+
+@mixin pseudo($pseudo-element: before) {
+  &:#{$pseudo-element} {
+    content: ".";
+    font-size: 0;
+
+    @content;
+  }
+}
+
+@mixin fa($content, $fa-type: fas, $pseudo-element: after) {
+  &:#{$pseudo-element} {
+    content: f.fa($content);
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+
+    @if $fa-type == fas {
+      font-weight: 900;
+    } @else if $fa-type == fab {
+      font-weight: 400;
+    }
+
+    @content;
+  }
+}
+
+@mixin arrow(
+  $size: 10px,
+  $color: #000,
+  $direction: down,
+  $pseudo: f,
+  $pseudo-element: after
+) {
+  @if $pseudo == f {
+    width: 0;
+    height: 0;
+    border-width: $size;
+    border-style: solid;
+    border-color: transparent;
+
+    @if $direction == top {
+      border-bottom-color: $color;
+    } @else if $direction == down {
+      border-top-color: $color;
+    } @else if $direction == left {
+      border-right-color: $color;
+    } @else if $direction == right {
+      border-left-color: $color;
+    }
+
+    @content;
+  } @else if $pseudo == t {
+    &:#{$pseudo-element} {
+      content: ".";
+      font-size: 0;
+      width: 0;
+      height: 0;
+      border-width: $size;
+      border-style: solid;
+      border-color: transparent;
+
+      @if $direction == top {
+        border-bottom-color: $color;
+      } @else if $direction == down {
+        border-top-color: $color;
+      } @else if $direction == left {
+        border-right-color: $color;
+      } @else if $direction == right {
+        border-left-color: $color;
+      }
+
+      @content;
+    }
+  }
+}
+
+@mixin grab {
+  cursor: grab;
+
+  &:active {
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: grabbing;
+  }
+}
+
+@mixin clearfix {
+  zoom: 1;
+
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ".";
+    clear: both;
+    height: 0;
+  }
+}
+
+@mixin prefix($declarations, $prefixes: (), $set: prop, $include: t) {
+  @if $set == prop {
+    @each $property, $value in $declarations {
+      @each $prefix in $prefixes {
+        #{"-" + $prefix + "-" + $property}: $value;
+      }
+
+      @content;
+
+      @if $include == t {
+        #{$property}: $value;
+      }
+    }
+  } @else if $set == val {
+    @each $property, $value in $declarations {
+      @each $prefix in $prefixes {
+        #{$property}: #{"-" + $prefix + "-" + $value};
+      }
+
+      @content;
+
+      @if $include == t {
+        #{$property}: $value;
+      }
+    }
+  }
+}
+
+@mixin disp($display) {
+  @if $display == hide {
+    visibility: hidden;
+
+    @content;
+  } @else if $display == show {
+    visibility: visible;
+
+    @content;
+  }
+}
+
+@mixin tran($property: all, $transition-duration: 0.5s) {
+  @include prefix(
+    (
+      transition: $property $transition-duration,
+    ),
+    webkit o moz
+  );
+}
+
+@mixin bg($value) {
+  background-image: $value;
+}
+
+@mixin grid-cont(
+  $template: none,
+  $row: auto,
+  $column: auto,
+  $n: 2,
+  $nr: 2,
+  $nc: 2
+) {
+  @include prefix(
+    (
+      display: grid,
+    ),
+    ms,
+    val
+  );
+
+  @if $template == def {
+    @include prefix(
+      (
+        grid-rows: $row,
+      ),
+      ms,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        grid-columns: $column,
+      ),
+      ms,
+      prop,
+      f
+    );
+
+    grid-template: $row / $column;
+  } @else if $template == r-rep {
+    @include prefix(
+      (
+        grid-rows: s.unquote("(#{$row}) [#{$n}]"),
+      ),
+      ms,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        grid-columns: $column,
+      ),
+      ms,
+      prop,
+      f
+    );
+
+    grid-template: repeat(#{$n}, #{$row}) / $column;
+  } @else if $template == c-rep {
+    @include prefix(
+      (
+        grid-rows: $row,
+      ),
+      ms,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        grid-columns: s.unquote("(#{$column}) [#{$n}]"),
+      ),
+      ms,
+      prop,
+      f
+    );
+
+    grid-template: $row / repeat(#{$n}, #{$column});
+  } @else if $template == a-rep {
+    @include prefix(
+      (
+        grid-rows: s.unquote("(#{$row}) [#{$nr}]"),
+      ),
+      ms,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        grid-columns: s.unquote("(#{$column}) [#{$nc}]"),
+      ),
+      ms,
+      prop,
+      f
+    );
+
+    grid-template: repeat(#{$nr}, #{$row}) / repeat(#{$nc}, #{$column});
+  }
+
+  @content;
+}
+
+@mixin grid-item($set, $start: 1, $end: 2) {
+  @if $set == row-se {
+    @include prefix(
+      (
+        grid-row: $start,
+      ),
+      ms,
+      prop,
+      f
+    ) {
+      @include prefix(
+        (
+          grid-row-span: $end,
+        ),
+        ms,
+        prop,
+        f
+      );
+    }
+
+    grid-row: #{$start} / #{$end};
+  } @else if $set == row-s {
+    @include prefix(
+      (
+        grid-row: $start,
+      ),
+      ms,
+      prop
+    );
+  } @else if $set == col-se {
+    @include prefix(
+      (
+        grid-column: $start,
+      ),
+      ms,
+      prop,
+      f
+    ) {
+      @include prefix(
+        (
+          grid-column-span: $end,
+        ),
+        ms,
+        prop,
+        f
+      );
+    }
+
+    grid-column: #{$start} / #{$end};
+  } @else if $set == col-s {
+    @include prefix(
+      (
+        grid-column: $start,
+      ),
+      ms,
+      prop
+    );
+  }
+}

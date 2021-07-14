@@ -1,0 +1,35 @@
+@use "../abstracts" as *;
+
+.owl-carousel {
+  &.owl-fl,
+  &.owl-side-nav {
+    position: relative;
+
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+
+      .owl-prev {
+        float: left;
+      }
+
+      .owl-next {
+        float: right;
+      }
+    }
+  }
+
+  &.owl-fl {
+    .owl-dots {
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .owl-prev,
+  .owl-next,
+  .owl-dot {
+    outline: 0;
+  }
+}

@@ -1,0 +1,92 @@
+@use "../abstracts" as *;
+
+@page {
+  size: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  @include prefix(
+    (
+      box-sizing: border-box
+    ),
+    webkit moz
+  );
+}
+
+@include elements {
+  @include prefix(
+    (
+      box-sizing: inherit
+    ),
+    webkit moz
+  );
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@include elements(margin-padding) {
+  margin: 0;
+  padding: 0;
+}
+
+@include elements(legacy) {
+  display: block;
+}
+
+@include elements(cursor) {
+  cursor: pointer;
+}
+
+@include elements(button) {
+  @include prefix(
+    (
+      appearance: button
+    ),
+    webkit moz
+  );
+}
+
+@include elements(select) {
+  -webkit-touch-callout: none;
+
+  @include prefix(
+    (
+      user-select: none
+    ),
+    webkit moz ms khtml
+  );
+}
+
+@include elements(input) {
+  width: 100%;
+}
+
+a {
+  color: $gray;
+  text-decoration: none;
+
+  &:hover {
+    color: $dgray;
+    text-decoration: none;
+  }
+}
+
+blockquote {
+  margin: 0 40px;
+}
+
+ol,
+ul {
+  padding-left: 40px;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}

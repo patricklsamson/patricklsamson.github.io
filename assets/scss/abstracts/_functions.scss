@@ -1,0 +1,15 @@
+@use "variables" as *;
+@use "sass:list" as l;
+@use "sass:string" as s;
+
+@function z($name) {
+  @if l.index($z-items, $name) {
+    @return (l.length($z-items) - l.index($z-items, $name)) + 1;
+  } @else {
+    @return null;
+  }
+}
+
+@function fa($icon) {
+  @return unquote('"') + unquote(s.insert($icon, "\\", 1)) + unquote('"');
+}

@@ -1,0 +1,799 @@
+@use "../abstracts" as *;
+
+.flex {
+  display: -ms-flexbox;
+
+  @include prefix(
+    (
+      display: box,
+    ),
+    webkit moz,
+    val,
+    f
+  );
+
+  @include prefix(
+    (
+      display: flex,
+    ),
+    webkit,
+    val
+  );
+
+  @include prefix(
+    (
+      align-items: center,
+    ),
+    webkit
+  );
+
+  @include prefix(
+    (
+      pack: center,
+    ),
+    webkit-box moz-box ms-flex,
+    prop,
+    f
+  );
+
+  @include prefix(
+    (
+      justify-content: center,
+    ),
+    webkit
+  );
+
+  @include prefix(
+    (
+      box-orient: vertical,
+    ),
+    webkit moz,
+    prop,
+    f
+  );
+
+  @include prefix(
+    (
+      box-direction: normal,
+    ),
+    webkit moz,
+    prop,
+    f
+  );
+
+  @include prefix(
+    (
+      flex-direction: column,
+    ),
+    webkit ms
+  );
+
+  &.ftop {
+    @include prefix(
+      (
+        pack: start,
+      ),
+      webkit-box moz-box ms-flex,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        justify-content: flex-start,
+      ),
+      webkit
+    );
+  }
+
+  &.fbot {
+    @include prefix(
+      (
+        pack: end,
+      ),
+      webkit-box moz-box ms-flex,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        justify-content: flex-end,
+      ),
+      webkit
+    );
+  }
+
+  &.flft {
+    @include prefix(
+      (
+        align: start,
+      ),
+      webkit-box moz-box ms-flex,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        align-items: flex-start,
+      ),
+      webkit
+    );
+  }
+
+  &.frgt {
+    @include prefix(
+      (
+        align: end,
+      ),
+      webkit-box moz-box ms-flex,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        align-items: flex-end,
+      ),
+      webkit
+    );
+  }
+}
+
+.rflex {
+  display: -ms-flexbox;
+
+  @include prefix(
+    (
+      display: box,
+    ),
+    webkit moz,
+    val,
+    f
+  );
+
+  @include prefix(
+    (
+      display: flex,
+    ),
+    webkit,
+    val
+  );
+
+  @include prefix(
+    (
+      align: center,
+    ),
+    webkit-box moz-box ms-flex,
+    prop,
+    f
+  );
+
+  @include prefix(
+    (
+      align-items: center,
+    ),
+    webkit
+  );
+
+  @include prefix(
+    (
+      pack: center,
+    ),
+    webkit-box moz-box ms-flex,
+    prop,
+    f
+  );
+
+  @include prefix(
+    (
+      justify-content: center,
+    ),
+    webkit
+  );
+
+  &.rftop {
+    @include prefix(
+      (
+        align: start,
+      ),
+      webkit-box moz-box ms-flex,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        align-items: flex-start,
+      ),
+      webkit
+    );
+  }
+
+  &.rfbot {
+    @include prefix(
+      (
+        align: end,
+      ),
+      webkit-box moz-box ms-flex,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        align-items: flex-end,
+      ),
+      webkit
+    );
+  }
+
+  &.rflft {
+    @include prefix(
+      (
+        pack: start,
+      ),
+      webkit-box moz-box ms-flex,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        justify-content: flex-start,
+      ),
+      webkit
+    );
+  }
+
+  &.rfrgt {
+    @include prefix(
+      (
+        pack: end,
+      ),
+      webkit-box moz-box ms-flex,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        justify-content: flex-end,
+      ),
+      webkit
+    );
+  }
+}
+
+.grid-cont {
+  @include prefix(
+    (
+      display: grid,
+    ),
+    ms,
+    val
+  );
+
+  @include prefix(
+    (
+      pack: center,
+    ),
+    ms-flex-line,
+    prop,
+    f
+  );
+
+  @include prefix(
+    (
+      align-content: center,
+    ),
+    webkit
+  );
+
+  @include prefix(
+    (
+      pack: center,
+    ),
+    webkit-box moz-box ms-flex,
+    prop,
+    f
+  );
+
+  @include prefix(
+    (
+      justify-content: center,
+    ),
+    webkit
+  );
+
+  &.gtop {
+    @include prefix(
+      (
+        pack: start,
+      ),
+      ms-flex-line,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        align-content: flex-start,
+      ),
+      webkit
+    );
+  }
+
+  &.gbot {
+    @include prefix(
+      (
+        pack: end,
+      ),
+      ms-flex-line,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        align-content: flex-end,
+      ),
+      webkit
+    );
+  }
+
+  &.glft {
+    @include prefix(
+      (
+        pack: start,
+      ),
+      webkit-box moz-box ms-flex,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        justify-content: flex-start,
+      ),
+      webkit
+    );
+  }
+
+  &.grgt {
+    @include prefix(
+      (
+        pack: end,
+      ),
+      webkit-box moz-box ms-flex,
+      prop,
+      f
+    );
+
+    @include prefix(
+      (
+        justify-content: flex-end,
+      ),
+      webkit
+    );
+  }
+}
+
+.table {
+  display: table;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+
+  &.ctr,
+  &.lft,
+  &.rgt {
+    width: auto;
+  }
+
+  &.lft {
+    margin-left: 0;
+  }
+
+  &.rgt {
+    margin-right: 0;
+  }
+
+  .valign {
+    display: table-cell;
+    vertical-align: middle;
+
+    &.top {
+      vertical-align: top;
+    }
+
+    &.bot {
+      vertical-align: bottom;
+    }
+  }
+}
+
+.img {
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include prefix(
+    (
+      background-size: cover,
+    ),
+    webkit moz o
+  );
+
+  &:before,
+  &:after {
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include prefix(
+      (
+        background-size: cover,
+      ),
+      webkit moz o
+    );
+  }
+
+  &.prlax {
+    @include mq(lgup) {
+      background-attachment: fixed;
+    }
+  }
+
+  &.con {
+    @include prefix(
+      (
+        background-size: contain,
+      ),
+      webkit moz o
+    );
+
+    &:before,
+    &:after {
+      @include prefix(
+        (
+          background-size: contain,
+        ),
+        webkit moz o
+      );
+    }
+  }
+
+  &.itop {
+    background-position: top;
+
+    &:before,
+    &:after {
+      background-position: top;
+    }
+  }
+
+  &.ibot {
+    background-position: bottom;
+
+    &:before,
+    &:after {
+      background-position: bottom;
+    }
+  }
+
+  &.ilft {
+    background-position: left;
+
+    &:before,
+    &:after {
+      background-position: left;
+    }
+  }
+
+  &.irgt {
+    background-position: right;
+
+    &:before,
+    &:after {
+      background-position: right;
+    }
+  }
+
+  &.ilt {
+    background-position: left top;
+
+    &:before,
+    &:after {
+      background-position: left top;
+    }
+  }
+
+  &.irt {
+    background-position: right top;
+
+    &:before,
+    &:after {
+      background-position: right top;
+    }
+  }
+
+  &.ilb {
+    background-position: left bottom;
+
+    &:before,
+    &:after {
+      background-position: left bottom;
+    }
+  }
+
+  &.irb {
+    background-position: right bottom;
+
+    &:before,
+    &:after {
+      background-position: right bottom;
+    }
+  }
+}
+
+.talign {
+  text-align: center;
+
+  &.tlft {
+    text-align: left;
+  }
+
+  &.trgt {
+    text-align: right;
+  }
+
+  &.tjust {
+    text-align: justify;
+  }
+}
+
+.balign {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.blft {
+    margin-left: 0;
+  }
+
+  &.brgt {
+    margin-right: 0;
+  }
+}
+
+.height-fl {
+  min-height: 100vh;
+}
+
+.mg-025 {
+  margin: 0.25em;
+}
+
+.mg-05 {
+  margin: 0.5em;
+}
+
+.mg-075 {
+  margin: 0.75em;
+}
+
+.mg-10 {
+  margin: 1em;
+}
+
+.mg-125 {
+  margin: 1.25em;
+}
+
+.mt-025 {
+  margin-top: 0.25em;
+}
+
+.mt-05 {
+  margin-top: 0.5em;
+}
+
+.mt-075 {
+  margin-top: 0.75em;
+}
+
+.mt-10 {
+  margin-top: 1em;
+}
+
+.mt-125 {
+  margin-top: 1.25em;
+}
+
+.mb-025 {
+  margin-bottom: 0.25em;
+}
+
+.mb-05 {
+  margin-bottom: 0.5em;
+}
+
+.mb-075 {
+  margin-bottom: 0.75em;
+}
+
+.mb-10 {
+  margin-bottom: 1em;
+}
+
+.mb-125 {
+  margin-bottom: 1.25em;
+}
+
+.ml-025 {
+  margin-left: 0.25em;
+}
+
+.ml-05 {
+  margin-left: 0.5em;
+}
+
+.ml-075 {
+  margin-left: 0.75em;
+}
+
+.ml-10 {
+  margin-left: 1em;
+}
+
+.ml-125 {
+  margin-left: 1.25em;
+}
+
+.mr-025 {
+  margin-right: 0.25em;
+}
+
+.mr-05 {
+  margin-right: 0.5em;
+}
+
+.mr-075 {
+  margin-right: 0.75em;
+}
+
+.mr-10 {
+  margin-right: 1em;
+}
+
+.mr-125 {
+  margin-right: 1.25em;
+}
+
+.pd-025 {
+  padding: 0.25em;
+}
+
+.pd-05 {
+  padding: 0.5em;
+}
+
+.pd-075 {
+  padding: 0.75em;
+}
+
+.pd-10 {
+  padding: 1em;
+}
+
+.pd-125 {
+  padding: 1.25em;
+}
+
+.pt-025 {
+  padding-top: 0.25em;
+}
+
+.pt-05 {
+  padding-top: 0.5em;
+}
+
+.pt-075 {
+  padding-top: 0.75em;
+}
+
+.pt-10 {
+  padding-top: 1em;
+}
+
+.pt-125 {
+  padding-top: 1.25em;
+}
+
+.pb-025 {
+  padding-bottom: 0.25em;
+}
+
+.pb-05 {
+  padding-bottom: 0.5em;
+}
+
+.pb-075 {
+  padding-bottom: 0.75em;
+}
+
+.pb-10 {
+  padding-bottom: 1em;
+}
+
+.pb-125 {
+  padding-bottom: 1.25em;
+}
+
+.pl-025 {
+  padding-left: 0.25em;
+}
+
+.pl-05 {
+  padding-left: 0.5em;
+}
+
+.pl-075 {
+  padding-left: 0.75em;
+}
+
+.pl-10 {
+  padding-left: 1em;
+}
+
+.pl-125 {
+  padding-left: 1.25em;
+}
+
+.pr-025 {
+  padding-right: 0.25em;
+}
+
+.pr-05 {
+  padding-right: 0.5em;
+}
+
+.pr-075 {
+  padding-right: 0.75em;
+}
+
+.pr-10 {
+  padding-right: 1em;
+}
+
+.pr-125 {
+  padding-right: 1.25em;
+}
+
+.xbul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pd50 {
+  padding: 50px 0;
+}
+
+.boxfx {
+  @include prefix(
+    (
+      box-shadow: 0 10px 20px 0 $black-05,
+    ),
+    webkit moz
+  );
+}
+
+.txtfx {
+  text-shadow: 0 5px 10px $black-05;
+}
+
+.modal-open {
+  position: fixed;
+  overflow-y: hidden;
+  width: 100%;
+}
