@@ -155,12 +155,12 @@
   } @else if $set == cursor {
     button,
     [role="button"],
-    input[type="checkbox"],
-    input[type="checkbox"] + label,
-    input[type="radio"],
-    input[type="radio"] + label,
-    input[type="submit"],
-    input[type="reset"],
+    [type="checkbox"],
+    [type="checkbox"] + label,
+    [type="radio"],
+    [type="radio"] + label,
+    [type="submit"],
+    [type="reset"],
     select,
     summary {
       @content;
@@ -180,7 +180,8 @@
   } @else if $set == input {
     [type="email"],
     [type="password"],
-    [type="text"] {
+    [type="text"],
+    textarea {
       @content;
     }
   } @else if $set == font {
@@ -258,30 +259,6 @@
     var {
       @content;
     }
-  } @else if $set == italic {
-    address,
-    em,
-    i,
-    var {
-      @content;
-    }
-  } @else if $set == bold {
-    b,
-    strong {
-      @content;
-    }
-  } @else if $set == monospace {
-    code,
-    kbd,
-    samp {
-      @content;
-    }
-  } @else if $set == small {
-    small,
-    sub,
-    sup {
-      @content;
-    }
   }
 }
 
@@ -318,7 +295,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      z-index: f.z("stky");
+      z-index: f.z("sticky");
     }
   } @else if $class == lazy {
     &.lazy {
@@ -480,6 +457,24 @@
 
 @mixin bg($value) {
   background-image: $value;
+}
+
+@mixin keyframes($animation) {
+  @-webkit-keyframes #{$animation} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation} {
+    @content;
+  }
+
+  @keyframes #{$animation} {
+    @content;
+  }
 }
 
 @mixin grid-cont(
