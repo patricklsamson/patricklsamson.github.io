@@ -1,0 +1,146 @@
+@use "../abstracts" as *;
+
+nav {
+  &#nav-bar {
+    button#nav-btn {
+      @include mq(lgup) {
+        display: none;
+      }
+    }
+
+    #nav-coll {
+      @include mq(md) {
+        @include disp(hide) {
+          opacity: 0;
+        }
+
+        @include tran;
+      }
+
+      .menu-container {
+        & > ul {
+          & > li {
+            @include mq(lgup) {
+              display: inline-block;
+            }
+
+            @include mq(md) {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .menu-container {
+      & > ul {
+        & > li {
+          display: inline-block;
+        }
+      }
+
+      ul {
+        li {
+          position: relative;
+
+          &:hover {
+            ul.sub-menu {
+              @include disp(show) {
+                opacity: 1;
+              }
+            }
+          }
+
+          a#content-btn {
+            @include fa(f078);
+
+            @include tran;
+
+            &.active {
+              & ~ ul.sub-menu {
+                @include disp(show) {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+
+          ul.sub-menu {
+            position: absolute;
+
+            @include tran;
+
+            @include disp(hide) {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &#side-bar {
+    #side-coll {
+      @include tran;
+    }
+  }
+
+  button#nav-btn {
+    position: relative;
+    z-index: z("nav-btn");
+    outline: 0;
+    background: transparent;
+    border-width: 2px;
+    border-color: #000;
+    width: 35px;
+    height: 35px;
+    font-size: 30px;
+
+    @include fa(f0c9, fas, before) {
+      position: absolute;
+      top: -6px;
+      left: 2.5px;
+      color: #000;
+    }
+
+    @include fa(f00d, fas) {
+      position: absolute;
+      top: -6px;
+      left: 5px;
+      color: #000;
+
+      @include tran;
+
+      @include disp(hide) {
+        opacity: 0;
+      }
+    }
+
+    &.active {
+      &:before {
+        @include disp(hide) {
+          opacity: 0;
+        }
+      }
+
+      &:after {
+        @include disp(show) {
+          opacity: 1;
+        }
+      }
+
+      & ~ #nav-coll {
+        @include disp(show) {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .menu-container {
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+  }
+}

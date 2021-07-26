@@ -1,0 +1,82 @@
+@use "../abstracts" as *;
+
+.select-box {
+  position: relative;
+
+  .selected {
+    cursor: pointer;
+
+    &.active {
+      & ~ .search-box {
+        input {
+          pointer-events: auto;
+
+          @include disp(show) {
+            opacity: 1;
+          }
+        }
+      }
+
+      & ~ .options-container {
+        @include disp(show) {
+          margin-top: 35px;
+          max-height: 250px;
+          opacity: 1;
+          overflow-y: scroll;
+        }
+      }
+    }
+  }
+
+  .search-box {
+    position: relative;
+
+    input[type*="text"] {
+      z-index: z("search-box");
+      width: 100%;
+      position: absolute;
+      pointer-events: none;
+
+      @include tran(opacity);
+
+      @include disp(hide) {
+        opacity: 0;
+      }
+    }
+  }
+
+  .options-container {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+
+    @include tran;
+
+    @include disp(hide) {
+      opacity: 0;
+      max-height: 0;
+    }
+
+    .option {
+      cursor: pointer;
+
+      @include tran;
+
+      &:hover {
+        background: $gray;
+      }
+
+      &.hide {
+        display: none;
+      }
+
+      input[type*="radio"] {
+        display: none;
+      }
+
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+}
