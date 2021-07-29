@@ -282,7 +282,7 @@
     &[#{$attribute}*="#{$value}"] {
       @content;
     }
-  } @else if $ampersand == ins {
+  } @else if $ampersand == in {
     & > [#{$attribute}*="#{$value}"] {
       @content;
     }
@@ -334,9 +334,9 @@
 }
 
 @mixin arrow(
+  $direction,
   $size: 10px,
   $color: #000,
-  $direction: down,
   $pseudo: f,
   $pseudo-element: after
 ) {
@@ -346,19 +346,10 @@
     border-width: $size;
     border-style: solid;
     border-color: transparent;
-
-    @if $direction == top {
-      border-bottom-color: $color;
-    } @else if $direction == down {
-      border-top-color: $color;
-    } @else if $direction == left {
-      border-right-color: $color;
-    } @else if $direction == right {
-      border-left-color: $color;
-    }
+    border-#{$direction}-color: $color;
 
     @content;
-  } @else if $pseudo == t {
+  } @else {
     &:#{$pseudo-element} {
       content: ".";
       font-size: 0;
@@ -367,29 +358,10 @@
       border-width: $size;
       border-style: solid;
       border-color: transparent;
-
-      @if $direction == top {
-        border-bottom-color: $color;
-      } @else if $direction == down {
-        border-top-color: $color;
-      } @else if $direction == left {
-        border-right-color: $color;
-      } @else if $direction == right {
-        border-left-color: $color;
-      }
+      border-#{$direction}-color: $color;
 
       @content;
     }
-  }
-}
-
-@mixin grab {
-  cursor: grab;
-
-  &:active {
-    cursor: -webkit-grabbing;
-    cursor: -moz-grabbing;
-    cursor: grabbing;
   }
 }
 
@@ -434,16 +406,221 @@
   }
 }
 
-@mixin disp($display) {
-  @if $display == hide {
-    visibility: hidden;
+@mixin grab {
+  cursor: grab;
 
-    @content;
-  } @else if $display == show {
-    visibility: visible;
-
-    @content;
+  &:active {
+    @include prefix(
+      (
+        cursor: grabbing,
+      ),
+      webkit moz,
+      val
+    );
   }
+}
+
+@mixin justify($center: t, $location: none) {
+  @if $center == t {
+    @include prefix(
+      (
+        justify-content: center,
+      ),
+      webkit
+    ) {
+      @include prefix(
+        (
+          pack: center,
+        ),
+        webkit-box moz-box ms-flex,
+        prop,
+        f
+      );
+    }
+  } @else {
+    @include prefix(
+      (
+        justify-content: flex-#{$location},
+      ),
+      webkit
+    ) {
+      @include prefix(
+        (
+          pack: $location,
+        ),
+        webkit-box moz-box ms-flex,
+        prop,
+        f
+      );
+    }
+  }
+}
+
+@mixin align($set: i, $center: t, $location: none) {
+  @if $set == i {
+    @if $center == t {
+      @include prefix(
+        (
+          align-items: center,
+        ),
+        webkit
+      ) {
+        @include prefix(
+          (
+            align: center,
+          ),
+          webkit-box moz-box ms-flex,
+          prop,
+          f
+        );
+      }
+    } @else {
+      @include prefix(
+        (
+          align-items: flex-#{$location},
+        ),
+        webkit
+      ) {
+        @include prefix(
+          (
+            align: $location,
+          ),
+          webkit-box moz-box ms-flex,
+          prop,
+          f
+        );
+      }
+    }
+  } @else if $set == c {
+    @if $center == t {
+      @include prefix(
+        (
+          align-content: center,
+        ),
+        webkit
+      ) {
+        @include prefix(
+          (
+            pack: center,
+          ),
+          ms-flex-line,
+          prop,
+          f
+        );
+      }
+    } @else {
+      @include prefix(
+        (
+          align-content: flex-#{$location},
+        ),
+        webkit
+      ) {
+        @include prefix(
+          (
+            pack: $location,
+          ),
+          ms-flex-line,
+          prop,
+          f
+        );
+      }
+    }
+  }
+}
+
+@mixin flex($column: t) {
+  @include prefix(
+    (
+      display: flex,
+    ),
+    webkit,
+    val
+  ) {
+    display: -ms-flexbox;
+
+    @include prefix(
+      (
+        display: box,
+      ),
+      webkit moz,
+      val,
+      f
+    );
+  }
+
+  @include align;
+  @include justify;
+
+  @if $column == t {
+    @include prefix(
+      (
+        flex-direction: column,
+      ),
+      webkit ms
+    ) {
+      @include prefix(
+        (
+          box-orient: vertical,
+        ),
+        webkit moz,
+        prop,
+        f
+      );
+
+      @include prefix(
+        (
+          box-direction: normal,
+        ),
+        webkit moz,
+        prop,
+        f
+      );
+    }
+  }
+}
+
+@mixin img-prop($background-size, $bg-repeat-position: t) {
+  @if $bg-repeat-position == t {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include prefix(
+    (
+      background-size: $background-size,
+    ),
+    webkit moz o
+  );
+
+  &:before,
+  &:after {
+    @if $bg-repeat-position == t {
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    @include prefix(
+      (
+        background-size: $background-size,
+      ),
+      webkit moz o
+    );
+  }
+}
+
+@mixin img-pos($loc) {
+  background-position: $loc;
+
+  &:before,
+  &:after {
+    background-position: $loc;
+  }
+}
+
+@mixin vis($display) {
+  visibility: $display;
+
+  @content;
 }
 
 @mixin tran($property: all, $transition-duration: 0.5s) {
@@ -478,21 +655,13 @@
 }
 
 @mixin grid-cont(
-  $template: none,
+  $template: def,
   $row: auto,
   $column: auto,
-  $n: 2,
-  $nr: 2,
-  $nc: 2
+  $number: 2,
+  $row-number: 2,
+  $column-number: 2
 ) {
-  @include prefix(
-    (
-      display: grid,
-    ),
-    ms,
-    val
-  );
-
   @if $template == def {
     @include prefix(
       (
@@ -516,7 +685,7 @@
   } @else if $template == r-rep {
     @include prefix(
       (
-        grid-rows: s.unquote("(#{$row}) [#{$n}]"),
+        grid-rows: s.unquote("(#{$row}) [#{$number}]"),
       ),
       ms,
       prop,
@@ -532,7 +701,7 @@
       f
     );
 
-    grid-template: repeat(#{$n}, #{$row}) / $column;
+    grid-template: repeat(#{$number}, #{$row}) / $column;
   } @else if $template == c-rep {
     @include prefix(
       (
@@ -545,18 +714,18 @@
 
     @include prefix(
       (
-        grid-columns: s.unquote("(#{$column}) [#{$n}]"),
+        grid-columns: s.unquote("(#{$column}) [#{$number}]"),
       ),
       ms,
       prop,
       f
     );
 
-    grid-template: $row / repeat(#{$n}, #{$column});
+    grid-template: $row / repeat(#{$number}, #{$column});
   } @else if $template == a-rep {
     @include prefix(
       (
-        grid-rows: s.unquote("(#{$row}) [#{$nr}]"),
+        grid-rows: s.unquote("(#{$row}) [#{$row-number}]"),
       ),
       ms,
       prop,
@@ -565,14 +734,17 @@
 
     @include prefix(
       (
-        grid-columns: s.unquote("(#{$column}) [#{$nc}]"),
+        grid-columns: s.unquote("(#{$column}) [#{$column-number}]"),
       ),
       ms,
       prop,
       f
     );
 
-    grid-template: repeat(#{$nr}, #{$row}) / repeat(#{$nc}, #{$column});
+    grid-template: repeat(#{$row-number}, #{$row}) / repeat(
+        #{$column-number},
+        #{$column}
+      );
   }
 
   @content;
