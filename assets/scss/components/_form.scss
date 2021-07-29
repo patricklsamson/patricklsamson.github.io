@@ -11,14 +11,14 @@
         input {
           pointer-events: auto;
 
-          @include disp(show) {
+          @include vis(visible) {
             opacity: 1;
           }
         }
       }
 
       & ~ .options-container {
-        @include disp(show) {
+        @include vis(visible) {
           margin-top: 35px;
           max-height: 250px;
           opacity: 1;
@@ -39,7 +39,7 @@
 
       @include tran(opacity);
 
-      @include disp(hide) {
+      @include vis(hidden) {
         opacity: 0;
       }
     }
@@ -52,7 +52,7 @@
 
     @include tran;
 
-    @include disp(hide) {
+    @include vis(hidden) {
       opacity: 0;
       max-height: 0;
     }
