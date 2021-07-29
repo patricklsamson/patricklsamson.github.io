@@ -8,26 +8,12 @@
   padding: 0 20px;
 }
 
-.cont {
-  @include mq(smup) {
-    padding: 0;
-    max-width: m.round($sm * 0.95);
-  }
-
-  @include mq(mdup) {
-    max-width: m.round($md * 0.95);
-  }
-
-  @include mq(lgup) {
-    max-width: m.round($lg * 0.95);
-  }
-
-  @include mq(xlup) {
-    max-width: m.round($xl * 0.95);
-  }
-
-  @include mq(xxl) {
-    max-width: m.round($xxl * 0.95);
+@each $mq, $px in $cont-mqs {
+  .cont {
+    @include mq($mq) {
+      padding: 0;
+      max-width: m.round($px * 0.95);
+    }
   }
 }
 
@@ -39,7 +25,7 @@
   &.xgut {
     margin: 0;
 
-    @include all(gcol-, ins) {
+    @include all(gcol-, in) {
       padding: 0;
     }
   }
@@ -71,378 +57,108 @@
     }
   }
 
-  @include mq(xsup) {
-    @for $i from 1 through 12 {
-      $percentage: m.div($i * 100%, 12);
+  @each $mq, $class in $min-mqs {
+    @include mq($mq) {
+      @for $i from 1 through 12 {
+        $percentage: m.div($i * 100%, 12);
 
-      .gcol-xs-#{$i} {
-        max-width: $percentage;
-      }
+        .gcol-#{$class}-#{$i} {
+          max-width: $percentage;
+        }
 
-      .xs-push-#{$i} {
-        left: $percentage;
-      }
+        .#{$class}-push-#{$i} {
+          left: $percentage;
+        }
 
-      .xs-pull-#{$i} {
-        right: $percentage;
-      }
-    }
-  }
-
-  @include mq(smup) {
-    @for $i from 1 through 12 {
-      $percentage: m.div($i * 100%, 12);
-
-      .gcol-sm-#{$i} {
-        max-width: $percentage;
-      }
-
-      .sm-push-#{$i} {
-        left: $percentage;
-      }
-
-      .sm-pull-#{$i} {
-        right: $percentage;
-      }
-    }
-  }
-
-  @include mq(mdup) {
-    @for $i from 1 through 12 {
-      $percentage: m.div($i * 100%, 12);
-
-      .gcol-md-#{$i} {
-        max-width: $percentage;
-      }
-
-      .md-push-#{$i} {
-        left: $percentage;
-      }
-
-      .md-pull-#{$i} {
-        right: $percentage;
-      }
-    }
-  }
-
-  @include mq(lgup) {
-    @for $i from 1 through 12 {
-      $percentage: m.div($i * 100%, 12);
-
-      .gcol-lg-#{$i} {
-        max-width: $percentage;
-      }
-
-      .lg-push-#{$i} {
-        left: $percentage;
-      }
-
-      .lg-pull-#{$i} {
-        right: $percentage;
-      }
-    }
-  }
-
-  @include mq(xlup) {
-    @for $i from 1 through 12 {
-      $percentage: m.div($i * 100%, 12);
-
-      .gcol-xl-#{$i} {
-        max-width: $percentage;
-      }
-
-      .xl-push-#{$i} {
-        left: $percentage;
-      }
-
-      .xl-pull-#{$i} {
-        right: $percentage;
-      }
-    }
-  }
-
-  @include mq(xxl) {
-    @for $i from 1 through 12 {
-      $percentage: m.div($i * 100%, 12);
-
-      .gcol-xxl-#{$i} {
-        max-width: $percentage;
-      }
-
-      .xxl-push-#{$i} {
-        left: $percentage;
-      }
-
-      .xxl-pull-#{$i} {
-        right: $percentage;
+        .#{$class}-pull-#{$i} {
+          right: $percentage;
+        }
       }
     }
   }
 }
 
 .flex {
-  display: -ms-flexbox;
-
-  @include prefix(
-    (
-      display: box,
-    ),
-    webkit moz,
-    val,
-    f
-  );
-
-  @include prefix(
-    (
-      display: flex,
-    ),
-    webkit,
-    val
-  );
-
-  @include prefix(
-    (
-      align-items: center,
-    ),
-    webkit
-  );
-
-  @include prefix(
-    (
-      pack: center,
-    ),
-    webkit-box moz-box ms-flex,
-    prop,
-    f
-  );
-
-  @include prefix(
-    (
-      justify-content: center,
-    ),
-    webkit
-  );
-
-  @include prefix(
-    (
-      box-orient: vertical,
-    ),
-    webkit moz,
-    prop,
-    f
-  );
-
-  @include prefix(
-    (
-      box-direction: normal,
-    ),
-    webkit moz,
-    prop,
-    f
-  );
-
-  @include prefix(
-    (
-      flex-direction: column,
-    ),
-    webkit ms
-  );
+  @include flex;
 
   &.ftop {
-    @include prefix(
-      (
-        pack: start,
-      ),
-      webkit-box moz-box ms-flex,
-      prop,
-      f
-    );
-
-    @include prefix(
-      (
-        justify-content: flex-start,
-      ),
-      webkit
-    );
+    @include justify(f, start);
   }
 
   &.fbot {
-    @include prefix(
-      (
-        pack: end,
-      ),
-      webkit-box moz-box ms-flex,
-      prop,
-      f
-    );
-
-    @include prefix(
-      (
-        justify-content: flex-end,
-      ),
-      webkit
-    );
+    @include justify(f, end);
   }
 
   &.flft {
-    @include prefix(
-      (
-        align: start,
-      ),
-      webkit-box moz-box ms-flex,
-      prop,
-      f
-    );
-
-    @include prefix(
-      (
-        align-items: flex-start,
-      ),
-      webkit
-    );
+    @include align(i, f, start);
   }
 
   &.frgt {
-    @include prefix(
-      (
-        align: end,
-      ),
-      webkit-box moz-box ms-flex,
-      prop,
-      f
-    );
-
-    @include prefix(
-      (
-        align-items: flex-end,
-      ),
-      webkit
-    );
+    @include align(i, f, end);
   }
 }
 
 .rflex {
-  display: -ms-flexbox;
-
-  @include prefix(
-    (
-      display: box,
-    ),
-    webkit moz,
-    val,
-    f
-  );
-
-  @include prefix(
-    (
-      display: flex,
-    ),
-    webkit,
-    val
-  );
-
-  @include prefix(
-    (
-      align: center,
-    ),
-    webkit-box moz-box ms-flex,
-    prop,
-    f
-  );
-
-  @include prefix(
-    (
-      align-items: center,
-    ),
-    webkit
-  );
-
-  @include prefix(
-    (
-      pack: center,
-    ),
-    webkit-box moz-box ms-flex,
-    prop,
-    f
-  );
-
-  @include prefix(
-    (
-      justify-content: center,
-    ),
-    webkit
-  );
+  @include flex(f);
 
   &.rftop {
-    @include prefix(
-      (
-        align: start,
-      ),
-      webkit-box moz-box ms-flex,
-      prop,
-      f
-    );
-
-    @include prefix(
-      (
-        align-items: flex-start,
-      ),
-      webkit
-    );
+    @include align(i, f, start);
   }
 
   &.rfbot {
-    @include prefix(
-      (
-        align: end,
-      ),
-      webkit-box moz-box ms-flex,
-      prop,
-      f
-    );
-
-    @include prefix(
-      (
-        align-items: flex-end,
-      ),
-      webkit
-    );
+    @include align(i, f, end);
   }
 
   &.rflft {
-    @include prefix(
-      (
-        pack: start,
-      ),
-      webkit-box moz-box ms-flex,
-      prop,
-      f
-    );
-
-    @include prefix(
-      (
-        justify-content: flex-start,
-      ),
-      webkit
-    );
+    @include justify(f, start);
   }
 
   &.rfrgt {
-    @include prefix(
-      (
-        pack: end,
-      ),
-      webkit-box moz-box ms-flex,
-      prop,
-      f
-    );
+    @include justify(f, end);
+  }
+}
 
-    @include prefix(
-      (
-        justify-content: flex-end,
-      ),
-      webkit
-    );
+@each $mq, $class in $min-mqs {
+  @include mq($mq) {
+    .flex-#{$class} {
+      @include flex;
+
+      &.ftop-#{$class} {
+        @include justify(f, start);
+      }
+
+      &.fbot-#{$class} {
+        @include justify(f, end);
+      }
+
+      &.flft-#{$class} {
+        @include align(i, f, start);
+      }
+
+      &.frgt-#{$class} {
+        @include align(i, f, end);
+      }
+    }
+
+    .rflex-#{$class} {
+      @include flex(f);
+
+      &.rftop-#{$class} {
+        @include align(i, f, start);
+      }
+
+      &.rfbot-#{$class} {
+        @include align(i, f, end);
+      }
+
+      &.rflft-#{$class} {
+        @include justify(f, start);
+      }
+
+      &.rfrgt-#{$class} {
+        @include justify(f, end);
+      }
+    }
   }
 }
 
@@ -455,108 +171,23 @@
     val
   );
 
-  @include prefix(
-    (
-      pack: center,
-    ),
-    ms-flex-line,
-    prop,
-    f
-  );
-
-  @include prefix(
-    (
-      align-content: center,
-    ),
-    webkit
-  );
-
-  @include prefix(
-    (
-      pack: center,
-    ),
-    webkit-box moz-box ms-flex,
-    prop,
-    f
-  );
-
-  @include prefix(
-    (
-      justify-content: center,
-    ),
-    webkit
-  );
+  @include align(c);
+  @include justify;
 
   &.gtop {
-    @include prefix(
-      (
-        pack: start,
-      ),
-      ms-flex-line,
-      prop,
-      f
-    );
-
-    @include prefix(
-      (
-        align-content: flex-start,
-      ),
-      webkit
-    );
+    @include align(c, f, start);
   }
 
   &.gbot {
-    @include prefix(
-      (
-        pack: end,
-      ),
-      ms-flex-line,
-      prop,
-      f
-    );
-
-    @include prefix(
-      (
-        align-content: flex-end,
-      ),
-      webkit
-    );
+    @include align(c, f, end);
   }
 
   &.glft {
-    @include prefix(
-      (
-        pack: start,
-      ),
-      webkit-box moz-box ms-flex,
-      prop,
-      f
-    );
-
-    @include prefix(
-      (
-        justify-content: flex-start,
-      ),
-      webkit
-    );
+    @include justify(f, start);
   }
 
   &.grgt {
-    @include prefix(
-      (
-        pack: end,
-      ),
-      webkit-box moz-box ms-flex,
-      prop,
-      f
-    );
-
-    @include prefix(
-      (
-        justify-content: flex-end,
-      ),
-      webkit
-    );
+    @include justify(f, end);
   }
 }
 
@@ -580,6 +211,24 @@
     margin-right: 0;
   }
 
+  @each $mq, $class in $min-mqs {
+    @include mq($mq) {
+      &.ctr-#{$class},
+      &.lft-#{$class},
+      &.rgt-#{$class} {
+        width: auto;
+      }
+
+      &.lft-#{$class} {
+        margin-left: 0;
+      }
+
+      &.rgt-#{$class} {
+        margin-right: 0;
+      }
+    }
+  }
+
   .valign {
     display: table-cell;
     vertical-align: middle;
@@ -591,32 +240,23 @@
     &.bot {
       vertical-align: bottom;
     }
+
+    @each $mq, $class in $min-mqs {
+      @include mq($mq) {
+        &.top-#{$class} {
+          vertical-align: top;
+        }
+
+        &.bot-#{$class} {
+          vertical-align: bottom;
+        }
+      }
+    }
   }
 }
 
 .img {
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @include prefix(
-    (
-      background-size: cover,
-    ),
-    webkit moz o
-  );
-
-  &:before,
-  &:after {
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @include prefix(
-      (
-        background-size: cover,
-      ),
-      webkit moz o
-    );
-  }
+  @include img-prop(cover);
 
   &.prlax {
     @include mq(lgup) {
@@ -625,93 +265,78 @@
   }
 
   &.con {
-    @include prefix(
-      (
-        background-size: contain,
-      ),
-      webkit moz o
-    );
-
-    &:before,
-    &:after {
-      @include prefix(
-        (
-          background-size: contain,
-        ),
-        webkit moz o
-      );
-    }
+    @include img-prop(contain, f);
   }
 
   &.itop {
-    background-position: top;
-
-    &:before,
-    &:after {
-      background-position: top;
-    }
+    @include img-pos(top);
   }
 
   &.ibot {
-    background-position: bottom;
-
-    &:before,
-    &:after {
-      background-position: bottom;
-    }
+    @include img-pos(bottom);
   }
 
   &.ilft {
-    background-position: left;
-
-    &:before,
-    &:after {
-      background-position: left;
-    }
+    @include img-pos(left);
   }
 
   &.irgt {
-    background-position: right;
-
-    &:before,
-    &:after {
-      background-position: right;
-    }
+    @include img-pos(right);
   }
 
   &.ilt {
-    background-position: left top;
-
-    &:before,
-    &:after {
-      background-position: left top;
-    }
+    @include img-pos(left top);
   }
 
   &.irt {
-    background-position: right top;
-
-    &:before,
-    &:after {
-      background-position: right top;
-    }
+    @include img-pos(right top);
   }
 
   &.ilb {
-    background-position: left bottom;
-
-    &:before,
-    &:after {
-      background-position: left bottom;
-    }
+    @include img-pos(left bottom);
   }
 
   &.irb {
-    background-position: right bottom;
+    @include img-pos(right bottom);
+  }
 
-    &:before,
-    &:after {
-      background-position: right bottom;
+  @each $mq, $class in $min-mqs {
+    @include mq($mq) {
+      &.con-#{$class} {
+        @include img-prop(contain, f);
+      }
+
+      &.itop-#{$class} {
+        @include img-pos(top);
+      }
+
+      &.ibot-#{$class} {
+        @include img-pos(bottom);
+      }
+
+      &.ilft-#{$class} {
+        @include img-pos(left);
+      }
+
+      &.irgt-#{$class} {
+        @include img-pos(right);
+      }
+
+      &.ilt-#{$class} {
+        @include img-pos(left top);
+      }
+
+      &.irt-#{$class} {
+        @include img-pos(right top);
+      }
+
+      &.ilb-#{$class} {
+        @include img-pos(left bottom);
+      }
+
+      &.irb-#{$class} {
+        @include img-pos(right bottom);
+      }
     }
   }
 }
@@ -730,6 +355,22 @@
   &.tjust {
     text-align: justify;
   }
+
+  @each $mq, $class in $min-mqs {
+    @include mq($mq) {
+      &.tlft-#{$class} {
+        text-align: left;
+      }
+
+      &.trgt-#{$class} {
+        text-align: right;
+      }
+
+      &.tjust-#{$class} {
+        text-align: justify;
+      }
+    }
+  }
 }
 
 .balign {
@@ -744,330 +385,112 @@
   &.brgt {
     margin-right: 0;
   }
-}
-
-.mg-auto {
-  margin: auto;
-}
-
-.mg-025 {
-  margin: 0.25em;
-}
-
-.mg-05 {
-  margin: 0.5em;
-}
-
-.mg-075 {
-  margin: 0.75em;
-}
-
-.mg-10 {
-  margin: 1em;
-}
-
-.mg-125 {
-  margin: 1.25em;
-}
-
-.mg-15 {
-  margin: 1.5em;
-}
-
-.mg-175 {
-  margin: 1.75em;
-}
-
-.mg-20 {
-  margin: 2em;
-}
-
-.mt-025 {
-  margin-top: 0.25em;
-}
-
-.mt-05 {
-  margin-top: 0.5em;
-}
-
-.mt-075 {
-  margin-top: 0.75em;
-}
-
-.mt-10 {
-  margin-top: 1em;
-}
-
-.mt-125 {
-  margin-top: 1.25em;
-}
-
-.mt-15 {
-  margin-top: 1.5em;
-}
-
-.mt-175 {
-  margin-top: 1.75em;
-}
-
-.mt-20 {
-  margin-top: 2em;
-}
-
-.mb-025 {
-  margin-bottom: 0.25em;
-}
-
-.mb-05 {
-  margin-bottom: 0.5em;
-}
-
-.mb-075 {
-  margin-bottom: 0.75em;
-}
-
-.mb-10 {
-  margin-bottom: 1em;
-}
-
-.mb-125 {
-  margin-bottom: 1.25em;
-}
-
-.mb-15 {
-  margin-bottom: 1.5em;
-}
-
-.mb-175 {
-  margin-bottom: 1.75em;
-}
-
-.mb-20 {
-  margin-bottom: 2em;
-}
-
-.ml-025 {
-  margin-left: 0.25em;
-}
-
-.ml-05 {
-  margin-left: 0.5em;
-}
-
-.ml-075 {
-  margin-left: 0.75em;
-}
-
-.ml-10 {
-  margin-left: 1em;
-}
-
-.ml-125 {
-  margin-left: 1.25em;
-}
-
-.ml-15 {
-  margin-left: 1.5em;
-}
-
-.ml-175 {
-  margin-left: 1.75em;
-}
-
-.ml-20 {
-  margin-left: 2em;
-}
-
-.mr-025 {
-  margin-right: 0.25em;
-}
-
-.mr-05 {
-  margin-right: 0.5em;
-}
-
-.mr-075 {
-  margin-right: 0.75em;
-}
-
-.mr-10 {
-  margin-right: 1em;
-}
-
-.mr-125 {
-  margin-right: 1.25em;
-}
-
-.mr-15 {
-  margin-right: 1.5em;
-}
-
-.mr-175 {
-  margin-right: 1.75em;
-}
-
-.mr-20 {
-  margin-right: 2em;
-}
-
-.pd-025 {
-  padding: 0.25em;
-}
-
-.pd-05 {
-  padding: 0.5em;
-}
-
-.pd-075 {
-  padding: 0.75em;
-}
-
-.pd-10 {
-  padding: 1em;
-}
-
-.pd-125 {
-  padding: 1.25em;
-}
-
-.pd-15 {
-  padding: 1.25em;
-}
-
-.pd-175 {
-  padding: 1.25em;
-}
-
-.pd-20 {
-  padding: 2em;
-}
-
-.pt-025 {
-  padding-top: 0.25em;
-}
-
-.pt-05 {
-  padding-top: 0.5em;
-}
-
-.pt-075 {
-  padding-top: 0.75em;
-}
-
-.pt-10 {
-  padding-top: 1em;
-}
-
-.pt-125 {
-  padding-top: 1.25em;
-}
-
-.pt-15 {
-  padding-top: 1.5em;
-}
-
-.pt-175 {
-  padding-top: 1.75em;
-}
-
-.pt-20 {
-  padding-top: 2em;
-}
-
-.pb-025 {
-  padding-bottom: 0.25em;
-}
-
-.pb-05 {
-  padding-bottom: 0.5em;
-}
-
-.pb-075 {
-  padding-bottom: 0.75em;
-}
-
-.pb-10 {
-  padding-bottom: 1em;
-}
-
-.pb-125 {
-  padding-bottom: 1.25em;
-}
-
-.pb-15 {
-  padding-bottom: 1.5em;
-}
-
-.pb-175 {
-  padding-bottom: 1.75em;
-}
-
-.pb-20 {
-  padding-bottom: 2em;
-}
-
-.pl-025 {
-  padding-left: 0.25em;
-}
-
-.pl-05 {
-  padding-left: 0.5em;
-}
-
-.pl-075 {
-  padding-left: 0.75em;
-}
-
-.pl-10 {
-  padding-left: 1em;
-}
-
-.pl-125 {
-  padding-left: 1.25em;
-}
-
-.pl-15 {
-  padding-left: 1.5em;
-}
-
-.pl-175 {
-  padding-left: 1.75em;
-}
-
-.pl-20 {
-  padding-left: 2em;
-}
-
-.pr-025 {
-  padding-right: 0.25em;
-}
-
-.pr-05 {
-  padding-right: 0.5em;
-}
-
-.pr-075 {
-  padding-right: 0.75em;
-}
-
-.pr-10 {
-  padding-right: 1em;
-}
-
-.pr-125 {
-  padding-right: 1.25em;
-}
-
-.pr-15 {
-  padding-right: 1.5em;
-}
-
-.pr-175 {
-  padding-right: 1.75em;
-}
 
-.pr-20 {
-  padding-right: 2em;
+  @each $mq, $class in $min-mqs {
+    @include mq($mq) {
+      &.blft-#{$class} {
+        margin-left: 0;
+      }
+
+      &.brgt-#{$class} {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@each $class, $loc in $mg-auto {
+  .m#{$class}-auto {
+    margin#{$loc}: auto;
+  }
+}
+
+@each $dual-loc, $first, $second in $dual-locs {
+  .m#{$dual-loc}-auto {
+    margin-#{$first}: auto;
+    margin-#{$second}: auto;
+  }
+}
+
+@each $class, $size in $mg-pd {
+  .mg-#{$class} {
+    margin: #{$size};
+  }
+
+  .pd-#{$class} {
+    padding: #{$size};
+  }
+
+  @each $loc, $prop in $locs {
+    .m#{$loc}-#{$class} {
+      margin-#{$prop}: #{$size};
+    }
+
+    .p#{$loc}-#{$class} {
+      padding-#{$prop}: #{$size};
+    }
+  }
+
+  @each $dual-loc, $first, $second in $dual-locs {
+    .m#{$dual-loc}-#{$class} {
+      margin-#{$first}: #{$size};
+      margin-#{$second}: #{$size};
+    }
+
+    .p#{$dual-loc}-#{$class} {
+      padding-#{$first}: #{$size};
+      padding-#{$second}: #{$size};
+    }
+  }
+}
+
+@each $mq, $size-class in $min-mqs {
+  @include mq($mq) {
+    @each $class, $loc in $mg-auto {
+      .m#{$class}-#{$size-class}-auto {
+        margin#{$loc}: auto;
+      }
+    }
+
+    @each $dual-loc, $first, $second in $dual-locs {
+      .m#{$dual-loc}-#{$size-class}-auto {
+        margin-#{$first}: auto;
+        margin-#{$second}: auto;
+      }
+    }
+
+    @each $class, $size in $mg-pd {
+      .mg-#{$size-class}-#{$class} {
+        margin: #{$size};
+      }
+
+      .pd-#{$size-class}-#{$class} {
+        padding: #{$size};
+      }
+
+      @each $loc, $prop in $locs {
+        .m#{$loc}-#{$size-class}-#{$class} {
+          margin-#{$prop}: #{$size};
+        }
+
+        .p#{$loc}-#{$size-class}-#{$class} {
+          padding-#{$prop}: #{$size};
+        }
+      }
+
+      @each $dual-loc, $first, $second in $dual-locs {
+        .m#{$dual-loc}-#{$size-class}-#{$class} {
+          margin-#{$first}: #{$size};
+          margin-#{$second}: #{$size};
+        }
+
+        .p#{$dual-loc}-#{$size-class}-#{$class} {
+          padding-#{$first}: #{$size};
+          padding-#{$second}: #{$size};
+        }
+      }
+    }
+  }
 }
 
 .d-none {
@@ -1076,6 +499,18 @@
 
 .d-inblock {
   display: inline-block;
+}
+
+@each $min-max-mq in $min-max-mqs {
+  @include mq($min-max-mq) {
+    .d-none-#{$min-max-mq} {
+      display: none;
+    }
+
+    .d-inblock-#{$min-max-mq} {
+      display: inline-block;
+    }
+  }
 }
 
 .xbul {
@@ -1106,7 +541,7 @@
   width: 100%;
 }
 
-.h-fluid {
+.vh-fluid {
   min-height: 100vh;
 }
 
@@ -1133,31 +568,9 @@
 .p-absolute {
   position: absolute;
 
-  &.nmt-20 {
-    margin-top: -2.0em;
-  }
-
-  &.nmt-25 {
-    margin-top: -2.5em;
-  }
-
-  &.nmt-30 {
-    margin-top: -3.0em;
-  }
-
-  &.nmt-35 {
-    margin-top: -3.5em;
-  }
-
-  &.nmt-40 {
-    margin-top: -4.0em;
-  }
-
-  &.nmt-45 {
-    margin-top: -4.5em;
-  }
-
-  &.nmt-50 {
-    margin-top: -5.0em;
+  @each $class, $size in $nmt {
+    &.nmt-#{$class} {
+      margin-top: $size;
+    }
   }
 }
