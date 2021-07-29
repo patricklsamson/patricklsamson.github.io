@@ -10,7 +10,7 @@ nav {
 
     #nav-coll {
       @include mq(md) {
-        @include disp(hide) {
+        @include vis(hidden) {
           opacity: 0;
         }
 
@@ -45,7 +45,7 @@ nav {
 
           &:hover {
             ul.sub-menu {
-              @include disp(show) {
+              @include vis(visible) {
                 opacity: 1;
               }
             }
@@ -58,7 +58,7 @@ nav {
 
             &.active {
               & ~ ul.sub-menu {
-                @include disp(show) {
+                @include vis(visible) {
                   opacity: 1;
                 }
               }
@@ -70,7 +70,7 @@ nav {
 
             @include tran;
 
-            @include disp(hide) {
+            @include vis(hidden) {
               opacity: 0;
             }
           }
@@ -111,26 +111,26 @@ nav {
 
       @include tran;
 
-      @include disp(hide) {
+      @include vis(hidden) {
         opacity: 0;
       }
     }
 
     &.active {
       &:before {
-        @include disp(hide) {
+        @include vis(hidden) {
           opacity: 0;
         }
       }
 
       &:after {
-        @include disp(show) {
+        @include vis(visible) {
           opacity: 1;
         }
       }
 
       & ~ #nav-coll {
-        @include disp(show) {
+        @include vis(visible) {
           opacity: 1;
         }
       }
