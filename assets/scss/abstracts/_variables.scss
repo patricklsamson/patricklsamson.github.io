@@ -22,6 +22,44 @@ $black-05: rgba(0, 0, 0, 0.5);
 // HELPERS
 // --------------------------------------------------
 
+$mg-auto: (
+  "g": "",
+  "t": "-top",
+  "b": "-bottom",
+  "l": "-left",
+  "r": "-right",
+);
+
+$mg-pd: (
+  "025": 0.25em,
+  "05": 0.5em,
+  "075": 0.75em,
+  "10": 1em,
+  "125": 1.25em,
+  "15": 1.5em,
+  "175": 1.75em,
+  "20": 2em,
+);
+
+$locs: (
+  "t": "top",
+  "b": "bottom",
+  "l": "left",
+  "r": "right",
+);
+
+$dual-locs: ("tb" "top" "bottom", "lr" "left" "right");
+
+$nmt: (
+  "20": -2em,
+  "25": -2.5em,
+  "30": -3em,
+  "35": -3.5em,
+  "40": -4em,
+  "45": -4.5em,
+  "50": -5em,
+);
+
 $z-items: ("nav-btn", "search-box", "sticky");
 
 // --------------------------------------------------
@@ -34,3 +72,39 @@ $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
+
+$cont-mqs: (
+  "smup": $sm,
+  "mdup": $md,
+  "lgup": $lg,
+  "xlup": $xl,
+  "xxl": $xxl,
+);
+
+$min-mqs: (
+  "xsup": "xs",
+  "smup": "sm",
+  "mdup": "md",
+  "lgup": "lg",
+  "xlup": "xl",
+  "xxl": "xxl",
+);
+
+$max-mqs: ("xxs", "xs", "sm", "md", "lg", "xl");
+
+$min-max-mqs: (
+  "xsup",
+  "smup",
+  "mdup",
+  "lgup",
+  "xlup",
+  "xxl",
+  "xxs",
+  "xs",
+  "sm",
+  "md",
+  "lg",
+  "xl"
+);
+
+$bs-mqs: ("sm", "md", "lg", "xl", "xxl");
