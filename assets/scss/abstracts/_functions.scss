@@ -11,5 +11,5 @@
 }
 
 @function fa($icon) {
-  @return unquote('"') + unquote(s.insert($icon, "\\", 1)) + unquote('"');
+  @return s.unquote('"') + s.unquote(s.insert($icon, "\\", 1)) + s.unquote('"');
 }
