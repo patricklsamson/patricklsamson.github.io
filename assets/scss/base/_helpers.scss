@@ -82,7 +82,7 @@
   @include flex;
 
   &.ftop {
-    @include justify(f, start);
+    @include justify(f);
   }
 
   &.fbot {
@@ -90,7 +90,7 @@
   }
 
   &.flft {
-    @include align(i, f, start);
+    @include align(i, f);
   }
 
   &.frgt {
@@ -102,7 +102,7 @@
   @include flex(f);
 
   &.rftop {
-    @include align(i, f, start);
+    @include align(i, f);
   }
 
   &.rfbot {
@@ -110,7 +110,7 @@
   }
 
   &.rflft {
-    @include justify(f, start);
+    @include justify(f);
   }
 
   &.rfrgt {
@@ -124,7 +124,7 @@
       @include flex;
 
       &.ftop-#{$class} {
-        @include justify(f, start);
+        @include justify(f);
       }
 
       &.fbot-#{$class} {
@@ -132,7 +132,7 @@
       }
 
       &.flft-#{$class} {
-        @include align(i, f, start);
+        @include align(i, f);
       }
 
       &.frgt-#{$class} {
@@ -144,7 +144,7 @@
       @include flex(f);
 
       &.rftop-#{$class} {
-        @include align(i, f, start);
+        @include align(i, f);
       }
 
       &.rfbot-#{$class} {
@@ -152,7 +152,7 @@
       }
 
       &.rflft-#{$class} {
-        @include justify(f, start);
+        @include justify(f);
       }
 
       &.rfrgt-#{$class} {
@@ -175,7 +175,7 @@
   @include justify;
 
   &.gtop {
-    @include align(c, f, start);
+    @include align(c, f);
   }
 
   &.gbot {
@@ -183,7 +183,7 @@
   }
 
   &.glft {
-    @include justify(f, start);
+    @include justify(f);
   }
 
   &.grgt {
