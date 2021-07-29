@@ -420,7 +420,7 @@
   }
 }
 
-@mixin justify($center: t, $location: none) {
+@mixin justify($center: t, $location: start) {
   @if $center == t {
     @include prefix(
       (
@@ -456,7 +456,7 @@
   }
 }
 
-@mixin align($set: i, $center: t, $location: none) {
+@mixin align($set: i, $center: t, $location: start) {
   @if $set == i {
     @if $center == t {
       @include prefix(
