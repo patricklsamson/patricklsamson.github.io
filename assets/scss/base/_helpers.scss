@@ -343,32 +343,36 @@
 
 .talign {
   text-align: center;
+}
 
-  &.tlft {
-    text-align: left;
-  }
+.tlft {
+  text-align: left;
+}
 
-  &.trgt {
-    text-align: right;
-  }
+.trgt {
+  text-align: right;
+}
 
-  &.tjust {
-    text-align: justify;
-  }
+.tjust {
+  text-align: justify;
+}
 
-  @each $mq, $class in $min-mqs {
-    @include mq($mq) {
-      &.tlft-#{$class} {
-        text-align: left;
-      }
+@each $min-max-mq in $min-max-mqs {
+  @include mq($min-max-mq) {
+    .talign-#{$min-max-mq} {
+      text-align: center;
+    }
 
-      &.trgt-#{$class} {
-        text-align: right;
-      }
+    .tlft-#{$min-max-mq} {
+      text-align: left;
+    }
 
-      &.tjust-#{$class} {
-        text-align: justify;
-      }
+    .trgt-#{$min-max-mq} {
+      text-align: right;
+    }
+
+    .tjust-#{$min-max-mq} {
+      text-align: justify;
     }
   }
 }
@@ -377,24 +381,30 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
 
-  &.blft {
-    margin-left: 0;
-  }
+.blft {
+  margin-left: 0;
+}
 
-  &.brgt {
-    margin-right: 0;
-  }
+.brgt {
+  margin-right: 0;
+}
 
-  @each $mq, $class in $min-mqs {
-    @include mq($mq) {
-      &.blft-#{$class} {
-        margin-left: 0;
-      }
+@each $min-max-mq in $min-max-mqs {
+  @include mq($min-max-mq) {
+    .balign-#{$min-max-mq} {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-      &.brgt-#{$class} {
-        margin-right: 0;
-      }
+    .blft-#{$min-max-mq} {
+      margin-left: 0;
+    }
+
+    .brgt-#{$min-max-mq} {
+      margin-right: 0;
     }
   }
 }
@@ -535,42 +545,38 @@
   text-shadow: 0 5px 10px $black-05;
 }
 
-.modal-open {
-  position: fixed;
-  overflow-y: hidden;
-  width: 100%;
+@each $span, $prop, $dim in $fluids {
+  .#{$span}-fluid {
+    #{$prop}: $dim;
+  }
 }
 
-.vh-fluid {
-  min-height: 100vh;
-}
-
-.vw-fluid {
-  width: 100vw;
-}
-
-.w-fluid {
-  width: 100%;
-}
-
-.x-scroll {
-  overflow-x: scroll;
-}
-
-.y-scroll {
-  overflow-y: scroll;
-}
-
-.p-relative {
-  position: relative;
-}
-
-.p-absolute {
-  position: absolute;
-
-  @each $class, $size in $nmt {
-    &.nmt-#{$class} {
-      margin-top: $size;
+@each $min-max-mq in $min-max-mqs {
+  @include mq($min-max-mq) {
+    @each $span, $prop, $dim in $fluids {
+      .#{$span}-fluid-#{$min-max-mq} {
+        #{$prop}: $dim;
+      }
     }
+  }
+}
+
+@each $xy in $xys {
+  @each $scroll-hidden in $scroll-hiddens {
+    .#{$xy}-#{$scroll-hidden} {
+      overflow-#{$xy}: $scroll-hidden;
+    }
+  }
+}
+
+@each $position in $positions {
+  .p-#{$position} {
+    position: $position;
+  }
+}
+
+@each $class, $size in $nmt {
+  .nmt-#{$class} {
+    margin-top: $size;
   }
 }
