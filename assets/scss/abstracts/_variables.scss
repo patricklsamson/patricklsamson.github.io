@@ -50,6 +50,17 @@ $locs: (
 
 $dual-locs: ("tb" "top" "bottom", "lr" "left" "right");
 
+$fluids: (
+  "vh" "min-height" 100vh,
+  "vw" "width" 100vw,
+  "h" "height" 100%,
+  "w" "width" 100%
+);
+
+$xys: ("x", "y");
+$scroll-hiddens: (scroll, hidden);
+$positions: (relative, absolute, fixed);
+
 $nmt: (
   "20": -2em,
   "25": -2.5em,
@@ -60,7 +71,7 @@ $nmt: (
   "50": -5em,
 );
 
-$z-items: ("nav-btn", "search-box", "sticky");
+$z-items: ("nav-btn", "search-box", "logo", "sticky");
 
 // --------------------------------------------------
 // MEDIA QUERIES
@@ -106,5 +117,3 @@ $min-max-mqs: (
   "lg",
   "xl"
 );
-
-$bs-mqs: ("sm", "md", "lg", "xl", "xxl");
