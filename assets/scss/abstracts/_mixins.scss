@@ -289,17 +289,65 @@
   }
 }
 
+@mixin prefix($declaration, $prefixes: (), $set: prop, $include: t) {
+  @if $set == prop {
+    @each $property, $value in $declaration {
+      @each $prefix in $prefixes {
+        #{"-" + $prefix + "-" + $property}: $value;
+      }
+
+      @content;
+
+      @if $include == t {
+        #{$property}: $value;
+      }
+    }
+  } @else if $set == val {
+    @each $property, $value in $declaration {
+      @each $prefix in $prefixes {
+        #{$property}: #{"-" + $prefix + "-" + $value};
+      }
+
+      @content;
+
+      @if $include == t {
+        #{$property}: $value;
+      }
+    }
+  }
+}
+
+@mixin z-index($index, $position: none) {
+  @if $position == r {
+    position: relative;
+  } @else if $position == a {
+    position: absolute;
+  } @else if $position == f {
+    position: fixed;
+  } @else if $position == s {
+    @include prefix(
+      (
+        position: sticky,
+      ),
+      webkit
+    );
+  }
+
+  z-index: f.z("#{$index}");
+}
+
 @mixin class($class: class) {
   @if $class == sticky {
     &.sticky {
-      position: fixed;
       top: 0;
       width: 100%;
-      z-index: f.z("sticky");
+      @include z-index(sticky, f);
+      @content;
     }
   } @else if $class == lazy {
     &.lazy {
       background-image: none;
+      @content;
     }
   }
 }
@@ -308,7 +356,6 @@
   &:#{$pseudo-element} {
     content: ".";
     font-size: 0;
-
     @content;
   }
 }
@@ -347,7 +394,6 @@
     border-style: solid;
     border-color: transparent;
     border-#{$direction}-color: $color;
-
     @content;
   } @else {
     &:#{$pseudo-element} {
@@ -359,7 +405,6 @@
       border-style: solid;
       border-color: transparent;
       border-#{$direction}-color: $color;
-
       @content;
     }
   }
@@ -375,34 +420,6 @@
     content: ".";
     clear: both;
     height: 0;
-  }
-}
-
-@mixin prefix($declarations, $prefixes: (), $set: prop, $include: t) {
-  @if $set == prop {
-    @each $property, $value in $declarations {
-      @each $prefix in $prefixes {
-        #{"-" + $prefix + "-" + $property}: $value;
-      }
-
-      @content;
-
-      @if $include == t {
-        #{$property}: $value;
-      }
-    }
-  } @else if $set == val {
-    @each $property, $value in $declarations {
-      @each $prefix in $prefixes {
-        #{$property}: #{"-" + $prefix + "-" + $value};
-      }
-
-      @content;
-
-      @if $include == t {
-        #{$property}: $value;
-      }
-    }
   }
 }
 
@@ -619,7 +636,6 @@
 
 @mixin vis($display) {
   visibility: $display;
-
   @content;
 }
 
