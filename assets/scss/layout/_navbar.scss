@@ -1,8 +1,35 @@
 @use "../abstracts" as *;
 
+body {
+  height: 1000px;
+}
+
 nav {
   &#nav-bar {
+    @include tran;
+
+    @include class(sticky) {
+      background: hsla(210, 10%, 23%, 0.8);
+
+      #nav-btn {
+        border-color: #f8f9fa;
+      }
+
+      #nav-btn:before,
+      #nav-btn:after,
+      a {
+        color: #f8f9fa;
+      }
+    }
+
+    img {
+      width: 50px;
+      @include z-index(logo, r);
+    }
+
     button#nav-btn {
+      float: right;
+
       @include mq(lgup) {
         display: none;
       }
@@ -10,6 +37,12 @@ nav {
 
     #nav-coll {
       @include mq(md) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: hsla(210, 10%, 23%, 0.8);
+
         @include vis(hidden) {
           opacity: 0;
         }
@@ -20,12 +53,44 @@ nav {
       .menu-container {
         & > ul {
           & > li {
+            &:before,
+            &:after {
+              color: transparent;
+              font-weight: 700;
+
+              @include tran;
+            }
+
+            &:before {
+              content: "[ ";
+            }
+
+            &:after {
+              content: " ]";
+            }
+
+            &:hover {
+              &:before,
+              &:after {
+                color: hsl(180, 33%, 55%);
+              }
+            }
+
             @include mq(lgup) {
               display: inline-block;
             }
 
             @include mq(md) {
               display: block;
+              margin: 2em 0;
+            }
+
+            a {
+              padding: 1em;
+
+              @include mq(md) {
+                color: #f8f9fa;
+              }
             }
           }
         }
@@ -36,44 +101,6 @@ nav {
       & > ul {
         & > li {
           display: inline-block;
-        }
-      }
-
-      ul {
-        li {
-          position: relative;
-
-          &:hover {
-            ul.sub-menu {
-              @include vis(visible) {
-                opacity: 1;
-              }
-            }
-          }
-
-          a#content-btn {
-            @include fa(f078);
-
-            @include tran;
-
-            &.active {
-              & ~ ul.sub-menu {
-                @include vis(visible) {
-                  opacity: 1;
-                }
-              }
-            }
-          }
-
-          ul.sub-menu {
-            position: absolute;
-
-            @include tran;
-
-            @include vis(hidden) {
-              opacity: 0;
-            }
-          }
         }
       }
     }
