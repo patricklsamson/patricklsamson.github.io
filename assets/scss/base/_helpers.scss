@@ -561,6 +561,16 @@
   }
 }
 
+.vwh-fluid {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.wh-fluid {
+  width: 100%;
+  height: 100%;
+}
+
 @each $xy in $xys {
   @each $scroll-hidden in $scroll-hiddens {
     .#{$xy}-#{$scroll-hidden} {
