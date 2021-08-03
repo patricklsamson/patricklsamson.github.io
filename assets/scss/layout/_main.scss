@@ -1,1 +1,13 @@
 @use "../abstracts" as *;
+
+main {
+  .grid-cont {
+    @include grid-cont(c-rep, 200px, 475px, 2);
+
+    .wrap-portfolio:first-child {
+      .wrap-portfolio-inner-back {
+        @include bg($batch8);
+      }
+    }
+  }
+}
