@@ -1,1 +1,27 @@
 @use "../abstracts" as *;
+
+.btn-bracket {
+  &:before,
+  &:after {
+    color: transparent;
+    font-weight: 700;
+
+    @include tran;
+  }
+
+  &:before {
+    content: "[ ";
+  }
+
+  &:after {
+    content: " ]";
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      color: $cyan;
+      text-shadow: 0 2px 5px $white-04;
+    }
+  }
+}
