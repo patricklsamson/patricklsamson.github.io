@@ -10,13 +10,21 @@
 // COLORS
 // --------------------------------------------------
 
-$gray: #6c757d;
-$dgray: #343a40;
-$black-05: rgba(0, 0, 0, 0.5);
+$gray: hsl(208, 7%, 46%);
+$dgray: hsl(210, 10%, 23%);
+$black-05: hsla(0, 0%, 0%, 0.5);
+$cyan: hsl(180, 33%, 55%);
+$white: hsl(210, 17%, 98%);
+$dgray-08: hsla(210, 10%, 23%, 0.8);
+$dgray-06: hsla(210, 10%, 23%, 0.6);
+$white-04: hsla(210, 17%, 98%, 0.4);
 
 // --------------------------------------------------
 // URL
 // --------------------------------------------------
+
+$batch8: url(../img/batch8-activities.jpg);
+$blue-gray-wp: url(../img/blue-gray-wp.jpg);
 
 // --------------------------------------------------
 // HELPERS
@@ -51,10 +59,10 @@ $locs: (
 $dual-locs: ("tb" "top" "bottom", "lr" "left" "right");
 
 $fluids: (
-  "vh" "min-height" 100vh,
   "vw" "width" 100vw,
-  "h" "height" 100%,
-  "w" "width" 100%
+  "vh" "min-height" 100vh,
+  "w" "width" 100%,
+  "h" "height" 100%
 );
 
 $xys: ("x", "y");
