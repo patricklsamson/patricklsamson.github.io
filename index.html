@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="assets/css/main.min.css" />
   </head>
   <body>
-    <nav id="nav-bar" class="ptb-05">
+    <nav id="nav-bar" class="ptb-05 p-fixed w-fluid">
       <div class="cont">
         <div class="grid">
           <div class="gcol-3 mh flex flft">
@@ -45,10 +45,14 @@
                     <div class="valign">
                       <div class="menu-container">
                         <ul>
-                          <li><a href="#">HOME</a></li>
-                          <li><a href="#">PROFESSIONAL</a></li>
-                          <li><a href="#">PORTFOLIO</a></li>
-                          <li><a href="#">CONTACT</a></li>
+                          <li class="btn-bracket"><a href="#home">HOME</a></li>
+                          <li class="btn-bracket">
+                            <a href="#">PROFESSIONAL</a>
+                          </li>
+                          <li class="btn-bracket">
+                            <a href="#portfolio">PORTFOLIO</a>
+                          </li>
+                          <li class="btn-bracket"><a href="#">CONTACT</a></li>
                         </ul>
                       </div>
                     </div>
@@ -61,17 +65,44 @@
       </div>
     </nav>
 
-    <section class="sec-banner">
-      <div class="cont">
-        <h1>I am Patrick Samson</h1>
+    <header id="home" class="img prlax">
+      <div class="wrap-overlay">
+        <div class="cont vh-fluid flex">
+          <h1>I am Patrick Samson</h1>
+        </div>
       </div>
-    </section>
+    </header>
 
-    <main>
+    <div id="portfolio" class="p-absolute nmt-50"></div>
+
+    <main class="pd50 wrap-gray">
       <div class="cont">
-        <a href="https://patricklsamson.github.io/batch8-activities/"
-          >Batch 8 Activities</a
-        >
+        <h2 class="talign mb-05">Portfolio</h2>
+
+        <div class="grid-cont">
+          <div class="wrap-portfolio">
+            <a href="https://patricklsamson.github.io/batch8-activities/">
+              <div class="wrap-portfolio-inner p-relative wh-fluid">
+                <div
+                  class="wrap-portfolio-inner-front p-absolute wh-fluid pd-15"
+                >
+                  <h3 class="mb-025">Batch 8 Activities</h3>
+                  <p>Compilation of Avion School Batch 8 Activities</p>
+                </div>
+
+                <div
+                  class="
+                    wrap-portfolio-inner-back
+                    p-absolute
+                    wh-fluid
+                    pd-15
+                    img
+                  "
+                ></div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </main>
 
