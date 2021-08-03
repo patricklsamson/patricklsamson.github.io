@@ -1,1 +1,64 @@
 @use "../abstracts" as *;
+
+.wrap-portfolio {
+  border: 5px solid #000;
+  background: transparent;
+
+  @include prefix(
+    (
+      perspective: 1000px,
+    ),
+    webkit moz
+  );
+
+  &:hover {
+    .wrap-portfolio-inner {
+      @include prefix(
+        (
+          transform: rotateY(180deg),
+        ),
+        webkit moz ms o
+      );
+    }
+  }
+
+  .wrap-portfolio-inner {
+    @include tran(transform, 0.8s);
+
+    @include prefix(
+      (
+        transform-style: preserve-3d,
+      ),
+      webkit moz
+    );
+
+    .wrap-portfolio-inner-front,
+    .wrap-portfolio-inner-back {
+      @include prefix(
+        (
+          backface-visibility: hidden,
+        ),
+        webkit moz
+      );
+    }
+
+    .wrap-portfolio-inner-back {
+      background: green;
+
+      @include prefix(
+        (
+          transform: rotateY(180deg),
+        ),
+        webkit moz ms o
+      );
+    }
+  }
+}
+
+.wrap-overlay {
+  background: $dgray-06;
+}
+
+.wrap-gray {
+  background: $dgray;
+}
