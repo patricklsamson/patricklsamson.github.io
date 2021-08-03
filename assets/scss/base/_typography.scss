@@ -21,6 +21,21 @@ html {
   .h#{$i} {
     line-height: 1.2;
     font-size: $rem;
+    color: $white;
+
+    &:before,
+    &:after {
+      color: $cyan;
+      text-shadow: 0 2px 5px $white-04;
+    }
+
+    &:before {
+      content: "[ ";
+    }
+
+    &:after {
+      content: " ]";
+    }
 
     @include mq(lgup) {
       font-size: calc(#{$rem} + #{$vw});
@@ -41,7 +56,7 @@ html {
 }
 
 .fs-20 {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 
 @include fonts;
