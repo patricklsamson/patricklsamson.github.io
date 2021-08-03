@@ -115,79 +115,36 @@ function nav_bar(callback) {
   }
 }
 
-function sticky(element) {
+function scroll_class(element, className) {
   add_event(window, "scroll", function () {
     if (
       window.pageYOffset > element.offsetTop ||
       document.documentElement.scrollTop > element.offsetTop
     ) {
-      add_class(element, "sticky");
+      add_class(element, className);
     } else {
-      remove_class(element, "sticky");
-    }
-  });
-}
-
-function search_sel() {
-  var i;
-
-  add_event(qsel(".selected"), "click", function () {
-    toggle_class(this, "active");
-    qsel(".search-box input").value = "";
-
-    setTimeout(function () {
-      for (i = 0; i < qsel_all(".option").length; i++) {
-        remove_class(qsel_all(".option")[i], "hide");
-      }
-    }, 500);
-
-    if (has_class(this, "active")) {
-      qsel(".search-box input").focus();
-    }
-  });
-
-  for (i = 0; i < qsel_all(".option").length; i++) {
-    add_event(qsel_all(".option")[i], "click", function () {
-      qsel(".selected").innerHTML = this.querySelector("label").innerHTML;
-      remove_class(qsel(".selected"), "active");
-      qsel(".search-box input").value = "";
-
-      setTimeout(function () {
-        remove_class(qsel_all(".option")[i], "hide");
-      }, 500);
-    });
-  }
-
-  add_event(qsel(".search-box input"), "keyup", function () {
-    for (i = 0; i < qsel_all(".option").length; i++) {
-      if (qsel_all(".option")[i].querySelector("label")) {
-        if (
-          qsel_all(".option")
-            [i].querySelector("label")
-            .innerHTML.toLowerCase()
-            .indexOf(this.value.toLowerCase()) > -1
-        ) {
-          remove_class(qsel_all(".option")[i], "hide");
-        } else {
-          add_class(qsel_all(".option")[i], "hide");
-        }
-      }
+      remove_class(element, className);
     }
   });
 }
 
 function match_height(element) {
-  var i = 0;
-  var items = qsel_all(element);
-  var itemsHeight = [];
+  var i;
+  var heights = [];
 
-  for (i = 0; i < items.length; i++) {
-    itemsHeight.push(items[i].offsetHeight);
+  for (i = 0; i < qsel_all(element).length; i++) {
+    heights.push(qsel_all(element)[i].offsetHeight);
   }
 
-  var maxHeight = Math.max(...itemsHeight);
+  var max = heights[0];
 
-  for (i = 0; i < items.length; i++) {
-    items[i].style.height = maxHeight + "px";
+  for(i = 0; i < heights.length; i++) {
+    if(heights[i] > max) {
+      max = heights[i];
+    }
+  }
+
+  for (i = 0; i < qsel_all(element).length; i++) {
+    qsel_all(element)[i].style.height = max + "px";
   }
 }
