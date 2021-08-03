@@ -8,17 +8,16 @@ nav {
   &#nav-bar {
     @include tran;
 
-    @include class(sticky) {
-      background: hsla(210, 10%, 23%, 0.8);
+    &.bg-change {
+      background: $dgray-08;
 
       #nav-btn {
-        border-color: #f8f9fa;
+        border-color: $white;
       }
 
       #nav-btn:before,
-      #nav-btn:after,
-      a {
-        color: #f8f9fa;
+      #nav-btn:after {
+        color: $white;
       }
     }
 
@@ -41,7 +40,7 @@ nav {
         top: 0;
         left: 0;
         width: 100vw;
-        background: hsla(210, 10%, 23%, 0.8);
+        background: $dgray-08;
 
         @include vis(hidden) {
           opacity: 0;
@@ -53,29 +52,6 @@ nav {
       .menu-container {
         & > ul {
           & > li {
-            &:before,
-            &:after {
-              color: transparent;
-              font-weight: 700;
-
-              @include tran;
-            }
-
-            &:before {
-              content: "[ ";
-            }
-
-            &:after {
-              content: " ]";
-            }
-
-            &:hover {
-              &:before,
-              &:after {
-                color: hsl(180, 33%, 55%);
-              }
-            }
-
             @include mq(lgup) {
               display: inline-block;
             }
@@ -87,10 +63,7 @@ nav {
 
             a {
               padding: 1em;
-
-              @include mq(md) {
-                color: #f8f9fa;
-              }
+              color: $white;
             }
           }
         }
