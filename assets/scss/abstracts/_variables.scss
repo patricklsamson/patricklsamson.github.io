@@ -47,6 +47,12 @@ $mg-pd: (
   "15": 1.5em,
   "175": 1.75em,
   "20": 2em,
+  "25": 2.5em,
+  "30": 3em,
+  "35": 3.5em,
+  "40": 4em,
+  "45": 4.5em,
+  "50": 5em,
 );
 
 $locs: (
@@ -68,16 +74,6 @@ $fluids: (
 $xys: ("x", "y");
 $scroll-hiddens: (scroll, hidden);
 $positions: (relative, absolute, fixed);
-
-$nmt: (
-  "20": -2em,
-  "25": -2.5em,
-  "30": -3em,
-  "35": -3.5em,
-  "40": -4em,
-  "45": -4.5em,
-  "50": -5em,
-);
 
 $fonts: ();
 $z-items: ("nav-btn", "search-box", "logo", "sticky");
