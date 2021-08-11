@@ -115,6 +115,19 @@ function nav_bar(callback) {
   }
 }
 
+function neg_margin(height_element, margin_element) {
+  var i;
+  var height = 0;
+
+  for (i = 0; i < qsel_all(height_element).length; i++) {
+    height += qsel_all(height_element)[i].offsetHeight;
+  }
+
+  for (i = 0; i < qsel_all(margin_element).length; i++) {
+    qsel_all(margin_element)[i].style.marginTop = "-" + height + "px";
+  }
+}
+
 function scroll_class(element, className) {
   add_event(window, "scroll", function () {
     if (
