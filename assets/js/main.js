@@ -1,6 +1,6 @@
 doc_ready(() => {
   nav_bar();
-  neg_margin(".h-add", ".nmt")
+  fixed_el(".h-add", ".nmt", ".cvh")
   scroll_class(id("nav-bar"), "bg-change");
   match_height(".mh");
 });
