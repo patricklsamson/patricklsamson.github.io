@@ -43,6 +43,42 @@ html {
   }
 }
 
+.talign {
+  text-align: center;
+}
+
+.tlft {
+  text-align: left;
+}
+
+.trgt {
+  text-align: right;
+}
+
+.tjust {
+  text-align: justify;
+}
+
+@each $min-max-mq in $min-max-mqs {
+  @include mq($min-max-mq) {
+    .talign-#{$min-max-mq} {
+      text-align: center;
+    }
+
+    .tlft-#{$min-max-mq} {
+      text-align: left;
+    }
+
+    .trgt-#{$min-max-mq} {
+      text-align: right;
+    }
+
+    .tjust-#{$min-max-mq} {
+      text-align: justify;
+    }
+  }
+}
+
 @for $i from 1 through 9 {
   .fw-#{$i}00 {
     font-weight: #{$i}00;
@@ -59,4 +95,12 @@ html {
   font-size: 2rem;
 }
 
+.txtfx {
+  text-shadow: 0 5px 10px $black-05;
+}
+
 @include fonts;
+
+// .txt-blk-shadow {
+//   text-shadow: ;
+// }
