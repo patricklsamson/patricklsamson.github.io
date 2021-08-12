@@ -115,16 +115,22 @@ function nav_bar(callback) {
   }
 }
 
-function neg_margin(height_element, margin_element) {
+function fixed_el(fixed_element, margin_element, vh_element) {
   var i;
   var height = 0;
 
-  for (i = 0; i < qsel_all(height_element).length; i++) {
-    height += qsel_all(height_element)[i].offsetHeight;
+  for (i = 0; i < qsel_all(fixed_element).length; i++) {
+    height += qsel_all(fixed_element)[i].offsetHeight;
   }
 
   for (i = 0; i < qsel_all(margin_element).length; i++) {
     qsel_all(margin_element)[i].style.marginTop = "-" + height + "px";
+  }
+
+  if (vh_element) {
+    for (i = 0; i < qsel_all(vh_element).length; i++) {
+      qsel_all(vh_element)[i].style.minHeight = "calc(100vh - " + height + "px)";
+    }
   }
 }
 
