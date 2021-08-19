@@ -1,6 +1,8 @@
 @use "../abstracts" as *;
 
 main {
+  @include bg($wave-wp);
+
   .grid-cont {
     @include grid-cont(c-rep, 200px, 475px, 2);
 
