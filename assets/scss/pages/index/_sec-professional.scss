@@ -1,0 +1,66 @@
+@use "../../abstracts" as *;
+
+.sec-professional {
+  @include all(gcol) {
+    color: $white;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    i {
+      text-shadow: 0 2px 4px $black-05, 0 -2px 4px $black-05;
+      vertical-align: middle;
+
+      &.fa-square {
+        color: $cyan;
+      }
+
+      &.fa-html5 {
+        color: hsl(13, 77%, 52%);
+      }
+
+      &.fa-css3-alt {
+        color: hsl(205, 79%, 40%);
+      }
+
+      &.fa-sass {
+        color: hsl(330, 50%, 60%);
+      }
+
+      &.fa-js {
+        color: hsl(53, 93%, 54%);
+      }
+
+      &.fa-wordpress {
+        color: hsl(199, 65%, 37%);
+      }
+
+      &.fa-php {
+        color: hsl(236, 29%, 59%);
+      }
+    }
+
+    svg {
+      width: 45px;
+      vertical-align: middle;
+      padding: 5px;
+
+      &.jquery {
+        background: hsl(205, 92%, 35%);
+      }
+
+      &.ruby {
+        background: hsl(3, 64%, 49%);
+      }
+
+      &.rails {
+        background: hsl(0, 100%, 40%);
+        width: 60px
+      }
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+}
