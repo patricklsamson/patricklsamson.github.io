@@ -110,6 +110,18 @@ function nav_bar(callback) {
     toggle_class(document.body, "y-hidden");
   });
 
+  add_event(window, "click", function (e) {
+    if (
+      !e.target.closest("#nav-btn") ||
+      !id("nav-btn").contains(e.target || e.srcElement)
+    ) {
+      if (has_class(id("nav-btn"), "active")) {
+        remove_class(id("nav-btn"), "active");
+        remove_class(document.body, "y-hidden");
+      }
+    }
+  });
+
   if (callback) {
     callback();
   }
