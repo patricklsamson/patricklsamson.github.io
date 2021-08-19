@@ -45,36 +45,40 @@ html {
 
 .talign {
   text-align: center;
-}
 
-.tlft {
-  text-align: left;
-}
+  &.tlft {
+    text-align: left;
+  }
 
-.trgt {
-  text-align: right;
-}
+  &.trgt {
+    text-align: right;
+  }
 
-.tjust {
-  text-align: justify;
+  &.tjust {
+    text-align: justify;
+  }
+
+  @each $min-max-mq in $min-max-mqs {
+    @include mq($min-max-mq) {
+      &.tlft-#{$min-max-mq} {
+        text-align: left;
+      }
+
+      &.trgt-#{$min-max-mq} {
+        text-align: right;
+      }
+
+      &.tjust-#{$min-max-mq} {
+        text-align: justify;
+      }
+    }
+  }
 }
 
 @each $min-max-mq in $min-max-mqs {
   @include mq($min-max-mq) {
     .talign-#{$min-max-mq} {
       text-align: center;
-    }
-
-    .tlft-#{$min-max-mq} {
-      text-align: left;
-    }
-
-    .trgt-#{$min-max-mq} {
-      text-align: right;
-    }
-
-    .tjust-#{$min-max-mq} {
-      text-align: justify;
     }
   }
 }
