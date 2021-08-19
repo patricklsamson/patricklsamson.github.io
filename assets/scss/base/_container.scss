@@ -96,6 +96,26 @@
   &.frgt {
     @include align(i, f, end);
   }
+
+  @each $mq, $class in $min-mqs {
+    @include mq($mq) {
+      &.ftop-#{$class} {
+        @include justify(f);
+      }
+
+      &.fbot-#{$class} {
+        @include justify(f, end);
+      }
+
+      &.flft-#{$class} {
+        @include align(i, f);
+      }
+
+      &.frgt-#{$class} {
+        @include align(i, f, end);
+      }
+    }
+  }
 }
 
 .rflex {
@@ -116,33 +136,9 @@
   &.rfrgt {
     @include justify(f, end);
   }
-}
 
-@each $mq, $class in $min-mqs {
-  @include mq($mq) {
-    .flex-#{$class} {
-      @include flex;
-
-      &.ftop-#{$class} {
-        @include justify(f);
-      }
-
-      &.fbot-#{$class} {
-        @include justify(f, end);
-      }
-
-      &.flft-#{$class} {
-        @include align(i, f);
-      }
-
-      &.frgt-#{$class} {
-        @include align(i, f, end);
-      }
-    }
-
-    .rflex-#{$class} {
-      @include flex(f);
-
+  @each $mq, $class in $min-mqs {
+    @include mq($mq) {
       &.rftop-#{$class} {
         @include align(i, f);
       }
@@ -158,6 +154,18 @@
       &.rfrgt-#{$class} {
         @include justify(f, end);
       }
+    }
+  }
+}
+
+@each $mq, $class in $min-mqs {
+  @include mq($mq) {
+    .flex-#{$class} {
+      @include flex;
+    }
+
+    .rflex-#{$class} {
+      @include flex(f);
     }
   }
 }
@@ -249,7 +257,7 @@
     vertical-align: text-top;
   }
 
-  &.t-bottom {
+  &.t-bot {
     vertical-align: text-bottom;
   }
 
@@ -267,7 +275,7 @@
         vertical-align: text-top;
       }
 
-      &.t-bottom-#{$class} {
+      &.t-bot-#{$class} {
         vertical-align: text-bottom;
       }
     }
