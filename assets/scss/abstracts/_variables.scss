@@ -15,6 +15,7 @@ $dgray: hsl(210, 10%, 23%);
 $black-05: hsla(0, 0%, 0%, 0.5);
 $cyan: hsl(180, 33%, 55%);
 $white: hsl(210, 17%, 98%);
+$dgray-09: hsla(210, 10%, 23%, 0.9);
 $dgray-08: hsla(210, 10%, 23%, 0.8);
 $dgray-06: hsla(210, 10%, 23%, 0.6);
 $white-04: hsla(210, 17%, 98%, 0.4);
@@ -77,7 +78,7 @@ $scroll-hiddens: (scroll, hidden);
 $positions: (relative, absolute, fixed);
 
 $fonts: ();
-$z-items: ("nav-btn", "search-box", "logo", "sticky");
+$z-items: ("nav-btn", "nav-bar", "search-box", "logo");
 
 // --------------------------------------------------
 // MEDIA QUERIES
