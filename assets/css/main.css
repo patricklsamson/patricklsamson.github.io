@@ -1788,62 +1788,107 @@ table {
     margin-right: 0;
   }
 }
-.table .valign {
+.table > .valign {
   display: table-cell;
+}
+
+.valign {
   vertical-align: middle;
 }
-.table .valign.top {
+.valign.top {
   vertical-align: top;
 }
-.table .valign.bot {
+.valign.bot {
   vertical-align: bottom;
 }
+.valign.t-top {
+  vertical-align: text-top;
+}
+.valign.t-bottom {
+  vertical-align: text-bottom;
+}
 @media only screen and (min-width: 481px) {
-  .table .valign.top-xs {
+  .valign.top-xs {
     vertical-align: top;
   }
-  .table .valign.bot-xs {
+  .valign.bot-xs {
     vertical-align: bottom;
+  }
+  .valign.t-top-xs {
+    vertical-align: text-top;
+  }
+  .valign.t-bottom-xs {
+    vertical-align: text-bottom;
   }
 }
 @media only screen and (min-width: 576px) {
-  .table .valign.top-sm {
+  .valign.top-sm {
     vertical-align: top;
   }
-  .table .valign.bot-sm {
+  .valign.bot-sm {
     vertical-align: bottom;
+  }
+  .valign.t-top-sm {
+    vertical-align: text-top;
+  }
+  .valign.t-bottom-sm {
+    vertical-align: text-bottom;
   }
 }
 @media only screen and (min-width: 768px) {
-  .table .valign.top-md {
+  .valign.top-md {
     vertical-align: top;
   }
-  .table .valign.bot-md {
+  .valign.bot-md {
     vertical-align: bottom;
+  }
+  .valign.t-top-md {
+    vertical-align: text-top;
+  }
+  .valign.t-bottom-md {
+    vertical-align: text-bottom;
   }
 }
 @media only screen and (min-width: 992px) {
-  .table .valign.top-lg {
+  .valign.top-lg {
     vertical-align: top;
   }
-  .table .valign.bot-lg {
+  .valign.bot-lg {
     vertical-align: bottom;
+  }
+  .valign.t-top-lg {
+    vertical-align: text-top;
+  }
+  .valign.t-bottom-lg {
+    vertical-align: text-bottom;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .table .valign.top-xl {
+  .valign.top-xl {
     vertical-align: top;
   }
-  .table .valign.bot-xl {
+  .valign.bot-xl {
     vertical-align: bottom;
+  }
+  .valign.t-top-xl {
+    vertical-align: text-top;
+  }
+  .valign.t-bottom-xl {
+    vertical-align: text-bottom;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .table .valign.top-xxl {
+  .valign.top-xxl {
     vertical-align: top;
   }
-  .table .valign.bot-xxl {
+  .valign.bot-xxl {
     vertical-align: bottom;
+  }
+  .valign.t-top-xxl {
+    vertical-align: text-top;
+  }
+  .valign.t-bottom-xxl {
+    vertical-align: text-bottom;
   }
 }
 
@@ -2688,6 +2733,10 @@ h6:after,
 
 .txtfx {
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.txt-blk-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .img {
@@ -9796,6 +9845,56 @@ main .grid-cont .wrap-portfolio:first-child .wrap-portfolio-inner-back {
 }
 .select-box .options-container .option label {
   cursor: pointer;
+}
+
+.sec-professional [class*=gcol] {
+  color: #f9fafb;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.sec-professional [class*=gcol] i {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.5);
+  vertical-align: middle;
+}
+.sec-professional [class*=gcol] i.fa-square {
+  color: #66b2b2;
+}
+.sec-professional [class*=gcol] i.fa-html5 {
+  color: #e34f26;
+}
+.sec-professional [class*=gcol] i.fa-css3-alt {
+  color: #1573b7;
+}
+.sec-professional [class*=gcol] i.fa-sass {
+  color: #cc6699;
+}
+.sec-professional [class*=gcol] i.fa-js {
+  color: #f7dd1d;
+}
+.sec-professional [class*=gcol] i.fa-wordpress {
+  color: #21759c;
+}
+.sec-professional [class*=gcol] i.fa-php {
+  color: #787cb5;
+}
+.sec-professional [class*=gcol] svg {
+  width: 45px;
+  vertical-align: middle;
+  padding: 5px;
+}
+.sec-professional [class*=gcol] svg.jquery {
+  background: #0767ab;
+}
+.sec-professional [class*=gcol] svg.ruby {
+  background: #cd352d;
+}
+.sec-professional [class*=gcol] svg.rails {
+  background: #cc0000;
+  width: 60px;
+}
+.sec-professional [class*=gcol] svg path {
+  fill: #f9fafb;
 }
 
 /*# sourceMappingURL=main.css.map */
