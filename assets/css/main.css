@@ -9623,6 +9623,9 @@ body {
   height: 1000px;
 }
 
+nav {
+  z-index: 3;
+}
 nav#nav-bar {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -9642,7 +9645,7 @@ nav#nav-bar.bg-change #nav-btn:after {
 nav#nav-bar img {
   width: 50px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 nav#nav-bar button#nav-btn {
   float: right;
@@ -9658,7 +9661,7 @@ nav#nav-bar button#nav-btn {
     top: 0;
     left: 0;
     width: 100vw;
-    background: rgba(53, 59, 65, 0.8);
+    background: rgba(53, 59, 65, 0.9);
     visibility: hidden;
     opacity: 0;
     -webkit-transition: all 0.5s;
@@ -9810,7 +9813,7 @@ main .grid-cont .wrap-portfolio:first-child .wrap-portfolio-inner-back {
   position: relative;
 }
 .select-box .search-box input[type*=text] {
-  z-index: 3;
+  z-index: 2;
   width: 100%;
   position: absolute;
   pointer-events: none;
