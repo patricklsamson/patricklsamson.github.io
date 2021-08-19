@@ -103,4 +103,9 @@ html {
 
 .txt-blk-shadow {
   text-shadow: 0 2px 4px $black-05, 0 -2px 4px $black-05;
+
+  &:before,
+  &:after {
+    text-shadow: 0 2px 4px $black-05, 0 -2px 4px $black-05;
+  }
 }
