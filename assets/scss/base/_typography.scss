@@ -101,6 +101,6 @@ html {
 
 @include fonts;
 
-// .txt-blk-shadow {
-//   text-shadow: ;
-// }
+.txt-blk-shadow {
+  text-shadow: 0 2px 4px $black-05, 0 -2px 4px $black-05;
+}
