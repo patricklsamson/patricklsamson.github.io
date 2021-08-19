@@ -129,7 +129,8 @@ function fixed_el(fixed_element, margin_element, vh_element) {
 
   if (vh_element) {
     for (i = 0; i < qsel_all(vh_element).length; i++) {
-      qsel_all(vh_element)[i].style.minHeight = "calc(100vh - " + height + "px)";
+      qsel_all(vh_element)[i].style.minHeight =
+        "calc(100vh - " + height + "px)";
     }
   }
 }
@@ -157,13 +158,36 @@ function match_height(element) {
 
   var max = heights[0];
 
-  for(i = 0; i < heights.length; i++) {
-    if(heights[i] > max) {
+  for (i = 0; i < heights.length; i++) {
+    if (heights[i] > max) {
       max = heights[i];
     }
   }
 
   for (i = 0; i < qsel_all(element).length; i++) {
     qsel_all(element)[i].style.height = max + "px";
+  }
+}
+
+function match_media(media, oldMedia, match, unmatch) {
+  if (window.matchMedia) {
+    var mq = window.matchMedia(media);
+
+    function matcher(param) {
+      if (param.matches) {
+        match();
+      } else {
+        unmatch();
+      }
+    }
+
+    matcher(mq);
+    add_event(mq, "change", matcher);
+  } else {
+    if (screen.width >= oldMedia) {
+      match();
+    } else {
+      unmatch();
+    }
   }
 }
