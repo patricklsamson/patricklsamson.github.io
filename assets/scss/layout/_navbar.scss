@@ -5,6 +5,8 @@ body {
 }
 
 nav {
+  z-index: z("nav-bar");
+
   &#nav-bar {
     @include tran;
 
@@ -40,7 +42,7 @@ nav {
         top: 0;
         left: 0;
         width: 100vw;
-        background: $dgray-08;
+        background: $dgray-09;
 
         @include vis(hidden) {
           opacity: 0;
