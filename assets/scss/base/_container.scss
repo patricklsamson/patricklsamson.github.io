@@ -229,27 +229,46 @@
     }
   }
 
-  .valign {
+  & > .valign {
     display: table-cell;
-    vertical-align: middle;
+  }
+}
 
-    &.top {
-      vertical-align: top;
-    }
+.valign {
+  vertical-align: middle;
 
-    &.bot {
-      vertical-align: bottom;
-    }
+  &.top {
+    vertical-align: top;
+  }
 
-    @each $mq, $class in $min-mqs {
-      @include mq($mq) {
-        &.top-#{$class} {
-          vertical-align: top;
-        }
+  &.bot {
+    vertical-align: bottom;
+  }
 
-        &.bot-#{$class} {
-          vertical-align: bottom;
-        }
+  &.t-top {
+    vertical-align: text-top;
+  }
+
+  &.t-bottom {
+    vertical-align: text-bottom;
+  }
+
+  @each $mq, $class in $min-mqs {
+    @include mq($mq) {
+      &.top-#{$class} {
+        vertical-align: top;
+      }
+
+      &.bot-#{$class} {
+        vertical-align: bottom;
+      }
+
+      &.t-top-#{$class} {
+        vertical-align: text-top;
+      }
+
+      &.t-bottom-#{$class} {
+        vertical-align: text-bottom;
       }
     }
   }
