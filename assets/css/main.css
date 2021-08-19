@@ -2738,6 +2738,9 @@ h6:after,
 .txt-blk-shadow {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.5);
 }
+.txt-blk-shadow:before, .txt-blk-shadow:after {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.5);
+}
 
 .img {
   background-repeat: no-repeat;
@@ -9754,6 +9757,9 @@ header {
   background-image: url(../img/blue-gray-wp.jpg);
 }
 
+main {
+  background-image: url(https://images.unsplash.com/photo-1629193266680-9193cc4a0c81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80);
+}
 main .grid-cont {
   -ms-grid-rows: 200px;
   -ms-grid-columns: (475px) [2];
@@ -9847,11 +9853,38 @@ main .grid-cont .wrap-portfolio:first-child .wrap-portfolio-inner-back {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 480px) {
+  .sec-professional h2 {
+    font-size: 25px;
+  }
+}
 .sec-professional [class*=gcol] {
   color: #f9fafb;
   font-size: 30px;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 20px;
+  border-bottom: 2px solid #f9fafb;
+}
+@media only screen and (max-width: 480px) {
+  .sec-professional [class*=gcol] {
+    font-size: 20px;
+  }
+}
+.sec-professional [class*=gcol]:last-child, .sec-professional [class*=gcol]:nth-last-child(2) {
+  border-color: transparent;
+}
+@media only screen and (max-width: 1199px) {
+  .sec-professional [class*=gcol]:nth-child(odd) {
+    border-color: transparent;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sec-professional [class*=gcol]:nth-child(odd) {
+    padding-bottom: 5px;
+  }
+  .sec-professional [class*=gcol]:nth-child(even) {
+    padding-top: 5px;
+  }
 }
 .sec-professional [class*=gcol] i {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.5);
@@ -9879,19 +9912,21 @@ main .grid-cont .wrap-portfolio:first-child .wrap-portfolio-inner-back {
   color: #787cb5;
 }
 .sec-professional [class*=gcol] svg {
-  width: 45px;
+  width: 2em;
   vertical-align: middle;
   padding: 5px;
 }
 .sec-professional [class*=gcol] svg.jquery {
   background: #0767ab;
 }
+.sec-professional [class*=gcol] svg.ruby, .sec-professional [class*=gcol] svg.rails {
+  border: 1px solid #f9fafb;
+}
 .sec-professional [class*=gcol] svg.ruby {
   background: #cd352d;
 }
 .sec-professional [class*=gcol] svg.rails {
   background: #cc0000;
-  width: 60px;
 }
 .sec-professional [class*=gcol] svg path {
   fill: #f9fafb;
