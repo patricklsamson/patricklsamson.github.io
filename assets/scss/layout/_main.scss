@@ -4,7 +4,11 @@ main {
   @include bg($wave-wp);
 
   .grid-cont {
-    @include grid-cont(c-rep, 200px, 475px, 2);
+    @include grid-cont(c-rep, 200px, 30vw, 2);
+
+    @include mq(md) {
+      @include grid-cont(r-rep, 200px, 60vw, 2);
+    }
 
     .wrap-portfolio:first-child {
       .wrap-portfolio-inner-back {
