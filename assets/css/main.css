@@ -17926,50 +17926,47 @@ form textarea {
   fill: #f9fafb;
 }
 
-.sec-contact .wrap-white {
-  border: 8px double #3c7777;
-}
-.sec-contact .wrap-white li {
+.sec-contact li {
   margin-top: 15px;
 }
-.sec-contact .wrap-white li:hover .btn-bracket:before, .sec-contact .wrap-white li:hover .btn-bracket:after {
+.sec-contact li:hover .btn-bracket:before, .sec-contact li:hover .btn-bracket:after {
   color: #66b2b2;
   text-shadow: 0 2px 5px rgba(249, 250, 251, 0.4);
 }
-.sec-contact .wrap-white li:last-child, .sec-contact .wrap-white li:nth-last-child(2) {
+.sec-contact li:last-child, .sec-contact li:nth-last-child(2) {
   cursor: grab;
 }
-.sec-contact .wrap-white li:last-child:active, .sec-contact .wrap-white li:nth-last-child(2):active {
+.sec-contact li:last-child:active, .sec-contact li:nth-last-child(2):active {
   cursor: -webkit-grabbing;
   cursor: -moz-grabbing;
   cursor: grabbing;
 }
-.sec-contact .wrap-white li i {
+.sec-contact li i {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), 0 -1px 1px rgba(0, 0, 0, 0.5);
   font-size: 2em;
   vertical-align: bottom;
   margin-right: 15px;
 }
-.sec-contact .wrap-white li i.fa-linkedin {
+.sec-contact li i.fa-linkedin {
   color: #0a66c2;
 }
-.sec-contact .wrap-white li i.fa-stack-overflow {
+.sec-contact li i.fa-stack-overflow {
   color: #f57e24;
 }
-.sec-contact .wrap-white li i.fa-github {
+.sec-contact li i.fa-github {
   color: #181717;
 }
-.sec-contact .wrap-white li i.fa-yahoo {
+.sec-contact li i.fa-yahoo {
   color: #5e01d0;
 }
-.sec-contact .wrap-white li .gmail {
+.sec-contact li .gmail {
   height: 2em;
   vertical-align: middle;
   margin-right: 15px;
   background: #f9fafb;
   padding: 2px;
 }
-.sec-contact .wrap-white li .gmail path {
+.sec-contact li .gmail path {
   fill: #ea4334;
 }
 
