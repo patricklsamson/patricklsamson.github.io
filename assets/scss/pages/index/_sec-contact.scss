@@ -1,56 +1,60 @@
 @use "../../abstracts" as *;
 
 .sec-contact {
-  li {
-    margin-top: 15px;
+  .wrap-white {
+    border: 8px double $dark-cyan;
 
-    &:hover {
-      .btn-bracket {
-        &:before,
-        &:after {
-          color: $cyan;
-          text-shadow: 0 2px 5px $white-04;
+    li {
+      margin-top: 15px;
+
+      &:hover {
+        .btn-bracket {
+          &:before,
+          &:after {
+            color: $cyan;
+            text-shadow: 0 2px 5px $white-04;
+          }
         }
       }
-    }
 
-    &:last-child,
-    &:nth-last-child(2) {
-      @include grab;
-    }
-
-    i {
-      text-shadow: 0 1px 1px $black-05, 0 -1px 1px $black-05;
-      font-size: 2em;
-      vertical-align: bottom;
-      margin-right: 15px;
-
-      &.fa-linkedin {
-        color: hsl(210, 90%, 40%);
+      &:last-child,
+      &:nth-last-child(2) {
+        @include grab;
       }
 
-      &.fa-stack-overflow {
-        color: hsl(26, 91%, 55%);
+      i {
+        text-shadow: 0 1px 1px $black-05, 0 -1px 1px $black-05;
+        font-size: 2em;
+        vertical-align: bottom;
+        margin-right: 15px;
+
+        &.fa-linkedin {
+          color: hsl(210, 90%, 40%);
+        }
+
+        &.fa-stack-overflow {
+          color: hsl(26, 91%, 55%);
+        }
+
+        &.fa-github {
+          color: #181717;
+        }
+
+        &.fa-yahoo {
+          color: hsl(267, 99%, 41%);
+        }
       }
 
-      &.fa-github {
-        color: #181717;
-      }
+      .gmail {
+        height: 2em;
+        vertical-align: middle;
+        margin-right: 15px;
+        background: $white;
+        padding: 2px;
 
-      &.fa-yahoo {
-        color: hsl(267, 99%, 41%);
-      }
-    }
-
-    .gmail {
-      height: 2em;
-      vertical-align: middle;
-      margin-right: 15px;
-      background: $white;
-      padding: 2px;
-
-      path {
-        fill: hsl(5, 81%, 56%);
+        path {
+          fill: hsl(5, 81%, 56%);
+        }
       }
     }
   }
