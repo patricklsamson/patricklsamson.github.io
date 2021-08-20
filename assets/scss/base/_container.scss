@@ -5,35 +5,39 @@
 .cont-fl {
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @each $mq, $px in $cont-mqs {
   .cont {
     @include mq($mq) {
-      padding: 0;
+      padding-left: 0;
+      padding-right: 0;
       max-width: m.round($px * 0.95);
     }
   }
 }
 
 .grid {
-  margin: 0 -10px;
+  margin-left: -10px;
+  margin-right: -10px;
 
   @include clearfix;
 
   &.xgut {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
 
-    @include all(gcol-, in) {
-      padding: 0;
+    @include all(gcol, in) {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
-  @include all(gcol-) {
+  @include all(gcol) {
     float: left;
     width: 100%;
-    padding: 0 10px;
   }
 
   [class*="push-"],
@@ -78,6 +82,11 @@
   }
 }
 
+@include all(gcol) {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .flex {
   @include flex;
 
@@ -97,21 +106,21 @@
     @include align(i, f, end);
   }
 
-  @each $mq, $class in $min-mqs {
-    @include mq($mq) {
-      &.ftop-#{$class} {
+  @each $min-max-mq in $min-max-mqs {
+    @include mq($min-max-mq) {
+      &.ftop-#{$min-max-mq} {
         @include justify(f);
       }
 
-      &.fbot-#{$class} {
+      &.fbot-#{$min-max-mq} {
         @include justify(f, end);
       }
 
-      &.flft-#{$class} {
+      &.flft-#{$min-max-mq} {
         @include align(i, f);
       }
 
-      &.frgt-#{$class} {
+      &.frgt-#{$min-max-mq} {
         @include align(i, f, end);
       }
     }
@@ -137,34 +146,34 @@
     @include justify(f, end);
   }
 
-  @each $mq, $class in $min-mqs {
-    @include mq($mq) {
-      &.rftop-#{$class} {
+  @each $min-max-mq in $min-max-mqs {
+    @include mq($min-max-mq) {
+      &.rftop-#{$min-max-mq} {
         @include align(i, f);
       }
 
-      &.rfbot-#{$class} {
+      &.rfbot-#{$min-max-mq} {
         @include align(i, f, end);
       }
 
-      &.rflft-#{$class} {
+      &.rflft-#{$min-max-mq} {
         @include justify(f);
       }
 
-      &.rfrgt-#{$class} {
+      &.rfrgt-#{$min-max-mq} {
         @include justify(f, end);
       }
     }
   }
 }
 
-@each $mq, $class in $min-mqs {
-  @include mq($mq) {
-    .flex-#{$class} {
+@each $min-max-mq in $min-max-mqs {
+  @include mq($min-max-mq) {
+    .flex-#{$min-max-mq} {
       @include flex;
     }
 
-    .rflex-#{$class} {
+    .rflex-#{$min-max-mq} {
       @include flex(f);
     }
   }
@@ -219,19 +228,19 @@
     margin-right: 0;
   }
 
-  @each $mq, $class in $min-mqs {
-    @include mq($mq) {
-      &.ctr-#{$class},
-      &.lft-#{$class},
-      &.rgt-#{$class} {
+  @each $min-max-mq in $min-max-mqs {
+    @include mq($min-max-mq) {
+      &.ctr-#{$min-max-mq},
+      &.lft-#{$min-max-mq},
+      &.rgt-#{$min-max-mq} {
         width: auto;
       }
 
-      &.lft-#{$class} {
+      &.lft-#{$min-max-mq} {
         margin-left: 0;
       }
 
-      &.rgt-#{$class} {
+      &.rgt-#{$min-max-mq} {
         margin-right: 0;
       }
     }
@@ -261,21 +270,21 @@
     vertical-align: text-bottom;
   }
 
-  @each $mq, $class in $min-mqs {
-    @include mq($mq) {
-      &.top-#{$class} {
+  @each $min-max-mq in $min-max-mqs {
+    @include mq($min-max-mq) {
+      &.top-#{$min-max-mq} {
         vertical-align: top;
       }
 
-      &.bot-#{$class} {
+      &.bot-#{$min-max-mq} {
         vertical-align: bottom;
       }
 
-      &.t-top-#{$class} {
+      &.t-top-#{$min-max-mq} {
         vertical-align: text-top;
       }
 
-      &.t-bot-#{$class} {
+      &.t-bot-#{$min-max-mq} {
         vertical-align: text-bottom;
       }
     }
@@ -386,4 +395,12 @@
 
 .wrap-gray {
   background: $dgray;
+}
+
+.wrap-white {
+  background: $white-08;
+}
+
+.wrap-cyan04 {
+  background: $cyan-04;
 }
