@@ -35,3 +35,28 @@ button {
     }
   }
 }
+
+#portfolio-btn {
+  @include tran;
+
+  &.active {
+    @include prefix(
+      (
+        transform: rotate(180deg),
+      ),
+      webkit moz ms o
+    );
+
+    & + #portfolio-dropdown {
+      @include vis(visible) {
+        height: 200px;
+      }
+
+      * {
+        @include vis(visible) {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
