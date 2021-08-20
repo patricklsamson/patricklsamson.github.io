@@ -5,6 +5,8 @@
   &:after {
     color: transparent;
     font-weight: 700;
+    position: relative;
+    bottom: 0.05em;
 
     @include tran;
   }
