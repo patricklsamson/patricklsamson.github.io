@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+#portfolio-dropdown {
+  @include tran;
+  @include vis(hidden) {
+    height: 0;
+  }
+
+  * {
+    @include tran;
+
+    @include vis(hidden) {
+      opacity: 0;
+    }
+  }
+}
