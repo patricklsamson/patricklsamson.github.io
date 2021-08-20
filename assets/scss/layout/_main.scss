@@ -17,5 +17,17 @@ main {
     #batch8 {
       @include bg($batch8);
     }
+
+    #predator {
+      @include bg($predator);
+    }
+
+    #bank {
+      @include bg($bank);
+    }
+
+    #chessgrid {
+      @include bg($chessgrid);
+    }
   }
 }
