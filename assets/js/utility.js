@@ -181,25 +181,36 @@ function match_height(element) {
   }
 }
 
-function match_media(media, oldMedia, match, unmatch) {
+function match_media(media, match, unmatch) {
   if (window.matchMedia) {
-    var mq = window.matchMedia(media);
-
     function matcher(param) {
       if (param.matches) {
-        match();
+        if (match) {
+          match();
+        }
       } else {
-        unmatch();
+        if (unmatch) {
+          unmatch();
+        }
       }
     }
 
-    matcher(mq);
-    add_event(mq, "change", matcher);
+    matcher(window.matchMedia("only screen and (min-width: " + media + "px"));
+
+    add_event(
+      window.matchMedia("only screen and (min-width: " + media + "px"),
+      "change",
+      matcher
+    );
   } else {
-    if (screen.width >= oldMedia) {
-      match();
+    if (screen.width >= media) {
+      if (match) {
+        match();
+      }
     } else {
-      unmatch();
+      if (unmatch) {
+        unmatch();
+      }
     }
   }
 }
