@@ -203,3 +203,19 @@ function match_media(media, oldMedia, match, unmatch) {
     }
   }
 }
+
+function click_copy(element) {
+  add_event(element, "click", function () {
+    document.execCommand("copy");
+  });
+
+  add_event(element, "copy", function (e) {
+    e.preventDefault();
+
+    if (e.clipboardData) {
+      e.clipboardData.setData("text/plain", element.innerHTML);
+    }
+
+    return false;
+  });
+}
