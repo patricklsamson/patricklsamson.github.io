@@ -118,8 +118,10 @@ a,
   }
 }
 
-.fs-20 {
-  font-size: 2rem;
+@for $i from 2 through 5 {
+  .fs-#{$i}0 {
+    font-size: #{$i}rem;
+  }
 }
 
 @each $min-max-mq in $min-max-mqs {
@@ -130,8 +132,10 @@ a,
       }
     }
 
-    .fs-#{$min-max-mq}-20 {
-      font-size: 2rem;
+    @for $i from 2 through 5 {
+      .fs-#{$min-max-mq}-#{$i}0 {
+        font-size: #{$i}rem;
+      }
     }
   }
 }
