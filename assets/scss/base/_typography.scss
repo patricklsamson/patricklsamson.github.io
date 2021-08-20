@@ -27,6 +27,8 @@ html {
     &:after {
       color: $cyan;
       text-shadow: 0 2px 5px $white-04;
+      position: relative;
+      bottom: 0.05em;
     }
 
     &:before {
@@ -40,6 +42,17 @@ html {
     @include mq(lgup) {
       font-size: calc(#{$rem} + #{$vw});
     }
+  }
+}
+
+a,
+.a {
+  color: $gray;
+  text-decoration: none;
+
+  &:hover {
+    color: $dgray;
+    text-decoration: none;
   }
 }
 
@@ -89,6 +102,16 @@ html {
   }
 }
 
+@each $min-max-mq in $min-max-mqs {
+  @include mq($min-max-mq) {
+    @for $i from 1 through 9 {
+      .fw-#{$min-max-mq}-#{$i}00 {
+        font-weight: #{$i}00;
+      }
+    }
+  }
+}
+
 @for $i from 1 through 9 {
   .fs-1#{$i} {
     font-size: s.unquote("1.#{$i}rem");
@@ -97,6 +120,20 @@ html {
 
 .fs-20 {
   font-size: 2rem;
+}
+
+@each $min-max-mq in $min-max-mqs {
+  @include mq($min-max-mq) {
+    @for $i from 1 through 9 {
+      .fs-#{$min-max-mq}-1#{$i} {
+        font-size: s.unquote("1.#{$i}rem");
+      }
+    }
+
+    .fs-#{$min-max-mq}-20 {
+      font-size: 2rem;
+    }
+  }
 }
 
 .txtfx {
