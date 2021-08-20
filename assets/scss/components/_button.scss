@@ -1,5 +1,13 @@
 @use "../abstracts" as *;
 
+button {
+  &.btn-bracket {
+    color: $white;
+    border: none;
+    background: transparent;
+  }
+}
+
 .btn-bracket {
   &:before,
   &:after {
