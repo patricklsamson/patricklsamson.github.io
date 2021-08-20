@@ -10,7 +10,7 @@ html {
 
   @include prefix(
     (
-      box-sizing: border-box
+      box-sizing: border-box,
     ),
     webkit moz
   );
@@ -19,7 +19,7 @@ html {
 @include elements {
   @include prefix(
     (
-      box-sizing: inherit
+      box-sizing: inherit,
     ),
     webkit moz
   );
@@ -45,7 +45,7 @@ body {
 @include elements(button) {
   @include prefix(
     (
-      appearance: button
+      appearance: button,
     ),
     webkit moz
   );
@@ -56,7 +56,7 @@ body {
 
   @include prefix(
     (
-      user-select: none
+      user-select: none,
     ),
     webkit moz ms khtml
   );
@@ -64,16 +64,6 @@ body {
 
 @include elements(input) {
   width: 100%;
-}
-
-a {
-  color: $gray;
-  text-decoration: none;
-
-  &:hover {
-    color: $dgray;
-    text-decoration: none;
-  }
 }
 
 blockquote {
