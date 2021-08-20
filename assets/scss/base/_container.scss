@@ -384,8 +384,6 @@
       }
 
       .wrap-portfolio-inner-back {
-        background: green;
-
         @include prefix(
           (
             transform: rotateY(180deg),
