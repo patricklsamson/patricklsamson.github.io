@@ -4,16 +4,18 @@ main {
   @include bg($wave-wp);
 
   .grid-cont {
-    @include grid-cont(c-rep, 200px, 30vw, 2);
-
-    @include mq(md) {
-      @include grid-cont(r-rep, 200px, 60vw, 2);
+    @include grid-cont(a-rep, 200px, 30vw, 2, 2) {
+      grid-gap: 20px;
     }
 
-    .wrap-portfolio:first-child {
-      .wrap-portfolio-inner-back {
-        @include bg($batch8);
+    @include mq(md) {
+      @include grid-cont(r-rep, 200px, 60vw, 4) {
+        grid-gap: 20px;
       }
+    }
+
+    #batch8 {
+      @include bg($batch8);
     }
   }
 }
