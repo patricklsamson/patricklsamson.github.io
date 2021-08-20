@@ -80,3 +80,11 @@
     }
   }
 }
+
+form {
+  color: $white;
+
+  textarea {
+    resize: none;
+  }
+}
