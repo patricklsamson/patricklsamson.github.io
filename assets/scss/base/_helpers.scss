@@ -168,47 +168,47 @@
   }
 }
 
-@each $mq, $size-class in $min-mqs {
-  @include mq($mq) {
+@each $min-max-mq in $min-max-mqs {
+  @include mq($min-max-mq) {
     @each $class, $loc in $mg-auto {
-      .m#{$class}-#{$size-class}-auto {
+      .m#{$class}-#{$min-max-mq}-auto {
         margin#{$loc}: auto;
       }
     }
 
     @each $dual-loc, $first, $second in $dual-locs {
-      .m#{$dual-loc}-#{$size-class}-auto {
+      .m#{$dual-loc}-#{$min-max-mq}-auto {
         margin-#{$first}: auto;
         margin-#{$second}: auto;
       }
     }
 
     @each $class, $size in $mg-pd {
-      .mg-#{$size-class}-#{$class} {
+      .mg-#{$min-max-mq}-#{$class} {
         margin: #{$size};
       }
 
-      .pd-#{$size-class}-#{$class} {
+      .pd-#{$min-max-mq}-#{$class} {
         padding: #{$size};
       }
 
       @each $loc, $prop in $locs {
-        .m#{$loc}-#{$size-class}-#{$class} {
+        .m#{$loc}-#{$min-max-mq}-#{$class} {
           margin-#{$prop}: #{$size};
         }
 
-        .p#{$loc}-#{$size-class}-#{$class} {
+        .p#{$loc}-#{$min-max-mq}-#{$class} {
           padding-#{$prop}: #{$size};
         }
       }
 
       @each $dual-loc, $first, $second in $dual-locs {
-        .m#{$dual-loc}-#{$size-class}-#{$class} {
+        .m#{$dual-loc}-#{$min-max-mq}-#{$class} {
           margin-#{$first}: #{$size};
           margin-#{$second}: #{$size};
         }
 
-        .p#{$dual-loc}-#{$size-class}-#{$class} {
+        .p#{$dual-loc}-#{$min-max-mq}-#{$class} {
           padding-#{$first}: #{$size};
           padding-#{$second}: #{$size};
         }
