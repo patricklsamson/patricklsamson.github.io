@@ -2990,12 +2990,12 @@ table {
   transform: rotateY(180deg);
 }
 
-.wrap-overlay {
-  background: rgba(53, 59, 65, 0.6);
+.wrap-dgray {
+  background: #4c545d;
 }
 
-.wrap-gray {
-  background: #353b41;
+.wrap-dgray06 {
+  background: rgba(53, 59, 65, 0.6);
 }
 
 .wrap-white {
@@ -17528,19 +17528,27 @@ main {
   background-image: url(https://images.unsplash.com/photo-1629193266680-9193cc4a0c81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80);
 }
 main .grid-cont {
-  -ms-grid-rows: 200px;
+  -ms-grid-rows: (200px) [2];
   -ms-grid-columns: (30vw) [2];
-  grid-template: 200px/repeat(2, 30vw);
+  grid-template: repeat(2, 200px)/repeat(2, 30vw);
+  grid-gap: 20px;
 }
 @media only screen and (max-width: 991px) {
   main .grid-cont {
-    -ms-grid-rows: (200px) [2];
+    -ms-grid-rows: (200px) [4];
     -ms-grid-columns: 60vw;
-    grid-template: repeat(2, 200px)/60vw;
+    grid-template: repeat(4, 200px)/60vw;
+    grid-gap: 20px;
   }
 }
-main .grid-cont .wrap-portfolio:first-child .wrap-portfolio-inner-back {
+main .grid-cont #batch8 {
   background-image: url(../img/batch8-activities.jpg);
+}
+
+button.btn-bracket {
+  color: #f9fafb;
+  border: none;
+  background: transparent;
 }
 
 .btn-bracket:before, .btn-bracket:after {
