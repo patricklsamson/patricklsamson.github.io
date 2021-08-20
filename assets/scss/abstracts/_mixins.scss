@@ -695,7 +695,6 @@
   $row: auto,
   $column: auto,
   $number: 2,
-  $row-number: 2,
   $column-number: 2
 ) {
   @if $template == def {
@@ -761,7 +760,7 @@
   } @else if $template == a-rep {
     @include prefix(
       (
-        grid-rows: s.unquote("(#{$row}) [#{$row-number}]"),
+        grid-rows: s.unquote("(#{$row}) [#{$number}]"),
       ),
       ms,
       prop,
@@ -777,7 +776,7 @@
       f
     );
 
-    grid-template: repeat(#{$row-number}, #{$row}) / repeat(
+    grid-template: repeat(#{$number}, #{$row}) / repeat(
         #{$column-number},
         #{$column}
       );
