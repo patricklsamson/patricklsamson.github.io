@@ -35,11 +35,15 @@
 
   .item {
     width: 30vw;
-    height: 200px;
+    height: 20vh;
     margin: auto;
 
     @include mq(md) {
-      width: 60vw;
+      width: 70vw;
+    }
+
+    @include mq(xxs) {
+      height: 25vh;
     }
 
     #psychally {
