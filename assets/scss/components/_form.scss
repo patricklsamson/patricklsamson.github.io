@@ -99,4 +99,20 @@ form {
       border: 2px solid $white;
     }
   }
+
+  #message-notice {
+    @include tran;
+
+    @include vis(hidden) {
+      opacity: 0;
+      height: 0;
+    }
+
+    &.show {
+      @include vis(visible) {
+        opacity: 1;
+        height: auto;
+      }
+    }
+  }
 }
