@@ -17770,6 +17770,11 @@ main .grid-cont #chessgrid {
   background-image: url(../img/chessgrid.JPG);
 }
 
+footer {
+  background: #353b41;
+  color: #f9fafb;
+}
+
 button.btn-bracket {
   color: #f9fafb;
   border: none;
