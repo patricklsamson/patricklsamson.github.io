@@ -245,13 +245,17 @@
   }
 }
 
+@each $position in $positions {
+  .p-#{$position} {
+    position: $position;
+  }
+}
+
 .xbul {
   list-style: none;
   padding-left: 0;
 }
 
-@each $position in $positions {
-  .p-#{$position} {
-    position: $position;
-  }
+.lazy {
+  background-image: none;
 }
