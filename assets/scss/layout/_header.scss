@@ -2,4 +2,18 @@
 
 header {
   @include bg($blue-gray-wp);
+
+  a {
+    color: $white;
+    text-shadow: 0 2px 4px $black-05, 0 -2px 4px $black-05;
+
+    &:before,
+    &:after {
+      text-shadow: none;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
 }
