@@ -17639,11 +17639,6 @@ a:hover,
     display: inline-block;
   }
 }
-.xbul {
-  list-style: none;
-  padding-left: 0;
-}
-
 .p-relative {
   position: relative;
 }
@@ -17654,6 +17649,15 @@ a:hover,
 
 .p-fixed {
   position: fixed;
+}
+
+.xbul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lazy {
+  background-image: none;
 }
 
 body {
@@ -17680,8 +17684,8 @@ nav#nav-bar.bg-change #nav-btn:after {
   color: #f9fafb;
 }
 nav#nav-bar img {
-  width: 50px;
   position: relative;
+  width: 50px;
   z-index: 1;
 }
 nav#nav-bar button#nav-btn {
