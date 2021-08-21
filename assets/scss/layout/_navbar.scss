@@ -24,8 +24,9 @@ nav {
     }
 
     img {
+      position: relative;
       width: 50px;
-      @include z-index(logo, r);
+      z-index: z("logo");
     }
 
     button#nav-btn {
