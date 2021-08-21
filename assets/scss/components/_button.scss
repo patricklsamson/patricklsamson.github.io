@@ -49,7 +49,7 @@ button {
 
     & + #portfolio-dropdown {
       @include vis(visible) {
-        height: 200px;
+        height: 300px;
       }
 
       * {
