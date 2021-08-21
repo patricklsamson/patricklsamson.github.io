@@ -654,8 +654,8 @@
   }
 }
 
-@mixin vis($display) {
-  visibility: $display;
+@mixin vis($visibility) {
+  visibility: $visibility;
   @content;
 }
 
