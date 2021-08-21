@@ -16,6 +16,12 @@ doc_ready(() => {
     setTimeout(() => {
       id("g-form").reset();
     }, 500);
+
+    add_class(id("message-notice"), "show");
+
+    setTimeout(() => {
+      remove_class(id("message-notice"), "show");
+    }, 2000);
   });
 
   click_copy(id("yahoo"));
