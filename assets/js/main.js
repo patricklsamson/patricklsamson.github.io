@@ -26,12 +26,10 @@ doc_ready(() => {
 
     if (has_class(id("portfolio-btn"), "active")) {
       setTimeout(() => {
-        id("portfolio-scroll-target").scrollIntoView(true);
-      }, 150);
+        qsel("main").scrollIntoView(false);
+      }, 250);
     } else {
-      setTimeout(() => {
-        id("portfolio").scrollIntoView(true);
-      }, 150);
+      id("portfolio").scrollIntoView(true);
     }
   });
 
