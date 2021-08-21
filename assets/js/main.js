@@ -34,4 +34,25 @@ doc_ready(() => {
       }, 150);
     }
   });
+
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    navText: [
+      "<i class='fas fa-angle-left'></i>",
+      "<i class='fas fa-angle-right'></i>",
+    ],
+    dots: true,
+    autoplay: false,
+    autoplayTimeout: 5000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      992: {
+        items: 2,
+      },
+    },
+  });
 });
