@@ -1,6 +1,8 @@
 @use "variables" as *;
 @use "functions" as f;
 @use "sass:string" as s;
+@use "sass:math" as m;
+@use "sass:color" as c;
 
 /**
  * Contents:
@@ -309,29 +311,80 @@
   }
 }
 
-@mixin prefix($declaration, $prefixes: (), $set: prop, $include: t) {
-  @if $set == prop {
-    @each $property, $value in $declaration {
+@mixin prefix($declaration, $prefixes: (), $prefix-property: t, $include: t) {
+  @each $property, $value in $declaration {
+    @if $prefix-property == t {
       @each $prefix in $prefixes {
         #{"-" + $prefix + "-" + $property}: $value;
       }
-
-      @content;
-
-      @if $include == t {
-        #{$property}: $value;
-      }
-    }
-  } @else if $set == val {
-    @each $property, $value in $declaration {
+    } @else {
       @each $prefix in $prefixes {
         #{$property}: #{"-" + $prefix + "-" + $value};
       }
+    }
 
-      @content;
+    @content;
 
-      @if $include == t {
-        #{$property}: $value;
+    @if $include == t {
+      #{$property}: $value;
+    }
+  }
+}
+
+@mixin scrollbar(
+  $scrollbar: f,
+  $thumb: $black-05,
+  $hover: $dgray,
+  $track: $gray,
+  $width: 10,
+  $border-radius: f,
+  $box-shadow: f,
+  $percent: -20%
+) {
+  @if $scrollbar == t {
+    ::-webkit-scrollbar {
+      width: #{$width}px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: $track;
+
+      @if $box-shadow == t {
+        @include prefix(
+          (
+            box-shadow: inset 0 0 #{m.div($width, 2)}px #{c.adjust(
+                $track,
+                $lightness: $percent
+              )},
+          ),
+          webkit moz
+        );
+      }
+
+      @if $border-radius == t {
+        @include prefix(
+          (
+            border-radius: #{$width}px,
+          ),
+          webkit moz
+        );
+      }
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: $thumb;
+
+      @if $border-radius == t {
+        @include prefix(
+          (
+            border-radius: #{$width}px,
+          ),
+          webkit moz
+        );
+      }
+
+      &:hover {
+        background: $hover;
       }
     }
   }
@@ -426,7 +479,7 @@
         cursor: grabbing,
       ),
       webkit moz,
-      val
+      t
     );
   }
 }
@@ -444,7 +497,7 @@
           pack: center,
         ),
         webkit-box moz-box ms-flex,
-        prop,
+        t,
         f
       );
     }
@@ -460,7 +513,7 @@
           pack: $location,
         ),
         webkit-box moz-box ms-flex,
-        prop,
+        t,
         f
       );
     }
@@ -481,7 +534,7 @@
             align: center,
           ),
           webkit-box moz-box ms-flex,
-          prop,
+          t,
           f
         );
       }
@@ -497,7 +550,7 @@
             align: $location,
           ),
           webkit-box moz-box ms-flex,
-          prop,
+          t,
           f
         );
       }
@@ -515,7 +568,7 @@
             pack: center,
           ),
           ms-flex-line,
-          prop,
+          t,
           f
         );
       }
@@ -531,7 +584,7 @@
             pack: $location,
           ),
           ms-flex-line,
-          prop,
+          t,
           f
         );
       }
@@ -545,7 +598,7 @@
       display: flex,
     ),
     webkit,
-    val
+    f
   ) {
     display: -ms-flexbox;
 
@@ -554,7 +607,7 @@
         display: box,
       ),
       webkit moz,
-      val,
+      f,
       f
     );
   }
@@ -574,7 +627,7 @@
           box-orient: vertical,
         ),
         webkit moz,
-        prop,
+        t,
         f
       );
 
@@ -583,7 +636,7 @@
           box-direction: normal,
         ),
         webkit moz,
-        prop,
+        t,
         f
       );
     }
@@ -677,7 +730,7 @@
         grid-rows: $row,
       ),
       ms,
-      prop,
+      t,
       f
     );
 
@@ -686,7 +739,7 @@
         grid-columns: $column,
       ),
       ms,
-      prop,
+      t,
       f
     );
 
@@ -697,7 +750,7 @@
         grid-rows: s.unquote("(#{$row}) [#{$number}]"),
       ),
       ms,
-      prop,
+      t,
       f
     );
 
@@ -706,7 +759,7 @@
         grid-columns: $column,
       ),
       ms,
-      prop,
+      t,
       f
     );
 
@@ -717,7 +770,7 @@
         grid-rows: $row,
       ),
       ms,
-      prop,
+      t,
       f
     );
 
@@ -726,7 +779,7 @@
         grid-columns: s.unquote("(#{$column}) [#{$number}]"),
       ),
       ms,
-      prop,
+      t,
       f
     );
 
@@ -737,7 +790,7 @@
         grid-rows: s.unquote("(#{$row}) [#{$number}]"),
       ),
       ms,
-      prop,
+      t,
       f
     );
 
@@ -746,7 +799,7 @@
         grid-columns: s.unquote("(#{$column}) [#{$column-number}]"),
       ),
       ms,
-      prop,
+      t,
       f
     );
 
@@ -766,7 +819,7 @@
         grid-row: $start,
       ),
       ms,
-      prop,
+      t,
       f
     ) {
       @include prefix(
@@ -774,7 +827,7 @@
           grid-row-span: $end,
         ),
         ms,
-        prop,
+        t,
         f
       );
     }
@@ -786,7 +839,7 @@
         grid-row: $start,
       ),
       ms,
-      prop
+      t
     );
   } @else if $set == col-se {
     @include prefix(
@@ -794,7 +847,7 @@
         grid-column: $start,
       ),
       ms,
-      prop,
+      t,
       f
     ) {
       @include prefix(
@@ -802,7 +855,7 @@
           grid-column-span: $end,
         ),
         ms,
-        prop,
+        t,
         f
       );
     }
@@ -814,7 +867,7 @@
         grid-column: $start,
       ),
       ms,
-      prop
+      t
     );
   }
 }
