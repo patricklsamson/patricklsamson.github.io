@@ -87,4 +87,16 @@ form {
   textarea {
     resize: none;
   }
+
+  input[type="submit"] {
+    background: $cyan;
+    border: 2px solid transparent;
+    color: $white;
+    @include tran;
+
+    &:hover {
+      background: $dcyan;
+      border: 2px solid $white;
+    }
+  }
 }
