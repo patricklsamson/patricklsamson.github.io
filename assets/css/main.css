@@ -17912,6 +17912,19 @@ form {
 form textarea {
   resize: none;
 }
+form input[type=submit] {
+  background: #66b2b2;
+  border: 2px solid transparent;
+  color: #f9fafb;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+form input[type=submit]:hover {
+  background: #3c7777;
+  border: 2px solid #f9fafb;
+}
 
 @media only screen and (max-width: 480px) {
   .sec-professional h2 {
