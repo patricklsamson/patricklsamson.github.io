@@ -1,0 +1,81 @@
+@use "../abstracts" as *;
+
+.owl-carousel {
+  &.owl-fl,
+  &.owl-side-nav {
+    position: relative;
+
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+
+      .owl-prev {
+        float: left;
+      }
+
+      .owl-next {
+        float: right;
+      }
+    }
+  }
+
+  &.owl-fl {
+    .owl-dots {
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .owl-prev,
+  .owl-next,
+  .owl-dot {
+    outline: 0;
+  }
+
+  .item {
+    width: 30vw;
+    height: 200px;
+    margin: auto;
+
+    @include mq(md) {
+      width: 60vw;
+    }
+
+    #psychally {
+      @include bg($psychally);
+    }
+
+    #tictactoe {
+      @include bg($tictactoe);
+    }
+
+    #chessflex {
+      @include bg($chessflex);
+    }
+
+    #survey {
+      @include bg($survey);
+    }
+
+    #tribute {
+      @include bg($tribute);
+    }
+
+    #momentum {
+      @include bg($momentum);
+    }
+  }
+
+  .owl-nav {
+    .owl-prev,
+    .owl-next {
+      margin: 1em 1.5em;
+
+      i {
+        font-size: 2.5em;
+        color: $white;
+      }
+    }
+  }
+}
