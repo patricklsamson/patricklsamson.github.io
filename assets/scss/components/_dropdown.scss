@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 #portfolio-dropdown {
-  @include tran;
+  @include tran(all, 0.25s);
   @include vis(hidden) {
     height: 0;
   }
