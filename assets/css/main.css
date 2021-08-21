@@ -15,6 +15,67 @@ i[id*=btn] {
   cursor: pointer;
 }
 
+.owl-carousel.owl-fl, .owl-carousel.owl-side-nav {
+  position: relative;
+}
+.owl-carousel.owl-fl .owl-nav, .owl-carousel.owl-side-nav .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+.owl-carousel.owl-fl .owl-nav .owl-prev, .owl-carousel.owl-side-nav .owl-nav .owl-prev {
+  float: left;
+}
+.owl-carousel.owl-fl .owl-nav .owl-next, .owl-carousel.owl-side-nav .owl-nav .owl-next {
+  float: right;
+}
+.owl-carousel.owl-fl .owl-dots {
+  position: absolute;
+  width: 100%;
+}
+.owl-carousel .owl-prev,
+.owl-carousel .owl-next,
+.owl-carousel .owl-dot {
+  outline: 0;
+}
+.owl-carousel .item {
+  width: 30vw;
+  height: 200px;
+  margin: auto;
+}
+@media only screen and (max-width: 991px) {
+  .owl-carousel .item {
+    width: 60vw;
+  }
+}
+.owl-carousel .item #psychally {
+  background-image: url(../img/psychally.JPG);
+}
+.owl-carousel .item #tictactoe {
+  background-image: url(../img/tictactoe.JPG);
+}
+.owl-carousel .item #chessflex {
+  background-image: url(../img/chessflex.JPG);
+}
+.owl-carousel .item #survey {
+  background-image: url(../img/survey.JPG);
+}
+.owl-carousel .item #tribute {
+  background-image: url(../img/tribute.JPG);
+}
+.owl-carousel .item #momentum {
+  background-image: url(../img/momentum.JPG);
+}
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+  margin: 1em 1.5em;
+}
+.owl-carousel .owl-nav .owl-prev i,
+.owl-carousel .owl-nav .owl-next i {
+  font-size: 2.5em;
+  color: #f9fafb;
+}
+
 @page {
   size: auto;
 }
@@ -17751,7 +17812,7 @@ button.btn-bracket {
 }
 #portfolio-btn.active + #portfolio-dropdown {
   visibility: visible;
-  height: 200px;
+  height: 300px;
 }
 #portfolio-btn.active + #portfolio-dropdown * {
   visibility: visible;
