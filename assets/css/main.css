@@ -84,6 +84,30 @@ i[id*=btn] {
 @page {
   size: auto;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9fafb;
+  -webkit-box-shadow: inset 0 0 5px #262e36;
+  -moz-box-shadow: inset 0 0 5px #262e36;
+  box-shadow: inset 0 0 5px #262e36;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #353b41;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3c7777;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -18107,8 +18131,8 @@ form #message-notice.show {
   cursor: grab;
 }
 .sec-contact li:last-child:active, .sec-contact li:nth-last-child(2):active {
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
+  -webkit-cursor: grabbing;
+  -moz-cursor: grabbing;
   cursor: grabbing;
 }
 .sec-contact li i {
