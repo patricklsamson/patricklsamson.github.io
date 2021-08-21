@@ -221,6 +221,10 @@
   display: none;
 }
 
+.d-block {
+  display: block;
+}
+
 .d-inblock {
   display: inline-block;
 }
@@ -229,6 +233,10 @@
   @include mq($min-max-mq) {
     .d-none-#{$min-max-mq} {
       display: none;
+    }
+
+    .d-block-#{$min-max-mq} {
+      display: block;
     }
 
     .d-inblock-#{$min-max-mq} {
