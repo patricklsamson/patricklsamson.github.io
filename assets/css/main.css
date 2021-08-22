@@ -5201,6 +5201,11 @@ a:hover,
   }
 }
 
+.formal {
+  width: 2in;
+  height: 2in;
+}
+
 .balign {
   display: block;
   margin-left: auto;
