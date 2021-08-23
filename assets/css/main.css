@@ -2452,11 +2452,8 @@ table {
 .table {
   display: table;
   height: 100%;
-  width: 100%;
-  margin: 0 auto;
-}
-.table.ctr, .table.lft, .table.rgt {
   width: auto;
+  margin: 0 auto;
 }
 .table.lft {
   margin-left: 0;
@@ -5199,11 +5196,6 @@ a:hover,
   .img.irb-xxl:before, .img.irb-xxl:after {
     background-position: right bottom;
   }
-}
-
-.formal {
-  width: 2in;
-  height: 2in;
 }
 
 .balign {
