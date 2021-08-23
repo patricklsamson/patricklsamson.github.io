@@ -211,14 +211,8 @@
 .table {
   display: table;
   height: 100%;
-  width: 100%;
+  width: auto;
   margin: 0 auto;
-
-  &.ctr,
-  &.lft,
-  &.rgt {
-    width: auto;
-  }
 
   &.lft {
     margin-left: 0;
