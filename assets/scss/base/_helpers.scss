@@ -217,6 +217,26 @@
   }
 }
 
+.float-lft {
+  float: left;
+}
+
+.float-rgt {
+  float: right;
+}
+
+@each $min-max-mq in $min-max-mqs {
+  @include mq($min-max-mq) {
+    .float-lft-#{$min-max-mq} {
+      float: left;
+    }
+
+    .float-rgt-#{$min-max-mq} {
+      float: right;
+    }
+  }
+}
+
 .d-none {
   display: none;
 }
