@@ -1,4 +1,4 @@
-# WIP: Portfolio
+# Portfolio
 
 ## About Me
 
