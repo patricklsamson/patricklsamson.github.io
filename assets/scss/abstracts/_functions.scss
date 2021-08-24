@@ -10,6 +10,14 @@
   }
 }
 
+@function nz($name) {
+  @if l.index($nz-items, $name) {
+    @return (l.length($nz-items) - l.index($nz-items, $name)) - 2;
+  } @else {
+    @return null;
+  }
+}
+
 @function fa($icon) {
   @return s.unquote('"') + s.unquote(s.insert($icon, "\\", 1)) + s.unquote('"');
 }
