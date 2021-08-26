@@ -3177,8 +3177,9 @@ var {
 
 h1,
 .h1 {
-  line-height: 1.2;
+  font-weight: bold;
   font-size: 2.5rem;
+  line-height: 1.2;
   color: #f9fafb;
 }
 h1:before, h1:after,
@@ -3206,8 +3207,9 @@ h1:after,
 
 h2,
 .h2 {
-  line-height: 1.2;
+  font-weight: bold;
   font-size: 2.25rem;
+  line-height: 1.2;
   color: #f9fafb;
 }
 h2:before, h2:after,
@@ -3235,8 +3237,9 @@ h2:after,
 
 h3,
 .h3 {
-  line-height: 1.2;
+  font-weight: bold;
   font-size: 2rem;
+  line-height: 1.2;
   color: #f9fafb;
 }
 h3:before, h3:after,
@@ -3264,8 +3267,9 @@ h3:after,
 
 h4,
 .h4 {
-  line-height: 1.2;
+  font-weight: bold;
   font-size: 1.75rem;
+  line-height: 1.2;
   color: #f9fafb;
 }
 h4:before, h4:after,
@@ -3293,8 +3297,9 @@ h4:after,
 
 h5,
 .h5 {
-  line-height: 1.2;
+  font-weight: bold;
   font-size: 1.5rem;
+  line-height: 1.2;
   color: #f9fafb;
 }
 h5:before, h5:after,
@@ -3322,8 +3327,9 @@ h5:after,
 
 h6,
 .h6 {
-  line-height: 1.2;
+  font-weight: bold;
   font-size: 1.25rem;
+  line-height: 1.2;
   color: #f9fafb;
 }
 h6:before, h6:after,
@@ -18000,6 +18006,7 @@ button.btn-bracket {
   font-weight: 700;
   position: relative;
   bottom: 0.05em;
+  text-shadow: 0 2px 5px transparent;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -18129,7 +18136,7 @@ form textarea {
 form input[type=submit] {
   background: #66b2b2;
   border: 2px solid transparent;
-  color: #f9fafb;
+  color: #353b41;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -18137,6 +18144,7 @@ form input[type=submit] {
 }
 form input[type=submit]:hover {
   background: #3c7777;
+  color: #f9fafb;
   border: 2px solid #f9fafb;
 }
 form #message-notice {
@@ -18248,6 +18256,9 @@ form #message-notice.show {
   -moz-cursor: grabbing;
   cursor: grabbing;
 }
+.sec-contact li a {
+  color: #000;
+}
 .sec-contact li i {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), 0 -1px 1px rgba(0, 0, 0, 0.5);
   font-size: 2em;
@@ -18275,6 +18286,10 @@ form #message-notice.show {
 }
 .sec-contact li .gmail path {
   fill: #ea4334;
+}
+.sec-contact li #yahoo,
+.sec-contact li #gmail {
+  color: #000;
 }
 
 /*# sourceMappingURL=main.css.map */
