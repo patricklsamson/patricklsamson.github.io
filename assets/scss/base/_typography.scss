@@ -19,8 +19,9 @@ html {
 
   h#{$i},
   .h#{$i} {
-    line-height: 1.2;
+    font-weight: bold;
     font-size: $rem;
+    line-height: 1.2;
     color: $white;
 
     &:before,
