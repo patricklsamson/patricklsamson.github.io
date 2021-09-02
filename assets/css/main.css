@@ -3104,12 +3104,14 @@ address,
 article,
 aside,
 b,
+bdi,
 bdo,
 blockquote,
 body,
 button,
 caption,
 cite,
+code,
 data,
 dd,
 del,
@@ -3122,19 +3124,83 @@ dt,
 em,
 fieldset,
 figcaption,
-figure,
 footer,
 form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 header,
 i,
 input,
 ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+nav,
+ol,
+optgroup,
+option,
+output,
+p,
+pre,
+q,
+s,
+samp,
+section,
+select,
+span,
+strong,
+summary,
+table,
+tbody,
+td,
+template,
+textarea,
+tfoot,
+th,
+thead,
+time,
+tr,
+u,
+ul,
+var,
+wbr {
+  font-size: inherit;
+}
+
+a,
+abbr,
+address,
+article,
+aside,
+b,
+bdi,
+bdo,
+blockquote,
+body,
+button,
+caption,
+cite,
+code,
+data,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+footer,
+form,
+header,
+i,
+input,
+ins,
+kbd,
 label,
 legend,
 li,
@@ -3161,6 +3227,7 @@ sup,
 table,
 tbody,
 td,
+template,
 textarea,
 tfoot,
 th,
@@ -3169,15 +3236,88 @@ time,
 tr,
 u,
 ul,
-var {
-  font-size: inherit;
+var,
+wbr {
   line-height: inherit;
+}
+
+a,
+abbr,
+address,
+article,
+aside,
+b,
+bdi,
+bdo,
+blockquote,
+body,
+button,
+caption,
+cite,
+data,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+i,
+input,
+ins,
+label,
+legend,
+li,
+main,
+mark,
+nav,
+ol,
+optgroup,
+option,
+output,
+p,
+q,
+s,
+section,
+select,
+small,
+span,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+template,
+textarea,
+tfoot,
+th,
+thead,
+time,
+tr,
+u,
+ul,
+var,
+wbr {
   font-family: inherit;
 }
 
 h1,
 .h1 {
-  font-weight: bold;
   font-size: 2.5rem;
   line-height: 1.2;
   color: #f9fafb;
@@ -3207,7 +3347,6 @@ h1:after,
 
 h2,
 .h2 {
-  font-weight: bold;
   font-size: 2.25rem;
   line-height: 1.2;
   color: #f9fafb;
@@ -3237,7 +3376,6 @@ h2:after,
 
 h3,
 .h3 {
-  font-weight: bold;
   font-size: 2rem;
   line-height: 1.2;
   color: #f9fafb;
@@ -3267,7 +3405,6 @@ h3:after,
 
 h4,
 .h4 {
-  font-weight: bold;
   font-size: 1.75rem;
   line-height: 1.2;
   color: #f9fafb;
@@ -3297,7 +3434,6 @@ h4:after,
 
 h5,
 .h5 {
-  font-weight: bold;
   font-size: 1.5rem;
   line-height: 1.2;
   color: #f9fafb;
@@ -3327,7 +3463,6 @@ h5:after,
 
 h6,
 .h6 {
-  font-weight: bold;
   font-size: 1.25rem;
   line-height: 1.2;
   color: #f9fafb;
@@ -4051,6 +4186,26 @@ a:hover,
     font-weight: 900;
   }
 }
+.fs-05 {
+  font-size: 0.5rem;
+}
+
+.fs-06 {
+  font-size: 0.6rem;
+}
+
+.fs-07 {
+  font-size: 0.7rem;
+}
+
+.fs-08 {
+  font-size: 0.8rem;
+}
+
+.fs-09 {
+  font-size: 0.9rem;
+}
+
 .fs-11 {
   font-size: 1.1rem;
 }
@@ -4104,6 +4259,26 @@ a:hover,
 }
 
 @media only screen and (min-width: 481px) {
+  .fs-xsup-05 {
+    font-size: 0.5rem;
+  }
+
+  .fs-xsup-06 {
+    font-size: 0.6rem;
+  }
+
+  .fs-xsup-07 {
+    font-size: 0.7rem;
+  }
+
+  .fs-xsup-08 {
+    font-size: 0.8rem;
+  }
+
+  .fs-xsup-09 {
+    font-size: 0.9rem;
+  }
+
   .fs-xsup-11 {
     font-size: 1.1rem;
   }
@@ -4157,6 +4332,26 @@ a:hover,
   }
 }
 @media only screen and (min-width: 576px) {
+  .fs-smup-05 {
+    font-size: 0.5rem;
+  }
+
+  .fs-smup-06 {
+    font-size: 0.6rem;
+  }
+
+  .fs-smup-07 {
+    font-size: 0.7rem;
+  }
+
+  .fs-smup-08 {
+    font-size: 0.8rem;
+  }
+
+  .fs-smup-09 {
+    font-size: 0.9rem;
+  }
+
   .fs-smup-11 {
     font-size: 1.1rem;
   }
@@ -4210,6 +4405,26 @@ a:hover,
   }
 }
 @media only screen and (min-width: 768px) {
+  .fs-mdup-05 {
+    font-size: 0.5rem;
+  }
+
+  .fs-mdup-06 {
+    font-size: 0.6rem;
+  }
+
+  .fs-mdup-07 {
+    font-size: 0.7rem;
+  }
+
+  .fs-mdup-08 {
+    font-size: 0.8rem;
+  }
+
+  .fs-mdup-09 {
+    font-size: 0.9rem;
+  }
+
   .fs-mdup-11 {
     font-size: 1.1rem;
   }
@@ -4263,6 +4478,26 @@ a:hover,
   }
 }
 @media only screen and (min-width: 992px) {
+  .fs-lgup-05 {
+    font-size: 0.5rem;
+  }
+
+  .fs-lgup-06 {
+    font-size: 0.6rem;
+  }
+
+  .fs-lgup-07 {
+    font-size: 0.7rem;
+  }
+
+  .fs-lgup-08 {
+    font-size: 0.8rem;
+  }
+
+  .fs-lgup-09 {
+    font-size: 0.9rem;
+  }
+
   .fs-lgup-11 {
     font-size: 1.1rem;
   }
@@ -4316,6 +4551,26 @@ a:hover,
   }
 }
 @media only screen and (min-width: 1200px) {
+  .fs-xlup-05 {
+    font-size: 0.5rem;
+  }
+
+  .fs-xlup-06 {
+    font-size: 0.6rem;
+  }
+
+  .fs-xlup-07 {
+    font-size: 0.7rem;
+  }
+
+  .fs-xlup-08 {
+    font-size: 0.8rem;
+  }
+
+  .fs-xlup-09 {
+    font-size: 0.9rem;
+  }
+
   .fs-xlup-11 {
     font-size: 1.1rem;
   }
@@ -4369,6 +4624,26 @@ a:hover,
   }
 }
 @media only screen and (min-width: 1400px) {
+  .fs-xxl-05 {
+    font-size: 0.5rem;
+  }
+
+  .fs-xxl-06 {
+    font-size: 0.6rem;
+  }
+
+  .fs-xxl-07 {
+    font-size: 0.7rem;
+  }
+
+  .fs-xxl-08 {
+    font-size: 0.8rem;
+  }
+
+  .fs-xxl-09 {
+    font-size: 0.9rem;
+  }
+
   .fs-xxl-11 {
     font-size: 1.1rem;
   }
@@ -4422,6 +4697,26 @@ a:hover,
   }
 }
 @media only screen and (max-width: 480px) {
+  .fs-xxs-05 {
+    font-size: 0.5rem;
+  }
+
+  .fs-xxs-06 {
+    font-size: 0.6rem;
+  }
+
+  .fs-xxs-07 {
+    font-size: 0.7rem;
+  }
+
+  .fs-xxs-08 {
+    font-size: 0.8rem;
+  }
+
+  .fs-xxs-09 {
+    font-size: 0.9rem;
+  }
+
   .fs-xxs-11 {
     font-size: 1.1rem;
   }
@@ -4475,6 +4770,26 @@ a:hover,
   }
 }
 @media only screen and (max-width: 575px) {
+  .fs-xs-05 {
+    font-size: 0.5rem;
+  }
+
+  .fs-xs-06 {
+    font-size: 0.6rem;
+  }
+
+  .fs-xs-07 {
+    font-size: 0.7rem;
+  }
+
+  .fs-xs-08 {
+    font-size: 0.8rem;
+  }
+
+  .fs-xs-09 {
+    font-size: 0.9rem;
+  }
+
   .fs-xs-11 {
     font-size: 1.1rem;
   }
@@ -4528,6 +4843,26 @@ a:hover,
   }
 }
 @media only screen and (max-width: 767px) {
+  .fs-sm-05 {
+    font-size: 0.5rem;
+  }
+
+  .fs-sm-06 {
+    font-size: 0.6rem;
+  }
+
+  .fs-sm-07 {
+    font-size: 0.7rem;
+  }
+
+  .fs-sm-08 {
+    font-size: 0.8rem;
+  }
+
+  .fs-sm-09 {
+    font-size: 0.9rem;
+  }
+
   .fs-sm-11 {
     font-size: 1.1rem;
   }
@@ -4581,6 +4916,26 @@ a:hover,
   }
 }
 @media only screen and (max-width: 991px) {
+  .fs-md-05 {
+    font-size: 0.5rem;
+  }
+
+  .fs-md-06 {
+    font-size: 0.6rem;
+  }
+
+  .fs-md-07 {
+    font-size: 0.7rem;
+  }
+
+  .fs-md-08 {
+    font-size: 0.8rem;
+  }
+
+  .fs-md-09 {
+    font-size: 0.9rem;
+  }
+
   .fs-md-11 {
     font-size: 1.1rem;
   }
@@ -4634,6 +4989,26 @@ a:hover,
   }
 }
 @media only screen and (max-width: 1199px) {
+  .fs-lg-05 {
+    font-size: 0.5rem;
+  }
+
+  .fs-lg-06 {
+    font-size: 0.6rem;
+  }
+
+  .fs-lg-07 {
+    font-size: 0.7rem;
+  }
+
+  .fs-lg-08 {
+    font-size: 0.8rem;
+  }
+
+  .fs-lg-09 {
+    font-size: 0.9rem;
+  }
+
   .fs-lg-11 {
     font-size: 1.1rem;
   }
@@ -4687,6 +5062,26 @@ a:hover,
   }
 }
 @media only screen and (max-width: 1399px) {
+  .fs-xl-05 {
+    font-size: 0.5rem;
+  }
+
+  .fs-xl-06 {
+    font-size: 0.6rem;
+  }
+
+  .fs-xl-07 {
+    font-size: 0.7rem;
+  }
+
+  .fs-xl-08 {
+    font-size: 0.8rem;
+  }
+
+  .fs-xl-09 {
+    font-size: 0.9rem;
+  }
+
   .fs-xl-11 {
     font-size: 1.1rem;
   }
