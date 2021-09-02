@@ -18606,6 +18606,16 @@ form #message-notice.show {
 .sec-professional [class*=gcol] i.fa-sass {
   color: #cc6699;
 }
+.sec-professional [class*=gcol] i.fa-bootstrap {
+  color: #7851b3;
+}
+.sec-professional [class*=gcol] i.fa-git-alt {
+  color: #f04f33;
+}
+.sec-professional [class*=gcol] i.fa-markdown {
+  color: #000;
+  text-shadow: 0 2px 4px rgba(249, 250, 251, 0.4), 0 -2px 4px rgba(249, 250, 251, 0.4);
+}
 .sec-professional [class*=gcol] i.fa-js {
   color: #f7dd1d;
 }
@@ -18623,8 +18633,14 @@ form #message-notice.show {
 .sec-professional [class*=gcol] svg.jquery {
   background: #0767ab;
 }
+.sec-professional [class*=gcol] svg.xampp path {
+  fill: #fb7923;
+}
 .sec-professional [class*=gcol] svg.ruby, .sec-professional [class*=gcol] svg.rails {
   border: 1px solid #f9fafb;
+}
+.sec-professional [class*=gcol] svg.postgresql {
+  background: royalblue;
 }
 .sec-professional [class*=gcol] svg.ruby {
   background: #cd352d;
