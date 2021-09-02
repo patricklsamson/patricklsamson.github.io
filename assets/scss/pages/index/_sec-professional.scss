@@ -59,6 +59,19 @@
         color: hsl(330, 50%, 60%);
       }
 
+      &.fa-bootstrap {
+        color: hsl(264, 39%, 51%);
+      }
+
+      &.fa-git-alt {
+        color: hsl(9, 86%, 57%);
+      }
+
+      &.fa-markdown {
+        color: #000;
+        text-shadow: 0 2px 4px $white-04, 0 -2px 4px $white-04;
+      }
+
       &.fa-js {
         color: hsl(53, 93%, 54%);
       }
@@ -81,8 +94,19 @@
         background: hsl(205, 92%, 35%);
       }
 
-      &.ruby, &.rails {
+      &.xampp {
+        path {
+          fill: hsl(24, 96%, 56%);
+        }
+      }
+
+      &.ruby,
+      &.rails {
         border: 1px solid $white;
+      }
+
+      &.postgresql {
+        background: hsl(225, 73%, 57%);
       }
 
       &.ruby {
