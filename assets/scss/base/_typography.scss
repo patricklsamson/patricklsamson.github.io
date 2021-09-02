@@ -7,9 +7,15 @@ html {
   font-family: "arial", sans-serif;
 }
 
-@include elements(font) {
+@include elements(font-size) {
   font-size: inherit;
+}
+
+@include elements(line-height) {
   line-height: inherit;
+}
+
+@include elements(font-family) {
   font-family: inherit;
 }
 
@@ -19,7 +25,6 @@ html {
 
   h#{$i},
   .h#{$i} {
-    font-weight: bold;
     font-size: $rem;
     line-height: 1.2;
     color: $white;
@@ -113,6 +118,12 @@ a,
   }
 }
 
+@for $i from 5 through 9 {
+  .fs-0#{$i} {
+    font-size: s.unquote("0.#{$i}rem");
+  }
+}
+
 @for $i from 1 through 9 {
   .fs-1#{$i} {
     font-size: s.unquote("1.#{$i}rem");
@@ -127,6 +138,12 @@ a,
 
 @each $min-max-mq in $min-max-mqs {
   @include mq($min-max-mq) {
+    @for $i from 5 through 9 {
+      .fs-#{$min-max-mq}-0#{$i} {
+        font-size: s.unquote("0.#{$i}rem");
+      }
+    }
+
     @for $i from 1 through 9 {
       .fs-#{$min-max-mq}-1#{$i} {
         font-size: s.unquote("1.#{$i}rem");
