@@ -50,7 +50,11 @@ button {
 
     & + #portfolio-dropdown {
       @include vis(visible) {
-        height: 300px;
+        height: 70vh;
+
+        @include mq(md) {
+          height: 600px;
+        }
       }
 
       * {
