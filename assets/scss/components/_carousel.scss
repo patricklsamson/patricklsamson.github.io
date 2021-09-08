@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.item {
+  margin: auto;
+
+  #psychally {
+    @include bg($psychally);
+  }
+
+  #tictactoe {
+    @include bg($tictactoe);
+  }
+
+  #chessgrid {
+    @include bg($chessgrid);
+  }
+
+  #chessflex {
+    @include bg($chessflex);
+  }
+
+  #survey {
+    @include bg($survey);
+  }
+
+  #tribute {
+    @include bg($tribute);
+  }
+
+  #momentum {
+    @include bg($momentum);
+  }
+}
