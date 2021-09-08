@@ -16,6 +16,10 @@ main {
       @include grid-cont(r-rep, 25vh, 70vw, 4);
     }
 
+    #slncdworks {
+      @include bg($slncdworks);
+    }
+
     #batch8 {
       @include bg($batch8);
     }
@@ -26,10 +30,6 @@ main {
 
     #bank {
       @include bg($bank);
-    }
-
-    #chessgrid {
-      @include bg($chessgrid);
     }
   }
 }
