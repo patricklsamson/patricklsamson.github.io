@@ -38,39 +38,6 @@ i[id*=btn] {
 .owl-carousel .owl-dot {
   outline: 0;
 }
-.owl-carousel .item {
-  width: 30vw;
-  height: 20vh;
-  margin: auto;
-}
-@media only screen and (max-width: 991px) {
-  .owl-carousel .item {
-    width: 70vw;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .owl-carousel .item {
-    height: 25vh;
-  }
-}
-.owl-carousel .item #psychally {
-  background-image: url(../img/psychally.JPG);
-}
-.owl-carousel .item #tictactoe {
-  background-image: url(../img/tictactoe.JPG);
-}
-.owl-carousel .item #chessflex {
-  background-image: url(../img/chessflex.JPG);
-}
-.owl-carousel .item #survey {
-  background-image: url(../img/survey.JPG);
-}
-.owl-carousel .item #tribute {
-  background-image: url(../img/tribute.JPG);
-}
-.owl-carousel .item #momentum {
-  background-image: url(../img/momentum.JPG);
-}
 .owl-carousel .owl-nav .owl-prev,
 .owl-carousel .owl-nav .owl-next {
   margin: 1em 1.5em;
@@ -3036,6 +3003,8 @@ table {
 .wrap-portfolio {
   border: 5px solid rgba(102, 178, 178, 0.4);
   background: transparent;
+  height: 20vh;
+  color: #f9fafb;
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
   perspective: 1000px;
@@ -3047,13 +3016,22 @@ table {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-.wrap-portfolio a {
-  color: #f9fafb;
+@media only screen and (min-width: 992px) {
+  .wrap-portfolio {
+    width: 30vw;
+  }
 }
-.wrap-portfolio a:hover {
-  color: rgba(249, 250, 251, 0.4);
+@media only screen and (max-width: 991px) {
+  .wrap-portfolio {
+    width: 70vw;
+  }
 }
-.wrap-portfolio a .wrap-portfolio-inner {
+@media only screen and (max-width: 480px) {
+  .wrap-portfolio {
+    height: 25vh;
+  }
+}
+.wrap-portfolio .wrap-portfolio-inner {
   -webkit-transition: transform 0.8s;
   -o-transition: transform 0.8s;
   -moz-transition: transform 0.8s;
@@ -3062,18 +3040,24 @@ table {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-.wrap-portfolio a .wrap-portfolio-inner .wrap-portfolio-inner-front,
-.wrap-portfolio a .wrap-portfolio-inner .wrap-portfolio-inner-back {
+.wrap-portfolio .wrap-portfolio-inner .wrap-portfolio-inner-front,
+.wrap-portfolio .wrap-portfolio-inner .wrap-portfolio-inner-back {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.wrap-portfolio a .wrap-portfolio-inner .wrap-portfolio-inner-back {
+.wrap-portfolio .wrap-portfolio-inner .wrap-portfolio-inner-back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
+}
+.wrap-portfolio .wrap-portfolio-inner .wrap-portfolio-inner-back [class*=wrap-dgray] {
+  height: 100%;
+}
+.wrap-portfolio .wrap-portfolio-inner .wrap-portfolio-inner-back [class*=wrap-dgray] a {
+  color: #f9fafb;
 }
 
 .wrap-dgray {
@@ -3082,6 +3066,10 @@ table {
 
 .wrap-dgray06 {
   background: rgba(53, 59, 65, 0.6);
+}
+
+.wrap-dgray08 {
+  background: rgba(53, 59, 65, 0.8);
 }
 
 .wrap-white {
@@ -18372,6 +18360,9 @@ main .grid-cont {
     grid-template: repeat(4, 25vh)/70vw;
   }
 }
+main .grid-cont #slncdworks {
+  background-image: url(../img/slncdworks.JPG);
+}
 main .grid-cont #batch8 {
   background-image: url(../img/batch8.JPG);
 }
@@ -18380,9 +18371,6 @@ main .grid-cont #predator {
 }
 main .grid-cont #bank {
   background-image: url(../img/bank.JPG);
-}
-main .grid-cont #chessgrid {
-  background-image: url(../img/chessgrid.JPG);
 }
 
 footer {
@@ -18433,7 +18421,12 @@ button.btn-bracket {
 }
 #portfolio-btn.active + #portfolio-dropdown {
   visibility: visible;
-  height: 300px;
+  height: 70vh;
+}
+@media only screen and (max-width: 991px) {
+  #portfolio-btn.active + #portfolio-dropdown {
+    height: 600px;
+  }
 }
 #portfolio-btn.active + #portfolio-dropdown * {
   visibility: visible;
@@ -18455,6 +18448,34 @@ button.btn-bracket {
   transition: all 0.5s;
   visibility: hidden;
   opacity: 0;
+}
+#portfolio-dropdown #stock {
+  background-image: url(../img/stock.JPG);
+}
+
+.item {
+  margin: auto;
+}
+.item #psychally {
+  background-image: url(../img/psychally.JPG);
+}
+.item #tictactoe {
+  background-image: url(../img/tictactoe.JPG);
+}
+.item #chessgrid {
+  background-image: url(../img/chessgrid.JPG);
+}
+.item #chessflex {
+  background-image: url(../img/chessflex.JPG);
+}
+.item #survey {
+  background-image: url(../img/survey.JPG);
+}
+.item #tribute {
+  background-image: url(../img/tribute.JPG);
+}
+.item #momentum {
+  background-image: url(../img/momentum.JPG);
 }
 
 .select-box {
