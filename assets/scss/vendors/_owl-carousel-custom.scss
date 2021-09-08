@@ -33,44 +33,6 @@
     outline: 0;
   }
 
-  .item {
-    width: 30vw;
-    height: 20vh;
-    margin: auto;
-
-    @include mq(md) {
-      width: 70vw;
-    }
-
-    @include mq(xxs) {
-      height: 25vh;
-    }
-
-    #psychally {
-      @include bg($psychally);
-    }
-
-    #tictactoe {
-      @include bg($tictactoe);
-    }
-
-    #chessflex {
-      @include bg($chessflex);
-    }
-
-    #survey {
-      @include bg($survey);
-    }
-
-    #tribute {
-      @include bg($tribute);
-    }
-
-    #momentum {
-      @include bg($momentum);
-    }
-  }
-
   .owl-nav {
     .owl-prev,
     .owl-next {
