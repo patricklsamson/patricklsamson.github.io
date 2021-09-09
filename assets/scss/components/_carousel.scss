@@ -3,6 +3,10 @@
 .item {
   margin: auto;
 
+  #blog {
+    @include bg($blog);
+  }
+
   #psychally {
     @include bg($psychally);
   }
