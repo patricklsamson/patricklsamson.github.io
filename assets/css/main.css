@@ -18432,6 +18432,9 @@ button.btn-bracket {
   visibility: visible;
   opacity: 1;
 }
+#portfolio-btn span {
+  color: transparent;
+}
 
 #portfolio-dropdown {
   -webkit-transition: all 0.25s;
