@@ -62,10 +62,11 @@ button {
           opacity: 1;
         }
       }
-    }
-  }
 
-  span {
-    color: transparent;
+      & > *,
+      & > .grid [class*="gcol"] {
+        height: auto;
+      }
+    }
   }
 }
