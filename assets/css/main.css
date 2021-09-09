@@ -18456,6 +18456,9 @@ button.btn-bracket {
 .item {
   margin: auto;
 }
+.item #blog {
+  background-image: url(../img/blog.JPG);
+}
 .item #psychally {
   background-image: url(../img/psychally.JPG);
 }
