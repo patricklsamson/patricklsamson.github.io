@@ -14,6 +14,11 @@
     }
   }
 
+  & > *,
+  & > .grid [class*="gcol"] {
+    height: 0;
+  }
+
   #stock {
     @include bg($stock);
   }
