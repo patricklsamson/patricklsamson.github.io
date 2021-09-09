@@ -18432,8 +18432,8 @@ button.btn-bracket {
   visibility: visible;
   opacity: 1;
 }
-#portfolio-btn span {
-  color: transparent;
+#portfolio-btn.active + #portfolio-dropdown > *, #portfolio-btn.active + #portfolio-dropdown > .grid [class*=gcol] {
+  height: auto;
 }
 
 #portfolio-dropdown {
@@ -18451,6 +18451,9 @@ button.btn-bracket {
   transition: all 0.5s;
   visibility: hidden;
   opacity: 0;
+}
+#portfolio-dropdown > *, #portfolio-dropdown > .grid [class*=gcol] {
+  height: 0;
 }
 #portfolio-dropdown #stock {
   background-image: url(../img/stock.JPG);
