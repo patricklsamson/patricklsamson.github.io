@@ -18660,23 +18660,30 @@ form #message-notice.show {
   vertical-align: middle;
   padding: 5px;
 }
+.sec-professional [class*=gcol] svg.bd-white {
+  border: 1px solid #f9fafb;
+}
 .sec-professional [class*=gcol] svg.jquery {
   background: #0767ab;
 }
+.sec-professional [class*=gcol] svg.heroku {
+  background: #420099;
+}
+.sec-professional [class*=gcol] svg.xampp {
+  -webkit-filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) drop-shadow(0 -2px 4px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) drop-shadow(0 -2px 4px rgba(0, 0, 0, 0.3));
+}
 .sec-professional [class*=gcol] svg.xampp path {
   fill: #fb7923;
-}
-.sec-professional [class*=gcol] svg.ruby, .sec-professional [class*=gcol] svg.rails {
-  border: 1px solid #f9fafb;
-}
-.sec-professional [class*=gcol] svg.postgresql {
-  background: royalblue;
 }
 .sec-professional [class*=gcol] svg.ruby {
   background: #cd352d;
 }
 .sec-professional [class*=gcol] svg.rails {
   background: #cc0000;
+}
+.sec-professional [class*=gcol] svg.postgresql {
+  background: royalblue;
 }
 .sec-professional [class*=gcol] svg path {
   fill: #f9fafb;
