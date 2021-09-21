@@ -25,6 +25,7 @@ doc_ready(() => {
 
   click_copy(id("yahoo"));
   click_copy(id("gmail"));
+  click_copy(id("mobile"));
 
   add_event(id("portfolio-btn"), "click", () => {
     toggle_class(id("portfolio-btn"), "active");
