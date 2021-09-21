@@ -15,7 +15,8 @@
     }
 
     &:last-child,
-    &:nth-last-child(2) {
+    &:nth-last-child(2),
+    &:nth-last-child(3) {
       @include grab;
     }
 
@@ -56,11 +57,6 @@
       path {
         fill: hsl(5, 81%, 56%);
       }
-    }
-
-    #yahoo,
-    #gmail {
-      color: #000;
     }
   }
 }
