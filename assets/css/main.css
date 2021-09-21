@@ -18696,10 +18696,10 @@ form #message-notice.show {
   color: #66b2b2;
   text-shadow: 0 2px 5px rgba(249, 250, 251, 0.4);
 }
-.sec-contact li:last-child, .sec-contact li:nth-last-child(2) {
+.sec-contact li:last-child, .sec-contact li:nth-last-child(2), .sec-contact li:nth-last-child(3) {
   cursor: grab;
 }
-.sec-contact li:last-child:active, .sec-contact li:nth-last-child(2):active {
+.sec-contact li:last-child:active, .sec-contact li:nth-last-child(2):active, .sec-contact li:nth-last-child(3):active {
   -webkit-cursor: grabbing;
   -moz-cursor: grabbing;
   cursor: grabbing;
@@ -18734,10 +18734,6 @@ form #message-notice.show {
 }
 .sec-contact li .gmail path {
   fill: #ea4334;
-}
-.sec-contact li #yahoo,
-.sec-contact li #gmail {
-  color: #000;
 }
 
 /*# sourceMappingURL=main.css.map */
