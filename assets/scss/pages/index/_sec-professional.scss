@@ -90,23 +90,29 @@
       vertical-align: middle;
       padding: 5px;
 
+      &.bd-white {
+        border: 1px solid $white;
+      }
+
       &.jquery {
         background: hsl(205, 92%, 35%);
       }
 
+      &.heroku {
+        background: hsl(266, 100%, 30%);
+      }
+
       &.xampp {
+        @include prefix(
+          (
+            filter: drop-shadow(0 2px 4px $black-03) drop-shadow(0 -2px 4px $black-03),
+          ),
+          webkit
+        );
+
         path {
           fill: hsl(24, 96%, 56%);
         }
-      }
-
-      &.ruby,
-      &.rails {
-        border: 1px solid $white;
-      }
-
-      &.postgresql {
-        background: hsl(225, 73%, 57%);
       }
 
       &.ruby {
@@ -115,6 +121,10 @@
 
       &.rails {
         background: hsl(0, 100%, 40%);
+      }
+
+      &.postgresql {
+        background: hsl(225, 73%, 57%);
       }
 
       path {
