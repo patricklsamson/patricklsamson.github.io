@@ -35,6 +35,16 @@ button {
       text-shadow: 0 2px 5px $white-04;
     }
   }
+
+  &.blk-shadow {
+    &:hover {
+      &:before,
+      &:after {
+        color: $cyan;
+        text-shadow: 0 2px 5px #000;
+      }
+    }
+  }
 }
 
 #portfolio-btn {
