@@ -176,6 +176,7 @@
     }
   } @else if $set == cursor {
     button,
+    .button,
     [role="button"],
     [type="checkbox"],
     [type="checkbox"] + label,
@@ -189,6 +190,7 @@
     }
   } @else if $set == button {
     button,
+    .button,
     [type="button"],
     [type="reset"],
     [type="submit"] {
