@@ -128,6 +128,7 @@ summary {
 }
 
 button,
+.button,
 [role=button],
 [type=checkbox],
 [type=checkbox] + label,
@@ -141,6 +142,7 @@ summary {
 }
 
 button,
+.button,
 [type=button],
 [type=reset],
 [type=submit] {
@@ -168,6 +170,32 @@ textarea {
 
 blockquote {
   margin: 0 40px;
+}
+
+button,
+.button {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  display: inline-block;
+  border: 1px solid #6d767e;
+  background: #f9fafb;
+}
+button:hover,
+.button:hover {
+  border-color: #353b41;
+  background: lightgray;
+}
+button.a,
+.button.a {
+  display: inline;
+  border: none;
+  background: none;
+}
+button.a:hover,
+.button.a:hover {
+  border: none;
+  background: none;
 }
 
 ol,
@@ -18405,6 +18433,10 @@ button.btn-bracket {
   color: #66b2b2;
   text-shadow: 0 2px 5px rgba(249, 250, 251, 0.4);
 }
+.btn-bracket.blk-shadow:hover:before, .btn-bracket.blk-shadow:hover:after {
+  color: #66b2b2;
+  text-shadow: 0 2px 5px #000;
+}
 
 #portfolio-btn {
   -webkit-transition: all 0.5s;
@@ -18691,10 +18723,6 @@ form #message-notice.show {
 
 .sec-contact li {
   margin-top: 15px;
-}
-.sec-contact li:hover .btn-bracket:before, .sec-contact li:hover .btn-bracket:after {
-  color: #66b2b2;
-  text-shadow: 0 2px 5px rgba(249, 250, 251, 0.4);
 }
 .sec-contact li:last-child, .sec-contact li:nth-last-child(2), .sec-contact li:nth-last-child(3) {
   cursor: grab;
