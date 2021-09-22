@@ -72,6 +72,36 @@ blockquote {
   margin: 0 40px;
 }
 
+button,
+.button {
+  @include prefix(
+    (
+      border-radius: 2px
+    ),
+    webkit moz
+  );
+
+  display: inline-block;
+  border: 1px solid $gray;
+  background: $white;
+
+  &:hover {
+    border-color: $dgray;
+    background: $lgray;
+  }
+
+  &.a {
+    display: inline;
+    border: none;
+    background: none;
+
+    &:hover {
+      border: none;
+      background: none;
+    }
+  }
+}
+
 ol,
 ul {
   padding-left: 40px;
