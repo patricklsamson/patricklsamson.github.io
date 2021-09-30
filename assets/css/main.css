@@ -3112,6 +3112,10 @@ table {
   background: rgba(53, 59, 65, 0.8);
 }
 
+.wrap-dgray09 {
+  background: rgba(53, 59, 65, 0.9);
+}
+
 .wrap-white {
   background: rgba(249, 250, 251, 0.7);
 }
@@ -18787,6 +18791,10 @@ form #message-notice.show {
 
 #stellargram {
   background-image: url(../img/stellargram.JPG);
+}
+
+#journal {
+  background-image: url(../img/journal.JPG);
 }
 
 /*# sourceMappingURL=main.css.map */
