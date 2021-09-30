@@ -1,0 +1,57 @@
+@use "../abstracts" as *;
+
+#stock {
+  @include bg($stock);
+}
+
+#blog {
+  @include bg($blog);
+}
+
+#psychally {
+  @include bg($psychally);
+}
+
+#tictactoe {
+  @include bg($tictactoe);
+}
+
+#chessgrid {
+  @include bg($chessgrid);
+}
+
+#chessflex {
+  @include bg($chessflex);
+}
+
+#survey {
+  @include bg($survey);
+}
+
+#tribute {
+  @include bg($tribute);
+}
+
+#momentum {
+  @include bg($momentum);
+}
+
+#slncdworks {
+  @include bg($slncdworks);
+}
+
+#batch8 {
+  @include bg($batch8);
+}
+
+#predator {
+  @include bg($predator);
+}
+
+#bank {
+  @include bg($bank);
+}
+
+#stellargram {
+  @include bg($stellargram);
+}
