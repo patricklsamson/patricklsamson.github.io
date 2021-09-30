@@ -60,6 +60,30 @@ a,
     color: $dgray;
     text-decoration: none;
   }
+
+  &.txt-ul {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.txt-lt {
+    &:hover {
+      text-decoration: line-through;
+    }
+  }
+
+  &.txt-ol {
+    &:hover {
+      text-decoration: overline;
+    }
+  }
+
+  &.txt-ul-ol {
+    &:hover {
+      text-decoration: underline overline;
+    }
+  }
 }
 
 .talign {
@@ -100,6 +124,22 @@ a,
       text-align: center;
     }
   }
+}
+
+.txt-ul {
+  text-decoration: underline;
+}
+
+.txt-lt {
+  text-decoration: line-through;
+}
+
+.txt-ol {
+  text-decoration: overline;
+}
+
+.txt-ul-ol {
+  text-decoration: underline overline;
 }
 
 @for $i from 1 through 9 {
