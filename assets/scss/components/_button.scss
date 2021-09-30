@@ -60,22 +60,16 @@ button {
 
     & + #portfolio-dropdown {
       @include vis(visible) {
-        height: 70vh;
+        height: 35vh;
 
         @include mq(md) {
-          height: 600px;
+          height: 300px;
         }
-      }
 
-      * {
-        @include vis(visible) {
+        .owl-carousel {
+          height: auto;
           opacity: 1;
         }
-      }
-
-      & > *,
-      & > .grid [class*="gcol"] {
-        height: auto;
       }
     }
   }
