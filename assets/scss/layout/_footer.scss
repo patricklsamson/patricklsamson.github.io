@@ -1,6 +1,48 @@
 @use "../abstracts" as *;
 
 footer {
-  background: $dgray;
-  color: $white;
+  position: relative;
+
+  .wrap-white {
+    @include mq(xsup) {
+      width: 75%;
+    }
+
+    i {
+      text-shadow: 0 1px 1px $black-05, 0 -1px 1px $black-05;
+      font-size: 2em;
+      vertical-align: bottom;
+      margin-right: 15px;
+
+      &.fa-linkedin {
+        color: hsl(210, 90%, 40%);
+      }
+
+      &.fa-stack-overflow {
+        color: hsl(26, 91%, 55%);
+      }
+
+      &.fa-github {
+        color: #181717;
+      }
+
+      &.fa-yahoo {
+        color: hsl(267, 99%, 41%);
+      }
+
+      &.fa-envelope,
+      &.fa-phone-alt {
+        color: $dcyan;
+      }
+    }
+  }
+
+  .copyright {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: $dgray;
+    color: $white;
+  }
 }
