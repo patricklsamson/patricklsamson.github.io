@@ -12,6 +12,8 @@
 
 $lgray: hsl(0, 0%, 82.745%);
 $gray: hsl(208, 7%, 46%);
+$gray-06: hsla(208, 7%, 46%, 0.6);
+$gray-08: hsla(208, 7%, 46%, 0.8);
 $dgray: hsl(210, 10%, 23%);
 $dgray-09: hsla(210, 10%, 23%, 0.9);
 $dgray-08: hsla(210, 10%, 23%, 0.8);
@@ -22,6 +24,7 @@ $white-04: hsla(210, 17%, 98%, 0.4);
 $white-08: hsla(210, 17%, 98%, 0.7);
 $black-03: hsla(0, 0%, 0%, 0.3);
 $black-05: hsla(0, 0%, 0%, 0.5);
+$black-08: hsla(0, 0%, 0%, 0.8);
 $cyan: hsl(180, 33%, 55%);
 $cyan-04: hsla(180, 33%, 55%, 0.4);
 $dcyan: hsl(180, 33%, 35%);
@@ -45,6 +48,7 @@ $survey: url(../img/survey.JPG);
 $tribute: url(../img/tribute.JPG);
 $momentum: url(../img/momentum.JPG);
 $stock: url(../img/stock.JPG);
+$stellargram: url(../img/stellargram.JPG);
 
 // --------------------------------------------------
 // HELPERS
