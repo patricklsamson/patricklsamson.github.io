@@ -15,21 +15,5 @@ main {
     @include mq(xxs) {
       @include grid-cont(r-rep, 25vh, 70vw, 4);
     }
-
-    #slncdworks {
-      @include bg($slncdworks);
-    }
-
-    #batch8 {
-      @include bg($batch8);
-    }
-
-    #predator {
-      @include bg($predator);
-    }
-
-    #bank {
-      @include bg($bank);
-    }
   }
 }
