@@ -84,20 +84,22 @@
 form {
   color: $white;
 
+  @include mq(xsup) {
+    width: 75%;
+  }
+
   textarea {
     resize: none;
   }
 
   input[type="submit"] {
     background: $cyan;
-    border: 2px solid transparent;
+    border: 4px solid transparent;
     color: $dgray;
     @include tran;
 
     &:hover {
-      background: $dcyan;
-      color: $white;
-      border: 2px solid $white;
+      border: 4px solid $white;
     }
   }
 
@@ -113,6 +115,14 @@ form {
       @include vis(visible) {
         opacity: 1;
         height: auto;
+
+        @include mq(lgup) {
+          margin-top: 1rem;
+        }
+
+        @include mq(sm) {
+          margin-top: 1rem;
+        }
       }
     }
   }
