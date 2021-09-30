@@ -403,12 +403,44 @@
   }
 }
 
+.wrap-gray {
+  @include prefix(
+    (
+      background: linear-gradient($gray-06, $lgray 50%),
+    ),
+    webkit moz o,
+    f
+  ) {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from($gray-06),
+      color-stop(50%, $lgray)
+    );
+  }
+}
+
 .wrap-dgray {
   background: $dgray2;
 }
 
 .wrap-dgray06 {
-  background: $dgray-06;
+  @include prefix(
+    (
+      background: linear-gradient($dgray-06, $gray-06),
+    ),
+    webkit moz o,
+    f
+  ) {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from($dgray-06),
+      to($gray-06)
+    );
+  }
 }
 
 .wrap-dgray08 {
@@ -419,6 +451,6 @@
   background: $white-08;
 }
 
-.wrap-cyan04 {
-  background: $cyan-04;
+.wrap-dcyan {
+  background: $dcyan;
 }
