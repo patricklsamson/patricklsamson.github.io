@@ -21,6 +21,15 @@ nav {
       #nav-btn:after {
         color: $white;
       }
+
+      li {
+        &:hover {
+          &:before,
+          &:after {
+            text-shadow: 0 2px 5px $white-04;
+          }
+        }
+      }
     }
 
     img {
@@ -144,6 +153,10 @@ nav {
     ul {
       list-style: none;
       padding-left: 0;
+
+      a {
+        text-shadow: 0 2px 4px $black-05, 0 -2px 4px $black-05;
+      }
     }
   }
 }
