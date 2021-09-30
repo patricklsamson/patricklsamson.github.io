@@ -3532,6 +3532,22 @@ a:hover,
   color: #353b41;
   text-decoration: none;
 }
+a.txt-ul:hover,
+.a.txt-ul:hover {
+  text-decoration: underline;
+}
+a.txt-lt:hover,
+.a.txt-lt:hover {
+  text-decoration: line-through;
+}
+a.txt-ol:hover,
+.a.txt-ol:hover {
+  text-decoration: overline;
+}
+a.txt-ul-ol:hover,
+.a.txt-ul-ol:hover {
+  text-decoration: underline overline;
+}
 
 .talign {
   text-align: center;
@@ -3738,6 +3754,22 @@ a:hover,
     text-align: center;
   }
 }
+.txt-ul {
+  text-decoration: underline;
+}
+
+.txt-lt {
+  text-decoration: line-through;
+}
+
+.txt-ol {
+  text-decoration: overline;
+}
+
+.txt-ul-ol {
+  text-decoration: underline overline;
+}
+
 .fw-100 {
   font-weight: 100;
 }
