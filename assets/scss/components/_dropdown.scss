@@ -4,22 +4,10 @@
   @include tran(all, 0.25s);
   @include vis(hidden) {
     height: 0;
-  }
 
-  * {
-    @include tran;
-
-    @include vis(hidden) {
+    .owl-carousel {
+      height: 0;
       opacity: 0;
     }
-  }
-
-  & > *,
-  & > .grid [class*="gcol"] {
-    height: 0;
-  }
-
-  #stock {
-    @include bg($stock);
   }
 }
