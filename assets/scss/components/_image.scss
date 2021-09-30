@@ -55,3 +55,7 @@
 #stellargram {
   @include bg($stellargram);
 }
+
+#journal {
+  @include bg($journal);
+}
