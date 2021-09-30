@@ -16,16 +16,13 @@ doc_ready(() => {
     setTimeout(() => {
       id("g-form").reset();
       add_class(id("message-notice"), "show");
+      add_class(id("message-notice"), "mt-xs-10");
 
       setTimeout(() => {
         remove_class(id("message-notice"), "show");
       }, 6000);
     }, 3000);
   });
-
-  click_copy(id("yahoo"));
-  click_copy(id("gmail"));
-  click_copy(id("mobile"));
 
   add_event(id("portfolio-btn"), "click", () => {
     toggle_class(id("portfolio-btn"), "active");
