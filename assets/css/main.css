@@ -18455,10 +18455,10 @@ header [class*=gcol]:last-child, header [class*=gcol]:nth-last-child(2) {
 }
 @media only screen and (max-width: 480px) {
   header [class*=gcol]:nth-child(odd) {
-    padding-bottom: 5px;
+    padding-bottom: 10px;
   }
   header [class*=gcol]:nth-child(even) {
-    padding-top: 5px;
+    padding-top: 10px;
   }
 }
 header [class*=gcol] i {
