@@ -28,6 +28,7 @@ html {
     font-size: $rem;
     line-height: 1.2;
     color: $white;
+    font-family: "Oswald", sans-serif;;
 
     &:before,
     &:after {
@@ -202,8 +203,6 @@ a,
   text-shadow: 0 5px 10px $black-05;
 }
 
-@include fonts;
-
 .txt-blk-shadow {
   text-shadow: 0 2px 4px $black-05, 0 -2px 4px $black-05;
 
@@ -211,4 +210,8 @@ a,
   &:after {
     text-shadow: 0 2px 4px $black-05, 0 -2px 4px $black-05;
   }
+}
+
+.f-oswald {
+  font-family: "Oswald", sans-serif;
 }
