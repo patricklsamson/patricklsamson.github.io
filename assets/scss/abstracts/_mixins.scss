@@ -7,7 +7,6 @@
 /**
  * Contents:
  * - MEDIA QUERIES
- * - FONTS
  * - HELPERS
  */
 
@@ -97,37 +96,6 @@
   } @else if $breakpoint == controller {
     @media (hover: hover) and (pointer: coarse) {
       @content;
-    }
-  }
-}
-
-// --------------------------------------------------
-// FONTS
-// --------------------------------------------------
-
-@mixin font-face(
-  $font-family,
-  $file,
-  $font-weight: normal,
-  $font-size: normal
-) {
-  @font-face {
-    font-family: "#{$font-family}";
-    src: url("../fonts/#{$file}.eot");
-    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
-      url("../fonts/#{$file}.woff") format("woff"),
-      url("../fonts/#{$file}.ttf") format("truetype"),
-      url("../fonts/#{$file}.svg?#webfont") format("svg");
-    font-weight: $font-weight;
-    font-style: $font-size;
-    font-display: swap;
-  }
-}
-
-@mixin fonts {
-  @each $class, $font, $generic-family in $fonts {
-    .f-#{$class} {
-      font-family: $font, $generic-family;
     }
   }
 }
@@ -426,6 +394,25 @@
     wbr {
       @content;
     }
+  }
+}
+
+@mixin font-face(
+  $font-family,
+  $file,
+  $font-weight: normal,
+  $font-size: normal
+) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$file}.eot");
+    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/#{$file}.woff") format("woff"),
+      url("../fonts/#{$file}.ttf") format("truetype"),
+      url("../fonts/#{$file}.svg?#webfont") format("svg");
+    font-weight: $font-weight;
+    font-style: $font-size;
+    font-display: swap;
   }
 }
 
