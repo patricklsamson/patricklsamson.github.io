@@ -18448,7 +18448,7 @@ header [class*=gcol] {
 header [class*=gcol]:last-child, header [class*=gcol]:nth-last-child(2) {
   border-color: transparent;
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 991px) {
   header [class*=gcol]:nth-child(odd) {
     border-color: transparent;
   }
