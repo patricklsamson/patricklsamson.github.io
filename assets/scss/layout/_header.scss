@@ -39,7 +39,7 @@ header {
       border-color: transparent;
     }
 
-    @include mq(lg) {
+    @include mq(md) {
       &:nth-child(odd) {
         border-color: transparent;
       }
