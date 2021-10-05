@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
 /**
  * Contents:
  * - COLORS
@@ -8,7 +9,6 @@
 /**
  * Contents:
  * - MEDIA QUERIES
- * - FONTS
  * - HELPERS
  */
 i[id*=btn] {
@@ -3353,6 +3353,7 @@ h1,
   font-size: 2.5rem;
   line-height: 1.2;
   color: #f9fafb;
+  font-family: "Oswald", sans-serif;
 }
 h1:before, h1:after,
 .h1:before,
@@ -3382,6 +3383,7 @@ h2,
   font-size: 2.25rem;
   line-height: 1.2;
   color: #f9fafb;
+  font-family: "Oswald", sans-serif;
 }
 h2:before, h2:after,
 .h2:before,
@@ -3411,6 +3413,7 @@ h3,
   font-size: 2rem;
   line-height: 1.2;
   color: #f9fafb;
+  font-family: "Oswald", sans-serif;
 }
 h3:before, h3:after,
 .h3:before,
@@ -3440,6 +3443,7 @@ h4,
   font-size: 1.75rem;
   line-height: 1.2;
   color: #f9fafb;
+  font-family: "Oswald", sans-serif;
 }
 h4:before, h4:after,
 .h4:before,
@@ -3469,6 +3473,7 @@ h5,
   font-size: 1.5rem;
   line-height: 1.2;
   color: #f9fafb;
+  font-family: "Oswald", sans-serif;
 }
 h5:before, h5:after,
 .h5:before,
@@ -3498,6 +3503,7 @@ h6,
   font-size: 1.25rem;
   line-height: 1.2;
   color: #f9fafb;
+  font-family: "Oswald", sans-serif;
 }
 h6:before, h6:after,
 .h6:before,
@@ -5207,6 +5213,10 @@ a.txt-ul-ol:hover,
 }
 .txt-blk-shadow:before, .txt-blk-shadow:after {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.f-oswald {
+  font-family: "Oswald", sans-serif;
 }
 
 .img {
