@@ -10,4 +10,6 @@ My portfolio website was also optimized for Google Search Engine. Try searching 
 
 Check it out [live](https://patricklsamson.github.io/) to know more about me!
 
+---
+
 Fair Use
