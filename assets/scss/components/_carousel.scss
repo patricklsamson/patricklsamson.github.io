@@ -3,3 +3,9 @@
 .item {
   margin: auto;
 }
+
+.owl-dots {
+  @include mq(md) {
+    display: none;
+  }
+}
