@@ -18418,7 +18418,7 @@ nav .menu-container ul a {
 header {
   background-image: url(../img/blue-gray-wp.jpg);
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 576px) {
   header p:nth-child(3) {
     width: 75%;
   }
