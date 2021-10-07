@@ -1,9 +1,5 @@
 @use "../abstracts" as *;
 
-body {
-  height: 1000px;
-}
-
 nav {
   z-index: z("nav-bar");
 
@@ -41,13 +37,13 @@ nav {
     button#nav-btn {
       float: right;
 
-      @include mq(lgup) {
+      @include mq(xlup) {
         display: none;
       }
     }
 
     #nav-coll {
-      @include mq(md) {
+      @include mq(lg) {
         position: fixed;
         top: 0;
         left: 0;
@@ -64,11 +60,11 @@ nav {
       .menu-container {
         & > ul {
           & > li {
-            @include mq(lgup) {
+            @include mq(xlup) {
               display: inline-block;
             }
 
-            @include mq(md) {
+            @include mq(lg) {
               display: block;
               margin: 2em 0;
             }
