@@ -5,7 +5,7 @@ header {
 
   p {
     &:nth-child(3) {
-      @include mq(xxl) {
+      @include mq(smup) {
         width: 75%;
       }
     }
