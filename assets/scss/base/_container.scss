@@ -361,7 +361,8 @@
   }
 
   @include mq(xxs) {
-    height: 25vh;
+    height: 200px;
+    width: 100%;
   }
 
   .wrap-portfolio-inner {
