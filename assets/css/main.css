@@ -3056,7 +3056,8 @@ table {
 }
 @media only screen and (max-width: 480px) {
   .wrap-portfolio {
-    height: 25vh;
+    height: 200px;
+    width: 100%;
   }
 }
 .wrap-portfolio .wrap-portfolio-inner {
@@ -18272,10 +18273,6 @@ a.txt-ul-ol:hover,
   background-image: none;
 }
 
-body {
-  height: 1000px;
-}
-
 nav {
   z-index: 3;
 }
@@ -18306,12 +18303,12 @@ nav#nav-bar img {
 nav#nav-bar button#nav-btn {
   float: right;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   nav#nav-bar button#nav-btn {
     display: none;
   }
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1199px) {
   nav#nav-bar #nav-coll {
     position: fixed;
     top: 0;
@@ -18326,12 +18323,12 @@ nav#nav-bar button#nav-btn {
     transition: all 0.5s;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   nav#nav-bar #nav-coll .menu-container > ul > li {
     display: inline-block;
   }
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1199px) {
   nav#nav-bar #nav-coll .menu-container > ul > li {
     display: block;
     margin: 2em 0;
@@ -18551,9 +18548,9 @@ main .grid-cont {
 }
 @media only screen and (max-width: 480px) {
   main .grid-cont {
-    -ms-grid-rows: (25vh) [4];
-    -ms-grid-columns: 70vw;
-    grid-template: repeat(4, 25vh)/70vw;
+    -ms-grid-rows: (200px) [4];
+    -ms-grid-columns: 100%;
+    grid-template: repeat(4, 200px)/100%;
   }
 }
 
@@ -18669,6 +18666,12 @@ button.btn-bracket {
 
 .item {
   margin: auto;
+}
+
+@media only screen and (max-width: 991px) {
+  .owl-dots {
+    display: none;
+  }
 }
 
 .select-box {
