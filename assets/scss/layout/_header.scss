@@ -3,6 +3,14 @@
 header {
   @include bg($blue-gray-wp);
 
+  p {
+    &:nth-child(3) {
+      @include mq(xxl) {
+        width: 75%;
+      }
+    }
+  }
+
   a {
     color: $white;
     text-shadow: 0 2px 4px $black-05, 0 -2px 4px $black-05;
