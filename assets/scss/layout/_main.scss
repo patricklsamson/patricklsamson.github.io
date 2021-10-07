@@ -13,7 +13,7 @@ main {
     }
 
     @include mq(xxs) {
-      @include grid-cont(r-rep, 25vh, 70vw, 4);
+      @include grid-cont(r-rep, 200px, 100%, 4);
     }
   }
 }
