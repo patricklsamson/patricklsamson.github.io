@@ -18418,6 +18418,11 @@ nav .menu-container ul a {
 header {
   background-image: url(../img/blue-gray-wp.jpg);
 }
+@media only screen and (min-width: 1400px) {
+  header p:nth-child(3) {
+    width: 75%;
+  }
+}
 header a {
   color: #f9fafb;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.5);
