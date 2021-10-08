@@ -59,3 +59,11 @@
 #journal {
   @include bg($journal);
 }
+
+#html-email {
+  @include bg($html-email);
+}
+
+#practice {
+  @include bg($practice);
+}
