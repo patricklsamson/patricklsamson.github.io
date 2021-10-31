@@ -24,9 +24,7 @@ main {
       @include grid-cont(a-rep, auto, 30vw, 1, 2);
 
       @include mq(lg) {
-        @include grid-cont(r-rep, auto, 70vw, 1) {
-          grid-gap: 20px;
-        }
+        @include grid-cont(r-rep, auto, 70vw, 1);
       }
 
       @include mq(xxs) {
