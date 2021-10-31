@@ -171,6 +171,10 @@ function match_height(element) {
   var heights = [];
 
   for (i = 0; i < qsel_all(element).length; i++) {
+    qsel_all(element)[i].style.height = "auto";
+  }
+
+  for (i = 0; i < qsel_all(element).length; i++) {
     heights.push(qsel_all(element)[i].offsetHeight);
   }
 
