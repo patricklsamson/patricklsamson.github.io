@@ -89,82 +89,22 @@
 
 .flex {
   @include flex;
-
-  &.ftop {
-    @include justify(f);
-  }
-
-  &.fbot {
-    @include justify(f, end);
-  }
-
-  &.flft {
-    @include align(i, f);
-  }
-
-  &.frgt {
-    @include align(i, f, end);
-  }
-
-  @each $min-max-mq in $min-max-mqs {
-    @include mq($min-max-mq) {
-      &.ftop-#{$min-max-mq} {
-        @include justify(f);
-      }
-
-      &.fbot-#{$min-max-mq} {
-        @include justify(f, end);
-      }
-
-      &.flft-#{$min-max-mq} {
-        @include align(i, f);
-      }
-
-      &.frgt-#{$min-max-mq} {
-        @include align(i, f, end);
-      }
-    }
-  }
 }
 
-.rflex {
-  @include flex(f);
+.flex-top {
+  @include justify(f);
+}
 
-  &.rftop {
-    @include align(i, f);
-  }
+.flex-bot {
+  @include justify(f, end);
+}
 
-  &.rfbot {
-    @include align(i, f, end);
-  }
+.flex-lft {
+  @include align(i, f);
+}
 
-  &.rflft {
-    @include justify(f);
-  }
-
-  &.rfrgt {
-    @include justify(f, end);
-  }
-
-  @each $min-max-mq in $min-max-mqs {
-    @include mq($min-max-mq) {
-      &.rftop-#{$min-max-mq} {
-        @include align(i, f);
-      }
-
-      &.rfbot-#{$min-max-mq} {
-        @include align(i, f, end);
-      }
-
-      &.rflft-#{$min-max-mq} {
-        @include justify(f);
-      }
-
-      &.rfrgt-#{$min-max-mq} {
-        @include justify(f, end);
-      }
-    }
-  }
+.flex-rgt {
+  @include align(i, f, end);
 }
 
 @each $min-max-mq in $min-max-mqs {
@@ -173,8 +113,64 @@
       @include flex;
     }
 
+    .flex-top-#{$min-max-mq} {
+      @include justify(f);
+    }
+
+    .flex-bot-#{$min-max-mq} {
+      @include justify(f, end);
+    }
+
+    .flex-lft-#{$min-max-mq} {
+      @include align(i, f);
+    }
+
+    .flex-rgt-#{$min-max-mq} {
+      @include align(i, f, end);
+    }
+  }
+}
+
+.rflex {
+  @include flex(f);
+}
+
+.rflex-top {
+  @include align(i, f);
+}
+
+.rflex-bot {
+  @include align(i, f, end);
+}
+
+.rflex-lft {
+  @include justify(f);
+}
+
+.rflex-rgt {
+  @include justify(f, end);
+}
+
+@each $min-max-mq in $min-max-mqs {
+  @include mq($min-max-mq) {
     .rflex-#{$min-max-mq} {
       @include flex(f);
+    }
+
+    .rflex-top-#{$min-max-mq} {
+      @include align(i, f);
+    }
+
+    .rflex-bot-#{$min-max-mq} {
+      @include align(i, f, end);
+    }
+
+    .rflex-lft-#{$min-max-mq} {
+      @include justify(f);
+    }
+
+    .rflex-rgt-#{$min-max-mq} {
+      @include justify(f, end);
     }
   }
 }
@@ -400,6 +396,68 @@
           color: $white;
         }
       }
+    }
+  }
+}
+
+.wrap-experience {
+  color: $white;
+
+  @include mq(xlup) {
+    &:nth-child(odd) {
+      border-right: 2.5px solid $cyan-04;
+
+      p:first-child {
+        position: relative;
+
+        @include mq(xlup) {
+          &:before {
+            display: none;
+          }
+
+          @include fa(f126) {
+            position: absolute;
+            font-size: 2.75rem;
+
+            @include prefix(
+              (
+                transform: scaleX(-1),
+              ),
+              webkit moz ms o
+            );
+          }
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      border-left: 2.5px solid $cyan-04;
+
+      p:first-child {
+        position: relative;
+
+        @include mq(xlup) {
+          &:after {
+            display: none;
+          }
+
+          @include fa(f126, fas, before) {
+            position: absolute;
+            margin-left: -2rem;
+            font-size: 2.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include mq(lg) {
+    border: 5px solid $cyan-04;
+  }
+
+  &.empty {
+    @include mq(lg) {
+      border: none;
     }
   }
 }
