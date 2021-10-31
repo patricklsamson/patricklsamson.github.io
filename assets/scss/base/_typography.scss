@@ -28,7 +28,7 @@ html {
     font-size: $rem;
     line-height: 1.2;
     color: $white;
-    font-family: "Oswald", sans-serif;;
+    font-family: "Oswald", sans-serif;
 
     &:before,
     &:after {
@@ -89,40 +89,36 @@ a,
 
 .talign {
   text-align: center;
+}
 
-  &.tlft {
-    text-align: left;
-  }
+.talign-lft {
+  text-align: left;
+}
 
-  &.trgt {
-    text-align: right;
-  }
+.talign-rgt {
+  text-align: right;
+}
 
-  &.tjust {
-    text-align: justify;
-  }
-
-  @each $min-max-mq in $min-max-mqs {
-    @include mq($min-max-mq) {
-      &.tlft-#{$min-max-mq} {
-        text-align: left;
-      }
-
-      &.trgt-#{$min-max-mq} {
-        text-align: right;
-      }
-
-      &.tjust-#{$min-max-mq} {
-        text-align: justify;
-      }
-    }
-  }
+.talign-just {
+  text-align: justify;
 }
 
 @each $min-max-mq in $min-max-mqs {
   @include mq($min-max-mq) {
     .talign-#{$min-max-mq} {
       text-align: center;
+    }
+
+    .talign-lft-#{$min-max-mq} {
+      text-align: left;
+    }
+
+    .talign-rgt-#{$min-max-mq} {
+      text-align: right;
+    }
+
+    .talign-just-#{$min-max-mq} {
+      text-align: justify;
     }
   }
 }
