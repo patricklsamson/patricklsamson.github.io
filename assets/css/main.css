@@ -3179,12 +3179,12 @@ table {
   margin-left: -2rem;
   font-size: 2.75rem;
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 991px) {
   .wrap-experience {
     border-left: 5px solid rgba(102, 178, 178, 0.4);
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .wrap-experience:nth-child(odd) {
     border-right: 2.5px solid rgba(102, 178, 178, 0.4);
   }
@@ -3212,12 +3212,12 @@ table {
     transform: scaleX(-1);
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .wrap-experience:nth-child(even) {
     border-left: 2.5px solid rgba(102, 178, 178, 0.4);
   }
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 991px) {
   .wrap-experience.empty {
     border: none;
   }
@@ -18709,7 +18709,7 @@ main .cont:nth-child(3) .grid-cont {
   -ms-grid-columns: (30vw) [2];
   grid-template: repeat(1, auto)/repeat(2, 30vw);
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 991px) {
   main .cont:nth-child(3) .grid-cont {
     -ms-grid-rows: (auto) [1];
     -ms-grid-columns: 70vw;
