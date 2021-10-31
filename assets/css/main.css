@@ -18721,6 +18721,13 @@ main .cont:nth-child(3) .grid-cont {
     grid-gap: 20px;
   }
 }
+@media only screen and (max-width: 480px) {
+  main .cont:nth-child(3) .grid-cont {
+    -ms-grid-rows: (auto) [1];
+    -ms-grid-columns: 100%;
+    grid-template: repeat(1, auto)/100%;
+  }
+}
 
 footer {
   position: relative;
