@@ -10,9 +10,25 @@ doc_ready(() => {
   scroll_class(id("nav-bar"), "bg-change");
   match_height(".mh");
 
-  match_media(576, function match() {
-    match_height(".mh2");
-  });
+  match_media(
+    576,
+    function match() {
+      match_height(".mh2");
+
+      add_event(window, "resize", function () {
+        // qsel_all(".mh2").forEach((element) => {
+        //   element.style.height = "auto";
+        // });
+
+        match_height(".mh2");
+      });
+    },
+    function unmatch() {
+      qsel_all(".mh2").forEach((element) => {
+        element.removeAttribute("style");
+      });
+    }
+  );
 
   add_event(id("g-form"), "submit", () => {
     submitted = true;
