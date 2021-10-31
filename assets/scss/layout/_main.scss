@@ -28,6 +28,10 @@ main {
           grid-gap: 20px;
         }
       }
+
+      @include mq(xxs) {
+        @include grid-cont(r-rep, auto, 100%, 1);
+      }
     }
   }
 }
