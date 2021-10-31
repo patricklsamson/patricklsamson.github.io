@@ -966,6 +966,7 @@
     }
 
     grid-row: #{$start} / #{$end};
+    @content;
   } @else if $set == row-s {
     @include prefix(
       (
@@ -974,6 +975,8 @@
       ms,
       t
     );
+
+    @content;
   } @else if $set == col-se {
     @include prefix(
       (
@@ -994,6 +997,7 @@
     }
 
     grid-column: #{$start} / #{$end};
+    @content;
   } @else if $set == col-s {
     @include prefix(
       (
@@ -1002,5 +1006,7 @@
       ms,
       t
     );
+
+    @content;
   }
 }
