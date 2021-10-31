@@ -25,12 +25,6 @@ header {
     }
   }
 
-  @include mq(xxs) {
-    h2 {
-      font-size: 25px;
-    }
-  }
-
   @include all(gcol) {
     color: $white;
     font-size: 30px;
@@ -50,11 +44,6 @@ header {
     @include mq(md) {
       &:nth-child(odd) {
         border-color: transparent;
-      }
-    }
-
-    @include mq(xxs) {
-      &:nth-child(odd) {
         padding-bottom: 10px;
       }
 
