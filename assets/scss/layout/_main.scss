@@ -9,6 +9,10 @@ main {
         grid-gap: 20px;
       }
 
+      @include mq(lg) {
+        @include grid-cont(a-rep, 20vh, 40vw, 2, 2);
+      }
+
       @include mq(md) {
         @include grid-cont(r-rep, 20vh, 70vw, 4);
       }
@@ -22,6 +26,10 @@ main {
   .cont:nth-child(3) {
     .grid-cont {
       @include grid-cont(a-rep, auto, 30vw, 1, 2);
+
+      @include mq(lg) {
+        @include grid-cont(a-rep, auto, 40vw, 2, 2);
+      }
 
       @include mq(md) {
         @include grid-cont(r-rep, auto, 70vw, 1);
