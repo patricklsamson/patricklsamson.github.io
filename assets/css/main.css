@@ -3160,6 +3160,30 @@ table {
 .wrap-experience {
   color: #f9fafb;
 }
+.wrap-experience p:first-child {
+  position: relative;
+}
+.wrap-experience p:first-child:after {
+  display: none;
+}
+.wrap-experience p:first-child:before {
+  content: "\f126";
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
+  position: absolute;
+  margin-left: -2rem;
+  font-size: 2.75rem;
+}
+@media only screen and (max-width: 1199px) {
+  .wrap-experience {
+    border-left: 5px solid rgba(102, 178, 178, 0.4);
+  }
+}
 @media only screen and (min-width: 1200px) {
   .wrap-experience:nth-child(odd) {
     border-right: 2.5px solid rgba(102, 178, 178, 0.4);
@@ -3167,8 +3191,6 @@ table {
   .wrap-experience:nth-child(odd) p:first-child {
     position: relative;
   }
-}
-@media only screen and (min-width: 1200px) and (min-width: 1200px) {
   .wrap-experience:nth-child(odd) p:first-child:before {
     display: none;
   }
@@ -3193,32 +3215,6 @@ table {
 @media only screen and (min-width: 1200px) {
   .wrap-experience:nth-child(even) {
     border-left: 2.5px solid rgba(102, 178, 178, 0.4);
-  }
-  .wrap-experience:nth-child(even) p:first-child {
-    position: relative;
-  }
-}
-@media only screen and (min-width: 1200px) and (min-width: 1200px) {
-  .wrap-experience:nth-child(even) p:first-child:after {
-    display: none;
-  }
-  .wrap-experience:nth-child(even) p:first-child:before {
-    content: "\f126";
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-weight: 900;
-    position: absolute;
-    margin-left: -2rem;
-    font-size: 2.75rem;
-  }
-}
-@media only screen and (max-width: 1199px) {
-  .wrap-experience {
-    border: 5px solid rgba(102, 178, 178, 0.4);
   }
 }
 @media only screen and (max-width: 1199px) {
@@ -18718,7 +18714,6 @@ main .cont:nth-child(3) .grid-cont {
     -ms-grid-rows: (auto) [1];
     -ms-grid-columns: 70vw;
     grid-template: repeat(1, auto)/70vw;
-    grid-gap: 20px;
   }
 }
 @media only screen and (max-width: 480px) {
