@@ -23,7 +23,7 @@ main {
     .grid-cont {
       @include grid-cont(a-rep, auto, 30vw, 1, 2);
 
-      @include mq(lg) {
+      @include mq(md) {
         @include grid-cont(r-rep, auto, 70vw, 1);
       }
 
