@@ -18581,11 +18581,6 @@ header a:before, header a:after {
 header a:hover {
   color: #f9fafb;
 }
-@media only screen and (max-width: 480px) {
-  header h2 {
-    font-size: 25px;
-  }
-}
 header [class*=gcol] {
   color: #f9fafb;
   font-size: 30px;
@@ -18604,10 +18599,6 @@ header [class*=gcol]:last-child, header [class*=gcol]:nth-last-child(2) {
 @media only screen and (max-width: 991px) {
   header [class*=gcol]:nth-child(odd) {
     border-color: transparent;
-  }
-}
-@media only screen and (max-width: 480px) {
-  header [class*=gcol]:nth-child(odd) {
     padding-bottom: 10px;
   }
   header [class*=gcol]:nth-child(even) {
