@@ -3117,6 +3117,11 @@ table {
     width: 30vw;
   }
 }
+@media only screen and (max-width: 1199px) {
+  .wrap-portfolio {
+    width: 40vw;
+  }
+}
 @media only screen and (max-width: 991px) {
   .wrap-portfolio {
     width: 70vw;
@@ -18692,6 +18697,13 @@ main .cont:first-child .grid-cont {
   grid-template: repeat(2, 20vh)/repeat(2, 30vw);
   grid-gap: 20px;
 }
+@media only screen and (max-width: 1199px) {
+  main .cont:first-child .grid-cont {
+    -ms-grid-rows: (20vh) [2];
+    -ms-grid-columns: (40vw) [2];
+    grid-template: repeat(2, 20vh)/repeat(2, 40vw);
+  }
+}
 @media only screen and (max-width: 991px) {
   main .cont:first-child .grid-cont {
     -ms-grid-rows: (20vh) [4];
@@ -18710,6 +18722,13 @@ main .cont:nth-child(3) .grid-cont {
   -ms-grid-rows: (auto) [1];
   -ms-grid-columns: (30vw) [2];
   grid-template: repeat(1, auto)/repeat(2, 30vw);
+}
+@media only screen and (max-width: 1199px) {
+  main .cont:nth-child(3) .grid-cont {
+    -ms-grid-rows: (auto) [2];
+    -ms-grid-columns: (40vw) [2];
+    grid-template: repeat(2, auto)/repeat(2, 40vw);
+  }
 }
 @media only screen and (max-width: 991px) {
   main .cont:nth-child(3) .grid-cont {
