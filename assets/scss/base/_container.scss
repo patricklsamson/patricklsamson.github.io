@@ -421,12 +421,29 @@
     border-left: 5px solid $cyan-04;
   }
 
-  &:nth-child(odd) {
+  &.order-1 {
     @include mq(lgup) {
       border-right: 2.5px solid $cyan-04;
 
+      @include prefix(
+        (
+          ordinal-group: 2,
+        ),
+        webkit-box moz-box,
+        t,
+        f
+      );
+
+      @include prefix(
+        (
+          order: 1,
+        ),
+        webkit ms-flex
+      );
+
       p:first-child {
         position: relative;
+        text-align: right;
 
         &:before {
           display: none;
@@ -447,9 +464,25 @@
     }
   }
 
-  &:nth-child(even) {
+  &.order-2 {
     @include mq(lgup) {
       border-left: 2.5px solid $cyan-04;
+
+      @include prefix(
+        (
+          ordinal-group: 3,
+        ),
+        webkit-box moz-box,
+        t,
+        f
+      );
+
+      @include prefix(
+        (
+          order: 2,
+        ),
+        webkit ms-flex
+      );
     }
   }
 
