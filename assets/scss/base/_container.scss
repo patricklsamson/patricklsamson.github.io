@@ -352,6 +352,10 @@
     width: 30vw;
   }
 
+  @include mq(lg) {
+    width: 40vw;
+  }
+
   @include mq(md) {
     width: 70vw;
   }
