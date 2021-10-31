@@ -91,26 +91,14 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
 
-  &.blft {
-    margin-left: 0;
-  }
+.balign-lft {
+  margin-left: 0;
+}
 
-  &.brgt {
-    margin-right: 0;
-  }
-
-  @each $min-max-mq in $min-max-mqs {
-    @include mq($min-max-mq) {
-      &.blft-#{$min-max-mq} {
-        margin-left: 0;
-      }
-
-      &.brgt-#{$min-max-mq} {
-        margin-right: 0;
-      }
-    }
-  }
+.balign-rgt {
+  margin-right: 0;
 }
 
 @each $min-max-mq in $min-max-mqs {
@@ -119,6 +107,14 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .balign-lft-#{$min-max-mq} {
+      margin-left: 0;
+    }
+
+    .balign-rgt-#{$min-max-mq} {
+      margin-right: 0;
     }
   }
 }
