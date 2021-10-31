@@ -92,18 +92,22 @@
 }
 
 .flex-top {
+  @include flex;
   @include justify(f);
 }
 
 .flex-bot {
+  @include flex;
   @include justify(f, end);
 }
 
 .flex-lft {
+  @include flex;
   @include align(i, f);
 }
 
 .flex-rgt {
+  @include flex;
   @include align(i, f, end);
 }
 
@@ -114,18 +118,22 @@
     }
 
     .flex-top-#{$min-max-mq} {
+      @include flex;
       @include justify(f);
     }
 
     .flex-bot-#{$min-max-mq} {
+      @include flex;
       @include justify(f, end);
     }
 
     .flex-lft-#{$min-max-mq} {
+      @include flex;
       @include align(i, f);
     }
 
     .flex-rgt-#{$min-max-mq} {
+      @include flex;
       @include align(i, f, end);
     }
   }
@@ -136,18 +144,22 @@
 }
 
 .rflex-top {
+  @include flex(f);
   @include align(i, f);
 }
 
 .rflex-bot {
+  @include flex(f);
   @include align(i, f, end);
 }
 
 .rflex-lft {
+  @include flex(f);
   @include justify(f);
 }
 
 .rflex-rgt {
+  @include flex(f);
   @include justify(f, end);
 }
 
@@ -158,18 +170,22 @@
     }
 
     .rflex-top-#{$min-max-mq} {
+      @include flex(f);
       @include align(i, f);
     }
 
     .rflex-bot-#{$min-max-mq} {
+      @include flex(f);
       @include align(i, f, end);
     }
 
     .rflex-lft-#{$min-max-mq} {
+      @include flex(f);
       @include justify(f);
     }
 
     .rflex-rgt-#{$min-max-mq} {
+      @include flex(f);
       @include justify(f, end);
     }
   }
