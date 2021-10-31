@@ -417,12 +417,12 @@
     }
   }
 
-  @include mq(lg) {
+  @include mq(md) {
     border-left: 5px solid $cyan-04;
   }
 
   &:nth-child(odd) {
-    @include mq(xlup) {
+    @include mq(lgup) {
       border-right: 2.5px solid $cyan-04;
 
       p:first-child {
@@ -448,13 +448,13 @@
   }
 
   &:nth-child(even) {
-    @include mq(xlup) {
+    @include mq(lgup) {
       border-left: 2.5px solid $cyan-04;
     }
   }
 
   &.empty {
-    @include mq(lg) {
+    @include mq(md) {
       border: none;
     }
   }
