@@ -33,7 +33,7 @@ doc_ready(() => {
 
     if (has_class(id("portfolio-btn"), "active")) {
       setTimeout(() => {
-        qsel("main").scrollIntoView(false);
+        qsel("main > .cont:first-child").scrollIntoView(false);
       }, 250);
     } else {
       id("portfolio").scrollIntoView(true);
