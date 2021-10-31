@@ -94,11 +94,13 @@
 }
 
 .balign-lft {
-  margin-left: 0;
+  display: block;
+  margin-right: auto;
 }
 
 .balign-rgt {
-  margin-right: 0;
+  display: block;
+  margin-left: auto;
 }
 
 @each $min-max-mq in $min-max-mqs {
@@ -110,11 +112,13 @@
     }
 
     .balign-lft-#{$min-max-mq} {
-      margin-left: 0;
+      display: block;
+      margin-right: auto;
     }
 
     .balign-rgt-#{$min-max-mq} {
-      margin-right: 0;
+      display: block;
+      margin-left: auto;
     }
   }
 }
