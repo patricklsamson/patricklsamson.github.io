@@ -2,7 +2,11 @@ doc_ready(() => {
   let submitted = false;
 
   nav_bar();
-  fixed_el(".h-add", ".nmt", ".cvh");
+
+  setTimeout(() => {
+    fixed_el(".h-add", ".nmt", ".cvh");
+  }, 500);
+
   scroll_class(id("nav-bar"), "bg-change");
   match_height(".mh");
 
