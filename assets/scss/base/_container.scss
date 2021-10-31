@@ -403,56 +403,54 @@
 .wrap-experience {
   color: $white;
 
-  @include mq(xlup) {
-    &:nth-child(odd) {
+  p:first-child {
+    position: relative;
+
+    &:after {
+      display: none;
+    }
+
+    @include fa(f126, fas, before) {
+      position: absolute;
+      margin-left: -2rem;
+      font-size: 2.75rem;
+    }
+  }
+
+  @include mq(lg) {
+    border-left: 5px solid $cyan-04;
+  }
+
+  &:nth-child(odd) {
+    @include mq(xlup) {
       border-right: 2.5px solid $cyan-04;
 
       p:first-child {
         position: relative;
 
-        @include mq(xlup) {
-          &:before {
-            display: none;
-          }
-
-          @include fa(f126) {
-            position: absolute;
-            font-size: 2.75rem;
-
-            @include prefix(
-              (
-                transform: scaleX(-1),
-              ),
-              webkit moz ms o
-            );
-          }
+        &:before {
+          display: none;
         }
-      }
-    }
 
-    &:nth-child(even) {
-      border-left: 2.5px solid $cyan-04;
+        @include fa(f126) {
+          position: absolute;
+          font-size: 2.75rem;
 
-      p:first-child {
-        position: relative;
-
-        @include mq(xlup) {
-          &:after {
-            display: none;
-          }
-
-          @include fa(f126, fas, before) {
-            position: absolute;
-            margin-left: -2rem;
-            font-size: 2.75rem;
-          }
+          @include prefix(
+            (
+              transform: scaleX(-1),
+            ),
+            webkit moz ms o
+          );
         }
       }
     }
   }
 
-  @include mq(lg) {
-    border: 5px solid $cyan-04;
+  &:nth-child(even) {
+    @include mq(xlup) {
+      border-left: 2.5px solid $cyan-04;
+    }
   }
 
   &.empty {
