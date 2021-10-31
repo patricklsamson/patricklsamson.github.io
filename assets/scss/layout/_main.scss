@@ -3,17 +3,31 @@
 main {
   @include bg($wave-wp);
 
-  .grid-cont {
-    @include grid-cont(a-rep, 20vh, 30vw, 2, 2) {
-      grid-gap: 20px;
-    }
+  .cont:first-child {
+    .grid-cont {
+      @include grid-cont(a-rep, 20vh, 30vw, 2, 2) {
+        grid-gap: 20px;
+      }
 
-    @include mq(md) {
-      @include grid-cont(r-rep, 20vh, 70vw, 4);
-    }
+      @include mq(md) {
+        @include grid-cont(r-rep, 20vh, 70vw, 4);
+      }
 
-    @include mq(xxs) {
-      @include grid-cont(r-rep, 200px, 100%, 4);
+      @include mq(xxs) {
+        @include grid-cont(r-rep, 200px, 100%, 4);
+      }
+    }
+  }
+
+  .cont:nth-child(3) {
+    .grid-cont {
+      @include grid-cont(a-rep, auto, 30vw, 1, 2);
+
+      @include mq(lg) {
+        @include grid-cont(r-rep, auto, 70vw, 1) {
+          grid-gap: 20px;
+        }
+      }
     }
   }
 }
