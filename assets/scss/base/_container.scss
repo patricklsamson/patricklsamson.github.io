@@ -445,21 +445,7 @@
     @include mq(lgup) {
       border-right: 2.5px solid $cyan-04;
 
-      @include prefix(
-        (
-          ordinal-group: 2,
-        ),
-        webkit-box moz-box,
-        t,
-        f
-      );
-
-      @include prefix(
-        (
-          order: 1,
-        ),
-        webkit ms-flex
-      );
+      @include order(1);
 
       p:first-child {
         position: relative;
@@ -488,21 +474,7 @@
     @include mq(lgup) {
       border-left: 2.5px solid $cyan-04;
 
-      @include prefix(
-        (
-          ordinal-group: 3,
-        ),
-        webkit-box moz-box,
-        t,
-        f
-      );
-
-      @include prefix(
-        (
-          order: 2,
-        ),
-        webkit ms-flex
-      );
+      @include order(2);
     }
   }
 
