@@ -127,11 +127,40 @@ function nav_bar(callback) {
   }
 }
 
-function fixed_el(fixed_element, margin_element, vh_element = null) {
+function fixed_el(
+  fixed_element,
+  margin_element,
+  top_element = null,
+  vh_element = null
+) {
   var i;
+  var topHeight = 0;
   var height = 0;
 
   (function (next) {
+    if (top_element) {
+      for (i = 0; i < qsel_all(top_element).length; i++) {
+        topHeight += qsel_all(top_element)[i].offsetHeight;
+      }
+
+      add_event(window, "scroll", function () {
+        if (
+          window.pageYOffset > topHeight ||
+          document.documentElement.scrollTop > topHeight
+        ) {
+          for (i = 0; i < qsel_all(fixed_element).length; i++) {
+            qsel_all(fixed_element)[i].style.position = "fixed";
+            qsel_all(fixed_element)[i].style.top = "0";
+          }
+        } else {
+          for (i = 0; i < qsel_all(fixed_element).length; i++) {
+            qsel_all(fixed_element)[i].style.position = null;
+            qsel_all(fixed_element)[i].style.top = null;
+          }
+        }
+      });
+    }
+
     for (i = 0; i < qsel_all(fixed_element).length; i++) {
       height += qsel_all(fixed_element)[i].offsetHeight;
 
@@ -140,8 +169,34 @@ function fixed_el(fixed_element, margin_element, vh_element = null) {
       }
     }
   })(function () {
-    for (i = 0; i < qsel_all(margin_element).length; i++) {
-      qsel_all(margin_element)[i].style.marginTop = "-" + height + "px";
+    var normalHeight = height;
+    var doubleHeight = height * 2;
+
+    if (top_element) {
+      for (i = 0; i < qsel_all(margin_element).length; i++) {
+        qsel_all(margin_element)[i].style.marginTop = "-" + doubleHeight + "px";
+      }
+
+      add_event(window, "scroll", function () {
+        if (
+          window.pageYOffset > topHeight ||
+          document.documentElement.scrollTop > topHeight
+        ) {
+          for (i = 0; i < qsel_all(margin_element).length; i++) {
+            qsel_all(margin_element)[i].style.marginTop =
+              "-" + normalHeight + "px";
+          }
+        } else {
+          for (i = 0; i < qsel_all(margin_element).length; i++) {
+            qsel_all(margin_element)[i].style.marginTop =
+              "-" + doubleHeight + "px";
+          }
+        }
+      });
+    } else {
+      for (i = 0; i < qsel_all(margin_element).length; i++) {
+        qsel_all(margin_element)[i].style.marginTop = "-" + normalHeight + "px";
+      }
     }
 
     if (vh_element) {

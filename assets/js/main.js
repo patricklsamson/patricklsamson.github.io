@@ -4,7 +4,7 @@ doc_ready(() => {
   nav_bar();
 
   setTimeout(() => {
-    fixed_el(".h-add", ".nmt", ".cvh");
+    fixed_el(".h-add", ".nmt", "#topDiv", ".cvh");
   }, 500);
 
   scroll_class(id("nav-bar"), "bg-change");
@@ -16,9 +16,9 @@ doc_ready(() => {
       match_height(".mh2");
 
       add_event(window, "resize", function () {
-        // qsel_all(".mh2").forEach((element) => {
-        //   element.style.height = "auto";
-        // });
+        qsel_all(".mh2").forEach((element) => {
+          element.style.height = "auto";
+        });
 
         match_height(".mh2");
       });
