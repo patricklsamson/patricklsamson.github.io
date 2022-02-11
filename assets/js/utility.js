@@ -127,7 +127,7 @@ function nav_bar(callback) {
   }
 }
 
-function fixed_el(fixed_element, margin_element, vh_element) {
+function fixed_el(fixed_element, margin_element, vh_element = null) {
   var i;
   var height = 0;
 
