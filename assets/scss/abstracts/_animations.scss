@@ -1,0 +1,38 @@
+@use "mixins" as *;
+@use "variables" as v;
+
+@include keyframes(rotating) {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+@include keyframes(pulsing) {
+  0% {
+    background: v.$dgray;
+  }
+
+  25% {
+    background: v.$gray;
+  }
+
+  50% {
+    background: v.$dgray2;
+  }
+
+  75% {
+    background: v.$gray;
+  }
+
+  100% {
+    background: v.$dgray;
+  }
+}
