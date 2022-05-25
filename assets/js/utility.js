@@ -129,18 +129,19 @@ function nav_bar(callback) {
 
 function fixed_el(
   fixed_element,
-  margin_element,
-  top_element = null,
-  vh_element = null
+  neg_margin_top_element,
+  padding_top_element = null,
+  to_fixed_element = null,
+  calc_vh_element = null
 ) {
   var i;
   var topHeight = 0;
   var height = 0;
 
   (function (next) {
-    if (top_element) {
-      for (i = 0; i < qsel_all(top_element).length; i++) {
-        topHeight += qsel_all(top_element)[i].offsetHeight;
+    if (to_fixed_element) {
+      for (i = 0; i < qsel_all(to_fixed_element).length; i++) {
+        topHeight += qsel_all(to_fixed_element)[i].offsetHeight;
       }
 
       add_event(window, "scroll", function () {
@@ -172,9 +173,13 @@ function fixed_el(
     var normalHeight = height;
     var doubleHeight = height * 2;
 
-    if (top_element) {
-      for (i = 0; i < qsel_all(margin_element).length; i++) {
-        qsel_all(margin_element)[i].style.marginTop = "-" + doubleHeight + "px";
+    if (padding_top_element) {
+      qsel(padding_top_element).style.paddingTop = height + "px";
+    }
+
+    if (to_fixed_element) {
+      for (i = 0; i < qsel_all(neg_margin_top_element).length; i++) {
+        qsel_all(neg_margin_top_element)[i].style.marginTop = "-" + doubleHeight + "px";
       }
 
       add_event(window, "scroll", function () {
@@ -182,26 +187,26 @@ function fixed_el(
           window.pageYOffset > topHeight ||
           document.documentElement.scrollTop > topHeight
         ) {
-          for (i = 0; i < qsel_all(margin_element).length; i++) {
-            qsel_all(margin_element)[i].style.marginTop =
+          for (i = 0; i < qsel_all(neg_margin_top_element).length; i++) {
+            qsel_all(neg_margin_top_element)[i].style.marginTop =
               "-" + normalHeight + "px";
           }
         } else {
-          for (i = 0; i < qsel_all(margin_element).length; i++) {
-            qsel_all(margin_element)[i].style.marginTop =
+          for (i = 0; i < qsel_all(neg_margin_top_element).length; i++) {
+            qsel_all(neg_margin_top_element)[i].style.marginTop =
               "-" + doubleHeight + "px";
           }
         }
       });
     } else {
-      for (i = 0; i < qsel_all(margin_element).length; i++) {
-        qsel_all(margin_element)[i].style.marginTop = "-" + normalHeight + "px";
+      for (i = 0; i < qsel_all(neg_margin_top_element).length; i++) {
+        qsel_all(neg_margin_top_element)[i].style.marginTop = "-" + normalHeight + "px";
       }
     }
 
-    if (vh_element) {
-      for (i = 0; i < qsel_all(vh_element).length; i++) {
-        qsel_all(vh_element)[i].style.minHeight =
+    if (calc_vh_element) {
+      for (i = 0; i < qsel_all(calc_vh_element).length; i++) {
+        qsel_all(calc_vh_element)[i].style.minHeight =
           "calc(100vh - " + height + "px)";
       }
     }

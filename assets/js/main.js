@@ -4,7 +4,7 @@ doc_ready(() => {
   nav_bar();
 
   setTimeout(() => {
-    fixed_el(".h-add", ".nmt", null, ".cvh");
+    fixed_el(".h-add", ".nmt", ".pt-add", null, ".cvh");
   }, 500);
 
   scroll_class(id("nav-bar"), "bg-change");
