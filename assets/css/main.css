@@ -20532,6 +20532,11 @@ nav .menu-container ul a {
 header {
   background-image: url(../img/blue-gray-wp.jpg);
 }
+header img {
+  -webkit-border-radius: 25px 100px 200px;
+  -moz-border-radius: 25px 100px 200px;
+  border-radius: 25px 100px 200px;
+}
 @media only screen and (min-width: 576px) {
   header p:nth-child(3) {
     width: 75%;
