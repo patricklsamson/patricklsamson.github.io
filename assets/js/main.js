@@ -16,16 +16,14 @@ doc_ready(() => {
       match_height(".mh2");
 
       add_event(window, "resize", function () {
-        qsel_all(".mh2").forEach((element) => {
-          element.style.height = "auto";
-        });
-
         match_height(".mh2");
       });
     },
     function unmatch() {
-      qsel_all(".mh2").forEach((element) => {
-        element.removeAttribute("style");
+      add_event(window, "resize", function () {
+        qsel_all(".mh2").forEach((element) => {
+          element.removeAttribute("style");
+        });
       });
     }
   );
