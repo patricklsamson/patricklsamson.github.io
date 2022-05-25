@@ -20572,11 +20572,12 @@ header [class*=gcol]:last-child, header [class*=gcol]:nth-last-child(2) {
   }
 }
 header [class*=gcol] i {
-  text-shadow: 0 2px 4px #353b41, 0 -2px 4px #353b41;
+  text-shadow: 0 2px 4px #f9fafb, 0 -2px 4px #f9fafb;
   vertical-align: middle;
 }
 header [class*=gcol] i.fa-square {
   color: #66b2b2;
+  text-shadow: 0 2px 4px #353b41, 0 -2px 4px #353b41;
 }
 header [class*=gcol] i.fa-html5 {
   color: #e34f26;
@@ -20589,53 +20590,74 @@ header [class*=gcol] i.fa-sass {
 }
 header [class*=gcol] i.fa-bootstrap {
   color: #7851b3;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3), 0 -2px 3px rgba(0, 0, 0, 0.3);
 }
 header [class*=gcol] i.fa-git-alt {
   color: #f04f33;
 }
-header [class*=gcol] i.fa-markdown {
-  color: #000;
-  text-shadow: 0 2px 4px rgba(249, 250, 251, 0.4), 0 -2px 4px rgba(249, 250, 251, 0.4);
+header [class*=gcol] i.fa-laravel {
+  color: #ff2a1f;
+}
+header [class*=gcol] i.fa-react {
+  text-shadow: none;
+  color: #60d9fb;
+  background: #353b41;
+  padding: 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 header [class*=gcol] i.fa-js {
+  text-shadow: none;
   color: #f7dd1d;
+  background: #000;
+  line-height: 0.75;
 }
 header [class*=gcol] i.fa-wordpress {
   color: #21759c;
-  text-shadow: 0 2px 4px #000, 0 -2px 4px #000;
 }
 header [class*=gcol] i.fa-php {
-  color: #787cb5;
-  text-shadow: 0 2px 3px #000, 0 -2px 3px #000;
+  text-shadow: none;
+  color: #000;
+  background: #787cb5;
+  padding: 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+header [class*=gcol] i.fa-node-js {
+  color: #339933;
 }
 header [class*=gcol] svg {
   width: 2em;
   vertical-align: middle;
-  padding: 5px;
-  -webkit-filter: drop-shadow(0 2px 4px #353b41) drop-shadow(0 -2px 4px #353b41);
-  filter: drop-shadow(0 2px 4px #353b41) drop-shadow(0 -2px 4px #353b41);
+  background: transparent;
+  -webkit-filter: drop-shadow(0 2px 4px #f9fafb) drop-shadow(0 -2px 4px #f9fafb);
+  filter: drop-shadow(0 2px 4px #f9fafb) drop-shadow(0 -2px 4px #f9fafb);
 }
-header [class*=gcol] svg.jquery {
-  background: #0767ab;
+header [class*=gcol] svg.jquery path {
+  fill: #0767ab;
 }
-header [class*=gcol] svg.heroku {
-  background: #420099;
+header [class*=gcol] svg.ruby path {
+  fill: #cd352d;
 }
-header [class*=gcol] svg.xampp path {
-  fill: #fb7923;
-}
-header [class*=gcol] svg.ruby {
-  background: #cd352d;
-}
-header [class*=gcol] svg.rails {
-  background: #cc0000;
+header [class*=gcol] svg.rails path {
+  fill: #cc0000;
 }
 header [class*=gcol] svg.postgresql {
   background: royalblue;
+  padding: 5px;
 }
-header [class*=gcol] svg path {
+header [class*=gcol] svg.postgresql path {
   fill: #f9fafb;
+}
+header [class*=gcol] svg.lumen path {
+  fill: #e74732;
+}
+header [class*=gcol] svg.typescript {
+  background: #f9fafb;
+}
+header [class*=gcol] svg.typescript path {
+  fill: #3178c4;
 }
 
 main {
