@@ -53,11 +53,12 @@ header {
     }
 
     i {
-      text-shadow: 0 2px 4px $dgray, 0 -2px 4px $dgray;
+      text-shadow: 0 2px 4px $white, 0 -2px 4px $white;
       vertical-align: middle;
 
       &.fa-square {
         color: $cyan;
+        text-shadow: 0 2px 4px $dgray, 0 -2px 4px $dgray;
       }
 
       &.fa-html5 {
@@ -74,73 +75,111 @@ header {
 
       &.fa-bootstrap {
         color: hsl(264, 39%, 51%);
-        text-shadow: 0 2px 3px $black-03, 0 -2px 3px $black-03;
       }
 
       &.fa-git-alt {
         color: hsl(9, 86%, 57%);
       }
 
-      &.fa-markdown {
-        color: #000;
-        text-shadow: 0 2px 4px $white-04, 0 -2px 4px $white-04;
+      &.fa-laravel {
+        color: hsl(3, 100%, 56%);
+      }
+
+      &.fa-react {
+        text-shadow: none;
+        color: hsl(193, 95%, 68%);
+        background: $dgray;
+        padding: 5px;
+
+        @include prefix(
+          (
+            border-radius: 10px,
+          ),
+          webkit moz
+        );
       }
 
       &.fa-js {
+        text-shadow: none;
         color: hsl(53, 93%, 54%);
+        background: #000;
+        line-height: 0.75;
       }
 
       &.fa-wordpress {
         color: hsl(199, 65%, 37%);
-        text-shadow: 0 2px 4px #000, 0 -2px 4px #000;
       }
 
       &.fa-php {
-        color: hsl(236, 29%, 59%);
-        text-shadow: 0 2px 3px #000, 0 -2px 3px #000;
+        text-shadow: none;
+        color: #000;
+        background: hsl(236, 29%, 59%);
+        padding: 5px;
+
+        @include prefix(
+          (
+            border-radius: 10px,
+          ),
+          webkit moz
+        );
+      }
+
+      &.fa-node-js {
+        color: hsl(120, 50%, 40%);
       }
     }
 
     svg {
       width: 2em;
       vertical-align: middle;
-      padding: 5px;
+      background: transparent;
 
       @include prefix(
         (
-          filter: drop-shadow(0 2px 4px $dgray) drop-shadow(0 -2px 4px $dgray),
+          filter: drop-shadow(0 2px 4px $white) drop-shadow(0 -2px 4px $white),
         ),
         webkit
       );
 
       &.jquery {
-        background: hsl(205, 92%, 35%);
-      }
-
-      &.heroku {
-        background: hsl(266, 100%, 30%);
-      }
-
-      &.xampp {
         path {
-          fill: hsl(24, 96%, 56%);
+          fill: hsl(205, 92%, 35%);
         }
       }
 
       &.ruby {
-        background: hsl(3, 64%, 49%);
+        path {
+          fill: hsl(3, 64%, 49%);
+        }
       }
 
       &.rails {
-        background: hsl(0, 100%, 40%);
+        path {
+          fill: hsl(0, 100%, 40%);
+        }
       }
 
       &.postgresql {
         background: hsl(225, 73%, 57%);
+        padding: 5px;
+
+        path {
+          fill: $white;
+        }
       }
 
-      path {
-        fill: $white;
+      &.lumen {
+        path {
+          fill: hsl(7, 79%, 55%);
+        }
+      }
+
+      &.typescript {
+        background: $white;
+
+        path {
+          fill: hsl(211, 60%, 48%);
+        }
       }
     }
   }
