@@ -11,6 +11,118 @@
  * - MEDIA QUERIES
  * - HELPERS
  */
+@-webkit-keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+@-moz-keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+@-o-keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+@-webkit-keyframes pulsing {
+  0% {
+    background: #353b41;
+  }
+  25% {
+    background: #6d767e;
+  }
+  50% {
+    background: #4c545d;
+  }
+  75% {
+    background: #6d767e;
+  }
+  100% {
+    background: #353b41;
+  }
+}
+@-moz-keyframes pulsing {
+  0% {
+    background: #353b41;
+  }
+  25% {
+    background: #6d767e;
+  }
+  50% {
+    background: #4c545d;
+  }
+  75% {
+    background: #6d767e;
+  }
+  100% {
+    background: #353b41;
+  }
+}
+@-o-keyframes pulsing {
+  0% {
+    background: #353b41;
+  }
+  25% {
+    background: #6d767e;
+  }
+  50% {
+    background: #4c545d;
+  }
+  75% {
+    background: #6d767e;
+  }
+  100% {
+    background: #353b41;
+  }
+}
+@keyframes pulsing {
+  0% {
+    background: #353b41;
+  }
+  25% {
+    background: #6d767e;
+  }
+  50% {
+    background: #4c545d;
+  }
+  75% {
+    background: #6d767e;
+  }
+  100% {
+    background: #353b41;
+  }
+}
 i[id*=btn] {
   cursor: pointer;
 }
@@ -20558,6 +20670,28 @@ footer .copyright {
   width: 100%;
   background: #353b41;
   color: #f9fafb;
+}
+
+.sec-loader {
+  background: #353b41;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.sec-loader.animate {
+  animation: pulsing 10s infinite;
+  z-index: 5;
+  visibility: visible;
+  opacity: 1;
+}
+.sec-loader.animate img {
+  animation: rotating 5s infinite;
+}
+.sec-loader img {
+  border: 2px solid lightgray;
 }
 
 button.btn-bracket {
