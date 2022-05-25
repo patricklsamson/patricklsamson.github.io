@@ -20564,13 +20564,25 @@ header [class*=gcol] {
   padding-bottom: 5vh;
   border-bottom: 2px solid #353b41;
 }
-@media only screen and (max-width: 480px) {
-  header [class*=gcol] {
-    font-size: 20px;
-  }
-}
 header [class*=gcol]:last-child, header [class*=gcol]:nth-last-child(2) {
   border-color: transparent;
+}
+header [class*=gcol]:nth-child(even) {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -moz-box;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 @media only screen and (max-width: 991px) {
   header [class*=gcol]:nth-child(odd) {
@@ -20588,6 +20600,7 @@ header [class*=gcol] i {
 header [class*=gcol] i.fa-square {
   color: #66b2b2;
   text-shadow: 0 2px 4px #353b41, 0 -2px 4px #353b41;
+  margin: 0 5px;
 }
 header [class*=gcol] i.fa-html5 {
   color: #e34f26;
