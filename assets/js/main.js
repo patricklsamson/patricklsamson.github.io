@@ -1,6 +1,13 @@
 doc_ready(() => {
   let submitted = false;
 
+  add_event(window, "load", function () {
+    setTimeout(() => {
+      remove_class(document.body, "p-fixed");
+      remove_class(id("loader"), "animate");
+    }, 1500);
+  });
+
   nav_bar();
 
   setTimeout(() => {
