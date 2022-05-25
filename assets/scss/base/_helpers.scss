@@ -11,77 +11,77 @@
   }
 
   &.con {
-    @include img-prop(contain, f);
+    @include img-prop(contain);
   }
 
   &.itop {
-    @include img-pos(top);
+    @include img-prop(top);
   }
 
   &.ibot {
-    @include img-pos(bottom);
+    @include img-prop(bottom);
   }
 
   &.ilft {
-    @include img-pos(left);
+    @include img-prop(left);
   }
 
   &.irgt {
-    @include img-pos(right);
+    @include img-prop(right);
   }
 
   &.ilt {
-    @include img-pos(left top);
+    @include img-prop(left top);
   }
 
   &.irt {
-    @include img-pos(right top);
+    @include img-prop(right top);
   }
 
   &.ilb {
-    @include img-pos(left bottom);
+    @include img-prop(left bottom);
   }
 
   &.irb {
-    @include img-pos(right bottom);
+    @include img-prop(right bottom);
   }
 
   @each $mq, $class in $min-mqs {
     @include mq($mq) {
       &.con-#{$class} {
-        @include img-prop(contain, f);
+        @include img-prop(contain);
       }
 
       &.itop-#{$class} {
-        @include img-pos(top);
+        @include img-prop(top);
       }
 
       &.ibot-#{$class} {
-        @include img-pos(bottom);
+        @include img-prop(bottom);
       }
 
       &.ilft-#{$class} {
-        @include img-pos(left);
+        @include img-prop(left);
       }
 
       &.irgt-#{$class} {
-        @include img-pos(right);
+        @include img-prop(right);
       }
 
       &.ilt-#{$class} {
-        @include img-pos(left top);
+        @include img-prop(left top);
       }
 
       &.irt-#{$class} {
-        @include img-pos(right top);
+        @include img-prop(right top);
       }
 
       &.ilb-#{$class} {
-        @include img-pos(left bottom);
+        @include img-prop(left bottom);
       }
 
       &.irb-#{$class} {
-        @include img-pos(right bottom);
+        @include img-prop(right bottom);
       }
     }
   }

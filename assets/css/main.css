@@ -7317,14 +7317,6 @@ a.txt-ul-ol:hover,
   -o-background-size: cover;
   background-size: cover;
 }
-.img:before, .img:after {
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 @media only screen and (min-width: 992px) {
   .img.prlax {
     background-attachment: fixed;
@@ -7336,58 +7328,28 @@ a.txt-ul-ol:hover,
   -o-background-size: contain;
   background-size: contain;
 }
-.img.con:before, .img.con:after {
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
-}
 .img.itop {
-  background-position: top;
-}
-.img.itop:before, .img.itop:after {
   background-position: top;
 }
 .img.ibot {
   background-position: bottom;
 }
-.img.ibot:before, .img.ibot:after {
-  background-position: bottom;
-}
 .img.ilft {
-  background-position: left;
-}
-.img.ilft:before, .img.ilft:after {
   background-position: left;
 }
 .img.irgt {
   background-position: right;
 }
-.img.irgt:before, .img.irgt:after {
-  background-position: right;
-}
 .img.ilt {
-  background-position: left top;
-}
-.img.ilt:before, .img.ilt:after {
   background-position: left top;
 }
 .img.irt {
   background-position: right top;
 }
-.img.irt:before, .img.irt:after {
-  background-position: right top;
-}
 .img.ilb {
   background-position: left bottom;
 }
-.img.ilb:before, .img.ilb:after {
-  background-position: left bottom;
-}
 .img.irb {
-  background-position: right bottom;
-}
-.img.irb:before, .img.irb:after {
   background-position: right bottom;
 }
 @media only screen and (min-width: 481px) {
@@ -7397,58 +7359,28 @@ a.txt-ul-ol:hover,
     -o-background-size: contain;
     background-size: contain;
   }
-  .img.con-xs:before, .img.con-xs:after {
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-  }
   .img.itop-xs {
-    background-position: top;
-  }
-  .img.itop-xs:before, .img.itop-xs:after {
     background-position: top;
   }
   .img.ibot-xs {
     background-position: bottom;
   }
-  .img.ibot-xs:before, .img.ibot-xs:after {
-    background-position: bottom;
-  }
   .img.ilft-xs {
-    background-position: left;
-  }
-  .img.ilft-xs:before, .img.ilft-xs:after {
     background-position: left;
   }
   .img.irgt-xs {
     background-position: right;
   }
-  .img.irgt-xs:before, .img.irgt-xs:after {
-    background-position: right;
-  }
   .img.ilt-xs {
-    background-position: left top;
-  }
-  .img.ilt-xs:before, .img.ilt-xs:after {
     background-position: left top;
   }
   .img.irt-xs {
     background-position: right top;
   }
-  .img.irt-xs:before, .img.irt-xs:after {
-    background-position: right top;
-  }
   .img.ilb-xs {
     background-position: left bottom;
   }
-  .img.ilb-xs:before, .img.ilb-xs:after {
-    background-position: left bottom;
-  }
   .img.irb-xs {
-    background-position: right bottom;
-  }
-  .img.irb-xs:before, .img.irb-xs:after {
     background-position: right bottom;
   }
 }
@@ -7459,58 +7391,28 @@ a.txt-ul-ol:hover,
     -o-background-size: contain;
     background-size: contain;
   }
-  .img.con-sm:before, .img.con-sm:after {
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-  }
   .img.itop-sm {
-    background-position: top;
-  }
-  .img.itop-sm:before, .img.itop-sm:after {
     background-position: top;
   }
   .img.ibot-sm {
     background-position: bottom;
   }
-  .img.ibot-sm:before, .img.ibot-sm:after {
-    background-position: bottom;
-  }
   .img.ilft-sm {
-    background-position: left;
-  }
-  .img.ilft-sm:before, .img.ilft-sm:after {
     background-position: left;
   }
   .img.irgt-sm {
     background-position: right;
   }
-  .img.irgt-sm:before, .img.irgt-sm:after {
-    background-position: right;
-  }
   .img.ilt-sm {
-    background-position: left top;
-  }
-  .img.ilt-sm:before, .img.ilt-sm:after {
     background-position: left top;
   }
   .img.irt-sm {
     background-position: right top;
   }
-  .img.irt-sm:before, .img.irt-sm:after {
-    background-position: right top;
-  }
   .img.ilb-sm {
     background-position: left bottom;
   }
-  .img.ilb-sm:before, .img.ilb-sm:after {
-    background-position: left bottom;
-  }
   .img.irb-sm {
-    background-position: right bottom;
-  }
-  .img.irb-sm:before, .img.irb-sm:after {
     background-position: right bottom;
   }
 }
@@ -7521,58 +7423,28 @@ a.txt-ul-ol:hover,
     -o-background-size: contain;
     background-size: contain;
   }
-  .img.con-md:before, .img.con-md:after {
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-  }
   .img.itop-md {
-    background-position: top;
-  }
-  .img.itop-md:before, .img.itop-md:after {
     background-position: top;
   }
   .img.ibot-md {
     background-position: bottom;
   }
-  .img.ibot-md:before, .img.ibot-md:after {
-    background-position: bottom;
-  }
   .img.ilft-md {
-    background-position: left;
-  }
-  .img.ilft-md:before, .img.ilft-md:after {
     background-position: left;
   }
   .img.irgt-md {
     background-position: right;
   }
-  .img.irgt-md:before, .img.irgt-md:after {
-    background-position: right;
-  }
   .img.ilt-md {
-    background-position: left top;
-  }
-  .img.ilt-md:before, .img.ilt-md:after {
     background-position: left top;
   }
   .img.irt-md {
     background-position: right top;
   }
-  .img.irt-md:before, .img.irt-md:after {
-    background-position: right top;
-  }
   .img.ilb-md {
     background-position: left bottom;
   }
-  .img.ilb-md:before, .img.ilb-md:after {
-    background-position: left bottom;
-  }
   .img.irb-md {
-    background-position: right bottom;
-  }
-  .img.irb-md:before, .img.irb-md:after {
     background-position: right bottom;
   }
 }
@@ -7583,58 +7455,28 @@ a.txt-ul-ol:hover,
     -o-background-size: contain;
     background-size: contain;
   }
-  .img.con-lg:before, .img.con-lg:after {
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-  }
   .img.itop-lg {
-    background-position: top;
-  }
-  .img.itop-lg:before, .img.itop-lg:after {
     background-position: top;
   }
   .img.ibot-lg {
     background-position: bottom;
   }
-  .img.ibot-lg:before, .img.ibot-lg:after {
-    background-position: bottom;
-  }
   .img.ilft-lg {
-    background-position: left;
-  }
-  .img.ilft-lg:before, .img.ilft-lg:after {
     background-position: left;
   }
   .img.irgt-lg {
     background-position: right;
   }
-  .img.irgt-lg:before, .img.irgt-lg:after {
-    background-position: right;
-  }
   .img.ilt-lg {
-    background-position: left top;
-  }
-  .img.ilt-lg:before, .img.ilt-lg:after {
     background-position: left top;
   }
   .img.irt-lg {
     background-position: right top;
   }
-  .img.irt-lg:before, .img.irt-lg:after {
-    background-position: right top;
-  }
   .img.ilb-lg {
     background-position: left bottom;
   }
-  .img.ilb-lg:before, .img.ilb-lg:after {
-    background-position: left bottom;
-  }
   .img.irb-lg {
-    background-position: right bottom;
-  }
-  .img.irb-lg:before, .img.irb-lg:after {
     background-position: right bottom;
   }
 }
@@ -7645,58 +7487,28 @@ a.txt-ul-ol:hover,
     -o-background-size: contain;
     background-size: contain;
   }
-  .img.con-xl:before, .img.con-xl:after {
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-  }
   .img.itop-xl {
-    background-position: top;
-  }
-  .img.itop-xl:before, .img.itop-xl:after {
     background-position: top;
   }
   .img.ibot-xl {
     background-position: bottom;
   }
-  .img.ibot-xl:before, .img.ibot-xl:after {
-    background-position: bottom;
-  }
   .img.ilft-xl {
-    background-position: left;
-  }
-  .img.ilft-xl:before, .img.ilft-xl:after {
     background-position: left;
   }
   .img.irgt-xl {
     background-position: right;
   }
-  .img.irgt-xl:before, .img.irgt-xl:after {
-    background-position: right;
-  }
   .img.ilt-xl {
-    background-position: left top;
-  }
-  .img.ilt-xl:before, .img.ilt-xl:after {
     background-position: left top;
   }
   .img.irt-xl {
     background-position: right top;
   }
-  .img.irt-xl:before, .img.irt-xl:after {
-    background-position: right top;
-  }
   .img.ilb-xl {
     background-position: left bottom;
   }
-  .img.ilb-xl:before, .img.ilb-xl:after {
-    background-position: left bottom;
-  }
   .img.irb-xl {
-    background-position: right bottom;
-  }
-  .img.irb-xl:before, .img.irb-xl:after {
     background-position: right bottom;
   }
 }
@@ -7707,58 +7519,28 @@ a.txt-ul-ol:hover,
     -o-background-size: contain;
     background-size: contain;
   }
-  .img.con-xxl:before, .img.con-xxl:after {
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-  }
   .img.itop-xxl {
-    background-position: top;
-  }
-  .img.itop-xxl:before, .img.itop-xxl:after {
     background-position: top;
   }
   .img.ibot-xxl {
     background-position: bottom;
   }
-  .img.ibot-xxl:before, .img.ibot-xxl:after {
-    background-position: bottom;
-  }
   .img.ilft-xxl {
-    background-position: left;
-  }
-  .img.ilft-xxl:before, .img.ilft-xxl:after {
     background-position: left;
   }
   .img.irgt-xxl {
     background-position: right;
   }
-  .img.irgt-xxl:before, .img.irgt-xxl:after {
-    background-position: right;
-  }
   .img.ilt-xxl {
-    background-position: left top;
-  }
-  .img.ilt-xxl:before, .img.ilt-xxl:after {
     background-position: left top;
   }
   .img.irt-xxl {
     background-position: right top;
   }
-  .img.irt-xxl:before, .img.irt-xxl:after {
-    background-position: right top;
-  }
   .img.ilb-xxl {
     background-position: left bottom;
   }
-  .img.ilb-xxl:before, .img.ilb-xxl:after {
-    background-position: left bottom;
-  }
   .img.irb-xxl {
-    background-position: right bottom;
-  }
-  .img.irb-xxl:before, .img.irb-xxl:after {
     background-position: right bottom;
   }
 }

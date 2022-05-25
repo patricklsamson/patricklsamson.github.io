@@ -794,41 +794,26 @@
   );
 }
 
-@mixin img-prop($background-size, $bg-repeat-position: t) {
-  @if $bg-repeat-position == t {
+@mixin img-prop($background-prop: cover) {
+  @if $background-prop == cover {
     background-repeat: no-repeat;
     background-position: center;
-  }
-
-  @include prefix(
-    (
-      background-size: $background-size,
-    ),
-    webkit moz o
-  );
-
-  &:before,
-  &:after {
-    @if $bg-repeat-position == t {
-      background-repeat: no-repeat;
-      background-position: center;
-    }
 
     @include prefix(
       (
-        background-size: $background-size,
+        background-size: $background-prop,
       ),
       webkit moz o
     );
-  }
-}
-
-@mixin img-pos($loc) {
-  background-position: $loc;
-
-  &:before,
-  &:after {
-    background-position: $loc;
+  } @else if $background-prop == contain {
+    @include prefix(
+      (
+        background-size: $background-prop,
+      ),
+      webkit moz o
+    );
+  } @else {
+    background-position: $background-prop;
   }
 }
 
