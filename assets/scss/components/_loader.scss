@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+
+.sec-loader {
+  background: $dgray;
+
+  @include vis(hidden) {
+    opacity: 0;
+
+    @include tran();
+  }
+
+  &.animate {
+    animation: pulsing 10s infinite;
+    z-index: z("loader");
+
+    @include vis(visible) {
+      opacity: 1;
+    }
+
+    img {
+      animation: rotating 5s infinite;
+    }
+  }
+
+  img {
+    border: 2px solid $lgray;
+  }
+}
