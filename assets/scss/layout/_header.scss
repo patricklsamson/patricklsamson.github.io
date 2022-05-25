@@ -10,6 +10,10 @@ header {
       ),
       webkit moz
     );
+
+    @include mq(xxs) {
+      width: 270px;
+    }
   }
 
   p {
