@@ -3,9 +3,12 @@ doc_ready(() => {
 
   nav_bar();
 
+
   (function (next) {
-    fixed_el(".h-add", ".nmt", ".pt-add", null, ".cvh");
-    next();
+    add_event(window, "load", function () {
+      fixed_el(".h-add", ".nmt", ".pt-add", null, ".cvh");
+      next();
+    });
   })(function () {
       remove_class(document.body, "p-fixed");
       remove_class(id("loader"), "animate");
