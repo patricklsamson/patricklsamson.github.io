@@ -61,6 +61,8 @@ doc_ready(() => {
     }
   });
 
+  id("copyright").innerHTML = new Date().getFullYear();
+
   $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 20,
