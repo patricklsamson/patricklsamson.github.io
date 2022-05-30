@@ -3,7 +3,6 @@ doc_ready(() => {
 
   nav_bar();
 
-
   (function (next) {
     add_event(window, "load", function () {
       fixed_el(".h-add", ".nmt", ".pt-add", null, ".cvh");
