@@ -1,18 +1,15 @@
 doc_ready(() => {
   let submitted = false;
 
-  add_event(window, "load", function () {
-    setTimeout(() => {
-      remove_class(document.body, "p-fixed");
-      remove_class(id("loader"), "animate");
-    }, 1500);
-  });
-
   nav_bar();
 
-  setTimeout(() => {
+  (function (next) {
     fixed_el(".h-add", ".nmt", ".pt-add", null, ".cvh");
-  }, 500);
+    next();
+  })(function () {
+      remove_class(document.body, "p-fixed");
+      remove_class(id("loader"), "animate");
+  })
 
   scroll_class(id("nav-bar"), "bg-change");
   match_height(".mh");
