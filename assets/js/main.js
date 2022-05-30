@@ -9,7 +9,7 @@ doc_ready(() => {
   })(function () {
       remove_class(document.body, "p-fixed");
       remove_class(id("loader"), "animate");
-  })
+  });
 
   scroll_class(id("nav-bar"), "bg-change");
   match_height(".mh");
