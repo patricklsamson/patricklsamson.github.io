@@ -1,5 +1,18 @@
 @use "../abstracts" as *;
 
+#myself {
+  @include prefix(
+    (
+      border-radius: 25px 100px 200px,
+    ),
+    webkit moz
+  );
+
+  @include mq(xxs) {
+    width: 80%;
+  }
+}
+
 #stock {
   @include bg($stock);
 }

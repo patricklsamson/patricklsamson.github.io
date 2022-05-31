@@ -3,19 +3,6 @@
 header {
   @include bg($blue-gray-wp);
 
-  img {
-    @include prefix(
-      (
-        border-radius: 25px 100px 200px,
-      ),
-      webkit moz
-    );
-
-    @include mq(xxs) {
-      width: 270px;
-    }
-  }
-
   p {
     &:nth-child(3) {
       @include mq(smup) {
