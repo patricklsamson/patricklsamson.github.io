@@ -179,7 +179,8 @@ function fixed_el(
 
     if (to_fixed_element) {
       for (i = 0; i < qsel_all(neg_margin_top_element).length; i++) {
-        qsel_all(neg_margin_top_element)[i].style.marginTop = "-" + doubleHeight + "px";
+        qsel_all(neg_margin_top_element)[i].style.marginTop =
+          "-" + doubleHeight + "px";
       }
 
       add_event(window, "scroll", function () {
@@ -200,7 +201,8 @@ function fixed_el(
       });
     } else {
       for (i = 0; i < qsel_all(neg_margin_top_element).length; i++) {
-        qsel_all(neg_margin_top_element)[i].style.marginTop = "-" + normalHeight + "px";
+        qsel_all(neg_margin_top_element)[i].style.marginTop =
+          "-" + normalHeight + "px";
       }
     }
 
