@@ -20280,7 +20280,7 @@ a.txt-ul-ol:hover,
   padding-left: 0;
 }
 
-.lazy {
+.img-none {
   background-image: none;
 }
 
@@ -20565,6 +20565,12 @@ header [class*=gcol] svg.typescript {
 }
 header [class*=gcol] svg.typescript path {
   fill: #3178c4;
+}
+header [class*=gcol] svg.golang path {
+  fill: #00abd6;
+}
+header [class*=gcol] svg.nestjs path {
+  fill: #e02450;
 }
 
 main {

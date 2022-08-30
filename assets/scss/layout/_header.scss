@@ -182,6 +182,18 @@ header {
           fill: hsl(211, 60%, 48%);
         }
       }
+
+      &.golang {
+        path {
+          fill: hsl(192, 100%, 42%);
+        }
+      }
+
+      &.nestjs {
+        path {
+          fill: hsl(346, 75%, 51%);
+        }
+      }
     }
   }
 }
