@@ -194,6 +194,27 @@ header {
           fill: hsl(346, 75%, 51%);
         }
       }
+
+      &.graphql {
+        path {
+          fill: hsl(319, 100%, 44%);
+        }
+      }
+
+      &.serverless {
+        path {
+          fill: hsl(2, 98%, 65%);
+        }
+      }
+
+      &.lambda {
+        background: hsl(36, 100%, 50%);
+        padding: 5px;
+
+        path {
+          fill: $white;
+        }
+      }
     }
   }
 }
