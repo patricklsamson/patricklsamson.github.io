@@ -20801,6 +20801,9 @@ header [class*=gcol] i.fa-bootstrap {
 header [class*=gcol] i.fa-git-alt {
   color: #f04f33;
 }
+header [class*=gcol] i.fa-markdown {
+  color: #000;
+}
 header [class*=gcol] i.fa-laravel {
   color: #ff2a1f;
 }
