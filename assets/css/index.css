@@ -5133,9 +5133,15 @@ table {
 }
 
 .boxfx {
-  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.boxfx-white {
+  -webkit-box-shadow: 0 0 4px 2px #f9fafb;
+  -moz-box-shadow: 0 0 4px 2px #f9fafb;
+  box-shadow: 0 0 4px 2px #f9fafb;
 }
 
 .wrap-portfolio {
@@ -20392,7 +20398,7 @@ nav button#nav-btn {
   outline: 0;
   background: transparent;
   border-width: 2px;
-  border-color: #000;
+  border-color: #f9fafb;
   width: 35px;
   height: 35px;
   font-size: 30px;
@@ -20409,7 +20415,7 @@ nav button#nav-btn:before {
   position: absolute;
   top: -6px;
   left: 2.5px;
-  color: #000;
+  color: #f9fafb;
 }
 nav button#nav-btn:after {
   content: "\f00d";
@@ -20423,7 +20429,7 @@ nav button#nav-btn:after {
   position: absolute;
   top: -6px;
   left: 5px;
-  color: #000;
+  color: #f9fafb;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -20651,11 +20657,6 @@ form #message-notice.show {
   -moz-border-radius: 25px 100px 200px;
   border-radius: 25px 100px 200px;
 }
-@media only screen and (max-width: 991px) {
-  #myself {
-    background-position: left;
-  }
-}
 @media only screen and (max-width: 480px) {
   #myself {
     width: 80%;
@@ -20731,11 +20732,16 @@ form #message-notice.show {
 }
 
 #rwd {
-  height: 2.5em;
+  height: 2em;
 }
 
 header {
   background-image: url(../img/blue-gray-wp.jpg);
+}
+@media only screen and (max-width: 1199px) {
+  header.img {
+    background-size: 140% 100%;
+  }
 }
 @media only screen and (min-width: 576px) {
   header p:nth-child(3) {
@@ -20831,7 +20837,7 @@ header [class*=gcol] i.fa-js {
   text-shadow: none;
   color: #f7dd1d;
   background: #000;
-  line-height: 0.75;
+  line-height: 0.9;
 }
 header [class*=gcol] i.fa-wordpress {
   color: #21759c;
