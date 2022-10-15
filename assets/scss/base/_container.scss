@@ -334,7 +334,16 @@
 .boxfx {
   @include prefix(
     (
-      box-shadow: 0 10px 20px 0 $black-05,
+      box-shadow: 0 10px 20px 10px $black-05,
+    ),
+    webkit moz
+  );
+}
+
+.boxfx-white {
+  @include prefix(
+    (
+      box-shadow: 0 0 4px 2px $white,
     ),
     webkit moz
   );
