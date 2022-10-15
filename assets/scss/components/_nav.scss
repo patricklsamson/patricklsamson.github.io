@@ -99,7 +99,7 @@ nav {
     outline: 0;
     background: transparent;
     border-width: 2px;
-    border-color: #000;
+    border-color: $white;
     width: 35px;
     height: 35px;
     font-size: 30px;
@@ -108,14 +108,14 @@ nav {
       position: absolute;
       top: -6px;
       left: 2.5px;
-      color: #000;
+      color: $white;
     }
 
     @include fa(f00d, fas) {
       position: absolute;
       top: -6px;
       left: 5px;
-      color: #000;
+      color: $white;
 
       @include tran;
 
