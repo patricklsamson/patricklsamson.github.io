@@ -8,6 +8,10 @@
     webkit moz
   );
 
+  @include mq(md) {
+    background-position: left;
+  }
+
   @include mq(xxs) {
     width: 80%;
   }
