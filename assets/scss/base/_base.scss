@@ -73,7 +73,8 @@ blockquote {
 }
 
 button,
-.button {
+.button,
+[class*="btn-"] {
   @include prefix(
     (
       border-radius: 2px
@@ -94,6 +95,13 @@ button,
     display: inline;
     border: none;
     background: none;
+
+    @include prefix(
+      (
+        appearance: auto
+      ),
+      webkit moz
+    );
 
     &:hover {
       border: none;
