@@ -8,10 +8,6 @@
     webkit moz
   );
 
-  @include mq(md) {
-    background-position: left;
-  }
-
   @include mq(xxs) {
     width: 80%;
   }
@@ -86,5 +82,5 @@
 }
 
 #rwd {
-  height: 2.5em;
+  height: 2em;
 }
