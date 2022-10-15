@@ -73,8 +73,7 @@ blockquote {
 }
 
 button,
-.button,
-[class*="btn-"] {
+.button {
   @include prefix(
     (
       border-radius: 2px
