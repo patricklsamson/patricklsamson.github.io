@@ -3,6 +3,12 @@
 header {
   @include bg($blue-gray-wp);
 
+  &.img {
+    @include mq(lg) {
+      background-size: 140% 100%;
+    }
+  }
+
   p {
     &:nth-child(3) {
       @include mq(smup) {
@@ -108,7 +114,7 @@ header {
         text-shadow: none;
         color: hsl(53, 93%, 54%);
         background: #000;
-        line-height: 0.75;
+        line-height: 0.9;
       }
 
       &.fa-wordpress {
