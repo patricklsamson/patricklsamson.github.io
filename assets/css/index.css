@@ -20992,7 +20992,7 @@ footer .wrap-white i.fa-yahoo {
 footer .wrap-white i.fa-envelope, footer .wrap-white i.fa-phone-alt {
   color: #3c7777;
 }
-footer .copyright {
+footer .cont:nth-child(2) {
   background: #353b41;
   color: #f9fafb;
 }
