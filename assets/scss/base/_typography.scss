@@ -171,6 +171,10 @@ a,
   .fs-#{$i}0 {
     font-size: #{$i}rem;
   }
+
+  .fs-#{$i}5 {
+    font-size: s.unquote("#{$i}.5rem");
+  }
 }
 
 @each $min-max-mq in $min-max-mqs {

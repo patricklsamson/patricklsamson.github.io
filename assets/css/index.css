@@ -6530,16 +6530,32 @@ a.txt-ul-ol:hover,
   font-size: 2rem;
 }
 
+.fs-25 {
+  font-size: 2.5rem;
+}
+
 .fs-30 {
   font-size: 3rem;
+}
+
+.fs-35 {
+  font-size: 3.5rem;
 }
 
 .fs-40 {
   font-size: 4rem;
 }
 
+.fs-45 {
+  font-size: 4.5rem;
+}
+
 .fs-50 {
   font-size: 5rem;
+}
+
+.fs-55 {
+  font-size: 5.5rem;
 }
 
 @media only screen and (min-width: 481px) {
