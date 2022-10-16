@@ -20993,10 +20993,6 @@ footer .wrap-white i.fa-envelope, footer .wrap-white i.fa-phone-alt {
   color: #3c7777;
 }
 footer .copyright {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   background: #353b41;
   color: #f9fafb;
 }
