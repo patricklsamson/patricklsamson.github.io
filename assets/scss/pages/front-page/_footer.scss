@@ -37,10 +37,8 @@ footer {
     }
   }
 
-  .cont {
-    &:nth-child(2) {
-      background: $dgray;
-      color: $white;
-    }
+  .copyright {
+    background: $dgray;
+    color: $white;
   }
 }
