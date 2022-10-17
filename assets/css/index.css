@@ -20749,6 +20749,7 @@ form #message-notice.show {
 
 #rwd {
   height: 2em;
+  margin: 8px;
 }
 
 header {
@@ -20813,6 +20814,7 @@ header [class*=gcol]:nth-child(even) {
 header [class*=gcol] i {
   text-shadow: 0 2px 4px #f9fafb, 0 -2px 4px #f9fafb;
   vertical-align: middle;
+  margin: 8px;
 }
 header [class*=gcol] i.fa-square {
   color: #66b2b2;
@@ -20858,6 +20860,9 @@ header [class*=gcol] i.fa-js {
 header [class*=gcol] i.fa-wordpress {
   color: #21759c;
 }
+header [class*=gcol] i.fa-docker {
+  color: #2697ed;
+}
 header [class*=gcol] i.fa-php {
   text-shadow: none;
   color: #000;
@@ -20874,6 +20879,7 @@ header [class*=gcol] svg {
   width: 2em;
   vertical-align: middle;
   background: transparent;
+  margin: 8px;
   -webkit-filter: drop-shadow(0 2px 4px #f9fafb) drop-shadow(0 -2px 4px #f9fafb);
   filter: drop-shadow(0 2px 4px #f9fafb) drop-shadow(0 -2px 4px #f9fafb);
 }
@@ -20910,6 +20916,9 @@ header [class*=gcol] svg.nestjs path {
 }
 header [class*=gcol] svg.graphql path {
   fill: #e00099;
+}
+header [class*=gcol] svg.apollo-gq path {
+  fill: #311c87;
 }
 header [class*=gcol] svg.serverless path {
   fill: #fd544e;
