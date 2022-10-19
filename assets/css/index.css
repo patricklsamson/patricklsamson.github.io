@@ -20930,6 +20930,9 @@ header [class*=gcol] svg.lambda {
 header [class*=gcol] svg.lambda path {
   fill: #f9fafb;
 }
+header [class*=gcol] svg.lens path {
+  fill: #3b8ece;
+}
 
 main {
   background-image: url(https://images.unsplash.com/photo-1629193266680-9193cc4a0c81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80);

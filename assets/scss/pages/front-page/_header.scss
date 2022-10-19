@@ -237,6 +237,12 @@ header {
           fill: $white;
         }
       }
+
+      &.lens {
+        path {
+          fill: hsl(206, 60%, 52%);
+        }
+      }
     }
   }
 }
