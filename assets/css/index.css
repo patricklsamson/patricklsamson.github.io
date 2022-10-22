@@ -20751,6 +20751,11 @@ form #message-notice.show {
   height: 2em;
   margin: 8px;
 }
+@media only screen and (max-width: 575px) {
+  #rwd {
+    height: 1.5em;
+  }
+}
 
 header {
   background-image: url(../img/blue-gray-wp.jpg);
@@ -20815,6 +20820,11 @@ header [class*=gcol] i {
   text-shadow: 0 2px 4px #f9fafb, 0 -2px 4px #f9fafb;
   vertical-align: middle;
   margin: 8px;
+}
+@media only screen and (max-width: 575px) {
+  header [class*=gcol] i {
+    font-size: 1.5em;
+  }
 }
 header [class*=gcol] i.fa-square {
   color: #66b2b2;
@@ -20883,6 +20893,11 @@ header [class*=gcol] svg {
   -webkit-filter: drop-shadow(0 2px 4px #f9fafb) drop-shadow(0 -2px 4px #f9fafb);
   filter: drop-shadow(0 2px 4px #f9fafb) drop-shadow(0 -2px 4px #f9fafb);
 }
+@media only screen and (max-width: 575px) {
+  header [class*=gcol] svg {
+    width: 1.5em;
+  }
+}
 header [class*=gcol] svg.jquery path {
   fill: #0767ab;
 }
@@ -20932,6 +20947,9 @@ header [class*=gcol] svg.lambda path {
 }
 header [class*=gcol] svg.lens path {
   fill: #3b8ece;
+}
+header [class*=gcol] svg.tailwind path {
+  fill: #07b6d5;
 }
 
 main {
