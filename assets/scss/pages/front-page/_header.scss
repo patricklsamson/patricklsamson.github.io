@@ -63,6 +63,10 @@ header {
       vertical-align: middle;
       margin: 8px;
 
+      @include mq(xs) {
+        font-size: 1.5em;
+      }
+
       &.fa-square {
         color: $cyan;
         text-shadow: 0 2px 4px $dgray, 0 -2px 4px $dgray;
@@ -158,6 +162,10 @@ header {
         webkit
       );
 
+      @include mq(xs) {
+        width: 1.5em;
+      }
+
       &.jquery {
         path {
           fill: hsl(205, 92%, 35%);
@@ -241,6 +249,12 @@ header {
       &.lens {
         path {
           fill: hsl(206, 60%, 52%);
+        }
+      }
+
+      &.tailwind {
+        path {
+          fill: hsl(189, 94%, 43%);
         }
       }
     }

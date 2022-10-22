@@ -84,4 +84,8 @@
 #rwd {
   height: 2em;
   margin: 8px;
+
+  @include mq(xs) {
+    height: 1.5em;
+  }
 }
