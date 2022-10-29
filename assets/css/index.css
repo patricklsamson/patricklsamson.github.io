@@ -162,6 +162,7 @@ i[id*=btn] {
 
 @page {
   size: auto;
+  margin: 0;
 }
 ::-webkit-scrollbar {
   width: 10px;
