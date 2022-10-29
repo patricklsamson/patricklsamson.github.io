@@ -169,6 +169,10 @@ nav {
       display: none;
     }
 
+    button#save-resume-btn {
+      padding: 5px 10px;
+    }
+
     ul {
       list-style: none;
       padding-left: 0;
@@ -176,7 +180,7 @@ nav {
       li {
         margin: 20px 0;
 
-        span {
+        span.span-page {
           padding: 20px 0;
           cursor: pointer;
           font-size: 1.5rem;
