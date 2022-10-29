@@ -130,6 +130,10 @@ function nav_bar(callback) {
 function resume_nav() {
   var i;
 
+  add_event(id("save-resume-btn"), "click", () => {
+    window.print();
+  });
+
   for (i = 0; i < qsel_all(".wrap-paper").length; i++) {
     if (
       qsel_all(".wrap-paper")[i].innerHTML == null ||
@@ -139,10 +143,10 @@ function resume_nav() {
     }
   }
 
-  for (i = 0; i < qsel_all(".nav-span").length; i++) {
-    add_event(qsel_all(".nav-span")[i], "click", function () {
-      for (i = 0; i < qsel_all(".nav-span").length; i++) {
-        remove_class(qsel_all(".nav-span")[i], "active");
+  for (i = 0; i < qsel_all(".span-page").length; i++) {
+    add_event(qsel_all(".span-page")[i], "click", function () {
+      for (i = 0; i < qsel_all(".span-page").length; i++) {
+        remove_class(qsel_all(".span-page")[i], "active");
         remove_class(qsel_all(".wrap-paper")[i], "active");
       }
 
