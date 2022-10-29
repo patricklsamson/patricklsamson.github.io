@@ -21055,6 +21055,9 @@ nav .menu-container ul a {
     display: none;
   }
 }
+.wrap-resume nav button#save-resume-btn {
+  padding: 5px 10px;
+}
 .wrap-resume nav ul {
   list-style: none;
   padding-left: 0;
@@ -21062,18 +21065,18 @@ nav .menu-container ul a {
 .wrap-resume nav ul li {
   margin: 20px 0;
 }
-.wrap-resume nav ul li span {
+.wrap-resume nav ul li span.span-page {
   padding: 20px 0;
   cursor: pointer;
   font-size: 1.5rem;
   color: #f9fafb;
 }
-.wrap-resume nav ul li span:after {
+.wrap-resume nav ul li span.span-page:after {
   font-family: monospace;
   content: " <--";
   color: transparent;
 }
-.wrap-resume nav ul li span:hover:after, .wrap-resume nav ul li span.active:after {
+.wrap-resume nav ul li span.span-page:hover:after, .wrap-resume nav ul li span.span-page.active:after {
   color: #f9fafb;
 }
 
