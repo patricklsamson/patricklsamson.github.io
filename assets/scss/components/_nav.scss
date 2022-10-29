@@ -156,3 +156,46 @@ nav {
     }
   }
 }
+
+.wrap-resume {
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 230px;
+    border: 15px solid $white;
+
+    @media print {
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        margin: 20px 0;
+
+        span {
+          padding: 20px 0;
+          cursor: pointer;
+          font-size: 1.5rem;
+          color: $white;
+
+          &:after {
+            font-family: monospace;
+            content: " <--";
+            color: transparent;
+          }
+
+          &:hover,
+          &.active {
+            &:after {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
