@@ -158,12 +158,29 @@ nav {
 }
 
 .wrap-resume {
+  @include mq(lg) {
+    position: relative;
+
+    @include pseudo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100%;
+      background: $dgray-06;
+      z-index: z("wrap-resume-overlay");
+    }
+  }
+
   nav {
     position: fixed;
     top: 0;
     right: 0;
     width: 230px;
     border: 15px solid $white;
+    background: $dgray;
+    padding: 20px;
+    margin: 30px;
 
     @media print {
       display: none;
