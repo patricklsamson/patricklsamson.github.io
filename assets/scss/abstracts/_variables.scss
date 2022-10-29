@@ -28,6 +28,11 @@ $black-08: hsla(0, 0%, 0%, 0.8);
 $cyan: hsl(180, 33%, 55%);
 $cyan-04: hsla(180, 33%, 55%, 0.4);
 $dcyan: hsl(180, 33%, 35%);
+$dblue: hsl(192.9, 52.195%, 40.196%);
+$dblue2: hsl(193.52, 51.825%, 26.863%);
+$dblue3: hsl(180, 100%, 27.255%);
+$lblue: hsl(194.4, 53.191%, 90.784%);
+$lblue2: hsl(192.97, 52.113%, 72.157%);
 
 // --------------------------------------------------
 // URL
@@ -56,6 +61,21 @@ $stellargram: url(../img/stellargram.JPG);
 $journal: url(../img/journal.JPG);
 $practice: url(../img/practice.JPG);
 $html-email: url(../img/html-email.JPG);
+
+$office: url(../img/office.jpg);
+$word: url(../img/word.jpg);
+$excel: url(../img/excel.jpg);
+$ppoint: url(../img/ppoint.jpg);
+$html: url(../img/html.png);
+$bootstrap: url(../img/bootstrap.png);
+$css: url(../img/css.jpg);
+$sass: url(../img/sass.jpg);
+$wordpress: url(../img/wordpress.png);
+$php: url(../img/php.png);
+$javascript: url(../img/javascript.jpg);
+$jquery: url(../img/jquery.png);
+$adobexd: url(../img/adobexd.png);
+$pslogo: url(../img/pslogo.jpg);
 
 // --------------------------------------------------
 // HELPERS
@@ -106,8 +126,34 @@ $fluids: (
 $xys: ("x", "y");
 $scroll-hiddens: (scroll, hidden);
 $positions: (relative, absolute, fixed);
-$z-items: ("loader", "nav-btn", "nav-bar", "search-box", "logo");
+
+$z-items: (
+  "loader",
+  "nav-btn",
+  "nav-bar",
+  "search-box",
+  "logo",
+  "pgnum",
+  "wrap-blue",
+  "wrap-paper",
+  "wrap-resume",
+  "parallelogram",
+);
+
 $nz-items: ();
+$multiplier: 1.1;
+
+$head-sizes: (
+  "4": 16pt,
+  "5": 15pt,
+  "6": 14pt
+);
+
+$formal-sizes: (
+  "1": 1in,
+  "15": 1.5in,
+  "2": 2in
+);
 
 // --------------------------------------------------
 // MEDIA QUERIES

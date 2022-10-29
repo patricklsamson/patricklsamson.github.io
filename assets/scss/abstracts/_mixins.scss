@@ -82,11 +82,7 @@
   }
 
   @if $breakpoint == ipad {
-    @media only screen
-      and (min-width: 1023px) and (max-width: 1025px)
-      and (min-height: 1365px) and (max-height: 1367px)
-      and (-webkit-min-device-pixel-ratio: 1.5)
-    {
+    @media only screen and (min-width: 1023px) and (max-width: 1025px) and (min-height: 1365px) and (max-height: 1367px) and (-webkit-min-device-pixel-ratio: 1.5) {
       @content;
     }
   } @else if $breakpoint == mobile {
@@ -148,9 +144,8 @@
     }
   } @else if $set == cursor {
     button,
-    .button,
     [class*="btn-"],
-    .cpointer,
+    .c-pointer,
     [role="button"],
     [type="checkbox"],
     [type="checkbox"] + label,
@@ -164,7 +159,6 @@
     }
   } @else if $set == button {
     button,
-    .button,
     [class*="btn-"],
     [type="button"],
     [type="reset"],
@@ -494,7 +488,7 @@
             box-shadow: inset 0 0 #{m.div($width, 2)}px #{c.adjust(
                 $track,
                 $lightness: $percent
-              )},
+              )}
           ),
           webkit moz
         );
@@ -503,7 +497,7 @@
       @if $border-radius == t {
         @include prefix(
           (
-            border-radius: #{$width}px,
+            border-radius: #{$width}px
           ),
           webkit moz
         );
@@ -516,7 +510,7 @@
       @if $border-radius == t {
         @include prefix(
           (
-            border-radius: #{$width}px,
+            border-radius: #{$width}px
           ),
           webkit moz
         );
@@ -616,10 +610,10 @@
   &:active {
     @include prefix(
       (
-        cursor: grabbing,
+        cursor: grabbing
       ),
       webkit moz,
-      t
+      f
     );
   }
 }
@@ -628,7 +622,7 @@
   @if $center == t {
     @include prefix(
       (
-        justify-content: center,
+        justify-content: center
       ),
       webkit
     ) {
@@ -636,7 +630,7 @@
         (
           pack: center,
         ),
-        webkit-box moz-box ms-flex,
+        webkit-box moz-box ms-flex
         t,
         f
       );
@@ -644,13 +638,13 @@
   } @else {
     @include prefix(
       (
-        justify-content: flex-#{$location},
+        justify-content: flex-#{$location}
       ),
       webkit
     ) {
       @include prefix(
         (
-          pack: $location,
+          pack: $location
         ),
         webkit-box moz-box ms-flex,
         t,
@@ -665,13 +659,13 @@
     @if $center == t {
       @include prefix(
         (
-          align-items: center,
+          align-items: center
         ),
         webkit
       ) {
         @include prefix(
           (
-            align: center,
+            align: center
           ),
           webkit-box moz-box ms-flex,
           t,
@@ -681,7 +675,7 @@
     } @else {
       @include prefix(
         (
-          align-items: flex-#{$location},
+          align-items: flex-#{$location}
         ),
         webkit
       ) {
@@ -699,7 +693,7 @@
     @if $center == t {
       @include prefix(
         (
-          align-content: center,
+          align-content: center
         ),
         webkit
       ) {
@@ -715,13 +709,13 @@
     } @else {
       @include prefix(
         (
-          align-content: flex-#{$location},
+          align-content: flex-#{$location}
         ),
         webkit
       ) {
         @include prefix(
           (
-            pack: $location,
+            pack: $location
           ),
           ms-flex-line,
           t,
@@ -735,7 +729,7 @@
 @mixin flex($column: t) {
   @include prefix(
     (
-      display: flex,
+      display: flex
     ),
     webkit,
     f
@@ -744,7 +738,7 @@
 
     @include prefix(
       (
-        display: box,
+        display: box
       ),
       webkit moz,
       f,
@@ -758,13 +752,13 @@
   @if $column == t {
     @include prefix(
       (
-        flex-direction: column,
+        flex-direction: column
       ),
       webkit ms
     ) {
       @include prefix(
         (
-          box-orient: vertical,
+          box-orient: vertical
         ),
         webkit moz,
         t,
@@ -773,7 +767,7 @@
 
       @include prefix(
         (
-          box-direction: normal,
+          box-direction: normal
         ),
         webkit moz,
         t,
@@ -786,7 +780,7 @@
 @mixin order($order) {
   @include prefix(
     (
-      ordinal-group: $order + 1,
+      ordinal-group: $order + 1
     ),
     webkit-box moz-box,
     t,
@@ -795,7 +789,7 @@
 
   @include prefix(
     (
-      order: $order,
+      order: $order
     ),
     webkit ms-flex
   );
@@ -808,14 +802,14 @@
 
     @include prefix(
       (
-        background-size: $background-prop,
+        background-size: $background-prop
       ),
       webkit moz o
     );
   } @else if $background-prop == contain {
     @include prefix(
       (
-        background-size: $background-prop,
+        background-size: $background-prop
       ),
       webkit moz o
     );
@@ -832,7 +826,7 @@
 @mixin tran($property: all, $transition-duration: 0.5s) {
   @include prefix(
     (
-      transition: $property $transition-duration,
+      transition: $property $transition-duration
     ),
     webkit o moz
   );
@@ -865,12 +859,13 @@
   $row: auto,
   $column: auto,
   $number: 2,
+  $row-number: 2,
   $column-number: 2
 ) {
   @if $template == def {
     @include prefix(
       (
-        grid-rows: $row,
+        grid-rows: $row
       ),
       ms,
       t,
@@ -879,7 +874,7 @@
 
     @include prefix(
       (
-        grid-columns: $column,
+        grid-columns: $column
       ),
       ms,
       t,
@@ -890,7 +885,7 @@
   } @else if $template == r-rep {
     @include prefix(
       (
-        grid-rows: s.unquote("(#{$row}) [#{$number}]"),
+        grid-rows: s.unquote("(#{$row}) [#{$number}]")
       ),
       ms,
       t,
@@ -899,7 +894,7 @@
 
     @include prefix(
       (
-        grid-columns: $column,
+        grid-columns: $column
       ),
       ms,
       t,
@@ -910,7 +905,7 @@
   } @else if $template == c-rep {
     @include prefix(
       (
-        grid-rows: $row,
+        grid-rows: $row
       ),
       ms,
       t,
@@ -919,7 +914,7 @@
 
     @include prefix(
       (
-        grid-columns: s.unquote("(#{$column}) [#{$number}]"),
+        grid-columns: s.unquote("(#{$column}) [#{$number}]")
       ),
       ms,
       t,
@@ -930,7 +925,7 @@
   } @else if $template == a-rep {
     @include prefix(
       (
-        grid-rows: s.unquote("(#{$row}) [#{$number}]"),
+        grid-rows: s.unquote("(#{$row}) [#{$row-number}]")
       ),
       ms,
       t,
@@ -939,14 +934,14 @@
 
     @include prefix(
       (
-        grid-columns: s.unquote("(#{$column}) [#{$column-number}]"),
+        grid-columns: s.unquote("(#{$column}) [#{$column-number}]")
       ),
       ms,
       t,
       f
     );
 
-    grid-template: repeat(#{$number}, #{$row}) / repeat(
+    grid-template: repeat(#{$row-number}, #{$row}) / repeat(
         #{$column-number},
         #{$column}
       );
@@ -959,7 +954,7 @@
   @if $set == row-se {
     @include prefix(
       (
-        grid-row: $start,
+        grid-row: $start
       ),
       ms,
       t,
@@ -980,7 +975,7 @@
   } @else if $set == row-s {
     @include prefix(
       (
-        grid-row: $start,
+        grid-row: $start
       ),
       ms,
       t
@@ -990,7 +985,7 @@
   } @else if $set == col-se {
     @include prefix(
       (
-        grid-column: $start,
+        grid-column: $start
       ),
       ms,
       t,
@@ -998,7 +993,7 @@
     ) {
       @include prefix(
         (
-          grid-column-span: $end,
+          grid-column-span: $end
         ),
         ms,
         t,
@@ -1011,12 +1006,70 @@
   } @else if $set == col-s {
     @include prefix(
       (
-        grid-column: $start,
+        grid-column: $start
       ),
       ms,
       t
     );
 
     @content;
+  }
+}
+
+@mixin paper($width: 8.5, $height: 11, $padding: 0.25) {
+  width: calc(#{$width}in * #{$multiplier});
+  height: calc(#{$height}in * #{$multiplier});
+  padding: calc(#{$padding}in * #{$multiplier});
+
+  .p-pgnum {
+    padding: 10px calc(#{$padding}in * #{$multiplier}) calc(
+      #{$padding}in * #{$multiplier}
+    );
+  }
+}
+
+@mixin pgnum($position: right) {
+  #{$position}: 0;
+
+  @include pseudo {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: calc(2pt * #{$multiplier});
+    #{$position}: 0;
+    background: #000;
+
+    @media print {
+      display: none;
+    }
+  }
+}
+
+@mixin parallelogram($top: 0, $left: 0) {
+  position: relative;
+
+  @include pseudo {
+    position: absolute;
+    z-index: f.z("parallelogram");
+    width: 200px;
+    height: 200px;
+    transform: skew(-20deg);
+    top: #{$top}px;
+    left: #{$left}px;
+    background: $lblue;
+    border: 3px solid $dblue;
+  }
+
+  @include pseudo(after) {
+    position: absolute;
+    z-index: f.z("parallelogram");
+    width: 200px;
+    height: 200px;
+    transform: skew(-20deg);
+    top: #{$top + 20}px;
+    left: #{$left + 5}px;
+    background: $dblue;
+    border: 3px solid $dblue2;
   }
 }
