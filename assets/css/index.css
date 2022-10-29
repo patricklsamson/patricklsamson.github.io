@@ -5406,6 +5406,11 @@ table {
   overflow-x: hidden;
   background: #353b41;
 }
+@media print {
+  .wrap-resume {
+    background: transparent;
+  }
+}
 .wrap-resume h1 {
   margin-bottom: calc(2pt * 1.1);
 }
