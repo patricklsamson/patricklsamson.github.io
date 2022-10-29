@@ -240,9 +240,8 @@ summary {
 }
 
 button,
-.button,
 [class*=btn-],
-.cpointer,
+.c-pointer,
 [role=button],
 [type=checkbox],
 [type=checkbox] + label,
@@ -256,7 +255,6 @@ summary {
 }
 
 button,
-.button,
 [class*=btn-],
 [type=button],
 [type=reset],
@@ -288,7 +286,7 @@ blockquote {
 }
 
 button,
-.button {
+[class*=btn-] {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -297,12 +295,12 @@ button,
   background: #f9fafb;
 }
 button:hover,
-.button:hover {
+[class*=btn-]:hover {
   border-color: #353b41;
   background: lightgray;
 }
 button.a,
-.button.a {
+[class*=btn-].a {
   display: inline;
   border: none;
   background: none;
@@ -311,7 +309,7 @@ button.a,
   appearance: auto;
 }
 button.a:hover,
-.button.a:hover {
+[class*=btn-].a:hover {
   border: none;
   background: none;
 }
@@ -1198,9 +1196,11 @@ table {
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
+  pack: -webkit-box-center;
+  pack: -moz-box-center;
+  pack: -ms-flex-center;
+  pack: -t-center;
+  pack: center;
   justify-content: center;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1223,9 +1223,11 @@ table {
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
+  pack: -webkit-box-center;
+  pack: -moz-box-center;
+  pack: -ms-flex-center;
+  pack: -t-center;
+  pack: center;
   justify-content: center;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1253,9 +1255,11 @@ table {
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
+  pack: -webkit-box-center;
+  pack: -moz-box-center;
+  pack: -ms-flex-center;
+  pack: -t-center;
+  pack: center;
   justify-content: center;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1283,9 +1287,11 @@ table {
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
+  pack: -webkit-box-center;
+  pack: -moz-box-center;
+  pack: -ms-flex-center;
+  pack: -t-center;
+  pack: center;
   justify-content: center;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1313,9 +1319,11 @@ table {
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
+  pack: -webkit-box-center;
+  pack: -moz-box-center;
+  pack: -ms-flex-center;
+  pack: -t-center;
+  pack: center;
   justify-content: center;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1344,9 +1352,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1369,9 +1379,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1399,9 +1411,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1429,9 +1443,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1459,9 +1475,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1490,9 +1508,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1515,9 +1535,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1545,9 +1567,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1575,9 +1599,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1605,9 +1631,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1636,9 +1664,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1661,9 +1691,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1691,9 +1723,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1721,9 +1755,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1751,9 +1787,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1782,9 +1820,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1807,9 +1847,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1837,9 +1879,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1867,9 +1911,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1897,9 +1943,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1928,9 +1976,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1953,9 +2003,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1983,9 +2035,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2013,9 +2067,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2043,9 +2099,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2074,9 +2132,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2099,9 +2159,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2129,9 +2191,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2159,9 +2223,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2189,9 +2255,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2220,9 +2288,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2245,9 +2315,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2275,9 +2347,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2305,9 +2379,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2335,9 +2411,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2366,9 +2444,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2391,9 +2471,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2421,9 +2503,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2451,9 +2535,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2481,9 +2567,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2512,9 +2600,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2537,9 +2627,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2567,9 +2659,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2597,9 +2691,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2627,9 +2723,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2658,9 +2756,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2683,9 +2783,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2713,9 +2815,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2743,9 +2847,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2773,9 +2879,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2804,9 +2912,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2829,9 +2939,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2859,9 +2971,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2889,9 +3003,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2919,9 +3035,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2950,9 +3068,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2975,9 +3095,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -3005,9 +3127,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -3035,9 +3159,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -3065,9 +3191,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -3095,9 +3223,11 @@ table {
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
+  pack: -webkit-box-center;
+  pack: -moz-box-center;
+  pack: -ms-flex-center;
+  pack: -t-center;
+  pack: center;
   justify-content: center;
 }
 
@@ -3113,9 +3243,11 @@ table {
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
+  pack: -webkit-box-center;
+  pack: -moz-box-center;
+  pack: -ms-flex-center;
+  pack: -t-center;
+  pack: center;
   justify-content: center;
   -webkit-align-items: flex-start;
   -webkit-box-align: start;
@@ -3136,9 +3268,11 @@ table {
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
+  pack: -webkit-box-center;
+  pack: -moz-box-center;
+  pack: -ms-flex-center;
+  pack: -t-center;
+  pack: center;
   justify-content: center;
   -webkit-align-items: flex-end;
   -webkit-box-align: end;
@@ -3159,9 +3293,11 @@ table {
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
+  pack: -webkit-box-center;
+  pack: -moz-box-center;
+  pack: -ms-flex-center;
+  pack: -t-center;
+  pack: center;
   justify-content: center;
   -webkit-justify-content: flex-start;
   -webkit-box-pack: start;
@@ -3182,9 +3318,11 @@ table {
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
+  pack: -webkit-box-center;
+  pack: -moz-box-center;
+  pack: -ms-flex-center;
+  pack: -t-center;
+  pack: center;
   justify-content: center;
   -webkit-justify-content: flex-end;
   -webkit-box-pack: end;
@@ -3206,9 +3344,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
   }
 
@@ -3224,9 +3364,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-start;
     -webkit-box-align: start;
@@ -3247,9 +3389,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
@@ -3270,9 +3414,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
@@ -3293,9 +3439,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-end;
     -webkit-box-pack: end;
@@ -3317,9 +3465,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
   }
 
@@ -3335,9 +3485,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-start;
     -webkit-box-align: start;
@@ -3358,9 +3510,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
@@ -3381,9 +3535,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
@@ -3404,9 +3560,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-end;
     -webkit-box-pack: end;
@@ -3428,9 +3586,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
   }
 
@@ -3446,9 +3606,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-start;
     -webkit-box-align: start;
@@ -3469,9 +3631,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
@@ -3492,9 +3656,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
@@ -3515,9 +3681,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-end;
     -webkit-box-pack: end;
@@ -3539,9 +3707,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
   }
 
@@ -3557,9 +3727,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-start;
     -webkit-box-align: start;
@@ -3580,9 +3752,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
@@ -3603,9 +3777,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
@@ -3626,9 +3802,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-end;
     -webkit-box-pack: end;
@@ -3650,9 +3828,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
   }
 
@@ -3668,9 +3848,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-start;
     -webkit-box-align: start;
@@ -3691,9 +3873,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
@@ -3714,9 +3898,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
@@ -3737,9 +3923,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-end;
     -webkit-box-pack: end;
@@ -3761,9 +3949,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
   }
 
@@ -3779,9 +3969,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-start;
     -webkit-box-align: start;
@@ -3802,9 +3994,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
@@ -3825,9 +4019,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
@@ -3848,9 +4044,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-end;
     -webkit-box-pack: end;
@@ -3872,9 +4070,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
   }
 
@@ -3890,9 +4090,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-start;
     -webkit-box-align: start;
@@ -3913,9 +4115,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
@@ -3936,9 +4140,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
@@ -3959,9 +4165,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-end;
     -webkit-box-pack: end;
@@ -3983,9 +4191,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
   }
 
@@ -4001,9 +4211,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-start;
     -webkit-box-align: start;
@@ -4024,9 +4236,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
@@ -4047,9 +4261,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
@@ -4070,9 +4286,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-end;
     -webkit-box-pack: end;
@@ -4094,9 +4312,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
   }
 
@@ -4112,9 +4332,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-start;
     -webkit-box-align: start;
@@ -4135,9 +4357,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
@@ -4158,9 +4382,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
@@ -4181,9 +4407,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-end;
     -webkit-box-pack: end;
@@ -4205,9 +4433,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
   }
 
@@ -4223,9 +4453,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-start;
     -webkit-box-align: start;
@@ -4246,9 +4478,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
@@ -4269,9 +4503,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
@@ -4292,9 +4528,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-end;
     -webkit-box-pack: end;
@@ -4316,9 +4554,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
   }
 
@@ -4334,9 +4574,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-start;
     -webkit-box-align: start;
@@ -4357,9 +4599,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
@@ -4380,9 +4624,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
@@ -4403,9 +4649,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-end;
     -webkit-box-pack: end;
@@ -4427,9 +4675,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
   }
 
@@ -4445,9 +4695,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-start;
     -webkit-box-align: start;
@@ -4468,9 +4720,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
@@ -4491,9 +4745,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
@@ -4514,9 +4770,11 @@ table {
     -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
+    pack: -webkit-box-center;
+    pack: -moz-box-center;
+    pack: -ms-flex-center;
+    pack: -t-center;
+    pack: center;
     justify-content: center;
     -webkit-justify-content: flex-end;
     -webkit-box-pack: end;
@@ -4532,9 +4790,11 @@ table {
   -ms-flex-line-pack: center;
   align-content: center;
   -webkit-justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
+  pack: -webkit-box-center;
+  pack: -moz-box-center;
+  pack: -ms-flex-center;
+  pack: -t-center;
+  pack: center;
   justify-content: center;
 }
 .grid-cont.gtop {
@@ -5140,6 +5400,76 @@ table {
   overflow-y: hidden;
 }
 
+.wrap-resume {
+  position: relative;
+  z-index: 2;
+  overflow-x: hidden;
+  background: #353b41;
+}
+.wrap-resume h1 {
+  margin-bottom: calc(2pt * 1.1);
+}
+.wrap-resume h2 {
+  margin-bottom: calc(2pt * 1.1);
+}
+.wrap-resume h3 {
+  margin-bottom: calc(2pt * 1.1);
+}
+.wrap-resume h4 {
+  margin-bottom: calc(2pt * 1.1);
+}
+.wrap-resume h5 {
+  margin-bottom: calc(2pt * 1.1);
+}
+.wrap-resume h6 {
+  margin-bottom: calc(2pt * 1.1);
+}
+.wrap-resume header,
+.wrap-resume footer,
+.wrap-resume section {
+  margin-bottom: calc(6pt * 1.1);
+}
+.wrap-resume li,
+.wrap-resume p {
+  margin-bottom: calc(2pt * 1.1);
+}
+.wrap-resume .mb-0 {
+  margin-bottom: 0;
+}
+
+.wrap-paper {
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  background: #fff;
+  display: none;
+  width: calc(8.5in * 1.1);
+  height: calc(11in * 1.1);
+  padding: calc(0.25in * 1.1);
+}
+.wrap-paper .p-pgnum {
+  padding: 10px calc(0.25in * 1.1) calc( 0.25in * 1.1 );
+}
+.wrap-paper:before {
+  content: ".";
+  font-size: 0;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  bottom: calc(0.25in * 1.1);
+  width: 100vw;
+  height: calc(2pt * 1.1);
+  background: #000;
+}
+@media print {
+  .wrap-paper:before {
+    display: none;
+  }
+}
+.wrap-paper.active {
+  display: block;
+}
+
 .boxfx {
   -webkit-box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.5);
@@ -5329,6 +5659,97 @@ table {
 
 .wrap-dcyan {
   background: #3c7777;
+}
+
+.wrap-blue {
+  position: relative;
+  z-index: 4;
+  border: 3px solid #31859c;
+  border-radius: 3px;
+  background: #dbeef4;
+  list-style: none;
+  padding: 5px;
+}
+.wrap-blue.dblue {
+  border-color: #215868;
+  background: #31859c;
+  color: #f9fafb;
+}
+.wrap-blue.blue-bar {
+  background: #31859c;
+  padding: 5px;
+  color: #f9fafb;
+}
+.wrap-blue.blue-bar img,
+.wrap-blue.blue-bar .img {
+  width: 50px;
+  height: 50px;
+}
+.wrap-blue.bg-gradient {
+  background: -webkit-linear-gradient(#dbeef4, #31859c);
+  background: -moz-linear-gradient(#dbeef4, #31859c);
+  background: -o-linear-gradient(#dbeef4, #31859c);
+  background: -webkit-gradient(linear, left top, left bottom, from(#dbeef4), to(#31859c));
+  background: linear-gradient(#dbeef4, #31859c);
+}
+.wrap-blue.img-bd-dark img {
+  border-color: #31859c;
+}
+.wrap-blue img,
+.wrap-blue .img,
+.wrap-blue .svg {
+  border: 3px solid #93cddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.wrap-blue .svg {
+  width: 50px;
+  vertical-align: middle;
+  padding: 5px;
+}
+.wrap-blue .svg path {
+  fill: #f9fafb;
+}
+.wrap-blue .fa-square {
+  color: #31859c;
+}
+
+.wrap-division [class*=gcol]:nth-child(odd) {
+  padding-top: 15px;
+}
+.wrap-division [class*=gcol]:nth-child(even) {
+  border-left: 10px double #31859c;
+}
+
+.parallelogram {
+  position: relative;
+}
+.parallelogram:before {
+  content: ".";
+  font-size: 0;
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  transform: skew(-20deg);
+  top: -35px;
+  left: 0px;
+  background: #dbeef4;
+  border: 3px solid #31859c;
+}
+.parallelogram:after {
+  content: ".";
+  font-size: 0;
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  transform: skew(-20deg);
+  top: -15px;
+  left: 5px;
+  background: #31859c;
+  border: 3px solid #215868;
 }
 
 html {
@@ -7442,6 +7863,115 @@ a.txt-ul-ol:hover,
     font-size: 5rem;
   }
 }
+.wrap-resume {
+  font-size: calc(10pt * 1.1);
+  line-height: 1.15;
+}
+.wrap-resume h1,
+.wrap-resume .h1 {
+  font-size: 2.5em;
+  line-height: 1.15;
+  font-family: "cambria", serif;
+}
+.wrap-resume h1:before, .wrap-resume h1:after,
+.wrap-resume .h1:before,
+.wrap-resume .h1:after {
+  display: none;
+}
+.wrap-resume h2,
+.wrap-resume .h2 {
+  font-size: 2.25em;
+  line-height: 1.15;
+  font-family: "cambria", serif;
+}
+.wrap-resume h2:before, .wrap-resume h2:after,
+.wrap-resume .h2:before,
+.wrap-resume .h2:after {
+  display: none;
+}
+.wrap-resume h3,
+.wrap-resume .h3 {
+  font-size: 2em;
+  line-height: 1.15;
+  font-family: "cambria", serif;
+}
+.wrap-resume h3:before, .wrap-resume h3:after,
+.wrap-resume .h3:before,
+.wrap-resume .h3:after {
+  display: none;
+}
+.wrap-resume h4,
+.wrap-resume .h4 {
+  font-size: calc(16pt * 1.1);
+  line-height: 1.15;
+  font-family: "cambria", serif;
+}
+.wrap-resume h4:before, .wrap-resume h4:after,
+.wrap-resume .h4:before,
+.wrap-resume .h4:after {
+  display: none;
+}
+.wrap-resume h5,
+.wrap-resume .h5 {
+  font-size: calc(15pt * 1.1);
+  line-height: 1.15;
+  font-family: "cambria", serif;
+}
+.wrap-resume h5:before, .wrap-resume h5:after,
+.wrap-resume .h5:before,
+.wrap-resume .h5:after {
+  display: none;
+}
+.wrap-resume h6,
+.wrap-resume .h6 {
+  font-size: calc(14pt * 1.1);
+  line-height: 1.15;
+  font-family: "cambria", serif;
+}
+.wrap-resume h6:before, .wrap-resume h6:after,
+.wrap-resume .h6:before,
+.wrap-resume .h6:after {
+  display: none;
+}
+.wrap-resume a {
+  color: blue;
+  text-decoration: underline;
+  text-shadow: none;
+}
+.wrap-resume a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.wrap-resume .fs-11 {
+  font-size: calc(11pt * 1.1);
+}
+.wrap-resume .fs-12 {
+  font-size: calc(12pt * 1.1);
+}
+
+.p-pgnum {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  right: 0;
+}
+.p-pgnum:before {
+  content: ".";
+  font-size: 0;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100vw;
+  height: calc(2pt * 1.1);
+  right: 0;
+  background: #000;
+}
+@media print {
+  .p-pgnum:before {
+    display: none;
+  }
+}
+
 .txtfx {
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -7455,6 +7985,17 @@ a.txt-ul-ol:hover,
 
 .f-oswald {
   font-family: "Oswald", sans-serif;
+}
+
+.h-top {
+  color: #215868;
+}
+
+.h-bg {
+  background: darkcyan;
+  color: #f9fafb;
+  border-bottom: 5px solid #93cddd;
+  padding-left: 10px;
 }
 
 .img {
@@ -20320,6 +20861,22 @@ a.txt-ul-ol:hover,
   background-image: none;
 }
 
+.formal-1 {
+  height: calc(1in * 1.1);
+}
+
+.formal-15 {
+  height: calc(1.5in * 1.1);
+}
+
+.formal-2 {
+  height: calc(2in * 1.1);
+}
+
+.blue-bul .fa-li {
+  color: #215868;
+}
+
 .sec-loader {
   background: #353b41;
   visibility: hidden;
@@ -20331,7 +20888,7 @@ a.txt-ul-ol:hover,
 }
 .sec-loader.animate {
   animation: pulsing 10s infinite;
-  z-index: 5;
+  z-index: 10;
   visibility: visible;
   opacity: 1;
 }
@@ -20343,7 +20900,7 @@ a.txt-ul-ol:hover,
 }
 
 nav {
-  z-index: 3;
+  z-index: 8;
 }
 nav#nav-bar {
   -webkit-transition: all 0.5s;
@@ -20367,7 +20924,7 @@ nav#nav-bar.bg-change li:hover:before, nav#nav-bar.bg-change li:hover:after {
 nav#nav-bar img {
   position: relative;
   width: 50px;
-  z-index: 1;
+  z-index: 6;
 }
 nav#nav-bar button#nav-btn {
   float: right;
@@ -20418,7 +20975,7 @@ nav#side-bar #side-coll {
 }
 nav button#nav-btn {
   position: relative;
-  z-index: 4;
+  z-index: 9;
   outline: 0;
   background: transparent;
   border-width: 2px;
@@ -20481,12 +21038,44 @@ nav .menu-container ul a {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.5);
 }
 
-button.btn-bracket {
+.wrap-resume nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 230px;
+  border: 15px solid #f9fafb;
+}
+@media print {
+  .wrap-resume nav {
+    display: none;
+  }
+}
+.wrap-resume nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+.wrap-resume nav ul li {
+  margin: 20px 0;
+}
+.wrap-resume nav ul li span {
+  padding: 20px 0;
+  cursor: pointer;
+  font-size: 1.5rem;
   color: #f9fafb;
+}
+.wrap-resume nav ul li span:after {
+  font-family: monospace;
+  content: " <--";
+  color: transparent;
+}
+.wrap-resume nav ul li span:hover:after, .wrap-resume nav ul li span.active:after {
+  color: #f9fafb;
+}
+
+.btn-bracket {
   border: none;
   background: transparent;
 }
-
 .btn-bracket:before, .btn-bracket:after {
   color: transparent;
   font-weight: 700;
@@ -20503,6 +21092,10 @@ button.btn-bracket {
 }
 .btn-bracket:after {
   content: " ]";
+}
+.btn-bracket:hover {
+  border: none;
+  background: transparent;
 }
 .btn-bracket:hover:before, .btn-bracket:hover:after {
   color: #66b2b2;
@@ -20585,7 +21178,7 @@ button.btn-bracket {
   position: relative;
 }
 .select-box .search-box input[type*=text] {
-  z-index: 2;
+  z-index: 7;
   width: 100%;
   position: absolute;
   pointer-events: none;
@@ -20810,9 +21403,11 @@ header [class*=gcol]:nth-child(even) {
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
+  pack: -webkit-box-center;
+  pack: -moz-box-center;
+  pack: -ms-flex-center;
+  pack: -t-center;
+  pack: center;
   justify-content: center;
 }
 @media only screen and (max-width: 991px) {
@@ -20991,9 +21586,9 @@ main .cont:first-child .grid-cont {
   }
 }
 main .cont:nth-child(3) .grid-cont {
-  -ms-grid-rows: (auto) [1];
+  -ms-grid-rows: (auto) [2];
   -ms-grid-columns: (30vw) [2];
-  grid-template: repeat(1, auto)/repeat(2, 30vw);
+  grid-template: repeat(2, auto)/repeat(2, 30vw);
 }
 @media only screen and (max-width: 1199px) {
   main .cont:nth-child(3) .grid-cont {
