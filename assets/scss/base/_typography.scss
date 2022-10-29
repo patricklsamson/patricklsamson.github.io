@@ -199,6 +199,63 @@ a,
   }
 }
 
+.wrap-resume {
+  font-size: calc(10pt * #{$multiplier});
+  line-height: 1.15;
+
+  @for $i from 1 through 3 {
+    $em: -0.25 * $i + 2.75em;
+
+    h#{$i},
+    .h#{$i} {
+      font-size: $em;
+      line-height: 1.15;
+      font-family: "cambria", serif;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+
+  @each $head, $head-size in $head-sizes {
+    h#{$head},
+    .h#{$head} {
+      font-size: calc(#{$head-size} * #{$multiplier});
+      line-height: 1.15;
+      font-family: "cambria", serif;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+
+  a {
+    color: blue;
+    text-decoration: underline;
+    text-shadow: none;
+
+    &:hover {
+      color: blue;
+      text-decoration: underline;
+    }
+  }
+
+  @for $i from 1 through 2 {
+    .fs-1#{$i} {
+      font-size: calc(1#{$i}pt * #{$multiplier});
+    }
+  }
+}
+
+.p-pgnum {
+  position: absolute;
+  z-index: z("pgnum");
+  bottom: 0;
+  @include pgnum(right);
+}
+
 .txtfx {
   text-shadow: 0 5px 10px $black-05;
 }
@@ -214,4 +271,15 @@ a,
 
 .f-oswald {
   font-family: "Oswald", sans-serif;
+}
+
+.h-top {
+  color: $dblue2;
+}
+
+.h-bg {
+  background: $dblue3;
+  color: $white;
+  border-bottom: 5px solid $lblue2;
+  padding-left: 10px;
 }

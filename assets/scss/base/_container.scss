@@ -340,10 +340,65 @@
   }
 }
 
+.wrap-resume {
+  position: relative;
+  z-index: z("wrap-resume");
+  overflow-x: hidden;
+  background: $dgray;
+
+  @for $i from 1 through 6 {
+    h#{$i} {
+      margin-bottom: calc(2pt * #{$multiplier});
+    }
+  }
+
+  header,
+  footer,
+  section {
+    margin-bottom: calc(6pt * #{$multiplier});
+  }
+
+  li,
+  p {
+    margin-bottom: calc(2pt * #{$multiplier});
+  }
+
+  .mb-0 {
+    margin-bottom: 0;
+  }
+}
+
+.wrap-paper {
+  position: relative;
+  z-index: z("wrap-paper");
+  overflow: hidden;
+  background: #fff;
+  display: none;
+  @include paper(8.5, 11, 0.25);
+
+  @include pseudo {
+    position: absolute;
+    z-index: z("pgnum");
+    left: 0;
+    bottom: calc(0.25in * #{$multiplier});
+    width: 100vw;
+    height: calc(2pt * #{$multiplier});
+    background: #000;
+
+    @media print {
+      display: none;
+    }
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
 .boxfx {
   @include prefix(
     (
-      box-shadow: 0 10px 20px 10px $black-05,
+      box-shadow: 0 10px 20px 10px $black-05
     ),
     webkit moz
   );
@@ -352,7 +407,7 @@
 .boxfx-white {
   @include prefix(
     (
-      box-shadow: 0 0 4px 2px $white,
+      box-shadow: 0 0 4px 2px $white
     ),
     webkit moz
   );
@@ -366,7 +421,7 @@
 
   @include prefix(
     (
-      perspective: 1000px,
+      perspective: 1000px
     ),
     webkit moz
   );
@@ -404,7 +459,7 @@
 
     @include prefix(
       (
-        transform-style: preserve-3d,
+        transform-style: preserve-3d
       ),
       webkit moz
     );
@@ -413,7 +468,7 @@
     .wrap-portfolio-inner-back {
       @include prefix(
         (
-          backface-visibility: hidden,
+          backface-visibility: hidden
         ),
         webkit moz
       );
@@ -422,7 +477,7 @@
     .wrap-portfolio-inner-back {
       @include prefix(
         (
-          transform: rotateY(180deg),
+          transform: rotateY(180deg)
         ),
         webkit moz ms o
       );
@@ -506,7 +561,7 @@
 .wrap-gray {
   @include prefix(
     (
-      background: linear-gradient($gray-06, $lgray 50%),
+      background: linear-gradient($gray-06, $lgray 50%)
     ),
     webkit moz o,
     f
@@ -528,7 +583,7 @@
 .wrap-dgray06 {
   @include prefix(
     (
-      background: linear-gradient($dgray-06, $gray-06),
+      background: linear-gradient($dgray-06, $gray-06)
     ),
     webkit moz o,
     f
@@ -557,4 +612,100 @@
 
 .wrap-dcyan {
   background: $dcyan;
+}
+
+
+.wrap-blue {
+  position: relative;
+  z-index: z("wrap-blue");
+  border: 3px solid $dblue;
+  border-radius: 3px;
+  background: $lblue;
+  list-style: none;
+  padding: 5px;
+
+  &.dblue {
+    border-color: $dblue2;
+    background: $dblue;
+    color: $white;
+  }
+
+  &.blue-bar {
+    background: $dblue;
+    padding: 5px;
+    color: $white;
+
+    img,
+    .img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &.bg-gradient {
+    @include prefix(
+      (
+        background: linear-gradient($lblue, $dblue),
+      ),
+      webkit moz o,
+      f
+    ) {
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from($lblue),
+        to($dblue)
+      );
+    }
+  }
+
+  &.img-bd-dark {
+    img {
+      border-color: $dblue;
+    }
+  }
+
+  img,
+  .img,
+  .svg {
+    border: 3px solid $lblue2;
+
+    @include prefix(
+      (
+        border-radius: 5px,
+      ),
+      webkit moz
+    );
+  }
+
+  .svg {
+    width: 50px;
+    vertical-align: middle;
+    padding: 5px;
+
+    path {
+      fill: $white;
+    }
+  }
+
+  .fa-square {
+    color: $dblue;
+  }
+}
+
+.wrap-division {
+  @include all(gcol) {
+    &:nth-child(odd) {
+      padding-top: 15px;
+    }
+
+    &:nth-child(even) {
+      border-left: 10px double $dblue;
+    }
+  }
+}
+
+.parallelogram {
+  @include parallelogram(-35);
 }
