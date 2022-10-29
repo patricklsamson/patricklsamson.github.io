@@ -5459,7 +5459,7 @@ table {
   content: ".";
   font-size: 0;
   position: absolute;
-  z-index: 5;
+  z-index: 6;
   left: 0;
   bottom: calc(0.25in * 1);
   width: 100vw;
@@ -5668,7 +5668,7 @@ table {
 
 .wrap-blue {
   position: relative;
-  z-index: 4;
+  z-index: 5;
   border: 3px solid #31859c;
   border-radius: 3px;
   background: #dbeef4;
@@ -7956,7 +7956,7 @@ a.txt-ul-ol:hover,
 
 .p-pgnum {
   position: absolute;
-  z-index: 5;
+  z-index: 6;
   bottom: 0;
   right: 0;
 }
@@ -20893,7 +20893,7 @@ a.txt-ul-ol:hover,
 }
 .sec-loader.animate {
   animation: pulsing 10s infinite;
-  z-index: 10;
+  z-index: 11;
   visibility: visible;
   opacity: 1;
 }
@@ -20905,7 +20905,7 @@ a.txt-ul-ol:hover,
 }
 
 nav {
-  z-index: 8;
+  z-index: 9;
 }
 nav#nav-bar {
   -webkit-transition: all 0.5s;
@@ -20929,7 +20929,7 @@ nav#nav-bar.bg-change li:hover:before, nav#nav-bar.bg-change li:hover:after {
 nav#nav-bar img {
   position: relative;
   width: 50px;
-  z-index: 6;
+  z-index: 7;
 }
 nav#nav-bar button#nav-btn {
   float: right;
@@ -20980,7 +20980,7 @@ nav#side-bar #side-coll {
 }
 nav button#nav-btn {
   position: relative;
-  z-index: 9;
+  z-index: 10;
   outline: 0;
   background: transparent;
   border-width: 2px;
@@ -21043,12 +21043,31 @@ nav .menu-container ul a {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.5);
 }
 
+@media only screen and (max-width: 1199px) {
+  .wrap-resume {
+    position: relative;
+  }
+  .wrap-resume:before {
+    content: ".";
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background: rgba(53, 59, 65, 0.6);
+    z-index: 4;
+  }
+}
 .wrap-resume nav {
   position: fixed;
   top: 0;
   right: 0;
   width: 230px;
   border: 15px solid #f9fafb;
+  background: #353b41;
+  padding: 20px;
+  margin: 30px;
 }
 @media print {
   .wrap-resume nav {
@@ -21186,7 +21205,7 @@ nav .menu-container ul a {
   position: relative;
 }
 .select-box .search-box input[type*=text] {
-  z-index: 7;
+  z-index: 8;
   width: 100%;
   position: absolute;
   pointer-events: none;
