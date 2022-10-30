@@ -46,6 +46,7 @@
 }
 
 #portfolio-btn {
+  color: $white;
   @include tran;
 
   &.active {
