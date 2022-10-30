@@ -5433,7 +5433,7 @@ table {
 .wrap-resume header,
 .wrap-resume footer,
 .wrap-resume section {
-  margin-bottom: calc(6pt * 1);
+  margin-bottom: calc(5pt * 1);
 }
 .wrap-resume li,
 .wrap-resume p {
@@ -5462,9 +5462,9 @@ table {
   position: absolute;
   z-index: 6;
   left: 0;
-  bottom: calc(0.25in * 1);
+  bottom: calc(0.25in * 1 - 2px);
   width: 100vw;
-  height: calc(2pt * 1);
+  height: 2px;
   background: #000;
 }
 @media print {
