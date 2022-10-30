@@ -1,3 +1,3 @@
 doc_ready(() => {
-  resume_nav();
+  page_nav();
 });

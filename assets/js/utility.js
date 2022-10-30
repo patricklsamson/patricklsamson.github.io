@@ -127,10 +127,10 @@ function nav_bar(callback) {
   }
 }
 
-function resume_nav() {
+function page_nav() {
   var i;
 
-  add_event(id("save-resume-btn"), "click", () => {
+  add_event(id("save-page-btn"), "click", () => {
     window.print();
   });
 
