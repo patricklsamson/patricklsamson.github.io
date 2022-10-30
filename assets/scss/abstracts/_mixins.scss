@@ -1026,7 +1026,7 @@
   ) 0;
 
   .p-pgnum {
-    padding: 10px calc(#{$spacing}in * #{$multiplier}) 0;
+    padding: calc(10pt * #{$multiplier}) calc(#{$spacing}in * #{$multiplier}) 0;
     margin: 0;
   }
 }
@@ -1054,7 +1054,6 @@
 
   @include pseudo {
     position: absolute;
-    z-index: f.z("parallelogram");
     width: 200px;
     height: 200px;
     transform: skew(-20deg);
@@ -1066,7 +1065,6 @@
 
   @include pseudo(after) {
     position: absolute;
-    z-index: f.z("parallelogram");
     width: 200px;
     height: 200px;
     transform: skew(-20deg);
