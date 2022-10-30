@@ -1021,9 +1021,9 @@
   height: calc(#{$height}in * #{$multiplier} - #{$spacing}in);
   margin-bottom: calc(#{$spacing}in * #{$multiplier});
 
-  padding: calc(#{$spacing}in * #{$multiplier}) calc(#{$spacing}in * #{
-    $multiplier
-  }) 0;
+  padding: calc(#{$spacing}in * #{$multiplier}) calc(
+    #{$spacing}in * #{$multiplier}
+  ) 0;
 
   .p-pgnum {
     padding: 10px calc(#{$spacing}in * #{$multiplier}) 0;
