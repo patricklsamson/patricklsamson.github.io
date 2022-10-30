@@ -127,21 +127,22 @@ $xys: ("x", "y");
 $scroll-hiddens: (scroll, hidden);
 $positions: (relative, absolute, fixed);
 
+// HIGH TO LOW
 $z-items: (
   "loader",
   "nav-btn",
-  "nav-bar",
+  "nav",
   "search-box",
   "logo",
   "pgnum",
-  "wrap-blue",
-  "wrap-resume-overlay",
-  "wrap-paper",
-  "wrap-resume",
-  "parallelogram",
+  "wrap-blue"
 );
 
-$nz-items: ();
+// LOW TO HIGH
+$nz-items: (
+
+);
+
 $multiplier: 1;
 
 $head-sizes: (
