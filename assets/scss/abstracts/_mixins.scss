@@ -1016,15 +1016,18 @@
   }
 }
 
-@mixin paper($width: 8.5, $height: 11, $padding: 0.25) {
+@mixin paper($width: 8.5, $height: 11, $spacing: 0.25) {
   width: calc(#{$width}in * #{$multiplier});
-  height: calc(#{$height}in * #{$multiplier});
-  padding: calc(#{$padding}in * #{$multiplier});
+  height: calc(#{$height}in * #{$multiplier} - #{$spacing}in);
+  margin-bottom: calc(#{$spacing}in * #{$multiplier});
+
+  padding: calc(#{$spacing}in * #{$multiplier}) calc(#{$spacing}in * #{
+    $multiplier
+  }) 0;
 
   .p-pgnum {
-    padding: 10px calc(#{$padding}in * #{$multiplier}) calc(
-      #{$padding}in * #{$multiplier}
-    );
+    padding: 10px calc(#{$spacing}in * #{$multiplier}) 0;
+    margin: 0;
   }
 }
 
@@ -1036,9 +1039,9 @@
     z-index: -1;
     top: 0;
     width: 100vw;
-    height: calc(2pt * #{$multiplier});
+    height: 100vh;
     #{$position}: 0;
-    background: #000;
+    background: $lgray;
 
     @media print {
       display: none;
