@@ -5450,27 +5450,13 @@ table {
   background: #fff;
   display: none;
   width: calc(8.5in * 1);
-  height: calc(11in * 1);
-  padding: calc(0.25in * 1);
+  height: calc(11in * 1 - 0.25in);
+  margin-bottom: calc(0.25in * 1);
+  padding: calc(0.25in * 1) calc(0.25in * 1) 0;
 }
 .wrap-paper .p-pgnum {
-  padding: 10px calc(0.25in * 1) calc( 0.25in * 1 );
-}
-.wrap-paper:before {
-  content: ".";
-  font-size: 0;
-  position: absolute;
-  z-index: 6;
-  left: 0;
-  bottom: calc(0.25in * 1 - 2px);
-  width: 100vw;
-  height: 2px;
-  background: #000;
-}
-@media print {
-  .wrap-paper:before {
-    display: none;
-  }
+  padding: 10px calc(0.25in * 1) 0;
+  margin: 0;
 }
 .wrap-paper.active {
   display: block;
@@ -7968,9 +7954,9 @@ a.txt-ul-ol:hover,
   z-index: -1;
   top: 0;
   width: 100vw;
-  height: calc(2pt * 1);
+  height: 100vh;
   right: 0;
-  background: #000;
+  background: lightgray;
 }
 @media print {
   .p-pgnum:before {
