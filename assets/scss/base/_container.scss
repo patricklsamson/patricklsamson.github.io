@@ -380,20 +380,6 @@
   display: none;
   @include paper(8.5, 11, 0.25);
 
-  @include pseudo {
-    position: absolute;
-    z-index: z("pgnum");
-    left: 0;
-    bottom: calc(0.25in * #{$multiplier} - 2px);
-    width: 100vw;
-    height: 2px;
-    background: #000;
-
-    @media print {
-      display: none;
-    }
-  }
-
   &.active {
     display: block;
   }
