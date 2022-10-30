@@ -1,9 +1,12 @@
 @use "../abstracts" as *;
 
 nav {
-  z-index: z("nav-bar");
+  position: relative;
+  z-index: z("nav");
 
   &#nav-bar {
+    position: fixed;
+    width: 100%;
     @include tran;
 
     &.bg-change {
@@ -93,6 +96,53 @@ nav {
     }
   }
 
+  &#page-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 230px;
+    border: 15px solid $white;
+    background: $dgray;
+    padding: 20px;
+    margin: 30px;
+
+    @media print {
+      display: none;
+    }
+
+    button#save-page-btn {
+      padding: 5px 10px;
+    }
+
+    .menu-container {
+      ul {
+        li {
+          margin: 20px 0;
+
+          span.span-page {
+            padding: 20px 0;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: $white;
+
+            &:after {
+              content: " <--";
+              font-family: monospace;
+              color: transparent;
+            }
+
+            &:hover,
+            &.active {
+              &:after {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   button#nav-btn {
     position: relative;
     z-index: z("nav-btn");
@@ -152,70 +202,6 @@ nav {
 
       a {
         text-shadow: 0 2px 4px $black-05, 0 -2px 4px $black-05;
-      }
-    }
-  }
-}
-
-.wrap-resume {
-  @include mq(lg) {
-    position: relative;
-
-    @include pseudo {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100vw;
-      height: 100%;
-      background: $dgray-06;
-      z-index: z("wrap-resume-overlay");
-    }
-  }
-
-  nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 230px;
-    border: 15px solid $white;
-    background: $dgray;
-    padding: 20px;
-    margin: 30px;
-
-    @media print {
-      display: none;
-    }
-
-    button#save-resume-btn {
-      padding: 5px 10px;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-
-      li {
-        margin: 20px 0;
-
-        span.span-page {
-          padding: 20px 0;
-          cursor: pointer;
-          font-size: 1.5rem;
-          color: $white;
-
-          &:after {
-            font-family: monospace;
-            content: " <--";
-            color: transparent;
-          }
-
-          &:hover,
-          &.active {
-            &:after {
-              color: $white;
-            }
-          }
-        }
       }
     }
   }
