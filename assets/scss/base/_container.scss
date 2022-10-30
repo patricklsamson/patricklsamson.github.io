@@ -340,14 +340,26 @@
   }
 }
 
-.wrap-resume {
-  position: relative;
-  z-index: z("wrap-resume");
+.wrap-document {
   overflow-x: hidden;
   background: $dgray;
 
   @media print {
     background: transparent;
+  }
+
+  @include mq(lg) {
+    position: relative;
+
+    @include pseudo {
+      position: absolute;
+      z-index: z("nav");
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100%;
+      background: $dgray-06;
+    }
   }
 
   @for $i from 1 through 6 {
@@ -373,8 +385,6 @@
 }
 
 .wrap-paper {
-  position: relative;
-  z-index: z("wrap-paper");
   overflow: hidden;
   background: #fff;
   display: none;
