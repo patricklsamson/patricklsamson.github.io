@@ -21114,6 +21114,7 @@ nav .menu-container ul a {
 }
 
 #portfolio-btn {
+  color: #f9fafb;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   -moz-transition: all 0.5s;
