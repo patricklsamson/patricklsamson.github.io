@@ -359,7 +359,7 @@
   header,
   footer,
   section {
-    margin-bottom: calc(6pt * #{$multiplier});
+    margin-bottom: calc(5pt * #{$multiplier});
   }
 
   li,
@@ -384,9 +384,9 @@
     position: absolute;
     z-index: z("pgnum");
     left: 0;
-    bottom: calc(0.25in * #{$multiplier});
+    bottom: calc(0.25in * #{$multiplier} - 2px);
     width: 100vw;
-    height: calc(2pt * #{$multiplier});
+    height: 2px;
     background: #000;
 
     @media print {
