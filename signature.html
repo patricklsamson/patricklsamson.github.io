@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signature</title>
-    
+
     <style>
       body {
         background: #343a40;
@@ -134,8 +134,9 @@
           "click",
           function () {
             const blob = new Blob([this.innerHTML], { type: "text/html" });
-            navigator.clipboard.write([new ClipboardItem({ 
-              "text/html": blob 
+
+            navigator.clipboard.write([new ClipboardItem({
+              "text/html": blob
             })]);
           }
         );
