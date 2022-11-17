@@ -144,6 +144,8 @@ function page_nav() {
   }
 
   for (i = 0; i < qsel_all(".span-page").length; i++) {
+    add_class(qsel_all(".wrap-paper")[i], qsel_all(".span-page")[i].innerHTML);
+
     add_event(qsel_all(".span-page")[i], "click", function () {
       for (i = 0; i < qsel_all(".span-page").length; i++) {
         remove_class(qsel_all(".span-page")[i], "active");
@@ -154,12 +156,6 @@ function page_nav() {
       add_class(qsel("." + this.innerHTML), "active");
       document.title = document.title.split("-").slice(0, 3).join("-");
       document.title += "-" + this.innerHTML.split("e")[1];
-
-      if (has_class(this, "page2") || has_class(this, "page3")) {
-        for (i = 2; i <= 3; i++) {
-          match_height(".mh" + i);
-        }
-      }
     });
   }
 }
@@ -265,13 +261,25 @@ function scroll_class(element, className) {
   });
 }
 
-function match_height(element) {
+function match_height(element, invisibleElement) {
   var i;
   var heights = [];
+
+  if (invisibleElement === undefined) {
+    invisibleElement = null;
+  }
+
+  if (invisibleElement) {
+    qsel(invisibleElement).style.display = "block";
+  }
 
   for (i = 0; i < qsel_all(element).length; i++) {
     qsel_all(element)[i].style.height = "auto";
     heights.push(qsel_all(element)[i].offsetHeight);
+  }
+
+  if (invisibleElement) {
+    qsel(invisibleElement).style.display = "";
   }
 
   var max = heights[0];
