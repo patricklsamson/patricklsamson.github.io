@@ -407,7 +407,7 @@ main.main-document {
     }
   }
 
-  @for $i from 1 through 2 {
+  @for $i from 1 through 9 {
     .fs-1#{$i}pt {
       font-size: calc(1#{$i}pt * #{$multiplier});
     }
