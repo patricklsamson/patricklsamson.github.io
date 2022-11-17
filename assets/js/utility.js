@@ -104,7 +104,7 @@ function toggle_class(element, className) {
   }
 }
 
-function nav_bar(callback) {
+function top_nav(callback) {
   add_event(id("nav-btn"), "click", function () {
     toggle_class(this, "active");
     toggle_class(document.body, "y-hidden");

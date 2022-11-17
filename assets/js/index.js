@@ -1,7 +1,7 @@
 doc_ready(() => {
   let submitted = false;
 
-  nav_bar();
+  top_nav();
 
   (function (next) {
     add_event(window, "load", function () {
@@ -13,7 +13,7 @@ doc_ready(() => {
       remove_class(id("loader"), "animate");
   });
 
-  scroll_class(id("nav-bar"), "bg-change");
+  scroll_class(id("top-nav"), "bg-change");
   match_height(".mh");
 
   match_media(
