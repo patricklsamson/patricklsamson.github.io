@@ -120,6 +120,30 @@
   @include align(i, f, end);
 }
 
+.flex-imp {
+  @include flex(t, t);
+}
+
+.flex-top-imp {
+  @include flex(t, t);
+  @include justify(f, start, t);
+}
+
+.flex-bot-imp {
+  @include flex(t, t);
+  @include justify(f, end, t);
+}
+
+.flex-lft-imp {
+  @include flex(t, t);
+  @include align(i, f, start, t);
+}
+
+.flex-rgt-imp {
+  @include flex(t, t);
+  @include align(i, f, end, t);
+}
+
 @each $min-max-mq in $min-max-mqs {
   @include mq($min-max-mq) {
     .flex-#{$min-max-mq} {
@@ -144,6 +168,30 @@
     .flex-rgt-#{$min-max-mq} {
       @include flex;
       @include align(i, f, end);
+    }
+
+    .flex-#{$min-max-mq}-imp {
+      @include flex(t, t);
+    }
+
+    .flex-top-#{$min-max-mq}-imp {
+      @include flex(t, t);
+      @include justify(f, start, t);
+    }
+
+    .flex-bot-#{$min-max-mq}-imp {
+      @include flex(t, t);
+      @include justify(f, end, t);
+    }
+
+    .flex-lft-#{$min-max-mq}-imp {
+      @include flex(t, t);
+      @include align(i, f, start, t);
+    }
+
+    .flex-rgt-#{$min-max-mq}-imp {
+      @include flex(t, t);
+      @include align(i, f, end, t);
     }
   }
 }
@@ -172,6 +220,30 @@
   @include justify(f, end);
 }
 
+.rflex-imp {
+  @include flex(f, t);
+}
+
+.rflex-top-imp {
+  @include flex(f, t);
+  @include align(i, f, start, t);
+}
+
+.rflex-bot-imp {
+  @include flex(f, t);
+  @include align(i, f, end, t);
+}
+
+.rflex-lft-imp {
+  @include flex(f, t);
+  @include justify(f, start, t);
+}
+
+.rflex-rgt-imp {
+  @include flex(f, t);
+  @include justify(f, end, t);
+}
+
 @each $min-max-mq in $min-max-mqs {
   @include mq($min-max-mq) {
     .rflex-#{$min-max-mq} {
@@ -196,6 +268,30 @@
     .rflex-rgt-#{$min-max-mq} {
       @include flex(f);
       @include justify(f, end);
+    }
+
+    .rflex-#{$min-max-mq}-imp {
+      @include flex(f, t);
+    }
+
+    .rflex-top-#{$min-max-mq}-imp {
+      @include flex(f, t);
+      @include align(i, f, start, t);
+    }
+
+    .rflex-bot-#{$min-max-mq}-imp {
+      @include flex(f, t);
+      @include align(i, f, end, t);
+    }
+
+    .rflex-lft-#{$min-max-mq}-imp {
+      @include flex(f, t);
+      @include justify(f, start, t);
+    }
+
+    .rflex-rgt-#{$min-max-mq}-imp {
+      @include flex(f, t);
+      @include justify(f, end, t);
     }
   }
 }
@@ -266,6 +362,43 @@
   }
 }
 
+.table-imp {
+  display: table !important;
+  height: 100% !important;
+  width: auto !important;
+  margin: 0 auto !important;
+
+  &.lft-imp {
+    margin-left: 0 !important;
+  }
+
+  &.rgt-imp {
+    margin-right: 0 !important;
+  }
+
+  @each $min-max-mq in $min-max-mqs {
+    @include mq($min-max-mq) {
+      &.ctr-#{$min-max-mq}-imp,
+      &.lft-#{$min-max-mq}-imp,
+      &.rgt-#{$min-max-mq}-imp {
+        width: auto !important;
+      }
+
+      &.lft-#{$min-max-mq}-imp {
+        margin-left: 0 !important;
+      }
+
+      &.rgt-#{$min-max-mq}-imp {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  & > .valign-imp {
+    display: table-cell !important;
+  }
+}
+
 .valign {
   vertical-align: middle;
 
@@ -306,9 +439,53 @@
   }
 }
 
+.valign-imp {
+  vertical-align: middle !important;
+
+  &.top-imp {
+    vertical-align: top !important;
+  }
+
+  &.bot-imp {
+    vertical-align: bottom !important;
+  }
+
+  &.t-top-imp {
+    vertical-align: text-top !important;
+  }
+
+  &.t-bot-imp {
+    vertical-align: text-bottom !important;
+  }
+
+  @each $min-max-mq in $min-max-mqs {
+    @include mq($min-max-mq) {
+      &.top-#{$min-max-mq}-imp {
+        vertical-align: top !important;
+      }
+
+      &.bot-#{$min-max-mq}-imp {
+        vertical-align: bottom !important;
+      }
+
+      &.t-top-#{$min-max-mq}-imp {
+        vertical-align: text-top !important;
+      }
+
+      &.t-bot-#{$min-max-mq}-imp {
+        vertical-align: text-bottom !important;
+      }
+    }
+  }
+}
+
 @each $span, $prop, $dim in $fluids {
   .#{$span}-fluid {
     #{$prop}: $dim;
+  }
+
+  .#{$span}-fluid-imp {
+    #{$prop}: $dim !important;
   }
 }
 
@@ -317,6 +494,12 @@
     @each $span, $prop, $dim in $fluids {
       .#{$span}-fluid-#{$min-max-mq} {
         #{$prop}: $dim;
+      }
+    }
+
+    @each $span, $prop, $dim in $fluids {
+      .#{$span}-fluid-#{$min-max-mq}-imp {
+        #{$prop}: $dim !important;
       }
     }
   }
@@ -332,10 +515,24 @@
   height: 100%;
 }
 
+.vwh-fluid-imp {
+  width: 100vw !important;
+  min-height: 100vh !important;
+}
+
+.wh-fluid-imp {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 @each $xy in $xys {
   @each $scroll-hidden in $scroll-hiddens {
     .#{$xy}-#{$scroll-hidden} {
       overflow-#{$xy}: $scroll-hidden;
+    }
+
+    .#{$xy}-#{$scroll-hidden} {
+      overflow-#{$xy}: $scroll-hidden !important;
     }
   }
 }
@@ -377,10 +574,6 @@ main.main-document {
   li,
   p {
     margin-bottom: calc(2pt * #{$multiplier});
-  }
-
-  .mb-0 {
-    margin-bottom: 0;
   }
 
   .wrap-paper {

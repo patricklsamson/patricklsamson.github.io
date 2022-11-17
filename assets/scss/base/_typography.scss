@@ -50,6 +50,33 @@ html {
       font-size: calc(#{$rem} + #{$vw});
     }
   }
+
+  .h#{$i}-imp {
+    font-size: $rem !important;
+    line-height: 1.2 !important;
+    color: $white !important;
+    font-family: "Oswald", sans-serif !important;
+
+    &:before,
+    &:after {
+      color: $cyan !important;
+      text-shadow: 0 2px 5px $white-04 !important;
+      position: relative !important;
+      bottom: 0.05em !important;
+    }
+
+    &:before {
+      content: "[ " !important;
+    }
+
+    &:after {
+      content: " ]" !important;
+    }
+
+    @include mq(lgup) {
+      font-size: calc(#{$rem} + #{$vw}) !important;
+    }
+  }
 }
 
 a,
@@ -87,6 +114,40 @@ a,
   }
 }
 
+.a-imp {
+  color: $gray !important;
+  text-decoration: none !important;
+
+  &:hover {
+    color: $dgray !important;
+    text-decoration: none !important;
+  }
+
+  &.txt-ul-imp {
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+
+  &.txt-lt-imp {
+    &:hover {
+      text-decoration: line-through !important;
+    }
+  }
+
+  &.txt-ol-imp {
+    &:hover {
+      text-decoration: overline !important;
+    }
+  }
+
+  &.txt-ul-ol-imp {
+    &:hover {
+      text-decoration: underline overline !important;
+    }
+  }
+}
+
 .talign {
   text-align: center;
 }
@@ -101,6 +162,22 @@ a,
 
 .talign-just {
   text-align: justify;
+}
+
+.talign-imp {
+  text-align: center !important;
+}
+
+.talign-lft-imp {
+  text-align: left !important;
+}
+
+.talign-rgt-imp {
+  text-align: right !important;
+}
+
+.talign-just-imp {
+  text-align: justify !important;
 }
 
 @each $min-max-mq in $min-max-mqs {
@@ -119,6 +196,22 @@ a,
 
     .talign-just-#{$min-max-mq} {
       text-align: justify;
+    }
+
+    .talign-#{$min-max-mq}-imp {
+      text-align: center !important;
+    }
+
+    .talign-lft-#{$min-max-mq}-imp {
+      text-align: left !important;
+    }
+
+    .talign-rgt-#{$min-max-mq}-imp {
+      text-align: right !important;
+    }
+
+    .talign-just-#{$min-max-mq}-imp {
+      text-align: justify !important;
     }
   }
 }
@@ -139,9 +232,29 @@ a,
   text-decoration: underline overline;
 }
 
+.txt-ul-imp {
+  text-decoration: underline !important;
+}
+
+.txt-lt-imp {
+  text-decoration: line-through !important;
+}
+
+.txt-ol-imp {
+  text-decoration: overline !important;
+}
+
+.txt-ul-ol-imp {
+  text-decoration: underline overline !important;
+}
+
 @for $i from 1 through 9 {
   .fw-#{$i}00 {
     font-weight: #{$i}00;
+  }
+
+  .fw-#{$i}00-imp {
+    font-weight: #{$i}00 !important;
   }
 }
 
@@ -151,6 +264,10 @@ a,
       .fw-#{$min-max-mq}-#{$i}00 {
         font-weight: #{$i}00;
       }
+
+      .fw-#{$min-max-mq}-#{$i}00-imp {
+        font-weight: #{$i}00 !important;
+      }
     }
   }
 }
@@ -159,11 +276,19 @@ a,
   .fs-0#{$i} {
     font-size: s.unquote("0.#{$i}rem");
   }
+
+  .fs-0#{$i}-imp {
+    font-size: s.unquote("0.#{$i}rem") !important;
+  }
 }
 
 @for $i from 1 through 9 {
   .fs-1#{$i} {
     font-size: s.unquote("1.#{$i}rem");
+  }
+
+  .fs-1#{$i}-imp {
+    font-size: s.unquote("1.#{$i}rem") !important;
   }
 }
 
@@ -175,6 +300,14 @@ a,
   .fs-#{$i}5 {
     font-size: s.unquote("#{$i}.5rem");
   }
+
+  .fs-#{$i}0-imp {
+    font-size: #{$i}rem !important;
+  }
+
+  .fs-#{$i}5-imp {
+    font-size: s.unquote("#{$i}.5rem") !important;
+  }
 }
 
 @each $min-max-mq in $min-max-mqs {
@@ -183,17 +316,29 @@ a,
       .fs-#{$min-max-mq}-0#{$i} {
         font-size: s.unquote("0.#{$i}rem");
       }
+
+      .fs-#{$min-max-mq}-0#{$i}-imp {
+        font-size: s.unquote("0.#{$i}rem") !important;
+      }
     }
 
     @for $i from 1 through 9 {
       .fs-#{$min-max-mq}-1#{$i} {
         font-size: s.unquote("1.#{$i}rem");
       }
+
+      .fs-#{$min-max-mq}-1#{$i}-imp {
+        font-size: s.unquote("1.#{$i}rem") !important;
+      }
     }
 
     @for $i from 2 through 5 {
       .fs-#{$min-max-mq}-#{$i}0 {
         font-size: #{$i}rem;
+      }
+
+      .fs-#{$min-max-mq}-#{$i}0-imp {
+        font-size: #{$i}rem !important;
       }
     }
   }
@@ -216,6 +361,16 @@ main.main-document {
         display: none;
       }
     }
+
+    .h#{$i}-imp {
+      font-size: $em !important;
+      line-height: 1.15 !important;
+      font-family: "cambria", serif !important;
+
+      &:before, &:after {
+        display: none !important;
+      }
+    }
   }
 
   @each $head, $head-size in $head-sizes {
@@ -227,6 +382,16 @@ main.main-document {
 
       &:before, &:after {
         display: none;
+      }
+    }
+
+    .h#{$head}-imp {
+      font-size: calc(#{$head-size} * #{$multiplier}) !important;
+      line-height: 1.15 !important;
+      font-family: "cambria", serif !important;
+
+      &:before, &:after {
+        display: none !important;
       }
     }
   }
@@ -243,13 +408,17 @@ main.main-document {
   }
 
   @for $i from 1 through 2 {
-    .fs-1#{$i} {
+    .fs-1#{$i}pt {
       font-size: calc(1#{$i}pt * #{$multiplier});
+    }
+
+    .fs-1#{$i}pt-imp {
+      font-size: calc(1#{$i}pt * #{$multiplier}) !important;
     }
   }
 }
 
-.p-pgnum {
+p.p-pgnum {
   position: absolute;
   z-index: z("pgnum");
   bottom: 0;

@@ -87,6 +87,92 @@
   }
 }
 
+.img-imp {
+  @include img-prop(cover);
+
+  &.prlax-imp {
+    @include mq(lgup) {
+      background-attachment: fixed;
+    }
+  }
+
+  &.con-imp {
+    @include img-prop(contain);
+  }
+
+  &.itop-imp {
+    @include img-prop(top);
+  }
+
+  &.ibot-imp {
+    @include img-prop(bottom);
+  }
+
+  &.ilft-imp {
+    @include img-prop(left);
+  }
+
+  &.irgt-imp {
+    @include img-prop(right);
+  }
+
+  &.ilt-imp {
+    @include img-prop(left top);
+  }
+
+  &.irt-imp {
+    @include img-prop(right top);
+  }
+
+  &.ilb-imp {
+    @include img-prop(left bottom);
+  }
+
+  &.irb-imp {
+    @include img-prop(right bottom);
+  }
+
+  @each $mq, $class in $min-mqs {
+    @include mq($mq) {
+      &.con-#{$class}-imp {
+        @include img-prop(contain);
+      }
+
+      &.itop-#{$class}-imp {
+        @include img-prop(top);
+      }
+
+      &.ibot-#{$class}-imp {
+        @include img-prop(bottom);
+      }
+
+      &.ilft-#{$class}-imp {
+        @include img-prop(left);
+      }
+
+      &.irgt-#{$class}-imp {
+        @include img-prop(right);
+      }
+
+      &.ilt-#{$class}-imp {
+        @include img-prop(left top);
+      }
+
+      &.irt-#{$class}-imp {
+        @include img-prop(right top);
+      }
+
+      &.ilb-#{$class}-imp {
+        @include img-prop(left bottom);
+      }
+
+      &.irb-#{$class}-imp {
+        @include img-prop(right bottom);
+      }
+    }
+  }
+}
+
 .balign {
   display: block;
   margin-left: auto;
@@ -101,6 +187,22 @@
 .balign-rgt {
   display: block;
   margin-left: auto;
+}
+
+.balign-imp {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.balign-lft-imp {
+  display: block !important;
+  margin-right: auto !important;
+}
+
+.balign-rgt-imp {
+  display: block !important;
+  margin-left: auto !important;
 }
 
 @each $min-max-mq in $min-max-mqs {
@@ -120,6 +222,22 @@
       display: block;
       margin-left: auto;
     }
+
+    .balign-#{$min-max-mq}-imp {
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .balign-lft-#{$min-max-mq}-imp {
+      display: block !important;
+      margin-right: auto !important;
+    }
+
+    .balign-rgt-#{$min-max-mq}-imp {
+      display: block !important;
+      margin-left: auto !important;
+    }
   }
 }
 
@@ -127,12 +245,21 @@
   .m#{$class}-auto {
     margin#{$loc}: auto;
   }
+
+  .m#{$class}-auto-imp {
+    margin#{$loc}: auto !important;
+  }
 }
 
 @each $dual-loc, $first, $second in $dual-locs {
   .m#{$dual-loc}-auto {
     margin-#{$first}: auto;
     margin-#{$second}: auto;
+  }
+
+  .m#{$dual-loc}-auto-imp {
+    margin-#{$first}: auto !important;
+    margin-#{$second}: auto !important;
   }
 }
 
@@ -145,6 +272,14 @@
     padding: #{$size};
   }
 
+  .mg-#{$class}-imp {
+    margin: #{$size} !important;
+  }
+
+  .pd-#{$class}-imp {
+    padding: #{$size} !important;
+  }
+
   @each $loc, $prop in $locs {
     .m#{$loc}-#{$class} {
       margin-#{$prop}: #{$size};
@@ -152,6 +287,14 @@
 
     .p#{$loc}-#{$class} {
       padding-#{$prop}: #{$size};
+    }
+
+    .m#{$loc}-#{$class}-imp {
+      margin-#{$prop}: #{$size} !important;
+    }
+
+    .p#{$loc}-#{$class}-imp {
+      padding-#{$prop}: #{$size} !important;
     }
   }
 
@@ -165,6 +308,16 @@
       padding-#{$first}: #{$size};
       padding-#{$second}: #{$size};
     }
+
+    .m#{$dual-loc}-#{$class}-imp {
+      margin-#{$first}: #{$size} !important;
+      margin-#{$second}: #{$size} !important;
+    }
+
+    .p#{$dual-loc}-#{$class}-imp {
+      padding-#{$first}: #{$size} !important;
+      padding-#{$second}: #{$size} !important;
+    }
   }
 }
 
@@ -174,12 +327,21 @@
       .m#{$class}-#{$min-max-mq}-auto {
         margin#{$loc}: auto;
       }
+
+      .m#{$class}-#{$min-max-mq}-auto-imp {
+        margin#{$loc}: auto !important;
+      }
     }
 
     @each $dual-loc, $first, $second in $dual-locs {
       .m#{$dual-loc}-#{$min-max-mq}-auto {
         margin-#{$first}: auto;
         margin-#{$second}: auto;
+      }
+
+      .m#{$dual-loc}-#{$min-max-mq}-auto-imp {
+        margin-#{$first}: auto !important;
+        margin-#{$second}: auto !important;
       }
     }
 
@@ -192,6 +354,14 @@
         padding: #{$size};
       }
 
+      .mg-#{$min-max-mq}-#{$class}-imp {
+        margin: #{$size} !important;
+      }
+
+      .pd-#{$min-max-mq}-#{$class}-imp {
+        padding: #{$size} !important;
+      }
+
       @each $loc, $prop in $locs {
         .m#{$loc}-#{$min-max-mq}-#{$class} {
           margin-#{$prop}: #{$size};
@@ -199,6 +369,14 @@
 
         .p#{$loc}-#{$min-max-mq}-#{$class} {
           padding-#{$prop}: #{$size};
+        }
+
+        .m#{$loc}-#{$min-max-mq}-#{$class}-imp {
+          margin-#{$prop}: #{$size} !important;
+        }
+
+        .p#{$loc}-#{$min-max-mq}-#{$class}-imp {
+          padding-#{$prop}: #{$size} !important;
         }
       }
 
@@ -211,6 +389,16 @@
         .p#{$dual-loc}-#{$min-max-mq}-#{$class} {
           padding-#{$first}: #{$size};
           padding-#{$second}: #{$size};
+        }
+
+        .m#{$dual-loc}-#{$min-max-mq}-#{$class}-imp {
+          margin-#{$first}: #{$size} !important;
+          margin-#{$second}: #{$size} !important;
+        }
+
+        .p#{$dual-loc}-#{$min-max-mq}-#{$class}-imp {
+          padding-#{$first}: #{$size} !important;
+          padding-#{$second}: #{$size} !important;
         }
       }
     }
@@ -225,6 +413,14 @@
   float: right;
 }
 
+.float-lft-imp {
+  float: left !important;
+}
+
+.float-rgt-imp {
+  float: right !important;
+}
+
 @each $min-max-mq in $min-max-mqs {
   @include mq($min-max-mq) {
     .float-lft-#{$min-max-mq} {
@@ -233,6 +429,14 @@
 
     .float-rgt-#{$min-max-mq} {
       float: right;
+    }
+
+    .float-lft-#{$min-max-mq}-imp {
+      float: left !important;
+    }
+
+    .float-rgt-#{$min-max-mq}-imp {
+      float: right !important;
     }
   }
 }
@@ -249,6 +453,18 @@
   display: inline-block;
 }
 
+.d-none-imp {
+  display: none !important;
+}
+
+.d-block-imp {
+  display: block !important;
+}
+
+.d-inblock-imp {
+  display: inline-block !important;
+}
+
 @each $min-max-mq in $min-max-mqs {
   @include mq($min-max-mq) {
     .d-none-#{$min-max-mq} {
@@ -262,6 +478,18 @@
     .d-inblock-#{$min-max-mq} {
       display: inline-block;
     }
+
+    .d-none-#{$min-max-mq}-imp {
+      display: none !important;
+    }
+
+    .d-block-#{$min-max-mq}-imp {
+      display: block !important;
+    }
+
+    .d-inblock-#{$min-max-mq}-imp {
+      display: inline-block !important;
+    }
   }
 }
 
@@ -269,11 +497,20 @@
   .p-#{$position} {
     position: $position;
   }
+
+  .p-#{$position}-imp {
+    position: $position !important;
+  }
 }
 
 .xbul {
   list-style: none;
   padding-left: 0;
+}
+
+.xbul-imp {
+  list-style: none !important;
+  padding-left: 0 !important;
 }
 
 .img-none {
@@ -283,6 +520,10 @@
 @each $class, $formal-size in $formal-sizes {
   .formal-#{$class} {
     height: calc(#{$formal-size} * #{$multiplier});
+  }
+
+  .formal-#{$class}-imp {
+    height: calc(#{$formal-size} * #{$multiplier}) !important;
   }
 }
 

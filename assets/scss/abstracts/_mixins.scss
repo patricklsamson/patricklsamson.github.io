@@ -604,96 +604,40 @@
   }
 }
 
-@mixin grab {
-  cursor: grab;
+@mixin grab($important: f) {
+  @if $important == f {
+    cursor: grab;
 
-  &:active {
-    @include prefix(
-      (
-        cursor: grabbing
-      ),
-      webkit moz,
-      f
-    );
-  }
-}
-
-@mixin justify($center: t, $location: start) {
-  @if $center == t {
-    @include prefix(
-      (
-        justify-content: center
-      ),
-      webkit
-    ) {
+    &:active {
       @include prefix(
         (
-          pack: center,
+          cursor: grabbing
         ),
-        webkit-box moz-box ms-flex
-        t,
+        webkit moz,
         f
       );
     }
   } @else {
-    @include prefix(
-      (
-        justify-content: flex-#{$location}
-      ),
-      webkit
-    ) {
+    cursor: grab !important;
+
+    &:active {
       @include prefix(
         (
-          pack: $location
+          cursor: grabbing s.unquote("!important")
         ),
-        webkit-box moz-box ms-flex,
-        t,
+        webkit moz,
         f
       );
     }
   }
 }
 
-@mixin align($set: i, $center: t, $location: start) {
-  @if $set == i {
-    @if $center == t {
+@mixin justify($center: t, $location: start, $important: f) {
+  @if $center == t {
+    @if $important == f {
       @include prefix(
         (
-          align-items: center
-        ),
-        webkit
-      ) {
-        @include prefix(
-          (
-            align: center
-          ),
-          webkit-box moz-box ms-flex,
-          t,
-          f
-        );
-      }
-    } @else {
-      @include prefix(
-        (
-          align-items: flex-#{$location}
-        ),
-        webkit
-      ) {
-        @include prefix(
-          (
-            align: $location,
-          ),
-          webkit-box moz-box ms-flex,
-          t,
-          f
-        );
-      }
-    }
-  } @else if $set == c {
-    @if $center == t {
-      @include prefix(
-        (
-          align-content: center
+          justify-content: center
         ),
         webkit
       ) {
@@ -701,7 +645,7 @@
           (
             pack: center,
           ),
-          ms-flex-line,
+          webkit-box moz-box ms-flex
           t,
           f
         );
@@ -709,7 +653,25 @@
     } @else {
       @include prefix(
         (
-          align-content: flex-#{$location}
+          justify-content: center s.unquote("!important")
+        ),
+        webkit
+      ) {
+        @include prefix(
+          (
+            pack: center s.unquote("!important"),
+          ),
+          webkit-box moz-box ms-flex
+          t,
+          f
+        );
+      }
+    }
+  } @else {
+    @if $important == f {
+      @include prefix(
+        (
+          justify-content: flex-#{$location} s.unquote("!important")
         ),
         webkit
       ) {
@@ -717,7 +679,23 @@
           (
             pack: $location
           ),
-          ms-flex-line,
+          webkit-box moz-box ms-flex,
+          t,
+          f
+        );
+      }
+    } @else {
+      @include prefix(
+        (
+          justify-content: flex-#{$location} s.unquote("!important")
+        ),
+        webkit
+      ) {
+        @include prefix(
+          (
+            pack: #{$location} s.unquote("!important")
+          ),
+          webkit-box moz-box ms-flex,
           t,
           f
         );
@@ -726,95 +704,331 @@
   }
 }
 
-@mixin flex($column: t) {
-  @include prefix(
-    (
-      display: flex
-    ),
-    webkit,
-    f
-  ) {
-    display: -ms-flexbox;
-
-    @include prefix(
-      (
-        display: box
-      ),
-      webkit moz,
-      f,
-      f
-    );
-  }
-
-  @include align;
-  @include justify;
-
-  @if $column == t {
-    @include prefix(
-      (
-        flex-direction: column
-      ),
-      webkit ms
-    ) {
-      @include prefix(
-        (
-          box-orient: vertical
-        ),
-        webkit moz,
-        t,
-        f
-      );
-
-      @include prefix(
-        (
-          box-direction: normal
-        ),
-        webkit moz,
-        t,
-        f
-      );
+@mixin align($set: i, $center: t, $location: start, $important: f) {
+  @if $set == i {
+    @if $center == t {
+      @if $important == f {
+        @include prefix(
+          (
+            align-items: center
+          ),
+          webkit
+        ) {
+          @include prefix(
+            (
+              align: center
+            ),
+            webkit-box moz-box ms-flex,
+            t,
+            f
+          );
+        }
+      } @else {
+        @include prefix(
+          (
+            align-items: center s.unquote("!important")
+          ),
+          webkit
+        ) {
+          @include prefix(
+            (
+              align: center s.unquote("!important")
+            ),
+            webkit-box moz-box ms-flex,
+            t,
+            f
+          );
+        }
+      }
+    } @else {
+      @if $important == f {
+        @include prefix(
+          (
+            align-items: flex-#{$location}
+          ),
+          webkit
+        ) {
+          @include prefix(
+            (
+              align: $location,
+            ),
+            webkit-box moz-box ms-flex,
+            t,
+            f
+          );
+        }
+      } @else {
+        @include prefix(
+          (
+            align-items: flex-#{$location} s.unquote("!important")
+          ),
+          webkit
+        ) {
+          @include prefix(
+            (
+              align: $location s.unquote("!important"),
+            ),
+            webkit-box moz-box ms-flex,
+            t,
+            f
+          );
+        }
+      }
+    }
+  } @else if $set == c {
+    @if $center == t {
+      @if $important == f {
+        @include prefix(
+          (
+            align-content: center
+          ),
+          webkit
+        ) {
+          @include prefix(
+            (
+              pack: center,
+            ),
+            ms-flex-line,
+            t,
+            f
+          );
+        }
+      } @else {
+        @include prefix(
+          (
+            align-content: center s.unquote("!important")
+          ),
+          webkit
+        ) {
+          @include prefix(
+            (
+              pack: center s.unquote("!important"),
+            ),
+            ms-flex-line,
+            t,
+            f
+          );
+        }
+      }
+    } @else {
+      @if $important == f {
+        @include prefix(
+          (
+            align-content: flex-#{$location}
+          ),
+          webkit
+        ) {
+          @include prefix(
+            (
+              pack: $location
+            ),
+            ms-flex-line,
+            t,
+            f
+          );
+        }
+      } @else {
+        @include prefix(
+          (
+            align-content: flex-#{$location} s.unquote("!important")
+          ),
+          webkit
+        ) {
+          @include prefix(
+            (
+              pack: $location s.unquote("!important")
+            ),
+            ms-flex-line,
+            t,
+            f
+          );
+        }
+      }
     }
   }
 }
 
-@mixin order($order) {
-  @include prefix(
-    (
-      ordinal-group: $order + 1
-    ),
-    webkit-box moz-box,
-    t,
-    f
-  );
+@mixin flex($column: t, $important: f) {
+  @if $important == f {
+    @include prefix(
+      (
+        display: flex
+      ),
+      webkit,
+      f
+    ) {
+      display: -ms-flexbox;
 
-  @include prefix(
-    (
-      order: $order
-    ),
-    webkit ms-flex
-  );
+      @include prefix(
+        (
+          display: box
+        ),
+        webkit moz,
+        f,
+        f
+      );
+    }
+
+    @include align;
+    @include justify;
+  } @else {
+    @include prefix(
+      (
+        display: flex s.unquote("!important")
+      ),
+      webkit,
+      f
+    ) {
+      display: -ms-flexbox !important;
+
+      @include prefix(
+        (
+          display: box s.unquote("!important")
+        ),
+        webkit moz,
+        f,
+        f
+      );
+    }
+
+    @include align(i, t, start, t);
+    @include justify(t, start, t);
+  }
+
+  @if $column == t {
+    @if $important == f {
+      @include prefix(
+        (
+          flex-direction: column
+        ),
+        webkit ms
+      ) {
+        @include prefix(
+          (
+            box-orient: vertical
+          ),
+          webkit moz,
+          t,
+          f
+        );
+
+        @include prefix(
+          (
+            box-direction: normal
+          ),
+          webkit moz,
+          t,
+          f
+        );
+      }
+    } @else {
+      @include prefix(
+        (
+          flex-direction: column s.unquote("!important")
+        ),
+        webkit ms
+      ) {
+        @include prefix(
+          (
+            box-orient: vertical s.unquote("!important")
+          ),
+          webkit moz,
+          t,
+          f
+        );
+
+        @include prefix(
+          (
+            box-direction: normal s.unquote("!important")
+          ),
+          webkit moz,
+          t,
+          f
+        );
+      }
+    }
+  }
 }
 
-@mixin img-prop($background-prop: cover) {
-  @if $background-prop == cover {
-    background-repeat: no-repeat;
-    background-position: center;
+@mixin order($order, $important: f) {
+  @if $important == f {
+    @include prefix(
+      (
+        ordinal-group: $order + 1
+      ),
+      webkit-box moz-box,
+      t,
+      f
+    );
 
     @include prefix(
       (
-        background-size: $background-prop
+        order: $order
       ),
-      webkit moz o
-    );
-  } @else if $background-prop == contain {
-    @include prefix(
-      (
-        background-size: $background-prop
-      ),
-      webkit moz o
+      webkit ms-flex
     );
   } @else {
-    background-position: $background-prop;
+    @include prefix(
+      (
+        ordinal-group: $order + 1 s.unquote("!important")
+      ),
+      webkit-box moz-box,
+      t,
+      f
+    );
+
+    @include prefix(
+      (
+        order: $order s.unquote("!important")
+      ),
+      webkit ms-flex
+    );
+  }
+}
+
+@mixin img-prop($background-prop: cover, $important: f) {
+  @if $important == f {
+    @if $background-prop == cover {
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include prefix(
+        (
+          background-size: $background-prop
+        ),
+        webkit moz o
+      );
+    } @else if $background-prop == contain {
+      @include prefix(
+        (
+          background-size: $background-prop
+        ),
+        webkit moz o
+      );
+    } @else {
+      background-position: $background-prop;
+    }
+  } @else {
+    @if $background-prop == cover {
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+
+      @include prefix(
+        (
+          background-size: $background-prop s.unquote("!important")
+        ),
+        webkit moz o
+      );
+    } @else if $background-prop == contain {
+      @include prefix(
+        (
+          background-size: $background-prop s.unquote("!important")
+        ),
+        webkit moz o
+      );
+    } @else {
+      background-position: $background-prop !important;
+    }
   }
 }
 

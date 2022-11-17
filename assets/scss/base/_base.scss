@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+@use "sass:string" as s;
 
 @page {
   size: auto;
@@ -106,6 +107,24 @@ button,
     &:hover {
       border: none;
       background: none;
+    }
+  }
+
+  &.a-imp {
+    display: inline !important;
+    border: none !important;
+    background: none !important;
+
+    @include prefix(
+      (
+        appearance: auto s.unquote("important")
+      ),
+      webkit moz
+    );
+
+    &:hover {
+      border: none !important;
+      background: none !important;
     }
   }
 }
