@@ -382,17 +382,17 @@
   .mb-0 {
     margin-bottom: 0;
   }
-}
 
-.wrap-paper {
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-  display: none;
-  @include paper(8.5, 11, 0.25);
+  .wrap-paper {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    display: none;
+    @include paper(8.5, 11, 0.25);
 
-  &.active {
-    display: block;
+    &.active {
+      display: block;
+    }
   }
 }
 
