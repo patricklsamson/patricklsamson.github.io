@@ -134,7 +134,8 @@ function page_nav() {
     window.print();
   });
 
-  for (i = 0; i < qsel_all(".wrap-paper").length; i++) {
+  for (i = 0; i < qsel_all(".span-page").length; i++) {
+    qsel_all(".span-page")[i].innerHTML = "page" + (i + 1);
     add_class(qsel_all(".wrap-paper")[i], "page" + (i + 1));
 
     if (
@@ -143,10 +144,6 @@ function page_nav() {
     ) {
       qsel_all(".wrap-paper")[i].innerHTML = "Page " + (i + 1);
     }
-  }
-
-  for (i = 0; i < qsel_all(".span-page").length; i++) {
-    qsel_all(".span-page")[i].innerHTML = "page" + (i + 1);
 
     add_event(qsel_all(".span-page")[i], "click", function () {
       for (i = 0; i < qsel_all(".span-page").length; i++) {
