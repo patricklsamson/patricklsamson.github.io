@@ -135,6 +135,8 @@ function page_nav() {
   });
 
   for (i = 0; i < qsel_all(".wrap-paper").length; i++) {
+    add_class(qsel_all(".wrap-paper")[i], "page" + (i + 1));
+
     if (
       qsel_all(".wrap-paper")[i].innerHTML == null ||
       qsel_all(".wrap-paper")[i].innerHTML == ""
@@ -144,7 +146,7 @@ function page_nav() {
   }
 
   for (i = 0; i < qsel_all(".span-page").length; i++) {
-    add_class(qsel_all(".wrap-paper")[i], qsel_all(".span-page")[i].innerHTML);
+    qsel_all(".span-page")[i].innerHTML = "page" + (i + 1);
 
     add_event(qsel_all(".span-page")[i], "click", function () {
       for (i = 0; i < qsel_all(".span-page").length; i++) {
