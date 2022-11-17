@@ -4,7 +4,7 @@ nav {
   position: relative;
   z-index: z("nav");
 
-  &#nav-bar {
+  &#top-nav {
     position: fixed;
     width: 100%;
     @include tran;
@@ -45,7 +45,7 @@ nav {
       }
     }
 
-    #nav-coll {
+    #nav-coll-wrap {
       @include mq(lg) {
         position: fixed;
         top: 0;
@@ -90,13 +90,13 @@ nav {
     }
   }
 
-  &#side-bar {
-    #side-coll {
+  &#side-nav {
+    #side-coll-wrap {
       @include tran;
     }
   }
 
-  &#page-bar {
+  &#page-nav {
     position: fixed;
     top: 0;
     right: 0;
@@ -187,7 +187,7 @@ nav {
         }
       }
 
-      & ~ #nav-coll {
+      & ~ #nav-coll-wrap {
         @include vis(visible) {
           opacity: 1;
         }

@@ -20905,7 +20905,7 @@ nav {
   position: relative;
   z-index: 5;
 }
-nav#nav-bar {
+nav#top-nav {
   position: fixed;
   width: 100%;
   -webkit-transition: all 0.5s;
@@ -20913,34 +20913,34 @@ nav#nav-bar {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-nav#nav-bar.bg-change {
+nav#top-nav.bg-change {
   background: rgba(53, 59, 65, 0.8);
 }
-nav#nav-bar.bg-change #nav-btn {
+nav#top-nav.bg-change #nav-btn {
   border-color: #f9fafb;
 }
-nav#nav-bar.bg-change #nav-btn:before,
-nav#nav-bar.bg-change #nav-btn:after {
+nav#top-nav.bg-change #nav-btn:before,
+nav#top-nav.bg-change #nav-btn:after {
   color: #f9fafb;
 }
-nav#nav-bar.bg-change li:hover:before, nav#nav-bar.bg-change li:hover:after {
+nav#top-nav.bg-change li:hover:before, nav#top-nav.bg-change li:hover:after {
   text-shadow: 0 2px 5px rgba(249, 250, 251, 0.4);
 }
-nav#nav-bar img {
+nav#top-nav img {
   position: relative;
   width: 50px;
   z-index: 3;
 }
-nav#nav-bar button#nav-btn {
+nav#top-nav button#nav-btn {
   float: right;
 }
 @media only screen and (min-width: 1200px) {
-  nav#nav-bar button#nav-btn {
+  nav#top-nav button#nav-btn {
     display: none;
   }
 }
 @media only screen and (max-width: 1199px) {
-  nav#nav-bar #nav-coll {
+  nav#top-nav #nav-coll-wrap {
     position: fixed;
     top: 0;
     left: 0;
@@ -20955,30 +20955,30 @@ nav#nav-bar button#nav-btn {
   }
 }
 @media only screen and (min-width: 1200px) {
-  nav#nav-bar #nav-coll .menu-container > ul > li {
+  nav#top-nav #nav-coll-wrap .menu-container > ul > li {
     display: inline-block;
   }
 }
 @media only screen and (max-width: 1199px) {
-  nav#nav-bar #nav-coll .menu-container > ul > li {
+  nav#top-nav #nav-coll-wrap .menu-container > ul > li {
     display: block;
     margin: 2em 0;
   }
 }
-nav#nav-bar #nav-coll .menu-container > ul > li a {
+nav#top-nav #nav-coll-wrap .menu-container > ul > li a {
   padding: 1em;
   color: #f9fafb;
 }
-nav#nav-bar .menu-container > ul > li {
+nav#top-nav .menu-container > ul > li {
   display: inline-block;
 }
-nav#side-bar #side-coll {
+nav#side-nav #side-coll-wrap {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-nav#page-bar {
+nav#page-nav {
   position: fixed;
   top: 0;
   right: 0;
@@ -20989,28 +20989,28 @@ nav#page-bar {
   margin: 30px;
 }
 @media print {
-  nav#page-bar {
+  nav#page-nav {
     display: none;
   }
 }
-nav#page-bar button#save-page-btn {
+nav#page-nav button#save-page-btn {
   padding: 5px 10px;
 }
-nav#page-bar .menu-container ul li {
+nav#page-nav .menu-container ul li {
   margin: 20px 0;
 }
-nav#page-bar .menu-container ul li span.span-page {
+nav#page-nav .menu-container ul li span.span-page {
   padding: 20px 0;
   cursor: pointer;
   font-size: 1.5rem;
   color: #f9fafb;
 }
-nav#page-bar .menu-container ul li span.span-page:after {
+nav#page-nav .menu-container ul li span.span-page:after {
   content: " <--";
   font-family: monospace;
   color: transparent;
 }
-nav#page-bar .menu-container ul li span.span-page:hover:after, nav#page-bar .menu-container ul li span.span-page.active:after {
+nav#page-nav .menu-container ul li span.span-page:hover:after, nav#page-nav .menu-container ul li span.span-page.active:after {
   color: #f9fafb;
 }
 nav button#nav-btn {
@@ -21066,7 +21066,7 @@ nav button#nav-btn.active:after {
   visibility: visible;
   opacity: 1;
 }
-nav button#nav-btn.active ~ #nav-coll {
+nav button#nav-btn.active ~ #nav-coll-wrap {
   visibility: visible;
   opacity: 1;
 }
