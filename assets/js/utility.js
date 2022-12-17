@@ -153,7 +153,12 @@ function page_nav() {
 
       add_class(this, "active");
       add_class(qsel("." + this.innerHTML), "active");
-      document.title = document.title.split("-").slice(0, 3).join("-");
+
+      document.title = document.title.split("-").slice(
+        0,
+        document.title.split("-").length - 1
+      ).join("-");
+
       document.title += "-" + this.innerHTML.split("e")[1];
     });
   }
