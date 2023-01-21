@@ -22,9 +22,6 @@ doc_ready(() => {
       match_height(".mh2");
     },
     function unmatch() {
-      // qsel_all(".mh2").forEach((element) => {
-      //   element.removeAttribute("style");
-      // });
       match_height(".mh2", "", true);
     }
   );
