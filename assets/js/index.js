@@ -9,8 +9,8 @@ doc_ready(() => {
       next();
     });
   })(function () {
-      remove_class(document.body, "p-fixed");
-      remove_class(id("loader"), "animate");
+    remove_class(document.body, "p-fixed");
+    remove_class(id("loader"), "animate");
   });
 
   scroll_class(id("top-nav"), "bg-change");
@@ -20,17 +20,12 @@ doc_ready(() => {
     767,
     function match() {
       match_height(".mh2");
-
-      add_event(window, "resize", function () {
-        match_height(".mh2");
-      });
     },
     function unmatch() {
-      add_event(window, "resize", function () {
-        qsel_all(".mh2").forEach((element) => {
-          element.removeAttribute("style");
-        });
-      });
+      // qsel_all(".mh2").forEach((element) => {
+      //   element.removeAttribute("style");
+      // });
+      match_height(".mh2", "", true);
     }
   );
 

@@ -265,25 +265,48 @@ function scroll_class(element, className) {
   });
 }
 
-function match_height(element, invisibleElement) {
+function match_height(element, invisibleElement, remove) {
   var i;
   var heights = [];
 
-  if (invisibleElement === undefined) {
+  if (invisibleElement === undefined || invisibleElement == "") {
     invisibleElement = null;
+  }
+
+  if (remove === undefined || remove == "") {
+    remove = null;
+  }
+
+  if (element && remove) {
+    for (i = 0; i < qsel_all(element).length; i++) {
+      qsel_all(element)[i].style.height = "auto";
+    }
+
+    return;
+  }
+
+  if (invisibleElement && remove) {
+    for (i = 0; i < qsel_all(invisibleElement).length; i++) {
+      qsel_all(invisibleElement)[i].style.height = "auto";
+    }
+
+    return;
   }
 
   if (invisibleElement) {
     qsel(invisibleElement).style.display = "block";
+
+    for (i = 0; i < qsel_all(invisibleElement).length; i++) {
+      qsel_all(invisibleElement)[i].style.height = "auto";
+      heights.push(qsel_all(invisibleElement)[i].offsetHeight);
+    }
+
+    qsel(invisibleElement).style.display = "";
   }
 
   for (i = 0; i < qsel_all(element).length; i++) {
     qsel_all(element)[i].style.height = "auto";
     heights.push(qsel_all(element)[i].offsetHeight);
-  }
-
-  if (invisibleElement) {
-    qsel(invisibleElement).style.display = "";
   }
 
   var max = heights[0];
@@ -302,14 +325,20 @@ function match_height(element, invisibleElement) {
 function match_media(media, match, unmatch) {
   if (window.matchMedia) {
     function matcher(param) {
-      if (param.matches) {
-        if (match) {
-          match();
-        }
-      } else {
-        if (unmatch) {
-          unmatch();
-        }
+      if (param.matches && match) {
+        match();
+
+        add_event(window, "resize", function () {
+          return match();
+        });
+      }
+
+      if (!param.matches && unmatch) {
+        unmatch();
+
+        add_event(window, "resize", function () {
+          return unmatch();
+        });
       }
     }
 
@@ -321,13 +350,21 @@ function match_media(media, match, unmatch) {
       matcher
     );
   } else {
-    if (screen.width >= media) {
-      if (match) {
-        match();
-      }
-    } else {
+    if (screen.width >= media && match) {
+      match();
+
+      add_event(window, "resize", function () {
+        return match();
+      });
+    }
+
+    if (screen.width < media && unmatch) {
       if (unmatch) {
         unmatch();
+
+        add_event(window, "resize", function () {
+          return unmatch();
+        });
       }
     }
   }
