@@ -167,9 +167,9 @@ function page_nav() {
 function fixed_el(
   fixedElements,
   navLandingElements,
-  elementBelowFixedElements = null,
-  elementsAboveFixedElements = null,
-  fitToScreenElements = null
+  elementBelowFixedElements,
+  elementsAboveFixedElements,
+  fitToScreenElements
 ) {
   var i;
   var topHeight = 0;
