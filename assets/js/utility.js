@@ -225,9 +225,6 @@ function fixed_el(
       }
     }
   })(function () {
-    var normalHeight = height;
-    var doubleHeight = height * 2;
-
     if (elementBelowFixedElements) {
       qsel(elementBelowFixedElements).style.paddingTop = height + "px";
     }
@@ -245,19 +242,19 @@ function fixed_el(
         ) {
           for (i = 0; i < qsel_all(navLandingElements).length; i++) {
             qsel_all(navLandingElements)[i].style.marginTop =
-              "-" + normalHeight + "px";
+              "-" + height + "px";
           }
         } else {
           for (i = 0; i < qsel_all(navLandingElements).length; i++) {
             qsel_all(navLandingElements)[i].style.marginTop =
-              "-" + doubleHeight + "px";
+              "-" + height * 2 + "px";
           }
         }
       });
     } else {
       for (i = 0; i < qsel_all(navLandingElements).length; i++) {
         qsel_all(navLandingElements)[i].style.marginTop =
-          "-" + normalHeight + "px";
+          "-" + height + "px";
       }
     }
 
