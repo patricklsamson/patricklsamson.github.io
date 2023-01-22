@@ -227,7 +227,7 @@ function fixed_el(
   if (elementsAboveFixedElements) {
     for (i = 0; i < qsel_all(navLandingElements).length; i++) {
       qsel_all(navLandingElements)[i].style.marginTop =
-        "-" + doubleHeight + "px";
+        "-" + (height * 2) + "px";
     }
 
     add_event(window, "scroll", function () {
@@ -242,7 +242,7 @@ function fixed_el(
       } else {
         for (i = 0; i < qsel_all(navLandingElements).length; i++) {
           qsel_all(navLandingElements)[i].style.marginTop =
-            "-" + height * 2 + "px";
+            "-" + (height * 2) + "px";
         }
       }
     });
