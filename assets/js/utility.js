@@ -193,78 +193,72 @@ function fixed_el(
     fitToScreenElements = null;
   }
 
-  (function (next) {
-    if (elementsAboveFixedElements) {
-      for (i = 0; i < qsel_all(elementsAboveFixedElements).length; i++) {
-        topHeight += qsel_all(elementsAboveFixedElements)[i].offsetHeight;
-      }
+  if (elementsAboveFixedElements) {
+    for (i = 0; i < qsel_all(elementsAboveFixedElements).length; i++) {
+      topHeight += qsel_all(elementsAboveFixedElements)[i].offsetHeight;
+    }
 
-      add_event(window, "scroll", function () {
-        if (
-          window.pageYOffset > topHeight ||
-          document.documentElement.scrollTop > topHeight
-        ) {
-          for (i = 0; i < qsel_all(fixedElements).length; i++) {
-            qsel_all(fixedElements)[i].style.position = "fixed";
-            qsel_all(fixedElements)[i].style.top = "0";
-          }
-        } else {
-          for (i = 0; i < qsel_all(fixedElements).length; i++) {
-            qsel_all(fixedElements)[i].style.position = null;
-            qsel_all(fixedElements)[i].style.top = null;
-          }
+    add_event(window, "scroll", function () {
+      if (
+        window.pageYOffset > topHeight ||
+        document.documentElement.scrollTop > topHeight
+      ) {
+        for (i = 0; i < qsel_all(fixedElements).length; i++) {
+          qsel_all(fixedElements)[i].style.position = "fixed";
+          qsel_all(fixedElements)[i].style.top = "0";
         }
-      });
-    }
-
-    for (i = 0; i < qsel_all(fixedElements).length; i++) {
-      height += qsel_all(fixedElements)[i].offsetHeight;
-
-      if (i == qsel_all(fixedElements).length - 1) {
-        next();
-      }
-    }
-  })(function () {
-    if (elementBelowFixedElements) {
-      qsel(elementBelowFixedElements).style.paddingTop = height + "px";
-    }
-
-    if (elementsAboveFixedElements) {
-      for (i = 0; i < qsel_all(navLandingElements).length; i++) {
-        qsel_all(navLandingElements)[i].style.marginTop =
-          "-" + doubleHeight + "px";
-      }
-
-      add_event(window, "scroll", function () {
-        if (
-          window.pageYOffset > topHeight ||
-          document.documentElement.scrollTop > topHeight
-        ) {
-          for (i = 0; i < qsel_all(navLandingElements).length; i++) {
-            qsel_all(navLandingElements)[i].style.marginTop =
-              "-" + height + "px";
-          }
-        } else {
-          for (i = 0; i < qsel_all(navLandingElements).length; i++) {
-            qsel_all(navLandingElements)[i].style.marginTop =
-              "-" + height * 2 + "px";
-          }
+      } else {
+        for (i = 0; i < qsel_all(fixedElements).length; i++) {
+          qsel_all(fixedElements)[i].style.position = null;
+          qsel_all(fixedElements)[i].style.top = null;
         }
-      });
-    } else {
-      for (i = 0; i < qsel_all(navLandingElements).length; i++) {
-        qsel_all(navLandingElements)[i].style.marginTop =
-          "-" + height + "px";
       }
+    });
+  }
+
+  for (i = 0; i < qsel_all(fixedElements).length; i++) {
+    height += qsel_all(fixedElements)[i].offsetHeight;
+  }
+
+  if (elementBelowFixedElements) {
+    qsel(elementBelowFixedElements).style.paddingTop = height + "px";
+  }
+
+  if (elementsAboveFixedElements) {
+    for (i = 0; i < qsel_all(navLandingElements).length; i++) {
+      qsel_all(navLandingElements)[i].style.marginTop =
+        "-" + doubleHeight + "px";
     }
 
-    if (fitToScreenElements) {
-      for (i = 0; i < qsel_all(fitToScreenElements).length; i++) {
-        qsel_all(fitToScreenElements)[i].style.minHeight =
-          "calc(100vh - " + height + "px)";
+    add_event(window, "scroll", function () {
+      if (
+        window.pageYOffset > topHeight ||
+        document.documentElement.scrollTop > topHeight
+      ) {
+        for (i = 0; i < qsel_all(navLandingElements).length; i++) {
+          qsel_all(navLandingElements)[i].style.marginTop =
+            "-" + height + "px";
+        }
+      } else {
+        for (i = 0; i < qsel_all(navLandingElements).length; i++) {
+          qsel_all(navLandingElements)[i].style.marginTop =
+            "-" + height * 2 + "px";
+        }
       }
+    });
+  } else {
+    for (i = 0; i < qsel_all(navLandingElements).length; i++) {
+      qsel_all(navLandingElements)[i].style.marginTop =
+        "-" + height + "px";
     }
-  });
+  }
+
+  if (fitToScreenElements) {
+    for (i = 0; i < qsel_all(fitToScreenElements).length; i++) {
+      qsel_all(fitToScreenElements)[i].style.minHeight =
+        "calc(100vh - " + height + "px)";
+    }
+  }
 }
 
 function scroll_class(element, className) {
