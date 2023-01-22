@@ -165,20 +165,38 @@ function page_nav() {
 }
 
 function fixed_el(
-  fixed_element,
-  neg_margin_top_element,
-  padding_top_element = null,
-  to_fixed_element = null,
-  calc_vh_element = null
+  fixedElements,
+  navLandingElements,
+  elementBelowFixedElements = null,
+  elementsAboveFixedElements = null,
+  fitToScreenElements = null
 ) {
   var i;
   var topHeight = 0;
   var height = 0;
 
+  if (
+    elementBelowFixedElements === undefined || elementBelowFixedElements == ""
+  ) {
+    elementBelowFixedElements = null;
+  }
+
+  if (
+    elementsAboveFixedElements === undefined || elementsAboveFixedElements == ""
+  ) {
+    elementsAboveFixedElements = null;
+  }
+
+  if (
+    fitToScreenElements === undefined || fitToScreenElements == ""
+  ) {
+    fitToScreenElements = null;
+  }
+
   (function (next) {
-    if (to_fixed_element) {
-      for (i = 0; i < qsel_all(to_fixed_element).length; i++) {
-        topHeight += qsel_all(to_fixed_element)[i].offsetHeight;
+    if (elementsAboveFixedElements) {
+      for (i = 0; i < qsel_all(elementsAboveFixedElements).length; i++) {
+        topHeight += qsel_all(elementsAboveFixedElements)[i].offsetHeight;
       }
 
       add_event(window, "scroll", function () {
@@ -186,23 +204,23 @@ function fixed_el(
           window.pageYOffset > topHeight ||
           document.documentElement.scrollTop > topHeight
         ) {
-          for (i = 0; i < qsel_all(fixed_element).length; i++) {
-            qsel_all(fixed_element)[i].style.position = "fixed";
-            qsel_all(fixed_element)[i].style.top = "0";
+          for (i = 0; i < qsel_all(fixedElements).length; i++) {
+            qsel_all(fixedElements)[i].style.position = "fixed";
+            qsel_all(fixedElements)[i].style.top = "0";
           }
         } else {
-          for (i = 0; i < qsel_all(fixed_element).length; i++) {
-            qsel_all(fixed_element)[i].style.position = null;
-            qsel_all(fixed_element)[i].style.top = null;
+          for (i = 0; i < qsel_all(fixedElements).length; i++) {
+            qsel_all(fixedElements)[i].style.position = null;
+            qsel_all(fixedElements)[i].style.top = null;
           }
         }
       });
     }
 
-    for (i = 0; i < qsel_all(fixed_element).length; i++) {
-      height += qsel_all(fixed_element)[i].offsetHeight;
+    for (i = 0; i < qsel_all(fixedElements).length; i++) {
+      height += qsel_all(fixedElements)[i].offsetHeight;
 
-      if (i == qsel_all(fixed_element).length - 1) {
+      if (i == qsel_all(fixedElements).length - 1) {
         next();
       }
     }
@@ -210,13 +228,13 @@ function fixed_el(
     var normalHeight = height;
     var doubleHeight = height * 2;
 
-    if (padding_top_element) {
-      qsel(padding_top_element).style.paddingTop = height + "px";
+    if (elementBelowFixedElements) {
+      qsel(elementBelowFixedElements).style.paddingTop = height + "px";
     }
 
-    if (to_fixed_element) {
-      for (i = 0; i < qsel_all(neg_margin_top_element).length; i++) {
-        qsel_all(neg_margin_top_element)[i].style.marginTop =
+    if (elementsAboveFixedElements) {
+      for (i = 0; i < qsel_all(navLandingElements).length; i++) {
+        qsel_all(navLandingElements)[i].style.marginTop =
           "-" + doubleHeight + "px";
       }
 
@@ -225,27 +243,27 @@ function fixed_el(
           window.pageYOffset > topHeight ||
           document.documentElement.scrollTop > topHeight
         ) {
-          for (i = 0; i < qsel_all(neg_margin_top_element).length; i++) {
-            qsel_all(neg_margin_top_element)[i].style.marginTop =
+          for (i = 0; i < qsel_all(navLandingElements).length; i++) {
+            qsel_all(navLandingElements)[i].style.marginTop =
               "-" + normalHeight + "px";
           }
         } else {
-          for (i = 0; i < qsel_all(neg_margin_top_element).length; i++) {
-            qsel_all(neg_margin_top_element)[i].style.marginTop =
+          for (i = 0; i < qsel_all(navLandingElements).length; i++) {
+            qsel_all(navLandingElements)[i].style.marginTop =
               "-" + doubleHeight + "px";
           }
         }
       });
     } else {
-      for (i = 0; i < qsel_all(neg_margin_top_element).length; i++) {
-        qsel_all(neg_margin_top_element)[i].style.marginTop =
+      for (i = 0; i < qsel_all(navLandingElements).length; i++) {
+        qsel_all(navLandingElements)[i].style.marginTop =
           "-" + normalHeight + "px";
       }
     }
 
-    if (calc_vh_element) {
-      for (i = 0; i < qsel_all(calc_vh_element).length; i++) {
-        qsel_all(calc_vh_element)[i].style.minHeight =
+    if (fitToScreenElements) {
+      for (i = 0; i < qsel_all(fitToScreenElements).length; i++) {
+        qsel_all(fitToScreenElements)[i].style.minHeight =
           "calc(100vh - " + height + "px)";
       }
     }
