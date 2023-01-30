@@ -39889,6 +39889,9 @@ header [class*=gcol] svg.typescript {
 header [class*=gcol] svg.typescript path {
   fill: #3178c4;
 }
+header [class*=gcol] svg.xampp path {
+  fill: #fb7923;
+}
 header [class*=gcol] svg.golang path {
   fill: #00abd6;
 }

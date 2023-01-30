@@ -207,6 +207,12 @@ header {
         }
       }
 
+      &.xampp {
+        path {
+          fill: hsl(24, 96%, 56%);
+        }
+      }
+
       &.golang {
         path {
           fill: hsl(192, 100%, 42%);
