@@ -37,15 +37,64 @@ nav {
       z-index: z("logo");
     }
 
-    button#nav-btn {
+    button#top-nav-btn {
+      position: relative;
+      z-index: z("top-nav-btn");
+      outline: 0;
+      background: transparent;
+      border-width: 2px;
+      border-color: $white;
+      width: 35px;
+      height: 35px;
+      font-size: 30px;
       float: right;
+
+      @include fa(f0c9, fas, before) {
+        position: absolute;
+        top: -6px;
+        left: 2.5px;
+        color: $white;
+      }
+
+      @include fa(f00d, fas) {
+        position: absolute;
+        top: -6px;
+        left: 5px;
+        color: $white;
+
+        @include tran;
+
+        @include vis(hidden) {
+          opacity: 0;
+        }
+      }
 
       @include mq(xlup) {
         display: none;
       }
+
+      &.active {
+        &:before {
+          @include vis(hidden) {
+            opacity: 0;
+          }
+        }
+
+        &:after {
+          @include vis(visible) {
+            opacity: 1;
+          }
+        }
+
+        & ~ #top-nav-coll-wrap {
+          @include vis(visible) {
+            opacity: 1;
+          }
+        }
+      }
     }
 
-    #nav-coll-wrap {
+    #top-nav-coll-wrap {
       @include mq(lg) {
         position: fixed;
         top: 0;
@@ -80,116 +129,185 @@ nav {
         }
       }
     }
-
-    .menu-container {
-      & > ul {
-        & > li {
-          display: inline-block;
-        }
-      }
-    }
   }
 
   &#side-nav {
-    #side-coll-wrap {
+    button#side-nav-btn {
+      position: relative;
+      z-index: z("side-nav-btn");
+      outline: 0;
+      background: transparent;
+      border-width: 2px;
+      border-color: #000;
+      width: 35px;
+      height: 35px;
+      font-size: 30px;
+
+      @include fa(f0c9, fas, before) {
+        position: absolute;
+        top: -6px;
+        left: 2.5px;
+        color: #000;
+      }
+
+      @include fa(f00d, fas) {
+        position: absolute;
+        top: -6px;
+        left: 5px;
+        color: #000;
+        @include tran;
+
+        @include vis(hidden) {
+          opacity: 0;
+        }
+      }
+
+      &.active {
+        &:before {
+          @include vis(hidden) {
+            opacity: 0;
+          }
+        }
+
+        &:after {
+          @include vis(visible) {
+            opacity: 1;
+          }
+        }
+
+        & ~ #side-nav-coll-wrap {
+          @include vis(visible) {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    #side-nav-coll-wrap {
       @include tran;
     }
   }
 
   &#page-nav {
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 230px;
-    border: 15px solid $white;
-    background: $dgray;
-    padding: 20px;
-    margin: 30px;
+
+    @include mq(xlup) {
+      top: 0;
+      right: 0;
+    }
+
+    @include mq(lg) {
+      padding: 20px;
+    }
 
     @media print {
       display: none;
     }
 
-    button#save-page-btn {
-      padding: 5px 10px;
-    }
+    button#page-nav-btn {
+      position: relative;
+      z-index: z("page-nav-btn");
+      outline: 0;
+      background: transparent;
+      border-width: 2px;
+      border-color: #000;
+      width: 35px;
+      height: 35px;
+      font-size: 30px;
+      opacity: 0.5;
 
-    .menu-container {
-      ul {
-        li {
-          margin: 20px 0;
-
-          span.span-page {
-            padding: 20px 0;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: $white;
-
-            &:after {
-              content: " <--";
-              font-family: monospace;
-              color: transparent;
-            }
-
-            &:hover,
-            &.active {
-              &:after {
-                color: $white;
-              }
-            }
-          }
-        }
+      @include fa(f0c9, fas, before) {
+        position: absolute;
+        top: -6px;
+        left: 2.5px;
+        color: #000;
       }
-    }
-  }
 
-  button#nav-btn {
-    position: relative;
-    z-index: z("nav-btn");
-    outline: 0;
-    background: transparent;
-    border-width: 2px;
-    border-color: $white;
-    width: 35px;
-    height: 35px;
-    font-size: 30px;
+      @include fa(f00d, fas) {
+        position: absolute;
+        top: -6px;
+        left: 5px;
+        color: #000;
+        @include tran;
 
-    @include fa(f0c9, fas, before) {
-      position: absolute;
-      top: -6px;
-      left: 2.5px;
-      color: $white;
-    }
-
-    @include fa(f00d, fas) {
-      position: absolute;
-      top: -6px;
-      left: 5px;
-      color: $white;
-
-      @include tran;
-
-      @include vis(hidden) {
-        opacity: 0;
-      }
-    }
-
-    &.active {
-      &:before {
         @include vis(hidden) {
           opacity: 0;
         }
       }
 
-      &:after {
-        @include vis(visible) {
-          opacity: 1;
-        }
+      @include mq(xlup) {
+        display: none;
       }
 
-      & ~ #nav-coll-wrap {
-        @include vis(visible) {
-          opacity: 1;
+      &.active {
+        &:before {
+          @include vis(hidden) {
+            opacity: 0;
+          }
+        }
+
+        &:after {
+          @include vis(visible) {
+            opacity: 1;
+          }
+        }
+
+        & ~ #page-nav-coll-wrap {
+          @include vis(visible) {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    #page-nav-coll-wrap {
+      background: $dgray-09;
+      padding: 20px;
+
+      @include mq(xlup) {
+        width: 230px;
+        background: $dgray;
+        border: 15px solid $white;
+        margin: 30px;
+      }
+
+      @include mq(lg) {
+        @include vis(hidden) {
+          opacity: 0;
+        }
+
+        @include tran;
+      }
+
+      button#save-page-btn {
+        padding: 5px 10px;
+      }
+
+      .menu-container {
+        ul {
+          li {
+            margin: 20px 0;
+
+            span.span-page {
+              padding: 20px 0;
+              cursor: pointer;
+              font-size: 1.5rem;
+              color: $white;
+
+              &:after {
+                content: " <--";
+                font-family: monospace;
+                color: transparent;
+              }
+
+              &:hover,
+              &.active {
+                &:after {
+                  color: $white;
+                }
+              }
+            }
+          }
         }
       }
     }
