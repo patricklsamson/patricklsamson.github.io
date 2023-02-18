@@ -541,22 +541,12 @@ main.main-document {
   overflow-x: hidden;
   background: $dgray;
 
-  @media print {
-    background: transparent;
+  @include mq(lg) {
+    overflow-x: scroll;
   }
 
-  @include mq(lg) {
-    position: relative;
-
-    @include pseudo {
-      position: absolute;
-      z-index: z("nav");
-      top: 0;
-      right: 0;
-      width: 100vw;
-      height: 100%;
-      background: $dgray-06;
-    }
+  @media print {
+    background: transparent;
   }
 
   @for $i from 1 through 6 {
