@@ -105,18 +105,18 @@ function toggle_class(element, className) {
 }
 
 function top_nav(callback) {
-  add_event(id("nav-btn"), "click", function () {
+  add_event(id("top-nav-btn"), "click", function () {
     toggle_class(this, "active");
     toggle_class(document.body, "y-hidden");
   });
 
   add_event(window, "click", function (e) {
     if (
-      !e.target.closest("#nav-btn") ||
-      !id("nav-btn").contains(e.target || e.srcElement)
+      !e.target.closest("#top-nav-btn") ||
+      !id("top-nav-btn").contains(e.target || e.srcElement)
     ) {
-      if (has_class(id("nav-btn"), "active")) {
-        remove_class(id("nav-btn"), "active");
+      if (has_class(id("top-nav-btn"), "active")) {
+        remove_class(id("top-nav-btn"), "active");
         remove_class(document.body, "y-hidden");
       }
     }
@@ -127,8 +127,29 @@ function top_nav(callback) {
   }
 }
 
-function page_nav() {
+function page_nav(callback) {
   var i;
+
+  add_event(id("page-nav-btn"), "click", function () {
+    toggle_class(this, "active");
+    toggle_class(document.body, "y-hidden");
+  });
+
+  add_event(window, "click", function (e) {
+    if (
+      !e.target.closest("#page-nav-btn") ||
+      !id("page-nav-btn").contains(e.target || e.srcElement)
+    ) {
+      if (has_class(id("page-nav-btn"), "active")) {
+        remove_class(id("page-nav-btn"), "active");
+        remove_class(document.body, "y-hidden");
+      }
+    }
+  });
+
+  if (callback) {
+    callback();
+  }
 
   add_event(id("save-page-btn"), "click", () => {
     window.print();
