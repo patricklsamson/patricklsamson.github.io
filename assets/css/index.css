@@ -39833,6 +39833,9 @@ header [class*=gcol] i.fa-js {
   background: #000;
   line-height: 0.9;
 }
+header [class*=gcol] i.fa-database {
+  color: #353b41;
+}
 header [class*=gcol] i.fa-wordpress {
   color: #21759c;
 }
