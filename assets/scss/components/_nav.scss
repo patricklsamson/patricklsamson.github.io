@@ -96,7 +96,6 @@ nav {
 
     #top-nav-coll-wrap {
       @include mq(lg) {
-        position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
@@ -196,10 +195,6 @@ nav {
       right: 0;
     }
 
-    @include mq(lg) {
-      padding: 20px;
-    }
-
     @media print {
       display: none;
     }
@@ -215,6 +210,7 @@ nav {
       height: 35px;
       font-size: 30px;
       opacity: 0.5;
+      margin: 10px;
 
       @include fa(f0c9, fas, before) {
         position: absolute;
@@ -255,6 +251,10 @@ nav {
         & ~ #page-nav-coll-wrap {
           @include vis(visible) {
             opacity: 1;
+            overflow-y: scroll;
+            padding: 20px 20px 40px;
+            width: auto;
+            height: 100vh;
           }
         }
       }
@@ -274,6 +274,10 @@ nav {
       @include mq(lg) {
         @include vis(hidden) {
           opacity: 0;
+          overflow: hidden;
+          padding: 0;
+          width: 0;
+          height: 0;
         }
 
         @include tran;
