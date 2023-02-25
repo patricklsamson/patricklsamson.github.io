@@ -62,6 +62,7 @@ header {
       text-shadow: 0 2px 4px $white, 0 -2px 4px $white;
       vertical-align: middle;
       margin: 8px;
+      color: hsl(210, 10%, 23%);
 
       @include mq(xs) {
         font-size: 1.5em;
@@ -94,7 +95,7 @@ header {
       }
 
       &.fa-markdown {
-        color: #000;
+        color: hsl(0, 0%, 0%);
       }
 
       &.fa-laravel {
@@ -118,12 +119,8 @@ header {
       &.fa-js {
         text-shadow: none;
         color: hsl(53, 93%, 54%);
-        background: #000;
+        background: hsl(0, 0%, 0%);
         line-height: 0.9;
-      }
-
-      &.fa-database {
-        color: hsl(210, 10%, 23%);
       }
 
       &.fa-wordpress {
@@ -165,6 +162,10 @@ header {
         ),
         webkit
       );
+
+      path {
+        fill: hsl(210, 10%, 23%);
+      }
 
       @include mq(xs) {
         width: 1.5em;
