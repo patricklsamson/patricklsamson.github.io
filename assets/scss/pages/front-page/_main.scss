@@ -23,7 +23,7 @@ main {
     }
   }
 
-  .cont:nth-child(3) {
+  .wrap-branch {
     .grid-cont {
       @include grid-cont(a-rep, auto, 30vw, 1, 2);
 
