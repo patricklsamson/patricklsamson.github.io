@@ -253,9 +253,8 @@ nav {
           @include vis(visible) {
             opacity: 1;
             overflow-y: scroll;
-            padding: 20px 20px 40px;
             width: auto;
-            height: 100vh;
+            height: 80vh;
           }
         }
       }
@@ -276,7 +275,6 @@ nav {
         @include vis(hidden) {
           opacity: 0;
           overflow: hidden;
-          padding: 0;
           width: 0;
           height: 0;
         }
