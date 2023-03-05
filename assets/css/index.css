@@ -40094,27 +40094,27 @@ main .cont:first-child .grid-cont {
     grid-template: repeat(4, 200px)/100%;
   }
 }
-main .cont:nth-child(3) .grid-cont {
+main .wrap-branch .grid-cont {
   -ms-grid-rows: (auto) [2];
   -ms-grid-columns: (30vw) [2];
   grid-template: repeat(2, auto)/repeat(2, 30vw);
 }
 @media only screen and (max-width: 1199px) {
-  main .cont:nth-child(3) .grid-cont {
+  main .wrap-branch .grid-cont {
     -ms-grid-rows: (auto) [2];
     -ms-grid-columns: (40vw) [2];
     grid-template: repeat(2, auto)/repeat(2, 40vw);
   }
 }
 @media only screen and (max-width: 991px) {
-  main .cont:nth-child(3) .grid-cont {
+  main .wrap-branch .grid-cont {
     -ms-grid-rows: (auto) [1];
     -ms-grid-columns: 70vw;
     grid-template: repeat(1, auto)/70vw;
   }
 }
 @media only screen and (max-width: 480px) {
-  main .cont:nth-child(3) .grid-cont {
+  main .wrap-branch .grid-cont {
     -ms-grid-rows: (auto) [1];
     -ms-grid-columns: 100%;
     grid-template: repeat(1, auto)/100%;
