@@ -39517,9 +39517,8 @@ nav#page-nav button#page-nav-btn.active ~ #page-nav-coll-wrap {
   visibility: visible;
   opacity: 1;
   overflow-y: scroll;
-  padding: 20px 20px 40px;
   width: auto;
-  height: 100vh;
+  height: 80vh;
 }
 nav#page-nav #page-nav-coll-wrap {
   background: rgba(53, 59, 65, 0.9);
@@ -39538,7 +39537,6 @@ nav#page-nav #page-nav-coll-wrap {
     visibility: hidden;
     opacity: 0;
     overflow: hidden;
-    padding: 0;
     width: 0;
     height: 0;
     -webkit-transition: all 0.5s;
