@@ -96,6 +96,7 @@ nav {
 
     #top-nav-coll-wrap {
       @include mq(lg) {
+        position: absolute;
         top: 0;
         left: 0;
         width: 100vw;
