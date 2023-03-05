@@ -39935,6 +39935,7 @@ header [class*=gcol] i.fa-square {
   color: #66b2b2;
   text-shadow: 0 2px 4px #353b41, 0 -2px 4px #353b41;
   margin: 0 5px;
+  font-size: 1em;
 }
 header [class*=gcol] i.fa-html5 {
   color: #e34f26;
