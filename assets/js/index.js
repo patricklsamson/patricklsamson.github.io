@@ -17,7 +17,7 @@ doc_ready(() => {
   match_height(".mh");
 
   match_media(
-    767,
+    991,
     function match() {
       match_height(".mh2");
     },
