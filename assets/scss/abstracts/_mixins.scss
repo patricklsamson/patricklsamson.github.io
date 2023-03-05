@@ -469,14 +469,15 @@
   $thumb: $black-05,
   $hover: $dgray,
   $track: $gray,
-  $width: 10,
+  $size: 10,
   $border-radius: f,
   $box-shadow: f,
   $percent: -20%
 ) {
   @if $scrollbar == t {
     ::-webkit-scrollbar {
-      width: #{$width}px;
+      width: #{$size}px;
+      height: #{$size}px;
     }
 
     ::-webkit-scrollbar-track {
@@ -485,7 +486,7 @@
       @if $box-shadow == t {
         @include prefix(
           (
-            box-shadow: inset 0 0 #{m.div($width, 2)}px #{c.adjust(
+            box-shadow: inset 0 0 #{m.div($size, 2)}px #{c.adjust(
                 $track,
                 $lightness: $percent
               )}
@@ -497,7 +498,7 @@
       @if $border-radius == t {
         @include prefix(
           (
-            border-radius: #{$width}px
+            border-radius: #{$size}px
           ),
           webkit moz
         );
@@ -510,7 +511,7 @@
       @if $border-radius == t {
         @include prefix(
           (
-            border-radius: #{$width}px
+            border-radius: #{$size}px
           ),
           webkit moz
         );
