@@ -9378,6 +9378,11 @@ html {
   line-height: 1.5;
   font-family: "arial", sans-serif;
 }
+@media only screen and (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+}
 
 a,
 abbr,
@@ -39343,6 +39348,7 @@ nav#top-nav button#top-nav-btn.active ~ #top-nav-coll-wrap {
 }
 @media only screen and (max-width: 1199px) {
   nav#top-nav #top-nav-coll-wrap {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
