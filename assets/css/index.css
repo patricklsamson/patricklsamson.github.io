@@ -39743,6 +39743,9 @@ form input[type=submit] {
   background: #66b2b2;
   border: 4px solid transparent;
   color: #353b41;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   -moz-transition: all 0.5s;

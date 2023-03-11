@@ -96,6 +96,14 @@ form {
     background: $cyan;
     border: 4px solid transparent;
     color: $dgray;
+
+    @include prefix(
+      (
+        border-radius: 15px
+      ),
+      webkit moz
+    );
+
     @include tran;
 
     &:hover {
