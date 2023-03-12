@@ -481,36 +481,40 @@
 }
 
 @for $i from 1 through 9 {
+  $percent: $i * 10%;
+  $vw: $i * 10vw;
+  $vh: $i * 10vh;
+
   .w-#{$i}0 {
-    width: s.unquote("#{$i}0%");
+    width: $percent;
   }
 
   .w-#{$i}0-imp {
-    width: s.unquote("#{$i}0% !important");
+    width: $percent !important;
   }
 
   .vw-#{$i}0 {
-    width: s.unquote("#{$i}0vw");
+    width: $vw;
   }
 
   .vw-#{$i}0-imp {
-    width: s.unquote("#{$i}0vw !important");
+    width: $vw !important;
   }
 
   .h-#{$i}0 {
-    height: s.unquote("#{$i}0%");
+    height: $percent;
   }
 
   .h-#{$i}0-imp {
-    height: s.unquote("#{$i}0% !important");
+    height: $percent !important;
   }
 
   .vh-#{$i}0 {
-    min-height: s.unquote("#{$i}0vh");
+    min-height: $vh;
   }
 
   .vh-#{$i}0-imp {
-    min-height: s.unquote("#{$i}0vh !important");
+    min-height: $vh !important;
   }
 }
 
@@ -527,36 +531,40 @@
 @each $min-max-mq in $min-max-mqs {
   @include mq($min-max-mq) {
     @for $i from 1 through 9 {
+      $percent: $i * 10%;
+      $vw: $i * 10vw;
+      $vh: $i * 10vh;
+
       .w-#{$i}0-#{$min-max-mq} {
-        width: s.unquote("#{$i}0%");
+        width: $percent;
       }
 
       .w-#{$i}0-#{$min-max-mq}-imp {
-        width: s.unquote("#{$i}0% !important");
+        width: $percent !important;
       }
 
       .vw-#{$i}0-#{$min-max-mq} {
-        width: s.unquote("#{$i}0vw");
+        width: $vw;
       }
 
       .vw-#{$i}0-#{$min-max-mq}-imp {
-        width: s.unquote("#{$i}0vw !important");
+        width: $vw !important;
       }
 
       .h-#{$i}0-#{$min-max-mq} {
-        height: s.unquote("#{$i}0%");
+        height: $percent;
       }
 
       .h-#{$i}0-#{$min-max-mq}-imp {
-        height: s.unquote("#{$i}0% !important");
+        height: $percent !important;
       }
 
       .vh-#{$i}0-#{$min-max-mq} {
-        min-height: s.unquote("#{$i}0vh");
+        min-height: $vh;
       }
 
       .vh-#{$i}0-#{$min-max-mq}-imp {
-        min-height: s.unquote("#{$i}0vh !important");
+        min-height: $vh !important;
       }
     }
 
@@ -615,10 +623,12 @@
 }
 
 @for $i from 5 through 9 {
+  $em: m.div($i, 10) * 1em;
+
   .br-0#{$i} {
     @include prefix(
       (
-        border-radius: s.unquote("0.#{$i}em")
+        border-radius: $em
       ),
       webkit moz
     );
@@ -627,7 +637,7 @@
   .br-0#{$i}-imp {
     @include prefix(
       (
-        border-radius: s.unquote("0.#{$i}em !important")
+        border-radius: s.unquote("#{$em} !important")
       ),
       webkit moz
     );
@@ -635,10 +645,12 @@
 }
 
 @for $i from 1 through 9 {
+  $em: (m.div($i, 10) + 1) * 1em;
+
   .br-1#{$i} {
     @include prefix(
       (
-        border-radius: s.unquote("1.#{$i}em")
+        border-radius: $em
       ),
       webkit moz
     );
@@ -647,7 +659,7 @@
   .br-1#{$i}-imp {
     @include prefix(
       (
-        border-radius: s.unquote("1.#{$i}em !important")
+        border-radius: s.unquote("#{$em} !important")
       ),
       webkit moz
     );
