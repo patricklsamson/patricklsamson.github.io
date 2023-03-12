@@ -503,6 +503,18 @@
   }
 }
 
+@each $min-max-mq in $min-max-mqs {
+  @each $position in $positions {
+    .p-#{$position}-#{$min-max-mq} {
+      position: $position;
+    }
+
+    .p-#{$position}-#{$min-max-mq}-imp {
+      position: $position !important;
+    }
+  }
+}
+
 .xbul {
   list-style: none;
   padding-left: 0;
