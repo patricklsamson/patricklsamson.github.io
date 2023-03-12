@@ -54,7 +54,7 @@ nav {
         top: -6px;
         left: 2.5px;
         color: $white;
-        @include tran;
+        @include tran(opacity);
       }
 
       @include fa(f00d, fas) {
@@ -147,7 +147,7 @@ nav {
         top: -6px;
         left: 2.5px;
         color: #000;
-        @include tran;
+        @include tran(opacity);
       }
 
       @include fa(f00d, fas) {
@@ -218,7 +218,7 @@ nav {
         top: -6px;
         left: 2.5px;
         color: #000;
-        @include tran;
+        @include tran(opacity);
       }
 
       @include fa(f00d, fas) {

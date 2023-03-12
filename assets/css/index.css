@@ -43493,10 +43493,10 @@ nav#top-nav button#top-nav-btn:before {
   top: -6px;
   left: 2.5px;
   color: #f9fafb;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 nav#top-nav button#top-nav-btn:after {
   content: "\f00d";
@@ -43589,10 +43589,10 @@ nav#side-nav button#side-nav-btn:before {
   top: -6px;
   left: 2.5px;
   color: #000;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 nav#side-nav button#side-nav-btn:after {
   content: "\f00d";
@@ -43672,10 +43672,10 @@ nav#page-nav button#page-nav-btn:before {
   top: -6px;
   left: 2.5px;
   color: #000;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 nav#page-nav button#page-nav-btn:after {
   content: "\f00d";
