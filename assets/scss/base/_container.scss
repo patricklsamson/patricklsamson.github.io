@@ -1,5 +1,6 @@
 @use "../abstracts" as *;
 @use "sass:math" as m;
+@use "sass:string" as s;
 
 .cont,
 .cont-fl {
@@ -479,6 +480,40 @@
   }
 }
 
+@for $i from 1 through 9 {
+  .w-#{$i}0 {
+    width: s.unquote("#{$i}0%");
+  }
+
+  .w-#{$i}0-imp {
+    width: s.unquote("#{$i}0% !important");
+  }
+
+  .vw-#{$i}0 {
+    width: s.unquote("#{$i}0vw");
+  }
+
+  .vw-#{$i}0-imp {
+    width: s.unquote("#{$i}0vw !important");
+  }
+
+  .h-#{$i}0 {
+    height: s.unquote("#{$i}0%");
+  }
+
+  .h-#{$i}0-imp {
+    height: s.unquote("#{$i}0% !important");
+  }
+
+  .vh-#{$i}0 {
+    min-height: s.unquote("#{$i}0vh");
+  }
+
+  .vh-#{$i}0-imp {
+    min-height: s.unquote("#{$i}0vh !important");
+  }
+}
+
 @each $span, $prop, $dim in $fluids {
   .#{$span}-fluid {
     #{$prop}: $dim;
@@ -535,6 +570,10 @@
       overflow-#{$xy}: $scroll-hidden !important;
     }
   }
+}
+
+.xy-hidden {
+  overflow: hidden;
 }
 
 main.main-document {
