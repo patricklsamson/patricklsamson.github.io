@@ -129,6 +129,12 @@ button,
   }
 }
 
+img {
+  @include mq(xxs) {
+    width: 100%;
+  }
+}
+
 ol,
 ul {
   padding-left: 40px;
