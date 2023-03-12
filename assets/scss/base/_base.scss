@@ -132,6 +132,10 @@ button,
 img {
   @include mq(xxs) {
     width: 100%;
+
+    &[class*="formal"] {
+      width: auto;
+    }
   }
 }
 
