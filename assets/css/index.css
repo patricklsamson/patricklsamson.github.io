@@ -330,15 +330,6 @@ button.a-imp:hover,
   background: none !important;
 }
 
-@media only screen and (max-width: 480px) {
-  img {
-    width: 100%;
-  }
-  img[class*=formal] {
-    width: auto;
-  }
-}
-
 ol,
 ul {
   padding-left: 40px;
