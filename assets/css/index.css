@@ -43086,6 +43086,294 @@ p.p-pgnum:before {
   position: fixed !important;
 }
 
+.p-relative-xsup {
+  position: relative;
+}
+
+.p-relative-xsup-imp {
+  position: relative !important;
+}
+
+.p-absolute-xsup {
+  position: absolute;
+}
+
+.p-absolute-xsup-imp {
+  position: absolute !important;
+}
+
+.p-fixed-xsup {
+  position: fixed;
+}
+
+.p-fixed-xsup-imp {
+  position: fixed !important;
+}
+
+.p-relative-smup {
+  position: relative;
+}
+
+.p-relative-smup-imp {
+  position: relative !important;
+}
+
+.p-absolute-smup {
+  position: absolute;
+}
+
+.p-absolute-smup-imp {
+  position: absolute !important;
+}
+
+.p-fixed-smup {
+  position: fixed;
+}
+
+.p-fixed-smup-imp {
+  position: fixed !important;
+}
+
+.p-relative-mdup {
+  position: relative;
+}
+
+.p-relative-mdup-imp {
+  position: relative !important;
+}
+
+.p-absolute-mdup {
+  position: absolute;
+}
+
+.p-absolute-mdup-imp {
+  position: absolute !important;
+}
+
+.p-fixed-mdup {
+  position: fixed;
+}
+
+.p-fixed-mdup-imp {
+  position: fixed !important;
+}
+
+.p-relative-lgup {
+  position: relative;
+}
+
+.p-relative-lgup-imp {
+  position: relative !important;
+}
+
+.p-absolute-lgup {
+  position: absolute;
+}
+
+.p-absolute-lgup-imp {
+  position: absolute !important;
+}
+
+.p-fixed-lgup {
+  position: fixed;
+}
+
+.p-fixed-lgup-imp {
+  position: fixed !important;
+}
+
+.p-relative-xlup {
+  position: relative;
+}
+
+.p-relative-xlup-imp {
+  position: relative !important;
+}
+
+.p-absolute-xlup {
+  position: absolute;
+}
+
+.p-absolute-xlup-imp {
+  position: absolute !important;
+}
+
+.p-fixed-xlup {
+  position: fixed;
+}
+
+.p-fixed-xlup-imp {
+  position: fixed !important;
+}
+
+.p-relative-xxl {
+  position: relative;
+}
+
+.p-relative-xxl-imp {
+  position: relative !important;
+}
+
+.p-absolute-xxl {
+  position: absolute;
+}
+
+.p-absolute-xxl-imp {
+  position: absolute !important;
+}
+
+.p-fixed-xxl {
+  position: fixed;
+}
+
+.p-fixed-xxl-imp {
+  position: fixed !important;
+}
+
+.p-relative-xxs {
+  position: relative;
+}
+
+.p-relative-xxs-imp {
+  position: relative !important;
+}
+
+.p-absolute-xxs {
+  position: absolute;
+}
+
+.p-absolute-xxs-imp {
+  position: absolute !important;
+}
+
+.p-fixed-xxs {
+  position: fixed;
+}
+
+.p-fixed-xxs-imp {
+  position: fixed !important;
+}
+
+.p-relative-xs {
+  position: relative;
+}
+
+.p-relative-xs-imp {
+  position: relative !important;
+}
+
+.p-absolute-xs {
+  position: absolute;
+}
+
+.p-absolute-xs-imp {
+  position: absolute !important;
+}
+
+.p-fixed-xs {
+  position: fixed;
+}
+
+.p-fixed-xs-imp {
+  position: fixed !important;
+}
+
+.p-relative-sm {
+  position: relative;
+}
+
+.p-relative-sm-imp {
+  position: relative !important;
+}
+
+.p-absolute-sm {
+  position: absolute;
+}
+
+.p-absolute-sm-imp {
+  position: absolute !important;
+}
+
+.p-fixed-sm {
+  position: fixed;
+}
+
+.p-fixed-sm-imp {
+  position: fixed !important;
+}
+
+.p-relative-md {
+  position: relative;
+}
+
+.p-relative-md-imp {
+  position: relative !important;
+}
+
+.p-absolute-md {
+  position: absolute;
+}
+
+.p-absolute-md-imp {
+  position: absolute !important;
+}
+
+.p-fixed-md {
+  position: fixed;
+}
+
+.p-fixed-md-imp {
+  position: fixed !important;
+}
+
+.p-relative-lg {
+  position: relative;
+}
+
+.p-relative-lg-imp {
+  position: relative !important;
+}
+
+.p-absolute-lg {
+  position: absolute;
+}
+
+.p-absolute-lg-imp {
+  position: absolute !important;
+}
+
+.p-fixed-lg {
+  position: fixed;
+}
+
+.p-fixed-lg-imp {
+  position: fixed !important;
+}
+
+.p-relative-xl {
+  position: relative;
+}
+
+.p-relative-xl-imp {
+  position: relative !important;
+}
+
+.p-absolute-xl {
+  position: absolute;
+}
+
+.p-absolute-xl-imp {
+  position: absolute !important;
+}
+
+.p-fixed-xl {
+  position: fixed;
+}
+
+.p-fixed-xl-imp {
+  position: fixed !important;
+}
+
 .xbul {
   list-style: none;
   padding-left: 0;
