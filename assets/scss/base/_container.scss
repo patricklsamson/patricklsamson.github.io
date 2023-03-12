@@ -526,6 +526,40 @@
 
 @each $min-max-mq in $min-max-mqs {
   @include mq($min-max-mq) {
+    @for $i from 1 through 9 {
+      .w-#{$i}0-#{$min-max-mq} {
+        width: s.unquote("#{$i}0%");
+      }
+
+      .w-#{$i}0-#{$min-max-mq}-imp {
+        width: s.unquote("#{$i}0% !important");
+      }
+
+      .vw-#{$i}0-#{$min-max-mq} {
+        width: s.unquote("#{$i}0vw");
+      }
+
+      .vw-#{$i}0-#{$min-max-mq}-imp {
+        width: s.unquote("#{$i}0vw !important");
+      }
+
+      .h-#{$i}0-#{$min-max-mq} {
+        height: s.unquote("#{$i}0%");
+      }
+
+      .h-#{$i}0-#{$min-max-mq}-imp {
+        height: s.unquote("#{$i}0% !important");
+      }
+
+      .vh-#{$i}0-#{$min-max-mq} {
+        min-height: s.unquote("#{$i}0vh");
+      }
+
+      .vh-#{$i}0-#{$min-max-mq}-imp {
+        min-height: s.unquote("#{$i}0vh !important");
+      }
+    }
+
     @each $span, $prop, $dim in $fluids {
       .#{$span}-fluid-#{$min-max-mq} {
         #{$prop}: $dim;
@@ -540,24 +574,24 @@
   }
 }
 
-.vwh-fluid {
-  width: 100vw;
-  min-height: 100vh;
-}
-
 .wh-fluid {
   width: 100%;
   height: 100%;
 }
 
-.vwh-fluid-imp {
-  width: 100vw !important;
-  min-height: 100vh !important;
-}
-
 .wh-fluid-imp {
   width: 100% !important;
   height: 100% !important;
+}
+
+.vwh-fluid {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.vwh-fluid-imp {
+  width: 100vw !important;
+  min-height: 100vh !important;
 }
 
 @each $xy in $xys {
@@ -566,7 +600,7 @@
       overflow-#{$xy}: $scroll-hidden;
     }
 
-    .#{$xy}-#{$scroll-hidden} {
+    .#{$xy}-#{$scroll-hidden}-imp {
       overflow-#{$xy}: $scroll-hidden !important;
     }
   }
@@ -574,6 +608,50 @@
 
 .xy-hidden {
   overflow: hidden;
+}
+
+.xy-hidden-imp {
+  overflow: hidden !important;
+}
+
+@for $i from 5 through 9 {
+  .br-0#{$i} {
+    @include prefix(
+      (
+        border-radius: s.unquote("0.#{$i}em")
+      ),
+      webkit moz
+    );
+  }
+
+  .br-0#{$i}-imp {
+    @include prefix(
+      (
+        border-radius: s.unquote("0.#{$i}em !important")
+      ),
+      webkit moz
+    );
+  }
+}
+
+@for $i from 1 through 9 {
+  .br-1#{$i} {
+    @include prefix(
+      (
+        border-radius: s.unquote("1.#{$i}em")
+      ),
+      webkit moz
+    );
+  }
+
+  .br-1#{$i}-imp {
+    @include prefix(
+      (
+        border-radius: s.unquote("1.#{$i}em !important")
+      ),
+      webkit moz
+    );
+  }
 }
 
 main.main-document {
