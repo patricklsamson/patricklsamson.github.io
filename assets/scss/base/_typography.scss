@@ -99,30 +99,6 @@ a,
     color: $dgray;
     text-decoration: none;
   }
-
-  &.txt-ul {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  &.txt-lt {
-    &:hover {
-      text-decoration: line-through;
-    }
-  }
-
-  &.txt-ol {
-    &:hover {
-      text-decoration: overline;
-    }
-  }
-
-  &.txt-ul-ol {
-    &:hover {
-      text-decoration: underline overline;
-    }
-  }
 }
 
 .a-imp {
@@ -132,30 +108,6 @@ a,
   &:hover {
     color: $dgray !important;
     text-decoration: none !important;
-  }
-
-  &.txt-ul-imp {
-    &:hover {
-      text-decoration: underline !important;
-    }
-  }
-
-  &.txt-lt-imp {
-    &:hover {
-      text-decoration: line-through !important;
-    }
-  }
-
-  &.txt-ol-imp {
-    &:hover {
-      text-decoration: overline !important;
-    }
-  }
-
-  &.txt-ul-ol-imp {
-    &:hover {
-      text-decoration: underline overline !important;
-    }
   }
 }
 
@@ -227,35 +179,35 @@ a,
   }
 }
 
-.txt-ul {
+.td-ul {
   text-decoration: underline;
 }
 
-.txt-lt {
+.td-lt {
   text-decoration: line-through;
 }
 
-.txt-ol {
+.td-ol {
   text-decoration: overline;
 }
 
-.txt-ul-ol {
+.td-ul-ol {
   text-decoration: underline overline;
 }
 
-.txt-ul-imp {
+.td-ul-imp {
   text-decoration: underline !important;
 }
 
-.txt-lt-imp {
+.td-lt-imp {
   text-decoration: line-through !important;
 }
 
-.txt-ol-imp {
+.td-ol-imp {
   text-decoration: overline !important;
 }
 
-.txt-ul-ol-imp {
+.td-ul-ol-imp {
   text-decoration: underline overline !important;
 }
 
