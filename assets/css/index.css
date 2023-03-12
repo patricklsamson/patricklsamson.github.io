@@ -43714,8 +43714,8 @@ nav#page-nav button#page-nav-btn.active ~ #page-nav-coll-wrap {
   visibility: visible;
   opacity: 1;
   overflow-y: scroll;
-  width: auto;
-  height: 80vh;
+  width: 80vw;
+  height: 50vh;
 }
 nav#page-nav #page-nav-coll-wrap {
   background: rgba(53, 59, 65, 0.9);
