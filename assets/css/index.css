@@ -43565,6 +43565,11 @@ nav#top-nav #top-nav-coll-wrap .menu-container > ul > li a {
   padding: 1em;
   color: #f9fafb;
 }
+@media only screen and (max-width: 1399px) {
+  nav#top-nav #top-nav-coll-wrap .menu-container > ul > li a {
+    padding: 0.5em;
+  }
+}
 nav#side-nav button#side-nav-btn {
   position: relative;
   z-index: 7;

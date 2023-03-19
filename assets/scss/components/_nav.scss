@@ -123,6 +123,10 @@ nav {
             a {
               padding: 1em;
               color: $white;
+
+              @include mq(xl) {
+                padding: 0.5em;
+              }
             }
           }
         }
