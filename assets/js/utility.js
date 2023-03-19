@@ -196,21 +196,15 @@ function fixed_el(
   var topHeight = 0;
   var height = 0;
 
-  if (
-    elementBelowFixedElements === undefined || elementBelowFixedElements == ""
-  ) {
+  if (elementBelowFixedElements === undefined) {
     elementBelowFixedElements = null;
   }
 
-  if (
-    elementsAboveFixedElements === undefined || elementsAboveFixedElements == ""
-  ) {
+  if (elementsAboveFixedElements === undefined) {
     elementsAboveFixedElements = null;
   }
 
-  if (
-    fitToScreenElements === undefined || fitToScreenElements == ""
-  ) {
+  if (fitToScreenElements === undefined) {
     fitToScreenElements = null;
   }
 
@@ -296,18 +290,17 @@ function scroll_class(element, className) {
 }
 
 function match_height(element, invisibleElement, remove) {
-  var i;
-  var heights = [];
-
-  if (invisibleElement === undefined || invisibleElement == "") {
+  if (invisibleElement === undefined) {
     invisibleElement = null;
   }
 
-  if (remove === undefined || remove == "") {
+  if (remove === undefined) {
     remove = null;
   }
 
-  if (element && remove) {
+  var i;
+
+  if (remove) {
     for (i = 0; i < qsel_all(element).length; i++) {
       qsel_all(element)[i].style.height = "auto";
     }
@@ -315,13 +308,7 @@ function match_height(element, invisibleElement, remove) {
     return;
   }
 
-  if (invisibleElement && remove) {
-    for (i = 0; i < qsel_all(invisibleElement).length; i++) {
-      qsel_all(invisibleElement)[i].style.height = "auto";
-    }
-
-    return;
-  }
+  var heights = [];
 
   if (invisibleElement) {
     qsel(invisibleElement).style.display = "block";

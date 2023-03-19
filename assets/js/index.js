@@ -22,7 +22,7 @@ doc_ready(() => {
       match_height(".mh2");
     },
     function unmatch() {
-      match_height(".mh2", "", true);
+      match_height(".mh2", null, true);
     }
   );
 
