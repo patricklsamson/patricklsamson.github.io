@@ -93,21 +93,45 @@ html {
 a,
 .a {
   color: $gray;
-  text-decoration: none;
+
+  @include prefix(
+    (
+      text-decoration: none
+    ),
+    webkit moz
+  );
 
   &:hover {
     color: $dgray;
-    text-decoration: none;
+
+    @include prefix(
+      (
+        text-decoration: none
+      ),
+      webkit moz
+    );
   }
 }
 
 .a-imp {
   color: $gray !important;
-  text-decoration: none !important;
+
+  @include prefix(
+    (
+      text-decoration: s.unquote("none !important")
+    ),
+    webkit moz
+  );
 
   &:hover {
     color: $dgray !important;
-    text-decoration: none !important;
+
+    @include prefix(
+      (
+        text-decoration: s.unquote("none !important")
+      ),
+      webkit moz
+    );
   }
 }
 
@@ -180,35 +204,75 @@ a,
 }
 
 .td-ul {
-  text-decoration: underline;
+  @include prefix(
+    (
+      text-decoration: underline
+    ),
+    webkit moz
+  );
 }
 
 .td-lt {
-  text-decoration: line-through;
+  @include prefix(
+    (
+      text-decoration: line-through
+    ),
+    webkit moz
+  );
 }
 
 .td-ol {
-  text-decoration: overline;
+  @include prefix(
+    (
+      text-decoration: overline
+    ),
+    webkit moz
+  );
 }
 
 .td-ul-ol {
-  text-decoration: underline overline;
+  @include prefix(
+    (
+      text-decoration: underline overline
+    ),
+    webkit moz
+  );
 }
 
 .td-ul-imp {
-  text-decoration: underline !important;
+  @include prefix(
+    (
+      text-decoration: s.unquote("underline !important")
+    ),
+    webkit moz
+  );
 }
 
 .td-lt-imp {
-  text-decoration: line-through !important;
+  @include prefix(
+    (
+      text-decoration: s.unquote("line-through !important")
+    ),
+    webkit moz
+  );
 }
 
 .td-ol-imp {
-  text-decoration: overline !important;
+  @include prefix(
+    (
+      text-decoration: s.unquote("overline !important")
+    ),
+    webkit moz
+  );
 }
 
 .td-ul-ol-imp {
-  text-decoration: underline overline !important;
+  @include prefix(
+    (
+      text-decoration: s.unquote("underline overline !important")
+    ),
+    webkit moz
+  );
 }
 
 @for $i from 1 through 9 {
