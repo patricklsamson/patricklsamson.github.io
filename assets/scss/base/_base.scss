@@ -4,6 +4,8 @@
 @page {
   size: auto;
   margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 @include scrollbar(t, $dgray, $dcyan, $white, 10, t, t, -80%);
