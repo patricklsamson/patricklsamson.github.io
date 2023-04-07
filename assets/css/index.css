@@ -162,9 +162,9 @@ i[id*=btn] {
 
 @page {
   size: auto;
-  margin: 0;
-  padding: 0;
-  border: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -198,6 +198,13 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+@media print {
+  html {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+}
 
 *,
 *:before,
@@ -209,6 +216,13 @@ html {
 
 body {
   overflow-x: hidden;
+}
+@media print {
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
 }
 
 blockquote,
