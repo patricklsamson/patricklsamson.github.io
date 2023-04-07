@@ -287,35 +287,9 @@ nav {
         @include tran;
       }
 
-      button#save-page-btn {
-        padding: 5px 10px;
-      }
-
       .menu-container {
-        ul {
-          li {
-            margin: 20px 0;
-
-            span.span-page {
-              padding: 20px 0;
-              cursor: pointer;
-              font-size: 1.5rem;
-              color: $white;
-
-              &:after {
-                content: " <--";
-                font-family: monospace;
-                color: transparent;
-              }
-
-              &:hover,
-              &.active {
-                &:after {
-                  color: $white;
-                }
-              }
-            }
-          }
+        button#save-page-btn {
+          padding: 5px 10px;
         }
       }
     }

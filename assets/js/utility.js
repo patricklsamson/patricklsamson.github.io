@@ -128,8 +128,6 @@ function top_nav(callback) {
 }
 
 function page_nav(callback) {
-  var i;
-
   add_event(id("page-nav-btn"), "click", function () {
     toggle_class(this, "active");
     toggle_class(document.body, "y-hidden");
@@ -154,35 +152,6 @@ function page_nav(callback) {
   add_event(id("save-page-btn"), "click", () => {
     window.print();
   });
-
-  for (i = 0; i < qsel_all(".span-page").length; i++) {
-    qsel_all(".span-page")[i].innerHTML = "page" + (i + 1);
-    add_class(qsel_all(".wrap-paper")[i], "page" + (i + 1));
-
-    if (
-      qsel_all(".wrap-paper")[i].innerHTML == null ||
-      qsel_all(".wrap-paper")[i].innerHTML == ""
-    ) {
-      qsel_all(".wrap-paper")[i].innerHTML = "Page " + (i + 1);
-    }
-
-    add_event(qsel_all(".span-page")[i], "click", function () {
-      for (i = 0; i < qsel_all(".span-page").length; i++) {
-        remove_class(qsel_all(".span-page")[i], "active");
-        remove_class(qsel_all(".wrap-paper")[i], "active");
-      }
-
-      add_class(this, "active");
-      add_class(qsel("." + this.innerHTML), "active");
-
-      document.title = document.title.split("-").slice(
-        0,
-        document.title.split("-").length - 1
-      ).join("-");
-
-      document.title += "-" + this.innerHTML.split("e")[1];
-    });
-  }
 }
 
 function fixed_el(

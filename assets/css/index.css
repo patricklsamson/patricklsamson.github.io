@@ -13016,7 +13016,6 @@ main.main-document .wrap-paper {
   position: relative;
   overflow: hidden;
   background: #fff;
-  display: none;
   width: calc(8.5in * 1);
   height: calc(11in * 1 - 0.25in);
   margin-bottom: calc(0.25in * 1);
@@ -13025,9 +13024,6 @@ main.main-document .wrap-paper {
 main.main-document .wrap-paper .p-pgnum {
   padding: calc(10pt * 1) calc(0.25in * 1) 0;
   margin: 0;
-}
-main.main-document .wrap-paper.active {
-  display: block;
 }
 
 .boxfx {
@@ -43787,25 +43783,8 @@ nav#page-nav #page-nav-coll-wrap {
     transition: all 0.5s;
   }
 }
-nav#page-nav #page-nav-coll-wrap button#save-page-btn {
+nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-btn {
   padding: 5px 10px;
-}
-nav#page-nav #page-nav-coll-wrap .menu-container ul li {
-  margin: 20px 0;
-}
-nav#page-nav #page-nav-coll-wrap .menu-container ul li span.span-page {
-  padding: 20px 0;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: #f9fafb;
-}
-nav#page-nav #page-nav-coll-wrap .menu-container ul li span.span-page:after {
-  content: " <--";
-  font-family: monospace;
-  color: transparent;
-}
-nav#page-nav #page-nav-coll-wrap .menu-container ul li span.span-page:hover:after, nav#page-nav #page-nav-coll-wrap .menu-container ul li span.span-page.active:after {
-  color: #f9fafb;
 }
 nav .menu-container ul {
   list-style: none;
