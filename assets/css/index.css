@@ -43754,9 +43754,8 @@ nav#page-nav button#page-nav-btn.active:after {
 nav#page-nav button#page-nav-btn.active ~ #page-nav-coll-wrap {
   visibility: visible;
   opacity: 1;
-  overflow-y: scroll;
-  width: 80vw;
-  height: 50vh;
+  width: 100px;
+  height: 80px;
 }
 nav#page-nav #page-nav-coll-wrap {
   background: rgba(53, 59, 65, 0.9);

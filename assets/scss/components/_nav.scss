@@ -257,9 +257,8 @@ nav {
         & ~ #page-nav-coll-wrap {
           @include vis(visible) {
             opacity: 1;
-            overflow-y: scroll;
-            width: 80vw;
-            height: 50vh;
+            width: 100px;
+            height: 80px;
           }
         }
       }
