@@ -681,6 +681,10 @@ main.main-document {
     border: 0 !important;
   }
 
+  &.bg-white {
+    background: $white;
+  }
+
   @for $i from 1 through 6 {
     h#{$i} {
       margin-bottom: calc(2pt * #{$multiplier});
@@ -1001,7 +1005,9 @@ main.main-document {
   }
 
   .fa-square {
-    color: $dblue;
+    path {
+      fill: $dblue;
+    }
   }
 }
 

@@ -540,7 +540,9 @@
 }
 
 .blue-bul {
-  .fa-li {
-    color: $dblue2;
+  svg {
+    path {
+      fill: $dblue2;
+    }
   }
 }

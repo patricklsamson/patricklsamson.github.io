@@ -12988,6 +12988,9 @@ main.main-document {
     border: 0 !important;
   }
 }
+main.main-document.bg-white {
+  background: #f9fafb;
+}
 main.main-document h1 {
   margin-bottom: calc(2pt * 1);
 }
@@ -13278,8 +13281,8 @@ main.main-document .wrap-paper .p-pgnum {
 .wrap-blue .svg path {
   fill: #f9fafb;
 }
-.wrap-blue .fa-square {
-  color: #31859c;
+.wrap-blue .fa-square path {
+  fill: #31859c;
 }
 
 .wrap-division [class*=gcol]:nth-child(odd) {
@@ -17445,6 +17448,9 @@ p.p-pgnum:before {
   p.p-pgnum:before {
     display: none;
   }
+}
+p.p-pgnum.d-none-before::before {
+  display: none;
 }
 
 .txtfx {
@@ -43459,8 +43465,8 @@ p.p-pgnum:before {
   height: calc(2in * 1) !important;
 }
 
-.blue-bul .fa-li {
-  color: #215868;
+.blue-bul svg path {
+  fill: #215868;
 }
 
 .sec-loader {
@@ -43765,8 +43771,8 @@ nav#page-nav button#page-nav-btn.active:after {
 nav#page-nav button#page-nav-btn.active ~ #page-nav-coll-wrap {
   visibility: visible;
   opacity: 1;
-  width: 155px;
-  height: 115px;
+  width: 160px;
+  height: 170px;
 }
 nav#page-nav #page-nav-coll-wrap {
   background: rgba(53, 59, 65, 0.9);
@@ -43794,9 +43800,36 @@ nav#page-nav #page-nav-coll-wrap {
     transition: all 0.5s;
   }
 }
-nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-btn {
+nav#page-nav #page-nav-coll-wrap .menu-container button {
   padding: 5px 10px;
-  margin-bottom: 20px;
+}
+nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-btn {
+  margin-bottom: 30px;
+  display: block;
+}
+nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-btn span::before {
+  content: "SAVE (Canvas)";
+}
+nav#page-nav #page-nav-coll-wrap .menu-container input#dynamic-print[type=checkbox] {
+  position: relative;
+}
+nav#page-nav #page-nav-coll-wrap .menu-container input#dynamic-print[type=checkbox]:before {
+  content: ".";
+  font-size: 0;
+  position: absolute;
+  left: -10px;
+  bottom: 30px;
+  width: 130px;
+  border: 1px solid #f9fafb;
+}
+nav#page-nav #page-nav-coll-wrap .menu-container label[for=dynamic-print] span::before {
+  content: "Dynamic Print";
+}
+nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-native-btn {
+  margin-top: 10px;
+}
+nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-native-btn span::before {
+  content: "SAVE (Native)";
 }
 nav .menu-container ul {
   list-style: none;

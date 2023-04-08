@@ -450,6 +450,12 @@ p.p-pgnum {
   z-index: z("pgnum");
   bottom: 0;
   @include pgnum(right);
+
+  &.d-none-before {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .txtfx {
