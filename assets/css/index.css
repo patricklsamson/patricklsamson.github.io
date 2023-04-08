@@ -13019,14 +13019,22 @@ main.main-document .wrap-paper {
   position: relative;
   overflow: hidden;
   background: #fff;
-  width: calc(8.5in * 1);
-  height: calc(11in * 1 - 0.25in);
-  margin-bottom: calc(0.25in * 1);
-  padding: calc(0.25in * 1) calc( 0.25in * 1 ) 0;
+  width: calc(8.5in * 1) !important;
+  height: calc(11in * 1 - 0.25in) !important;
+  margin-bottom: calc(0.25in * 1) !important;
+  padding: calc(0.25in * 1) calc( 0.25in * 1 ) 0 !important;
 }
 main.main-document .wrap-paper .p-pgnum {
   padding: calc(10pt * 1) calc(0.25in * 1) 0;
   margin: 0;
+}
+@media print {
+  main.main-document .wrap-paper.dynamic-print {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
 
 .boxfx {
@@ -43757,12 +43765,13 @@ nav#page-nav button#page-nav-btn.active:after {
 nav#page-nav button#page-nav-btn.active ~ #page-nav-coll-wrap {
   visibility: visible;
   opacity: 1;
-  width: 100px;
-  height: 80px;
+  width: 155px;
+  height: 115px;
 }
 nav#page-nav #page-nav-coll-wrap {
   background: rgba(53, 59, 65, 0.9);
   padding: 20px;
+  color: #f9fafb;
 }
 @media only screen and (min-width: 1200px) {
   nav#page-nav #page-nav-coll-wrap {
@@ -43787,6 +43796,7 @@ nav#page-nav #page-nav-coll-wrap {
 }
 nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-btn {
   padding: 5px 10px;
+  margin-bottom: 20px;
 }
 nav .menu-container ul {
   list-style: none;

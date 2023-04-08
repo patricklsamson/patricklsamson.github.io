@@ -1232,17 +1232,26 @@
 }
 
 @mixin paper($width: 8.5, $height: 11, $spacing: 0.25) {
-  width: calc(#{$width}in * #{$multiplier});
-  height: calc(#{$height}in * #{$multiplier} - #{$spacing}in);
-  margin-bottom: calc(#{$spacing}in * #{$multiplier});
+  width: calc(#{$width}in * #{$multiplier}) !important;
+  height: calc(#{$height}in * #{$multiplier} - #{$spacing}in) !important;
+  margin-bottom: calc(#{$spacing}in * #{$multiplier}) !important;
 
   padding: calc(#{$spacing}in * #{$multiplier}) calc(
     #{$spacing}in * #{$multiplier}
-  ) 0;
+  ) 0 !important;
 
   .p-pgnum {
     padding: calc(10pt * #{$multiplier}) calc(#{$spacing}in * #{$multiplier}) 0;
     margin: 0;
+  }
+
+  &.dynamic-print {
+    @media print {
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
   }
 }
 

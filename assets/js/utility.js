@@ -128,6 +128,8 @@ function top_nav(callback) {
 }
 
 function page_nav(callback) {
+  var i;
+
   add_event(id("page-nav-btn"), "click", function () {
     toggle_class(this, "active");
     toggle_class(document.body, "y-hidden");
@@ -149,8 +151,14 @@ function page_nav(callback) {
     callback();
   }
 
-  add_event(id("save-page-btn"), "click", () => {
+  add_event(id("save-page-btn"), "click", function () {
     window.print();
+  });
+
+  add_event(id("dynamic-print"), "click", function () {
+    for (i = 0; i < qsel_all(".wrap-paper").length; i++) {
+      toggle_class(qsel_all(".wrap-paper")[i], "dynamic-print");
+    }
   });
 }
 

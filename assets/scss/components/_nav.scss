@@ -257,8 +257,8 @@ nav {
         & ~ #page-nav-coll-wrap {
           @include vis(visible) {
             opacity: 1;
-            width: 100px;
-            height: 80px;
+            width: 155px;
+            height: 115px;
           }
         }
       }
@@ -267,6 +267,7 @@ nav {
     #page-nav-coll-wrap {
       background: $dgray-09;
       padding: 20px;
+      color: $white;
 
       @include mq(xlup) {
         width: 230px;
@@ -289,6 +290,7 @@ nav {
       .menu-container {
         button#save-page-btn {
           padding: 5px 10px;
+          margin-bottom: 20px;
         }
       }
     }
