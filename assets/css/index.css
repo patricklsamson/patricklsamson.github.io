@@ -13322,7 +13322,7 @@ main.main-document .wrap-paper .p-pgnum {
 
 html,
 body {
-  font-size: 16px;
+  font-size: 16px !important;
   line-height: 1.5;
   font-family: "arial", sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -17242,7 +17242,7 @@ a:hover,
   }
 }
 main.main-document {
-  font-size: calc(10pt * 1);
+  font-size: calc(10pt * 1) !important;
   line-height: 1.15;
 }
 main.main-document h1,
