@@ -13320,7 +13320,8 @@ main.main-document .wrap-paper .p-pgnum {
   border: 3px solid #215868;
 }
 
-html {
+html,
+body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "arial", sans-serif;
@@ -13328,11 +13329,6 @@ html {
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
-}
-@media only screen and (max-width: 1199px) {
-  html {
-    font-size: 14px;
-  }
 }
 
 a,

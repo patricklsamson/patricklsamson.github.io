@@ -1,7 +1,8 @@
 @use "../abstracts" as *;
 @use "sass:string" as s;
 
-html {
+html,
+body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "arial", sans-serif;
@@ -12,10 +13,6 @@ html {
     ),
     webkit moz ms
   );
-
-  @include mq(lg) {
-    font-size: 14px;
-  }
 }
 
 @include elements(font-size) {
