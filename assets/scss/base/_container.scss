@@ -676,6 +676,9 @@ main.main-document {
 
   @media print {
     background: transparent;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
   }
 
   @for $i from 1 through 6 {

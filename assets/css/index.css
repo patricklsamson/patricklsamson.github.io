@@ -12983,6 +12983,9 @@ main.main-document {
 @media print {
   main.main-document {
     background: transparent;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
   }
 }
 main.main-document h1 {
