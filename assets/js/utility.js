@@ -137,8 +137,8 @@ function page_nav(callback) {
 
   add_event(window, "click", function (e) {
     if (
-      !e.target.closest("#page-nav-btn") ||
-      !id("page-nav-btn").contains(e.target || e.srcElement)
+      !e.target.closest("#page-nav") ||
+      !id("page-nav").contains(e.target || e.srcElement)
     ) {
       if (has_class(id("page-nav-btn"), "active")) {
         remove_class(id("page-nav-btn"), "active");
