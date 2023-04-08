@@ -257,8 +257,8 @@ nav {
         & ~ #page-nav-coll-wrap {
           @include vis(visible) {
             opacity: 1;
-            width: 160px;
-            height: 170px;
+            width: 180px;
+            height: 175px;
           }
         }
       }
@@ -308,9 +308,9 @@ nav {
 
           @include pseudo() {
             position: absolute;
-            left: -10px;
+            left: -4px;
             bottom: 30px;
-            width: 130px;
+            width: 140px;
             border: 1px solid $white;
           };
         }
