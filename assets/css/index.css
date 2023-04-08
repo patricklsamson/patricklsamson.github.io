@@ -17426,14 +17426,13 @@ main.main-document .fs-19pt {
 main.main-document .fs-19pt-imp {
   font-size: calc(19pt * 1) !important;
 }
-
-p.p-pgnum {
+main.main-document p.p-pgnum {
   position: absolute;
   z-index: 2;
   bottom: 0;
   right: 0;
 }
-p.p-pgnum:before {
+main.main-document p.p-pgnum:before {
   content: ".";
   font-size: 0;
   position: absolute;
@@ -17445,11 +17444,11 @@ p.p-pgnum:before {
   background: lightgray;
 }
 @media print {
-  p.p-pgnum:before {
+  main.main-document p.p-pgnum:before {
     display: none;
   }
 }
-p.p-pgnum.d-none-before::before {
+main.main-document p.p-pgnum.d-none-before::before {
   display: none;
 }
 
