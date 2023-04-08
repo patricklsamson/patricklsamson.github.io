@@ -12989,7 +12989,7 @@ main.main-document {
   }
 }
 main.main-document.bg-white {
-  background: #f9fafb;
+  background: white;
 }
 main.main-document h1 {
   margin-bottom: calc(2pt * 1);

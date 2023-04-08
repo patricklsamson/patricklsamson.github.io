@@ -682,7 +682,7 @@ main.main-document {
   }
 
   &.bg-white {
-    background: $white;
+    background: hsl(0, 0%, 100%);
   }
 
   @for $i from 1 through 6 {
