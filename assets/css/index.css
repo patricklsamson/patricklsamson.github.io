@@ -215,6 +215,7 @@ i[id*=btn] {
   background: #3c7777;
 }
 
+:root,
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -13330,6 +13331,7 @@ main.main-document .wrap-paper .p-pgnum {
   border: 3px solid #215868;
 }
 
+:root,
 html,
 body {
   font-size: 16px;
@@ -13409,6 +13411,8 @@ ul,
 var,
 wbr {
   font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a,

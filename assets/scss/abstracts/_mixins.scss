@@ -177,7 +177,7 @@
     textarea {
       @content;
     }
-  } @else if $set == font-size {
+  } @else if $set == font-global {
     a,
     abbr,
     address,

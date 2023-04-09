@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 @use "sass:string" as s;
 
+:root,
 html,
 body {
   font-size: 16px;
@@ -15,8 +16,10 @@ body {
   );
 }
 
-@include elements(font-size) {
+@include elements(font-global) {
   font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 @include elements(line-height) {
