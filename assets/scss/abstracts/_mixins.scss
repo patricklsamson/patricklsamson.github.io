@@ -405,12 +405,13 @@
   }
 }
 
-@mixin font-face(
+@mixin font(
+  $defaultBoldOrItalic: f,
   $font-family,
   $file,
   $font-weight: 400,
   $font-style: normal,
-  $fallback: sans-serif
+  $fallback: $sans-serif-fb
 ) {
   @font-face {
     font-family: "#{$font-family}";
@@ -428,6 +429,38 @@
     font-family: "#{$font-family}", $fallback;
     font-weight: $font-weight;
     font-style: $font-style;
+  }
+
+  @if $defaultBoldOrItalic == t {
+    @if $font-weight == 400 {
+      @if $font-style == italic {
+        body {
+          em,
+          i {
+            font-family: "#{$font-family}", $fallback;
+          }
+        }
+      }
+    }
+
+    @if $font-weight == 700 {
+      @if $font-style == normal {
+        body {
+          b,
+          strong {
+            font-family: "#{$font-family}", $fallback;
+          }
+        }
+      } @else if $font-style == italic {
+        b,
+        strong {
+          & > em,
+          & > i {
+            font-family: "#{$font-family}", $fallback;
+          }
+        }
+      }
+    }
   }
 }
 

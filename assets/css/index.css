@@ -20,7 +20,7 @@
   font-display: swap;
 }
 .ff-arimo {
-  font-family: "Arimo", sans-serif;
+  font-family: "Arimo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
   font-style: normal;
 }
@@ -34,9 +34,14 @@
   font-display: swap;
 }
 .ff-arimo-italic {
-  font-family: "Arimo-Italic", sans-serif;
+  font-family: "Arimo-Italic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
   font-style: italic;
+}
+
+body em,
+body i {
+  font-family: "Arimo-Italic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 @font-face {
@@ -48,9 +53,14 @@
   font-display: swap;
 }
 .ff-arimo-bold {
-  font-family: "Arimo-Bold", sans-serif;
+  font-family: "Arimo-Bold", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   font-style: normal;
+}
+
+body b,
+body strong {
+  font-family: "Arimo-Bold", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 @font-face {
@@ -62,9 +72,15 @@
   font-display: swap;
 }
 .ff-arimo-bolditalic {
-  font-family: "Arimo-BoldItalic", sans-serif;
+  font-family: "Arimo-BoldItalic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   font-style: italic;
+}
+
+b > em, b > i,
+strong > em,
+strong > i {
+  font-family: "Arimo-BoldItalic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 @font-face {
@@ -76,7 +92,7 @@
   font-display: swap;
 }
 .ff-tinos {
-  font-family: "Tinos", serif;
+  font-family: "Tinos", "Times New Roman", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -90,7 +106,7 @@
   font-display: swap;
 }
 .ff-tinos-italic {
-  font-family: "Tinos-Italic", serif;
+  font-family: "Tinos-Italic", "Times New Roman", serif;
   font-weight: 400;
   font-style: italic;
 }
@@ -104,7 +120,7 @@
   font-display: swap;
 }
 .ff-tinos-bold {
-  font-family: "Tinos-Bold", serif;
+  font-family: "Tinos-Bold", "Times New Roman", serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -118,7 +134,7 @@
   font-display: swap;
 }
 .ff-tinos-bolditalic {
-  font-family: "Tinos-BoldItalic", serif;
+  font-family: "Tinos-BoldItalic", "Times New Roman", serif;
   font-weight: 700;
   font-style: italic;
 }
@@ -132,7 +148,7 @@
   font-display: swap;
 }
 .ff-hack {
-  font-family: "Hack", sans-serif;
+  font-family: "Hack", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-weight: 400;
   font-style: normal;
 }
@@ -13681,7 +13697,7 @@ h1,
   font-size: 2.5rem;
   line-height: 1.2;
   color: #f9fafb;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 h1:before, h1:after,
 .h1:before,
@@ -13710,7 +13726,7 @@ h1:after,
   font-size: 2.5rem !important;
   line-height: 1.2 !important;
   color: #f9fafb !important;
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 .h1-imp:before, .h1-imp:after {
   color: #66b2b2 !important;
@@ -13735,7 +13751,7 @@ h2,
   font-size: 2.25rem;
   line-height: 1.2;
   color: #f9fafb;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 h2:before, h2:after,
 .h2:before,
@@ -13764,7 +13780,7 @@ h2:after,
   font-size: 2.25rem !important;
   line-height: 1.2 !important;
   color: #f9fafb !important;
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 .h2-imp:before, .h2-imp:after {
   color: #66b2b2 !important;
@@ -13789,7 +13805,7 @@ h3,
   font-size: 2rem;
   line-height: 1.2;
   color: #f9fafb;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 h3:before, h3:after,
 .h3:before,
@@ -13818,7 +13834,7 @@ h3:after,
   font-size: 2rem !important;
   line-height: 1.2 !important;
   color: #f9fafb !important;
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 .h3-imp:before, .h3-imp:after {
   color: #66b2b2 !important;
@@ -13843,7 +13859,7 @@ h4,
   font-size: 1.75rem;
   line-height: 1.2;
   color: #f9fafb;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 h4:before, h4:after,
 .h4:before,
@@ -13872,7 +13888,7 @@ h4:after,
   font-size: 1.75rem !important;
   line-height: 1.2 !important;
   color: #f9fafb !important;
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 .h4-imp:before, .h4-imp:after {
   color: #66b2b2 !important;
@@ -13897,7 +13913,7 @@ h5,
   font-size: 1.5rem;
   line-height: 1.2;
   color: #f9fafb;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 h5:before, h5:after,
 .h5:before,
@@ -13926,7 +13942,7 @@ h5:after,
   font-size: 1.5rem !important;
   line-height: 1.2 !important;
   color: #f9fafb !important;
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 .h5-imp:before, .h5-imp:after {
   color: #66b2b2 !important;
@@ -13951,7 +13967,7 @@ h6,
   font-size: 1.25rem;
   line-height: 1.2;
   color: #f9fafb;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 h6:before, h6:after,
 .h6:before,
@@ -13980,7 +13996,7 @@ h6:after,
   font-size: 1.25rem !important;
   line-height: 1.2 !important;
   color: #f9fafb !important;
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 .h6-imp:before, .h6-imp:after {
   color: #66b2b2 !important;
@@ -17385,7 +17401,6 @@ main.main-document .h1 {
   font-size: 2.5em;
   line-height: 1.15;
   font-family: "Tinos-Bold", "Times New Roman", serif;
-  font-weight: 400;
 }
 main.main-document h1:before, main.main-document h1:after,
 main.main-document .h1:before,
@@ -17396,7 +17411,6 @@ main.main-document .h1-imp {
   font-size: 2.5em !important;
   line-height: 1.15 !important;
   font-family: "Tinos-Bold", "Times New Roman", serif !important;
-  font-weight: 400 !important;
 }
 main.main-document .h1-imp:before, main.main-document .h1-imp:after {
   display: none !important;
@@ -17406,7 +17420,6 @@ main.main-document .h2 {
   font-size: 2.25em;
   line-height: 1.15;
   font-family: "Tinos-Bold", "Times New Roman", serif;
-  font-weight: 400;
 }
 main.main-document h2:before, main.main-document h2:after,
 main.main-document .h2:before,
@@ -17417,7 +17430,6 @@ main.main-document .h2-imp {
   font-size: 2.25em !important;
   line-height: 1.15 !important;
   font-family: "Tinos-Bold", "Times New Roman", serif !important;
-  font-weight: 400 !important;
 }
 main.main-document .h2-imp:before, main.main-document .h2-imp:after {
   display: none !important;
@@ -17427,7 +17439,6 @@ main.main-document .h3 {
   font-size: 2em;
   line-height: 1.15;
   font-family: "Tinos-Bold", "Times New Roman", serif;
-  font-weight: 400;
 }
 main.main-document h3:before, main.main-document h3:after,
 main.main-document .h3:before,
@@ -17438,7 +17449,6 @@ main.main-document .h3-imp {
   font-size: 2em !important;
   line-height: 1.15 !important;
   font-family: "Tinos-Bold", "Times New Roman", serif !important;
-  font-weight: 400 !important;
 }
 main.main-document .h3-imp:before, main.main-document .h3-imp:after {
   display: none !important;
@@ -17448,7 +17458,6 @@ main.main-document .h4 {
   font-size: 16pt;
   line-height: 1.15;
   font-family: "Tinos-Bold", "Times New Roman", serif;
-  font-weight: 400;
 }
 main.main-document h4:before, main.main-document h4:after,
 main.main-document .h4:before,
@@ -17459,7 +17468,6 @@ main.main-document .h4-imp {
   font-size: 16pt !important;
   line-height: 1.15 !important;
   font-family: "Tinos-Bold", "Times New Roman", serif !important;
-  font-weight: 400 !important;
 }
 main.main-document .h4-imp:before, main.main-document .h4-imp:after {
   display: none !important;
@@ -17469,7 +17477,6 @@ main.main-document .h5 {
   font-size: 15pt;
   line-height: 1.15;
   font-family: "Tinos-Bold", "Times New Roman", serif;
-  font-weight: 400;
 }
 main.main-document h5:before, main.main-document h5:after,
 main.main-document .h5:before,
@@ -17480,7 +17487,6 @@ main.main-document .h5-imp {
   font-size: 15pt !important;
   line-height: 1.15 !important;
   font-family: "Tinos-Bold", "Times New Roman", serif !important;
-  font-weight: 400 !important;
 }
 main.main-document .h5-imp:before, main.main-document .h5-imp:after {
   display: none !important;
@@ -17490,7 +17496,6 @@ main.main-document .h6 {
   font-size: 14pt;
   line-height: 1.15;
   font-family: "Tinos-Bold", "Times New Roman", serif;
-  font-weight: 400;
 }
 main.main-document h6:before, main.main-document h6:after,
 main.main-document .h6:before,
@@ -17501,7 +17506,6 @@ main.main-document .h6-imp {
   font-size: 14pt !important;
   line-height: 1.15 !important;
   font-family: "Tinos-Bold", "Times New Roman", serif !important;
-  font-weight: 400 !important;
 }
 main.main-document .h6-imp:before, main.main-document .h6-imp:after {
   display: none !important;
