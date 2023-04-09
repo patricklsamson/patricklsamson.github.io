@@ -373,7 +373,7 @@ a,
 }
 
 main.main-document {
-  font-size: calc(10pt * #{$multiplier});
+  font-size: 10pt;
   font-family: "Arimo", "Arial", sans-serif;
   line-height: 1.15;
 
@@ -405,7 +405,7 @@ main.main-document {
   @each $head, $head-size in $head-sizes {
     h#{$head},
     .h#{$head} {
-      font-size: calc(#{$head-size} * #{$multiplier});
+      font-size: #{$head-size};
       line-height: 1.15;
       font-family: "Tinos", "Times New Roman", serif;
 
@@ -415,7 +415,7 @@ main.main-document {
     }
 
     .h#{$head}-imp {
-      font-size: calc(#{$head-size} * #{$multiplier}) !important;
+      font-size: #{$head-size} !important;
       line-height: 1.15 !important;
       font-family: "Tinos", "Times New Roman", serif !important;
 
@@ -438,11 +438,11 @@ main.main-document {
 
   @for $i from 1 through 9 {
     .fs-1#{$i}pt {
-      font-size: calc(1#{$i}pt * #{$multiplier});
+      font-size: 1#{$i}pt;
     }
 
     .fs-1#{$i}pt-imp {
-      font-size: calc(1#{$i}pt * #{$multiplier}) !important;
+      font-size: 1#{$i}pt !important;
     }
   }
 

@@ -13002,43 +13002,43 @@ main.main-document.bg-white {
   background: white;
 }
 main.main-document h1 {
-  margin-bottom: calc(2pt * 1);
+  margin-bottom: 2pt;
 }
 main.main-document h2 {
-  margin-bottom: calc(2pt * 1);
+  margin-bottom: 2pt;
 }
 main.main-document h3 {
-  margin-bottom: calc(2pt * 1);
+  margin-bottom: 2pt;
 }
 main.main-document h4 {
-  margin-bottom: calc(2pt * 1);
+  margin-bottom: 2pt;
 }
 main.main-document h5 {
-  margin-bottom: calc(2pt * 1);
+  margin-bottom: 2pt;
 }
 main.main-document h6 {
-  margin-bottom: calc(2pt * 1);
+  margin-bottom: 2pt;
 }
 main.main-document header,
 main.main-document footer,
 main.main-document section {
-  margin-bottom: calc(5pt * 1);
+  margin-bottom: 5pt;
 }
 main.main-document li,
 main.main-document p {
-  margin-bottom: calc(2pt * 1);
+  margin-bottom: 2pt;
 }
 main.main-document .wrap-paper {
   position: relative;
   overflow: hidden;
   background: #fff;
-  width: calc(8.5in * 1) !important;
-  height: calc(11in * 1 - 0.25in) !important;
-  margin-bottom: calc(0.25in * 1) !important;
-  padding: calc(0.25in * 1) calc( 0.25in * 1 ) 0 !important;
+  width: 215.9mm;
+  height: calc(279.4mm - 6.35mm);
+  margin-bottom: 6.35mm;
+  padding: 6.35mm 6.35mm 0;
 }
 main.main-document .wrap-paper .p-pgnum {
-  padding: calc(10pt * 1) calc(0.25in * 1) 0;
+  padding: 6.35mm 6.35mm 0;
   margin: 0;
 }
 @media print {
@@ -17259,7 +17259,7 @@ samp {
   }
 }
 main.main-document {
-  font-size: calc(10pt * 1);
+  font-size: 10pt;
   font-family: "Arimo", "Arial", sans-serif;
   line-height: 1.15;
 }
@@ -17322,7 +17322,7 @@ main.main-document .h3-imp:before, main.main-document .h3-imp:after {
 }
 main.main-document h4,
 main.main-document .h4 {
-  font-size: calc(16pt * 1);
+  font-size: 16pt;
   line-height: 1.15;
   font-family: "Tinos", "Times New Roman", serif;
 }
@@ -17332,7 +17332,7 @@ main.main-document .h4:after {
   display: none;
 }
 main.main-document .h4-imp {
-  font-size: calc(16pt * 1) !important;
+  font-size: 16pt !important;
   line-height: 1.15 !important;
   font-family: "Tinos", "Times New Roman", serif !important;
 }
@@ -17341,7 +17341,7 @@ main.main-document .h4-imp:before, main.main-document .h4-imp:after {
 }
 main.main-document h5,
 main.main-document .h5 {
-  font-size: calc(15pt * 1);
+  font-size: 15pt;
   line-height: 1.15;
   font-family: "Tinos", "Times New Roman", serif;
 }
@@ -17351,7 +17351,7 @@ main.main-document .h5:after {
   display: none;
 }
 main.main-document .h5-imp {
-  font-size: calc(15pt * 1) !important;
+  font-size: 15pt !important;
   line-height: 1.15 !important;
   font-family: "Tinos", "Times New Roman", serif !important;
 }
@@ -17360,7 +17360,7 @@ main.main-document .h5-imp:before, main.main-document .h5-imp:after {
 }
 main.main-document h6,
 main.main-document .h6 {
-  font-size: calc(14pt * 1);
+  font-size: 14pt;
   line-height: 1.15;
   font-family: "Tinos", "Times New Roman", serif;
 }
@@ -17370,7 +17370,7 @@ main.main-document .h6:after {
   display: none;
 }
 main.main-document .h6-imp {
-  font-size: calc(14pt * 1) !important;
+  font-size: 14pt !important;
   line-height: 1.15 !important;
   font-family: "Tinos", "Times New Roman", serif !important;
 }
@@ -17387,58 +17387,58 @@ main.main-document a:hover {
   text-decoration: underline;
 }
 main.main-document .fs-11pt {
-  font-size: calc(11pt * 1);
+  font-size: 1 1pt;
 }
 main.main-document .fs-11pt-imp {
-  font-size: calc(11pt * 1) !important;
+  font-size: 1 1pt !important;
 }
 main.main-document .fs-12pt {
-  font-size: calc(12pt * 1);
+  font-size: 1 2pt;
 }
 main.main-document .fs-12pt-imp {
-  font-size: calc(12pt * 1) !important;
+  font-size: 1 2pt !important;
 }
 main.main-document .fs-13pt {
-  font-size: calc(13pt * 1);
+  font-size: 1 3pt;
 }
 main.main-document .fs-13pt-imp {
-  font-size: calc(13pt * 1) !important;
+  font-size: 1 3pt !important;
 }
 main.main-document .fs-14pt {
-  font-size: calc(14pt * 1);
+  font-size: 1 4pt;
 }
 main.main-document .fs-14pt-imp {
-  font-size: calc(14pt * 1) !important;
+  font-size: 1 4pt !important;
 }
 main.main-document .fs-15pt {
-  font-size: calc(15pt * 1);
+  font-size: 1 5pt;
 }
 main.main-document .fs-15pt-imp {
-  font-size: calc(15pt * 1) !important;
+  font-size: 1 5pt !important;
 }
 main.main-document .fs-16pt {
-  font-size: calc(16pt * 1);
+  font-size: 1 6pt;
 }
 main.main-document .fs-16pt-imp {
-  font-size: calc(16pt * 1) !important;
+  font-size: 1 6pt !important;
 }
 main.main-document .fs-17pt {
-  font-size: calc(17pt * 1);
+  font-size: 1 7pt;
 }
 main.main-document .fs-17pt-imp {
-  font-size: calc(17pt * 1) !important;
+  font-size: 1 7pt !important;
 }
 main.main-document .fs-18pt {
-  font-size: calc(18pt * 1);
+  font-size: 1 8pt;
 }
 main.main-document .fs-18pt-imp {
-  font-size: calc(18pt * 1) !important;
+  font-size: 1 8pt !important;
 }
 main.main-document .fs-19pt {
-  font-size: calc(19pt * 1);
+  font-size: 1 9pt;
 }
 main.main-document .fs-19pt-imp {
-  font-size: calc(19pt * 1) !important;
+  font-size: 1 9pt !important;
 }
 main.main-document p.p-pgnum {
   position: absolute;
@@ -43455,27 +43455,27 @@ main.main-document p.p-pgnum.d-none-before::before {
 }
 
 .formal-1 {
-  height: calc(1in * 1);
+  height: 25.4mm;
 }
 
 .formal-1-imp {
-  height: calc(1in * 1) !important;
+  height: 25.4mm !important;
 }
 
 .formal-15 {
-  height: calc(1.5in * 1);
+  height: 38.1mm;
 }
 
 .formal-15-imp {
-  height: calc(1.5in * 1) !important;
+  height: 38.1mm !important;
 }
 
 .formal-2 {
-  height: calc(2in * 1);
+  height: 50.8mm;
 }
 
 .formal-2-imp {
-  height: calc(2in * 1) !important;
+  height: 50.8mm !important;
 }
 
 .blue-bul svg path {

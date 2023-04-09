@@ -531,11 +531,11 @@
 
 @each $class, $formal-size in $formal-sizes {
   .formal-#{$class} {
-    height: calc(#{$formal-size} * #{$multiplier});
+    height: #{$formal-size};
   }
 
   .formal-#{$class}-imp {
-    height: calc(#{$formal-size} * #{$multiplier}) !important;
+    height: #{$formal-size} !important;
   }
 }
 

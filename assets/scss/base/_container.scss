@@ -687,26 +687,26 @@ main.main-document {
 
   @for $i from 1 through 6 {
     h#{$i} {
-      margin-bottom: calc(2pt * #{$multiplier});
+      margin-bottom: 2pt;
     }
   }
 
   header,
   footer,
   section {
-    margin-bottom: calc(5pt * #{$multiplier});
+    margin-bottom: 5pt;
   }
 
   li,
   p {
-    margin-bottom: calc(2pt * #{$multiplier});
+    margin-bottom: 2pt;
   }
 
   .wrap-paper {
     position: relative;
     overflow: hidden;
     background: #fff;
-    @include paper(8.5, 11, 0.25);
+    @include paper(215.90, 279.40, 6.35);
   }
 }
 
