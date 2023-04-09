@@ -409,7 +409,7 @@
   $font-family,
   $file,
   $font-weight: normal,
-  $font-size: normal,
+  $font-style: normal,
   $fallback: sans-serif
 ) {
   @font-face {
@@ -420,12 +420,13 @@
       url("../fonts/#{$file}.ttf") format("truetype"),
       url("../fonts/#{$file}.svg?#webfont") format("svg");
     font-weight: $font-weight;
-    font-style: $font-size;
+    font-style: $font-style;
     font-display: swap;
   }
 
   .ff-#{s.to-lower-case($font-family)} {
     font-family: "#{$font-family}", $fallback;
+    font-style: $font-style;
   }
 }
 
