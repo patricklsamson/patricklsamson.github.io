@@ -5,13 +5,13 @@
 );
 
 @include font-face("Arimo", "Arimo-Regular");
-@include font-face("Arimo-Italic", "Arimo-Italic", normal, italic);
-@include font-face("Arimo-Bold", "Arimo-Bold", bold, normal);
-@include font-face("Arimo-BoldItalic", "Arimo-BoldItalic", bold, italic);
+@include font-face("Arimo-Italic", "Arimo-Italic", 400, italic);
+@include font-face("Arimo-Bold", "Arimo-Bold", 700, normal);
+@include font-face("Arimo-BoldItalic", "Arimo-BoldItalic", 700, italic);
 
-@include font-face("Tinos", "Tinos-Regular", normal, normal, serif);
-@include font-face("Tinos-Italic", "Tinos-Italic", normal, italic, serif);
-@include font-face("Tinos-Bold", "Tinos-Bold", bold, normal, serif);
-@include font-face("Tinos-BoldItalic", "Tinos-BoldItalic", bold, italic, serif);
+@include font-face("Tinos", "Tinos-Regular", 400, normal, serif);
+@include font-face("Tinos-Italic", "Tinos-Italic", 400, italic, serif);
+@include font-face("Tinos-Bold", "Tinos-Bold", 700, normal, serif);
+@include font-face("Tinos-BoldItalic", "Tinos-BoldItalic", 700, italic, serif);
 
 @include font-face("Hack", "Hack-Regular");

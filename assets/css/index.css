@@ -15,12 +15,13 @@
   font-family: "Arimo";
   src: url("../fonts/Arimo-Regular.eot");
   src: url("../fonts/Arimo-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Arimo-Regular.woff") format("woff"), url("../fonts/Arimo-Regular.ttf") format("truetype"), url("../fonts/Arimo-Regular.svg?#webfont") format("svg");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 .ff-arimo {
   font-family: "Arimo", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -28,12 +29,13 @@
   font-family: "Arimo-Italic";
   src: url("../fonts/Arimo-Italic.eot");
   src: url("../fonts/Arimo-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Arimo-Italic.woff") format("woff"), url("../fonts/Arimo-Italic.ttf") format("truetype"), url("../fonts/Arimo-Italic.svg?#webfont") format("svg");
-  font-weight: normal;
+  font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 .ff-arimo-italic {
   font-family: "Arimo-Italic", sans-serif;
+  font-weight: 400;
   font-style: italic;
 }
 
@@ -41,12 +43,13 @@
   font-family: "Arimo-Bold";
   src: url("../fonts/Arimo-Bold.eot");
   src: url("../fonts/Arimo-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Arimo-Bold.woff") format("woff"), url("../fonts/Arimo-Bold.ttf") format("truetype"), url("../fonts/Arimo-Bold.svg?#webfont") format("svg");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 .ff-arimo-bold {
   font-family: "Arimo-Bold", sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -54,12 +57,13 @@
   font-family: "Arimo-BoldItalic";
   src: url("../fonts/Arimo-BoldItalic.eot");
   src: url("../fonts/Arimo-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Arimo-BoldItalic.woff") format("woff"), url("../fonts/Arimo-BoldItalic.ttf") format("truetype"), url("../fonts/Arimo-BoldItalic.svg?#webfont") format("svg");
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 .ff-arimo-bolditalic {
   font-family: "Arimo-BoldItalic", sans-serif;
+  font-weight: 700;
   font-style: italic;
 }
 
@@ -67,12 +71,13 @@
   font-family: "Tinos";
   src: url("../fonts/Tinos-Regular.eot");
   src: url("../fonts/Tinos-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Tinos-Regular.woff") format("woff"), url("../fonts/Tinos-Regular.ttf") format("truetype"), url("../fonts/Tinos-Regular.svg?#webfont") format("svg");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 .ff-tinos {
   font-family: "Tinos", serif;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -80,12 +85,13 @@
   font-family: "Tinos-Italic";
   src: url("../fonts/Tinos-Italic.eot");
   src: url("../fonts/Tinos-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Tinos-Italic.woff") format("woff"), url("../fonts/Tinos-Italic.ttf") format("truetype"), url("../fonts/Tinos-Italic.svg?#webfont") format("svg");
-  font-weight: normal;
+  font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 .ff-tinos-italic {
   font-family: "Tinos-Italic", serif;
+  font-weight: 400;
   font-style: italic;
 }
 
@@ -93,12 +99,13 @@
   font-family: "Tinos-Bold";
   src: url("../fonts/Tinos-Bold.eot");
   src: url("../fonts/Tinos-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Tinos-Bold.woff") format("woff"), url("../fonts/Tinos-Bold.ttf") format("truetype"), url("../fonts/Tinos-Bold.svg?#webfont") format("svg");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 .ff-tinos-bold {
   font-family: "Tinos-Bold", serif;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -106,12 +113,13 @@
   font-family: "Tinos-BoldItalic";
   src: url("../fonts/Tinos-BoldItalic.eot");
   src: url("../fonts/Tinos-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Tinos-BoldItalic.woff") format("woff"), url("../fonts/Tinos-BoldItalic.ttf") format("truetype"), url("../fonts/Tinos-BoldItalic.svg?#webfont") format("svg");
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 .ff-tinos-bolditalic {
   font-family: "Tinos-BoldItalic", serif;
+  font-weight: 700;
   font-style: italic;
 }
 
@@ -119,12 +127,13 @@
   font-family: "Hack";
   src: url("../fonts/Hack-Regular.eot");
   src: url("../fonts/Hack-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Hack-Regular.woff") format("woff"), url("../fonts/Hack-Regular.ttf") format("truetype"), url("../fonts/Hack-Regular.svg?#webfont") format("svg");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 .ff-hack {
   font-family: "Hack", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 

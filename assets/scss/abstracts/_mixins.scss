@@ -408,7 +408,7 @@
 @mixin font-face(
   $font-family,
   $file,
-  $font-weight: normal,
+  $font-weight: 400,
   $font-style: normal,
   $fallback: sans-serif
 ) {
@@ -426,6 +426,7 @@
 
   .ff-#{s.to-lower-case($font-family)} {
     font-family: "#{$font-family}", $fallback;
+    font-weight: $font-weight;
     font-style: $font-style;
   }
 }
