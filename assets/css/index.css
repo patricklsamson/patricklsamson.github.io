@@ -13032,13 +13032,13 @@ main.main-document .wrap-paper {
   position: relative;
   overflow: hidden;
   background: #fff;
-  width: 215.9mm;
-  height: calc(279.4mm - 6.35mm);
-  margin-bottom: 6.35mm;
-  padding: 6.35mm 6.35mm 0;
+  width: 8.5in;
+  height: calc(11in - 0.25in);
+  margin-bottom: 0.25in;
+  padding: 0.25in 0.25in 0;
 }
 main.main-document .wrap-paper .p-pgnum {
-  padding: 6.35mm 6.35mm 0;
+  padding: 1em 0.25in 0;
   margin: 0;
 }
 @media print {
@@ -43455,27 +43455,27 @@ main.main-document p.p-pgnum.d-none-before::before {
 }
 
 .formal-1 {
-  height: 25.4mm;
+  height: 1in;
 }
 
 .formal-1-imp {
-  height: 25.4mm !important;
+  height: 1in !important;
 }
 
 .formal-15 {
-  height: 38.1mm;
+  height: 1.5in;
 }
 
 .formal-15-imp {
-  height: 38.1mm !important;
+  height: 1.5in !important;
 }
 
 .formal-2 {
-  height: 50.8mm;
+  height: 2in;
 }
 
 .formal-2-imp {
-  height: 50.8mm !important;
+  height: 2in !important;
 }
 
 .blue-bul svg path {

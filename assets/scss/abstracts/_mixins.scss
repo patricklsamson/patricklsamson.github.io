@@ -1238,14 +1238,14 @@
   }
 }
 
-@mixin paper($width: 215.90, $height: 279.40, $spacing: 6.35) {
-  width: #{$width}mm;
-  height: calc(#{$height}mm - #{$spacing}mm);
-  margin-bottom: #{$spacing}mm;
-  padding: #{$spacing}mm #{$spacing}mm 0;
+@mixin paper($width: 8.5, $height: 11, $spacing: 0.25) {
+  width: #{$width}in;
+  height: calc(#{$height}in - #{$spacing}in);
+  margin-bottom: #{$spacing}in;
+  padding: #{$spacing}in #{$spacing}in 0;
 
   .p-pgnum {
-    padding: #{$spacing}mm #{$spacing}mm 0;
+    padding: 1em #{$spacing}in 0;
     margin: 0;
   }
 
