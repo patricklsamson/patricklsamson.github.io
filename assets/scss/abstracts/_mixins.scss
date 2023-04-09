@@ -409,7 +409,8 @@
   $font-family,
   $file,
   $font-weight: normal,
-  $font-size: normal
+  $font-size: normal,
+  $fallback: sans-serif
 ) {
   @font-face {
     font-family: "#{$font-family}";
@@ -421,6 +422,10 @@
     font-weight: $font-weight;
     font-style: $font-size;
     font-display: swap;
+  }
+
+  .ff-#{s.to-lower-case($font-family)} {
+    font-family: "#{$font-family}", $fallback;
   }
 }
 

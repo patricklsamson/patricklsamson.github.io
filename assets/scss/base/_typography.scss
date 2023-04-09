@@ -387,7 +387,8 @@ main.main-document {
     .h#{$i} {
       font-size: $em;
       line-height: 1.15;
-      font-family: "Tinos", "Times New Roman", serif;
+      font-family: "Tinos-Bold", "Times New Roman", serif;
+      font-weight: 400;
 
       &:before, &:after {
         display: none;
@@ -397,7 +398,8 @@ main.main-document {
     .h#{$i}-imp {
       font-size: $em !important;
       line-height: 1.15 !important;
-      font-family: "Tinos", "Times New Roman", serif !important;
+      font-family: "Tinos-Bold", "Times New Roman", serif !important;
+      font-weight: 400 !important;
 
       &:before, &:after {
         display: none !important;
@@ -410,7 +412,8 @@ main.main-document {
     .h#{$head} {
       font-size: $head-size;
       line-height: 1.15;
-      font-family: "Tinos", "Times New Roman", serif;
+      font-family: "Tinos-Bold", "Times New Roman", serif;
+      font-weight: 400;
 
       &:before, &:after {
         display: none;
@@ -420,7 +423,8 @@ main.main-document {
     .h#{$head}-imp {
       font-size: $head-size !important;
       line-height: 1.15 !important;
-      font-family: "Tinos", "Times New Roman", serif !important;
+      font-family: "Tinos-Bold", "Times New Roman", serif !important;
+      font-weight: 400 !important;
 
       &:before, &:after {
         display: none !important;

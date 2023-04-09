@@ -19,6 +19,46 @@
   font-style: normal;
   font-display: swap;
 }
+.ff-arimo {
+  font-family: "Arimo", sans-serif;
+}
+
+@font-face {
+  font-family: "Arimo-Italic";
+  src: url("../fonts/Arimo-Italic.eot");
+  src: url("../fonts/Arimo-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Arimo-Italic.woff") format("woff"), url("../fonts/Arimo-Italic.ttf") format("truetype"), url("../fonts/Arimo-Italic.svg?#webfont") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+.ff-arimo-italic {
+  font-family: "Arimo-Italic", sans-serif;
+}
+
+@font-face {
+  font-family: "Arimo-Bold";
+  src: url("../fonts/Arimo-Bold.eot");
+  src: url("../fonts/Arimo-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Arimo-Bold.woff") format("woff"), url("../fonts/Arimo-Bold.ttf") format("truetype"), url("../fonts/Arimo-Bold.svg?#webfont") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+.ff-arimo-bold {
+  font-family: "Arimo-Bold", sans-serif;
+}
+
+@font-face {
+  font-family: "Arimo-BoldItalic";
+  src: url("../fonts/Arimo-BoldItalic.eot");
+  src: url("../fonts/Arimo-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Arimo-BoldItalic.woff") format("woff"), url("../fonts/Arimo-BoldItalic.ttf") format("truetype"), url("../fonts/Arimo-BoldItalic.svg?#webfont") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+.ff-arimo-bolditalic {
+  font-family: "Arimo-BoldItalic", sans-serif;
+}
+
 @font-face {
   font-family: "Tinos";
   src: url("../fonts/Tinos-Regular.eot");
@@ -27,6 +67,46 @@
   font-style: normal;
   font-display: swap;
 }
+.ff-tinos {
+  font-family: "Tinos", serif;
+}
+
+@font-face {
+  font-family: "Tinos-Italic";
+  src: url("../fonts/Tinos-Italic.eot");
+  src: url("../fonts/Tinos-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Tinos-Italic.woff") format("woff"), url("../fonts/Tinos-Italic.ttf") format("truetype"), url("../fonts/Tinos-Italic.svg?#webfont") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+.ff-tinos-italic {
+  font-family: "Tinos-Italic", serif;
+}
+
+@font-face {
+  font-family: "Tinos-Bold";
+  src: url("../fonts/Tinos-Bold.eot");
+  src: url("../fonts/Tinos-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Tinos-Bold.woff") format("woff"), url("../fonts/Tinos-Bold.ttf") format("truetype"), url("../fonts/Tinos-Bold.svg?#webfont") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+.ff-tinos-bold {
+  font-family: "Tinos-Bold", serif;
+}
+
+@font-face {
+  font-family: "Tinos-BoldItalic";
+  src: url("../fonts/Tinos-BoldItalic.eot");
+  src: url("../fonts/Tinos-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Tinos-BoldItalic.woff") format("woff"), url("../fonts/Tinos-BoldItalic.ttf") format("truetype"), url("../fonts/Tinos-BoldItalic.svg?#webfont") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+.ff-tinos-bolditalic {
+  font-family: "Tinos-BoldItalic", serif;
+}
+
 @font-face {
   font-family: "Hack";
   src: url("../fonts/Hack-Regular.eot");
@@ -35,6 +115,10 @@
   font-style: normal;
   font-display: swap;
 }
+.ff-hack {
+  font-family: "Hack", sans-serif;
+}
+
 @-webkit-keyframes rotating {
   0% {
     transform: rotate(0deg);
@@ -17282,7 +17366,8 @@ main.main-document h1,
 main.main-document .h1 {
   font-size: 2.5em;
   line-height: 1.15;
-  font-family: "Tinos", "Times New Roman", serif;
+  font-family: "Tinos-Bold", "Times New Roman", serif;
+  font-weight: 400;
 }
 main.main-document h1:before, main.main-document h1:after,
 main.main-document .h1:before,
@@ -17292,7 +17377,8 @@ main.main-document .h1:after {
 main.main-document .h1-imp {
   font-size: 2.5em !important;
   line-height: 1.15 !important;
-  font-family: "Tinos", "Times New Roman", serif !important;
+  font-family: "Tinos-Bold", "Times New Roman", serif !important;
+  font-weight: 400 !important;
 }
 main.main-document .h1-imp:before, main.main-document .h1-imp:after {
   display: none !important;
@@ -17301,7 +17387,8 @@ main.main-document h2,
 main.main-document .h2 {
   font-size: 2.25em;
   line-height: 1.15;
-  font-family: "Tinos", "Times New Roman", serif;
+  font-family: "Tinos-Bold", "Times New Roman", serif;
+  font-weight: 400;
 }
 main.main-document h2:before, main.main-document h2:after,
 main.main-document .h2:before,
@@ -17311,7 +17398,8 @@ main.main-document .h2:after {
 main.main-document .h2-imp {
   font-size: 2.25em !important;
   line-height: 1.15 !important;
-  font-family: "Tinos", "Times New Roman", serif !important;
+  font-family: "Tinos-Bold", "Times New Roman", serif !important;
+  font-weight: 400 !important;
 }
 main.main-document .h2-imp:before, main.main-document .h2-imp:after {
   display: none !important;
@@ -17320,7 +17408,8 @@ main.main-document h3,
 main.main-document .h3 {
   font-size: 2em;
   line-height: 1.15;
-  font-family: "Tinos", "Times New Roman", serif;
+  font-family: "Tinos-Bold", "Times New Roman", serif;
+  font-weight: 400;
 }
 main.main-document h3:before, main.main-document h3:after,
 main.main-document .h3:before,
@@ -17330,7 +17419,8 @@ main.main-document .h3:after {
 main.main-document .h3-imp {
   font-size: 2em !important;
   line-height: 1.15 !important;
-  font-family: "Tinos", "Times New Roman", serif !important;
+  font-family: "Tinos-Bold", "Times New Roman", serif !important;
+  font-weight: 400 !important;
 }
 main.main-document .h3-imp:before, main.main-document .h3-imp:after {
   display: none !important;
@@ -17339,7 +17429,8 @@ main.main-document h4,
 main.main-document .h4 {
   font-size: 16pt;
   line-height: 1.15;
-  font-family: "Tinos", "Times New Roman", serif;
+  font-family: "Tinos-Bold", "Times New Roman", serif;
+  font-weight: 400;
 }
 main.main-document h4:before, main.main-document h4:after,
 main.main-document .h4:before,
@@ -17349,7 +17440,8 @@ main.main-document .h4:after {
 main.main-document .h4-imp {
   font-size: 16pt !important;
   line-height: 1.15 !important;
-  font-family: "Tinos", "Times New Roman", serif !important;
+  font-family: "Tinos-Bold", "Times New Roman", serif !important;
+  font-weight: 400 !important;
 }
 main.main-document .h4-imp:before, main.main-document .h4-imp:after {
   display: none !important;
@@ -17358,7 +17450,8 @@ main.main-document h5,
 main.main-document .h5 {
   font-size: 15pt;
   line-height: 1.15;
-  font-family: "Tinos", "Times New Roman", serif;
+  font-family: "Tinos-Bold", "Times New Roman", serif;
+  font-weight: 400;
 }
 main.main-document h5:before, main.main-document h5:after,
 main.main-document .h5:before,
@@ -17368,7 +17461,8 @@ main.main-document .h5:after {
 main.main-document .h5-imp {
   font-size: 15pt !important;
   line-height: 1.15 !important;
-  font-family: "Tinos", "Times New Roman", serif !important;
+  font-family: "Tinos-Bold", "Times New Roman", serif !important;
+  font-weight: 400 !important;
 }
 main.main-document .h5-imp:before, main.main-document .h5-imp:after {
   display: none !important;
@@ -17377,7 +17471,8 @@ main.main-document h6,
 main.main-document .h6 {
   font-size: 14pt;
   line-height: 1.15;
-  font-family: "Tinos", "Times New Roman", serif;
+  font-family: "Tinos-Bold", "Times New Roman", serif;
+  font-weight: 400;
 }
 main.main-document h6:before, main.main-document h6:after,
 main.main-document .h6:before,
@@ -17387,7 +17482,8 @@ main.main-document .h6:after {
 main.main-document .h6-imp {
   font-size: 14pt !important;
   line-height: 1.15 !important;
-  font-family: "Tinos", "Times New Roman", serif !important;
+  font-family: "Tinos-Bold", "Times New Roman", serif !important;
+  font-weight: 400 !important;
 }
 main.main-document .h6-imp:before, main.main-document .h6-imp:after {
   display: none !important;
