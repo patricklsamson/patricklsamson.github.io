@@ -1240,7 +1240,7 @@
 
 @mixin paper($width: 8.5, $height: 11, $spacing: 0.25) {
   width: #{$width}in;
-  height: calc(#{$height}in - #{$spacing}in);
+  height: #{$height - $spacing}in;
   margin-bottom: #{$spacing}in;
   padding: #{$spacing}in #{$spacing}in 0;
 

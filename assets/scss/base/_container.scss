@@ -676,13 +676,13 @@ main.main-document {
 
   @media print {
     background: transparent;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
   }
 
-  &.bg-white {
-    background: hsl(0, 0%, 100%);
+  &.bg-transparent {
+    background: transparent;
   }
 
   @for $i from 1 through 6 {

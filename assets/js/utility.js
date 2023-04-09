@@ -154,7 +154,7 @@ function page_nav(callback) {
   add_event(id("save-page-btn"), "click", function () {
     var paperSize = this.className;
 
-    add_class(qsel(".main-document"), "bg-white");
+    add_class(qsel(".main-document"), "bg-transparent");
 
     for (i = 0; i < qsel_all(".p-pgnum").length; i++) {
       add_class(qsel_all(".p-pgnum")[i], "d-none-before");
@@ -187,7 +187,7 @@ function page_nav(callback) {
       }).from(qsel(".main-document")).save();
 
       setTimeout(function () {
-        remove_class(qsel(".main-document"), "bg-white");
+        remove_class(qsel(".main-document"), "bg-transparent");
 
         for (i = 0; i < qsel_all(".p-pgnum").length; i++) {
           remove_class(qsel_all(".p-pgnum")[i], "d-none-before");

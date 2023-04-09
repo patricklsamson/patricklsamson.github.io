@@ -408,7 +408,7 @@ main.main-document {
   @each $head, $head-size in $head-sizes {
     h#{$head},
     .h#{$head} {
-      font-size: #{$head-size};
+      font-size: $head-size;
       line-height: 1.15;
       font-family: "Tinos", "Times New Roman", serif;
 
@@ -418,7 +418,7 @@ main.main-document {
     }
 
     .h#{$head}-imp {
-      font-size: #{$head-size} !important;
+      font-size: $head-size !important;
       line-height: 1.15 !important;
       font-family: "Tinos", "Times New Roman", serif !important;
 

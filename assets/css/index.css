@@ -224,6 +224,17 @@ html {
   box-sizing: border-box;
 }
 
+@media print {
+  :root,
+html,
+body {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
 *,
 *:before,
 *:after {
@@ -12994,13 +13005,13 @@ main.main-document {
 @media print {
   main.main-document {
     background: transparent;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
   }
 }
-main.main-document.bg-white {
-  background: white;
+main.main-document.bg-transparent {
+  background: transparent;
 }
 main.main-document h1 {
   margin-bottom: 2pt;
@@ -13034,7 +13045,7 @@ main.main-document .wrap-paper {
   overflow: hidden;
   background: #fff;
   width: 8.5in;
-  height: calc(11in - 0.25in);
+  height: 10.75in;
   margin-bottom: 0.25in;
   padding: 0.25in 0.25in 0;
 }
