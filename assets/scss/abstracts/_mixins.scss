@@ -395,6 +395,13 @@
     wbr {
       @content;
     }
+  } @else if $set == monospace {
+    pre,
+    code,
+    kbd,
+    samp {
+      @content;
+    }
   }
 }
 

@@ -3,9 +3,9 @@
 
 @page {
   size: auto;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 @include scrollbar(t, $dgray, $dcyan, $white, 10, t, t, -80%);
@@ -20,12 +20,6 @@ html {
     ),
     webkit moz
   );
-
-  @media print {
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-  }
 }
 
 @include elements {
@@ -39,12 +33,6 @@ html {
 
 body {
   overflow-x: hidden;
-
-  @media print {
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-  }
 }
 
 @include elements(margin-padding) {

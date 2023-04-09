@@ -3,9 +3,9 @@
 
 html,
 body {
-  font-size: 16px !important;
+  font-size: 16px;
   line-height: 1.5;
-  font-family: "arial", sans-serif;
+  font-family: "Arimo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   @include prefix(
     (
@@ -130,6 +130,10 @@ a,
       webkit moz
     );
   }
+}
+
+@include elements(monospace) {
+  font-family: "Hack", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .talign {
@@ -369,7 +373,8 @@ a,
 }
 
 main.main-document {
-  font-size: calc(10pt * #{$multiplier}) !important;
+  font-size: calc(10pt * #{$multiplier});
+  font-family: "Arimo", "Arial", sans-serif;
   line-height: 1.15;
 
   @for $i from 1 through 3 {
@@ -379,7 +384,7 @@ main.main-document {
     .h#{$i} {
       font-size: $em;
       line-height: 1.15;
-      font-family: "cambria", serif;
+      font-family: "Tinos", "Times New Roman", serif;
 
       &:before, &:after {
         display: none;
@@ -389,7 +394,7 @@ main.main-document {
     .h#{$i}-imp {
       font-size: $em !important;
       line-height: 1.15 !important;
-      font-family: "cambria", serif !important;
+      font-family: "Tinos", "Times New Roman", serif !important;
 
       &:before, &:after {
         display: none !important;
@@ -402,7 +407,7 @@ main.main-document {
     .h#{$head} {
       font-size: calc(#{$head-size} * #{$multiplier});
       line-height: 1.15;
-      font-family: "cambria", serif;
+      font-family: "Tinos", "Times New Roman", serif;
 
       &:before, &:after {
         display: none;
@@ -412,7 +417,7 @@ main.main-document {
     .h#{$head}-imp {
       font-size: calc(#{$head-size} * #{$multiplier}) !important;
       line-height: 1.15 !important;
-      font-family: "cambria", serif !important;
+      font-family: "Tinos", "Times New Roman", serif !important;
 
       &:before, &:after {
         display: none !important;
