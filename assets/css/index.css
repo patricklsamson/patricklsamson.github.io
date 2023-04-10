@@ -14209,7 +14209,7 @@ wbr {
   font-size: inherit;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  color: black;
+  color: inherit;
 }
 
 a,
