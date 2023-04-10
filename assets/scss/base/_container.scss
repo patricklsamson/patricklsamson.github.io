@@ -71,20 +71,20 @@
     }
   }
 
-  @each $mq, $class in $min-mqs {
-    @include mq($mq) {
+  @each $min-max-mq in $min-max-mqs {
+    @include mq($min-max-mq) {
       @for $i from 1 through 12 {
         $percentage: m.div($i * 100%, 12);
 
-        .gcol-#{$class}-#{$i} {
+        .gcol-#{$min-max-mq}-#{$i} {
           max-width: $percentage;
         }
 
-        .#{$class}-push-#{$i} {
+        .push-#{$min-max-mq}-#{$i} {
           left: $percentage;
         }
 
-        .#{$class}-pull-#{$i} {
+        .pull-#{$min-max-mq}-#{$i} {
           right: $percentage;
         }
       }
