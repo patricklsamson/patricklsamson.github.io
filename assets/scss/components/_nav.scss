@@ -258,7 +258,7 @@ nav {
           @include vis(visible) {
             opacity: 1;
             width: 180px;
-            height: 175px;
+            height: 135px;
           }
         }
       }
@@ -290,45 +290,22 @@ nav {
       .menu-container {
         button {
           padding: 5px 10px;
-        }
 
-        button#save-page-btn {
-          margin-bottom: 30px;
-          display: block;
+          &#save-page-btn {
+            margin-bottom: 20px;
 
-          span {
-            &::before {
-              content: "SAVE (Canvas)";
+            span {
+              &::before {
+                content: "SAVE (Canvas)";
+              }
             }
           }
-        }
 
-        input#dynamic-print[type="checkbox"] {
-          position: relative;
-
-          @include pseudo() {
-            position: absolute;
-            left: -4px;
-            bottom: 30px;
-            width: 140px;
-            border: 1px solid $white;
-          };
-        }
-
-        label[for="dynamic-print"] {
-          span {
-            &::before {
-              content: "Dynamic Print";
-            }
-          }
-        }
-
-        button#save-page-native-btn {
-          margin-top: 10px;
-
-          span {
-            &::before {
-              content: "SAVE (Native)";
+          &#save-page-native-btn {
+            span {
+              &::before {
+                content: "SAVE (Native)";
+              }
             }
           }
         }

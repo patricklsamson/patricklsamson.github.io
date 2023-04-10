@@ -199,12 +199,6 @@ function page_nav(callback) {
   add_event(id("save-page-native-btn"), "click", function () {
     window.print();
   });
-
-  add_event(id("dynamic-print"), "click", function () {
-    for (i = 0; i < qsel_all(".wrap-paper").length; i++) {
-      toggle_class(qsel_all(".wrap-paper")[i], "dynamic-print");
-    }
-  });
 }
 
 function fixed_el(

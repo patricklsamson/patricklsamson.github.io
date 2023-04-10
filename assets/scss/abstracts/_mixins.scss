@@ -1278,27 +1278,6 @@
   }
 }
 
-@mixin paper($width: 8.5, $height: 11, $spacing: 0.25) {
-  width: #{$width}in;
-  height: #{$height - $spacing}in;
-  margin-bottom: #{$spacing}in;
-  padding: #{$spacing}in #{$spacing}in 0;
-
-  .p-pgnum {
-    padding: 1em #{$spacing}in 0;
-    margin: 0;
-  }
-
-  &.dynamic-print {
-    @media print {
-      width: 100% !important;
-      height: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-  }
-}
-
 @mixin pgnum($position: right) {
   #{$position}: 0;
 
