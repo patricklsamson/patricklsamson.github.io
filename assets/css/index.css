@@ -308,6 +308,12 @@ i[id*=btn] {
   padding: 0;
   border: 0;
 }
+@media print {
+  header, footer {
+    display: none;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -14202,6 +14208,7 @@ wbr {
   font-size: inherit;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  color: black;
 }
 
 a,

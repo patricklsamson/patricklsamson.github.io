@@ -8,6 +8,12 @@
   border: 0;
 }
 
+header, footer {
+  @media print {
+    display: none;
+  }
+}
+
 @include scrollbar(t, $dgray, $dcyan, $white, 10, t, t, -80%);
 
 :root,
