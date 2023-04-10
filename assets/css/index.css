@@ -304,7 +304,7 @@ i[id*=btn] {
 
 @page {
   size: auto;
-  margin: 0.25in !important;
+  margin: 0 !important;
   padding: 0 !important;
   border: 0 !important;
 }
