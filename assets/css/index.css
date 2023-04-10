@@ -13836,8 +13836,8 @@ main.main-document .wrap-paper {
 }
 @media print {
   main.main-document .wrap-paper {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
   }
