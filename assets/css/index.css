@@ -44591,7 +44591,6 @@ nav#page-nav button#page-nav-btn.active ~ #page-nav-coll-wrap {
 nav#page-nav #page-nav-coll-wrap {
   background: rgba(53, 59, 65, 0.9);
   padding: 20px;
-  color: #f9fafb;
 }
 @media only screen and (min-width: 1200px) {
   nav#page-nav #page-nav-coll-wrap {
