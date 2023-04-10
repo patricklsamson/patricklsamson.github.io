@@ -685,21 +685,25 @@ main.main-document {
     background: transparent;
   }
 
-  @for $i from 1 through 6 {
-    h#{$i} {
-      margin-bottom: 2pt;
-    }
-  }
-
   header,
   footer,
   section {
-    margin-bottom: 5pt;
+    margin-bottom: 0.5em;
   }
 
-  li,
-  p {
-    margin-bottom: 2pt;
+  @for $i from 1 through 6 {
+    $line-spacing: 0.15em;
+
+    h#{$i} {
+      margin-bottom: $line-spacing;
+    }
+
+    @if $i == 6 {
+      li,
+      p {
+        margin-bottom: $line-spacing;
+      }
+    }
   }
 
   .wrap-paper {

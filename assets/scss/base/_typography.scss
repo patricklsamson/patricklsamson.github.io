@@ -381,7 +381,7 @@ main.main-document {
   font-family: "Arimo", "Arial", sans-serif;
   line-height: 1.15;
 
-  @for $i from 1 through 3 {
+  @for $i from 1 through 6 {
     $em: -0.25 * $i + 2.75em;
 
     h#{$i},
@@ -397,29 +397,6 @@ main.main-document {
 
     .h#{$i}-imp {
       font-size: $em !important;
-      line-height: 1.15 !important;
-      font-family: "Tinos-Bold", $serif-fb !important;
-
-      &:before, &:after {
-        display: none !important;
-      }
-    }
-  }
-
-  @each $head, $head-size in $head-sizes {
-    h#{$head},
-    .h#{$head} {
-      font-size: $head-size;
-      line-height: 1.15;
-      font-family: "Tinos-Bold", $serif-fb;
-
-      &:before, &:after {
-        display: none;
-      }
-    }
-
-    .h#{$head}-imp {
-      font-size: $head-size !important;
       line-height: 1.15 !important;
       font-family: "Tinos-Bold", $serif-fb !important;
 
