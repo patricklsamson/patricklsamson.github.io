@@ -44928,6 +44928,7 @@ form #message-notice.show {
   background-image: url("../img/practice.JPG");
 }
 
+#api,
 #rwd,
 #caspio,
 #sql-server {
@@ -44935,7 +44936,8 @@ form #message-notice.show {
   margin: 8px;
 }
 @media only screen and (max-width: 575px) {
-  #rwd,
+  #api,
+#rwd,
 #caspio,
 #sql-server {
     height: 1.5em;
