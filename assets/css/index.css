@@ -44331,11 +44331,6 @@ nav#top-nav.bg-change #nav-btn:after {
 nav#top-nav.bg-change li:hover:before, nav#top-nav.bg-change li:hover:after {
   text-shadow: 0 2px 5px rgba(249, 250, 251, 0.4);
 }
-nav#top-nav img {
-  position: relative;
-  width: 50px;
-  z-index: 3;
-}
 nav#top-nav button#top-nav-btn {
   position: relative;
   z-index: 8;
@@ -44849,6 +44844,12 @@ form #message-notice.show {
   }
 }
 
+#slnc-logo {
+  position: relative;
+  width: 50px;
+  z-index: 3;
+}
+
 header {
   background-image: url("../img/blue-gray-wp.jpg");
 }
@@ -44856,6 +44857,149 @@ header {
   header.img {
     background-size: 140% 100%;
   }
+}
+header i {
+  text-shadow: 0 2px 4px #f9fafb, 0 -2px 4px #f9fafb;
+  vertical-align: middle;
+  margin: 8px;
+  color: #353b41;
+}
+@media only screen and (max-width: 575px) {
+  header i.fa-2x {
+    font-size: 1.5em;
+  }
+}
+header i.fa-square {
+  color: #66b2b2;
+  text-shadow: 0 2px 4px #353b41, 0 -2px 4px #353b41;
+  margin: 0 5px;
+  font-size: 1em;
+}
+header i.fa-html5 {
+  color: #e34f26;
+}
+header i.fa-css3-alt {
+  color: #1573b7;
+}
+header i.fa-sass {
+  color: #cc6699;
+}
+header i.fa-bootstrap {
+  color: #7851b3;
+}
+header i.fa-git-alt {
+  color: #f04f33;
+}
+header i.fa-markdown {
+  color: black;
+}
+header i.fa-laravel {
+  color: #ff2a1f;
+}
+header i.fa-react {
+  text-shadow: none;
+  color: #60d9fb;
+  background: #353b41;
+  padding: 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+header i.fa-js {
+  text-shadow: none;
+  color: #f7dd1d;
+  background: black;
+  line-height: 0.9;
+}
+header i.fa-wordpress {
+  color: #21759c;
+}
+header i.fa-docker {
+  color: #2697ed;
+}
+header i.fa-php {
+  text-shadow: none;
+  color: #000;
+  background: #787cb5;
+  padding: 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+header i.fa-node-js {
+  color: #339933;
+}
+header svg {
+  width: 2em;
+  vertical-align: middle;
+  background: transparent;
+  margin: 8px;
+  -webkit-filter: drop-shadow(0 2px 4px #f9fafb) drop-shadow(0 -2px 4px #f9fafb);
+  filter: drop-shadow(0 2px 4px #f9fafb) drop-shadow(0 -2px 4px #f9fafb);
+}
+header svg path {
+  fill: #353b41;
+}
+@media only screen and (max-width: 575px) {
+  header svg {
+    width: 1.5em;
+  }
+}
+header svg.jquery path {
+  fill: #0767ab;
+}
+header svg.ruby path {
+  fill: #cd352d;
+}
+header svg.rails path {
+  fill: #cc0000;
+}
+header svg.postgresql {
+  background: royalblue;
+  padding: 5px;
+}
+header svg.postgresql path {
+  fill: #f9fafb;
+}
+header svg.lumen path {
+  fill: #e74732;
+}
+header svg.typescript {
+  background: #f9fafb;
+}
+header svg.typescript path {
+  fill: #3178c4;
+}
+header svg.xampp path {
+  fill: #fb7923;
+}
+header svg.golang path {
+  fill: #00abd6;
+}
+header svg.nestjs path {
+  fill: #e02450;
+}
+header svg.graphql path {
+  fill: #e00099;
+}
+header svg.apollo-gq path {
+  fill: #311c87;
+}
+header svg.serverless path {
+  fill: #fd544e;
+}
+header svg.lambda {
+  background: #ff9900;
+  padding: 5px;
+}
+header svg.lambda path {
+  fill: #f9fafb;
+}
+header svg.lens path {
+  fill: #3b8ece;
+}
+header svg.tailwind path {
+  fill: #07b6d5;
 }
 
 main {
@@ -44957,149 +45101,25 @@ main {
   }
 }
 
-i {
-  text-shadow: 0 2px 4px #f9fafb, 0 -2px 4px #f9fafb;
-  vertical-align: middle;
-  margin: 8px;
-  color: #353b41;
+footer i {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), 0 -1px 1px rgba(0, 0, 0, 0.5);
+  vertical-align: bottom;
+  margin: 0 10px;
 }
-@media only screen and (max-width: 575px) {
-  i.fa-2x {
-    font-size: 1.5em;
-  }
+footer i.fa-linkedin {
+  color: #0a66c2;
 }
-i.fa-square {
-  color: #66b2b2;
-  text-shadow: 0 2px 4px #353b41, 0 -2px 4px #353b41;
-  margin: 0 5px;
-  font-size: 1em;
+footer i.fa-stack-overflow {
+  color: #f57e24;
 }
-i.fa-html5 {
-  color: #e34f26;
+footer i.fa-github {
+  color: #181717;
 }
-i.fa-css3-alt {
-  color: #1573b7;
+footer i.fa-yahoo {
+  color: #5e01d0;
 }
-i.fa-sass {
-  color: #cc6699;
-}
-i.fa-bootstrap {
-  color: #7851b3;
-}
-i.fa-git-alt {
-  color: #f04f33;
-}
-i.fa-markdown {
-  color: black;
-}
-i.fa-laravel {
-  color: #ff2a1f;
-}
-i.fa-react {
-  text-shadow: none;
-  color: #60d9fb;
-  background: #353b41;
-  padding: 5px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-}
-i.fa-js {
-  text-shadow: none;
-  color: #f7dd1d;
-  background: black;
-  line-height: 0.9;
-}
-i.fa-wordpress {
-  color: #21759c;
-}
-i.fa-docker {
-  color: #2697ed;
-}
-i.fa-php {
-  text-shadow: none;
-  color: #000;
-  background: #787cb5;
-  padding: 5px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-}
-i.fa-node-js {
-  color: #339933;
-}
-
-svg {
-  width: 2em;
-  vertical-align: middle;
-  background: transparent;
-  margin: 8px;
-  -webkit-filter: drop-shadow(0 2px 4px #f9fafb) drop-shadow(0 -2px 4px #f9fafb);
-  filter: drop-shadow(0 2px 4px #f9fafb) drop-shadow(0 -2px 4px #f9fafb);
-}
-svg path {
-  fill: #353b41;
-}
-@media only screen and (max-width: 575px) {
-  svg {
-    width: 1.5em;
-  }
-}
-svg.jquery path {
-  fill: #0767ab;
-}
-svg.ruby path {
-  fill: #cd352d;
-}
-svg.rails path {
-  fill: #cc0000;
-}
-svg.postgresql {
-  background: royalblue;
-  padding: 5px;
-}
-svg.postgresql path {
-  fill: #f9fafb;
-}
-svg.lumen path {
-  fill: #e74732;
-}
-svg.typescript {
-  background: #f9fafb;
-}
-svg.typescript path {
-  fill: #3178c4;
-}
-svg.xampp path {
-  fill: #fb7923;
-}
-svg.golang path {
-  fill: #00abd6;
-}
-svg.nestjs path {
-  fill: #e02450;
-}
-svg.graphql path {
-  fill: #e00099;
-}
-svg.apollo-gq path {
-  fill: #311c87;
-}
-svg.serverless path {
-  fill: #fd544e;
-}
-svg.lambda {
-  background: #ff9900;
-  padding: 5px;
-}
-svg.lambda path {
-  fill: #f9fafb;
-}
-svg.lens path {
-  fill: #3b8ece;
-}
-svg.tailwind path {
-  fill: #07b6d5;
+footer i.fa-envelope, footer i.fa-phone-alt {
+  color: #3c7777;
 }
 
 @media only screen and (min-width: 576px) {
@@ -45215,26 +45235,6 @@ footer {
   footer .wrap-white {
     width: 75%;
   }
-}
-footer .wrap-white i {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), 0 -1px 1px rgba(0, 0, 0, 0.5);
-  vertical-align: bottom;
-  margin: 0 10px;
-}
-footer .wrap-white i.fa-linkedin {
-  color: #0a66c2;
-}
-footer .wrap-white i.fa-stack-overflow {
-  color: #f57e24;
-}
-footer .wrap-white i.fa-github {
-  color: #181717;
-}
-footer .wrap-white i.fa-yahoo {
-  color: #5e01d0;
-}
-footer .wrap-white i.fa-envelope, footer .wrap-white i.fa-phone-alt {
-  color: #3c7777;
 }
 footer .copyright {
   background: #353b41;

@@ -32,12 +32,6 @@ nav {
       }
     }
 
-    img {
-      position: relative;
-      width: 50px;
-      z-index: z("logo");
-    }
-
     button#top-nav-btn {
       position: relative;
       z-index: z("top-nav-btn");
