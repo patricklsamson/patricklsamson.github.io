@@ -101,7 +101,9 @@ i {
   color: hsl(210, 10%, 23%);
 
   @include mq(xs) {
-    font-size: 1.5em !important;
+    &.fa-2x {
+      font-size: 1.5em;
+    }
   }
 
   &.fa-square {
