@@ -44849,6 +44849,19 @@ form #message-notice.show {
   }
 }
 
+header {
+  background-image: url("../img/blue-gray-wp.jpg");
+}
+@media only screen and (max-width: 1199px) {
+  header.img {
+    background-size: 140% 100%;
+  }
+}
+
+main {
+  background-image: url("https://images.unsplash.com/photo-1629193266680-9193cc4a0c81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80");
+}
+
 #myself {
   -webkit-border-radius: 25px 100px 200px;
   -moz-border-radius: 25px 100px 200px;
@@ -45089,14 +45102,6 @@ svg.tailwind path {
   fill: #07b6d5;
 }
 
-header {
-  background-image: url("../img/blue-gray-wp.jpg");
-}
-@media only screen and (max-width: 1199px) {
-  header.img {
-    background-size: 140% 100%;
-  }
-}
 @media only screen and (min-width: 576px) {
   header p:nth-child(3) {
     width: 75%;
@@ -45149,9 +45154,6 @@ header [class*=gcol]:nth-child(even) {
   }
 }
 
-main {
-  background-image: url("https://images.unsplash.com/photo-1629193266680-9193cc4a0c81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80");
-}
 main .cont:first-child .grid-cont {
   -ms-grid-rows: (20vh) [2];
   -ms-grid-columns: (30vw) [2];

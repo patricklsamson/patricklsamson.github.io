@@ -1,14 +1,6 @@
 @use "../../abstracts" as *;
 
 header {
-  @include bg($blue-gray-wp);
-
-  &.img {
-    @include mq(lg) {
-      background-size: 140% 100%;
-    }
-  }
-
   p {
     &:nth-child(3) {
       @include mq(smup) {

@@ -1,5 +1,19 @@
 @use "../abstracts" as *;
 
+header {
+  @include bg($blue-gray-wp);
+
+  &.img {
+    @include mq(lg) {
+      background-size: 140% 100%;
+    }
+  }
+}
+
+main {
+  @include bg($wave-wp);
+}
+
 #myself {
   @include prefix(
     (
@@ -92,7 +106,6 @@
     height: 1.5em;
   }
 }
-
 
 i {
   text-shadow: 0 2px 4px $white, 0 -2px 4px $white;

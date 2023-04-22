@@ -1,8 +1,6 @@
 @use "../../abstracts" as *;
 
 main {
-  @include bg($wave-wp);
-
   .cont:first-child {
     .grid-cont {
       @include grid-cont(a-rep, 20vh, 30vw, 2, 2) {
