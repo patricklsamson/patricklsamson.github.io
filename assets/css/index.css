@@ -44928,22 +44928,16 @@ form #message-notice.show {
   background-image: url("../img/practice.JPG");
 }
 
-#rwd {
+#rwd,
+#caspio,
+#sql-server {
   height: 2em;
   margin: 8px;
 }
 @media only screen and (max-width: 575px) {
-  #rwd {
-    height: 1.5em;
-  }
-}
-
-#caspio {
-  height: 2em;
-  margin: 8px;
-}
-@media only screen and (max-width: 575px) {
-  #caspio {
+  #rwd,
+#caspio,
+#sql-server {
     height: 1.5em;
   }
 }
