@@ -3,15 +3,20 @@ doc_ready(() => {
 
   top_nav();
 
-  (function (next) {
-    add_event(window, "load", function () {
-      fixed_el(".h-add", ".nmt", ".pt-add", null, ".cvh");
-      next();
-    });
-  })(function () {
+  // (function (next) {
+  //   add_event(window, "load", function () {
+  //     fixed_el(".h-add", ".nmt", ".pt-add", null, ".cvh");
+  //     next();
+  //   });
+  // })(function () {
+  //   remove_class(document.body, "p-fixed");
+  //   remove_class(id("loader"), "animate");
+  // });
+
+  setTimeout(function () {
     remove_class(document.body, "p-fixed");
     remove_class(id("loader"), "animate");
-  });
+  }, 1000);
 
   scroll_class(id("top-nav"), "bg-change");
   match_height(".mh");
