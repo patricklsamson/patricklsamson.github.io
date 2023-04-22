@@ -3,6 +3,7 @@
 nav {
   position: relative;
   z-index: z("nav");
+  min-height: $nav-height;
 
   &#top-nav {
     position: fixed;
@@ -322,4 +323,18 @@ nav {
       }
     }
   }
+}
+
+.nav-sec-first {
+  padding-top: $nav-height + 20px;
+  min-height: 100vh;
+}
+
+.nav-sec-fluid {
+  min-height: calc(100vh - #{$nav-height});
+}
+
+.nav-sec-landing {
+  position: absolute;
+  margin-top: $nav-height * -1;
 }

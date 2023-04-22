@@ -44308,6 +44308,7 @@ main.main-document p.p-pgnum.d-none-before::before {
 nav {
   position: relative;
   z-index: 5;
+  min-height: 66px;
 }
 nav#top-nav {
   position: fixed;
@@ -44633,6 +44634,20 @@ nav .menu-container ul a {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.nav-sec-first {
+  padding-top: 86px;
+  min-height: 100vh;
+}
+
+.nav-sec-fluid {
+  min-height: calc(100vh - 66px);
+}
+
+.nav-sec-landing {
+  position: absolute;
+  margin-top: -66px;
+}
+
 .btn-bracket {
   border: none;
   background: transparent;
@@ -44919,6 +44934,16 @@ form #message-notice.show {
 }
 @media only screen and (max-width: 575px) {
   #rwd {
+    height: 1.5em;
+  }
+}
+
+#caspio {
+  height: 2em;
+  margin: 8px;
+}
+@media only screen and (max-width: 575px) {
+  #caspio {
     height: 1.5em;
   }
 }
