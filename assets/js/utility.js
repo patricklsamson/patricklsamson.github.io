@@ -252,7 +252,7 @@ function fixed_el(
   }
 
   if (elementBelowFixedElements) {
-    qsel(elementBelowFixedElements).style.paddingTop = height + "px";
+    qsel(elementBelowFixedElements).style.paddingTop = height + 20 + "px";
   }
 
   if (elementsAboveFixedElements) {
