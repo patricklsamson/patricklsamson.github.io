@@ -66,7 +66,7 @@ header {
       text-shadow: none;
       color: hsl(193, 95%, 68%);
       background: $dgray;
-      padding: 5px;
+      padding: 0 5px;
 
       @include prefix(
         (
@@ -80,7 +80,9 @@ header {
       text-shadow: none;
       color: hsl(53, 93%, 54%);
       background: hsl(0, 0%, 0%);
-      line-height: 0.9;
+      line-height: 0.8;
+      border-top: 5px solid hsl(53, 93%, 54%);
+      border-bottom: 5px solid hsl(53, 93%, 54%);
     }
 
     &.fa-wordpress {
@@ -95,7 +97,7 @@ header {
       text-shadow: none;
       color: #000;
       background: hsl(236, 29%, 59%);
-      padding: 5px;
+      padding: 0 5px;
 
       @include prefix(
         (

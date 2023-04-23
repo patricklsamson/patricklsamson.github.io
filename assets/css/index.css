@@ -44892,7 +44892,7 @@ header i.fa-react {
   text-shadow: none;
   color: #60d9fb;
   background: #353b41;
-  padding: 5px;
+  padding: 0 5px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -44901,7 +44901,9 @@ header i.fa-js {
   text-shadow: none;
   color: #f7dd1d;
   background: black;
-  line-height: 0.9;
+  line-height: 0.8;
+  border-top: 5px solid #f7dd1d;
+  border-bottom: 5px solid #f7dd1d;
 }
 header i.fa-wordpress {
   color: #21759c;
@@ -44913,7 +44915,7 @@ header i.fa-php {
   text-shadow: none;
   color: #000;
   background: #787cb5;
-  padding: 5px;
+  padding: 0 5px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
