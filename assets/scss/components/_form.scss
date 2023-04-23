@@ -10,10 +10,7 @@
       & ~ .search-box {
         input {
           pointer-events: auto;
-
-          @include vis(visible) {
-            opacity: 1;
-          }
+          @include vis(visible);
         }
       }
 
@@ -21,7 +18,6 @@
         @include vis(visible) {
           margin-top: 35px;
           max-height: 250px;
-          opacity: 1;
           overflow-y: scroll;
         }
       }
@@ -36,12 +32,8 @@
       width: 100%;
       position: absolute;
       pointer-events: none;
-
       @include tran(opacity);
-
-      @include vis(hidden) {
-        opacity: 0;
-      }
+      @include vis(hidden);
     }
   }
 
@@ -49,17 +41,14 @@
     position: absolute;
     width: 100%;
     overflow: hidden;
-
     @include tran;
 
     @include vis(hidden) {
-      opacity: 0;
       max-height: 0;
     }
 
     .option {
       cursor: pointer;
-
       @include tran;
 
       &:hover {
@@ -121,13 +110,11 @@ form {
     @include tran;
 
     @include vis(hidden) {
-      opacity: 0;
       height: 0;
     }
 
     &.show {
       @include vis(visible) {
-        opacity: 1;
         height: auto;
       }
     }

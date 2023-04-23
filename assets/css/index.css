@@ -44286,6 +44286,7 @@ main.main-document p.p-pgnum.d-none-before::before {
   background: #353b41;
   visibility: hidden;
   opacity: 0;
+  opacity: 0;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -44295,6 +44296,7 @@ main.main-document p.p-pgnum.d-none-before::before {
   animation: pulsing 10s infinite;
   z-index: 9;
   visibility: visible;
+  opacity: 1;
   opacity: 1;
 }
 .sec-loader.animate img {
@@ -44355,10 +44357,10 @@ nav#top-nav button#top-nav-btn:before {
   top: -6px;
   left: 2.5px;
   color: #f9fafb;
-  -webkit-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity;
+  -o-transition: opacity;
+  -moz-transition: opacity;
+  transition: opacity;
 }
 nav#top-nav button#top-nav-btn:after {
   content: "\f00d";
@@ -44456,10 +44458,10 @@ nav#side-nav button#side-nav-btn:before {
   top: -6px;
   left: 2.5px;
   color: #000;
-  -webkit-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity;
+  -o-transition: opacity;
+  -moz-transition: opacity;
+  transition: opacity;
 }
 nav#side-nav button#side-nav-btn:after {
   content: "\f00d";
@@ -44539,10 +44541,10 @@ nav#page-nav button#page-nav-btn:before {
   top: -6px;
   left: 2.5px;
   color: #000;
-  -webkit-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity;
+  -o-transition: opacity;
+  -moz-transition: opacity;
+  transition: opacity;
 }
 nav#page-nav button#page-nav-btn:after {
   content: "\f00d";
@@ -44692,16 +44694,13 @@ nav .menu-container ul a {
 }
 #portfolio-btn.active + #portfolio-dropdown {
   visibility: visible;
+  opacity: 1;
   height: 35vh;
 }
 @media only screen and (max-width: 991px) {
   #portfolio-btn.active + #portfolio-dropdown {
     height: 300px;
   }
-}
-#portfolio-btn.active + #portfolio-dropdown .owl-carousel {
-  height: auto;
-  opacity: 1;
 }
 
 #portfolio-dropdown {
@@ -44710,11 +44709,8 @@ nav .menu-container ul a {
   -moz-transition: all 0.25s;
   transition: all 0.25s;
   visibility: hidden;
-  height: 0;
-}
-#portfolio-dropdown .owl-carousel {
-  height: 0;
   opacity: 0;
+  height: 0;
 }
 
 .item {
@@ -44740,9 +44736,9 @@ nav .menu-container ul a {
 }
 .select-box .selected.active ~ .options-container {
   visibility: visible;
+  opacity: 1;
   margin-top: 35px;
   max-height: 250px;
-  opacity: 1;
   overflow-y: scroll;
 }
 .select-box .search-box {
@@ -44753,10 +44749,10 @@ nav .menu-container ul a {
   width: 100%;
   position: absolute;
   pointer-events: none;
-  -webkit-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity;
+  -o-transition: opacity;
+  -moz-transition: opacity;
+  transition: opacity;
   visibility: hidden;
   opacity: 0;
 }
