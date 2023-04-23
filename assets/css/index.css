@@ -44800,6 +44800,9 @@ form {
     width: 75%;
   }
 }
+form label span {
+  color: #c0fcfb;
+}
 form textarea {
   resize: none;
 }

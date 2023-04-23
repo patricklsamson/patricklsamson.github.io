@@ -88,6 +88,12 @@ form {
     width: 75%;
   }
 
+  label {
+    span {
+      color: $lcyan;
+    }
+  }
+
   textarea {
     resize: none;
   }
