@@ -37,7 +37,6 @@ doc_ready(() => {
     setTimeout(() => {
       id("g-form").reset();
       add_class(id("message-notice"), "show");
-      add_class(id("message-notice"), "mt-xs-10");
 
       setTimeout(() => {
         remove_class(id("message-notice"), "show");

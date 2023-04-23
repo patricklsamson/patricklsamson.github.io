@@ -123,14 +123,7 @@ form {
       @include vis(visible) {
         opacity: 1;
         height: auto;
-
-        @include mq(lgup) {
-          margin-top: 1rem;
-        }
-
-        @include mq(sm) {
-          margin-top: 1rem;
-        }
+        margin-top: 1rem;
       }
     }
   }
