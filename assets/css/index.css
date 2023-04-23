@@ -44320,7 +44320,7 @@ nav#top-nav {
   transition: all 0.5s;
 }
 nav#top-nav.bg-change {
-  background: rgba(53, 59, 65, 0.8);
+  background: #4c545d;
 }
 nav#top-nav.bg-change #nav-btn {
   border-color: #f9fafb;
