@@ -33,15 +33,15 @@ doc_ready(() => {
 
   add_event(id("g-form"), "submit", () => {
     submitted = true;
+    add_class(id("message-notice"), "show");
 
     setTimeout(() => {
       id("g-form").reset();
-      add_class(id("message-notice"), "show");
 
       setTimeout(() => {
         remove_class(id("message-notice"), "show");
-      }, 6000);
-    }, 3000);
+      }, 2000);
+    }, 500);
   });
 
   add_event(id("portfolio-btn"), "click", () => {
