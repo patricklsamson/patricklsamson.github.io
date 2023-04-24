@@ -1092,10 +1092,10 @@
   @content;
 }
 
-@mixin tran($property: all 0.5s) {
+@mixin tran($property: "all 0.5s") {
   @include prefix(
     (
-      transition: $property
+      transition: s.unquote($property)
     ),
     webkit o moz
   );

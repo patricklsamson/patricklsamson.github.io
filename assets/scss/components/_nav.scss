@@ -46,17 +46,20 @@ nav {
 
       @include fa(f0c9, fas, before) {
         position: absolute;
-        top: -6px;
+        top: 1px;
         left: 2.5px;
         color: $white;
-        @include tran(opacity);
+        line-height: 1;
+        @include tran("opacity 0.5s, visibility 0.5s");
+        @include vis(visible);
       }
 
       @include fa(f00d, fas) {
         position: absolute;
-        top: -6px;
+        top: 1px;
         left: 5px;
         color: $white;
+        line-height: 1;
         @include tran;
         @include vis(hidden);
       }
@@ -131,17 +134,20 @@ nav {
 
       @include fa(f0c9, fas, before) {
         position: absolute;
-        top: -6px;
+        top: 1px;
         left: 2.5px;
         color: #000;
-        @include tran(opacity);
+        line-height: 1;
+        @include tran("opacity 0.5s, visibility 0.5s");
+        @include vis(visible);
       }
 
       @include fa(f00d, fas) {
         position: absolute;
-        top: -6px;
+        top: 1px;
         left: 5px;
         color: #000;
+        line-height: 1;
         @include tran;
         @include vis(hidden);
       }
@@ -193,17 +199,20 @@ nav {
 
       @include fa(f0c9, fas, before) {
         position: absolute;
-        top: -6px;
+        top: 1px;
         left: 2.5px;
         color: #000;
-        @include tran(opacity);
+        line-height: 1;
+        @include tran("opacity 0.5s, visibility 0.5s");
+        @include vis(visible);
       }
 
       @include fa(f00d, fas) {
         position: absolute;
-        top: -6px;
+        top: 1px;
         left: 5px;
         color: #000;
+        line-height: 1;
         @include tran;
         @include vis(hidden);
       }

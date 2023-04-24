@@ -789,7 +789,7 @@ main.main-document {
   }
 
   .wrap-portfolio-inner {
-    @include tran(transform 0.8s);
+    @include tran("transform 0.8s");
 
     @include prefix(
       (

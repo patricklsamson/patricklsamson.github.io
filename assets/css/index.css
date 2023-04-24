@@ -44354,13 +44354,16 @@ nav#top-nav button#top-nav-btn:before {
   -webkit-font-smoothing: antialiased;
   font-weight: 900;
   position: absolute;
-  top: -6px;
+  top: 1px;
   left: 2.5px;
   color: #f9fafb;
-  -webkit-transition: opacity;
-  -o-transition: opacity;
-  -moz-transition: opacity;
-  transition: opacity;
+  line-height: 1;
+  -webkit-transition: opacity 0.5s, visibility 0.5s;
+  -o-transition: opacity 0.5s, visibility 0.5s;
+  -moz-transition: opacity 0.5s, visibility 0.5s;
+  transition: opacity 0.5s, visibility 0.5s;
+  visibility: visible;
+  opacity: 1;
 }
 nav#top-nav button#top-nav-btn:after {
   content: "\f00d";
@@ -44372,9 +44375,10 @@ nav#top-nav button#top-nav-btn:after {
   -webkit-font-smoothing: antialiased;
   font-weight: 900;
   position: absolute;
-  top: -6px;
+  top: 1px;
   left: 5px;
   color: #f9fafb;
+  line-height: 1;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -44455,13 +44459,16 @@ nav#side-nav button#side-nav-btn:before {
   -webkit-font-smoothing: antialiased;
   font-weight: 900;
   position: absolute;
-  top: -6px;
+  top: 1px;
   left: 2.5px;
   color: #000;
-  -webkit-transition: opacity;
-  -o-transition: opacity;
-  -moz-transition: opacity;
-  transition: opacity;
+  line-height: 1;
+  -webkit-transition: opacity 0.5s, visibility 0.5s;
+  -o-transition: opacity 0.5s, visibility 0.5s;
+  -moz-transition: opacity 0.5s, visibility 0.5s;
+  transition: opacity 0.5s, visibility 0.5s;
+  visibility: visible;
+  opacity: 1;
 }
 nav#side-nav button#side-nav-btn:after {
   content: "\f00d";
@@ -44473,9 +44480,10 @@ nav#side-nav button#side-nav-btn:after {
   -webkit-font-smoothing: antialiased;
   font-weight: 900;
   position: absolute;
-  top: -6px;
+  top: 1px;
   left: 5px;
   color: #000;
+  line-height: 1;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -44538,13 +44546,16 @@ nav#page-nav button#page-nav-btn:before {
   -webkit-font-smoothing: antialiased;
   font-weight: 900;
   position: absolute;
-  top: -6px;
+  top: 1px;
   left: 2.5px;
   color: #000;
-  -webkit-transition: opacity;
-  -o-transition: opacity;
-  -moz-transition: opacity;
-  transition: opacity;
+  line-height: 1;
+  -webkit-transition: opacity 0.5s, visibility 0.5s;
+  -o-transition: opacity 0.5s, visibility 0.5s;
+  -moz-transition: opacity 0.5s, visibility 0.5s;
+  transition: opacity 0.5s, visibility 0.5s;
+  visibility: visible;
+  opacity: 1;
 }
 nav#page-nav button#page-nav-btn:after {
   content: "\f00d";
@@ -44556,9 +44567,10 @@ nav#page-nav button#page-nav-btn:after {
   -webkit-font-smoothing: antialiased;
   font-weight: 900;
   position: absolute;
-  top: -6px;
+  top: 1px;
   left: 5px;
   color: #000;
+  line-height: 1;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   -moz-transition: all 0.5s;
