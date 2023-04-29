@@ -14718,6 +14718,10 @@ samp {
   font-family: "Hack", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+button {
+  color: black;
+}
+
 .talign {
   text-align: center;
 }
