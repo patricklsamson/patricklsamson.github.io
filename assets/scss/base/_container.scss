@@ -771,21 +771,20 @@ main.main-document {
     }
   }
 
-  @include mq(lgup) {
-    width: 30vw;
-  }
-
-  @include mq(lg) {
+  @include mq(xl) {
     width: 40vw;
   }
 
+  @include mq(lg) {
+    width: 38vw;
+  }
+
   @include mq(md) {
-    width: 70vw;
+    width: 100%;
   }
 
   @include mq(xxs) {
     height: 200px;
-    width: 100%;
   }
 
   .wrap-portfolio-inner {
@@ -846,11 +845,13 @@ main.main-document {
 
   @include mq(md) {
     border-left: 5px solid $cyan-04;
+    padding-right: 0 !important;
   }
 
   &.order-1 {
     @include mq(lgup) {
       border-right: 2.5px solid $cyan-04;
+      padding-left: 0;
 
       @include order(1);
 
@@ -880,6 +881,7 @@ main.main-document {
   &.order-2 {
     @include mq(lgup) {
       border-left: 2.5px solid $cyan-04;
+      padding-right: 0;
 
       @include order(2);
     }

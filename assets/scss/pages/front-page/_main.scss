@@ -3,16 +3,20 @@
 main {
   .cont:first-child {
     .grid-cont {
-      @include grid-cont(a-rep, 20vh, 30vw, 2, 2) {
+      @include grid-cont(a-rep, 20vh, 655px, 2, 2) {
         grid-gap: 20px;
       }
 
-      @include mq(lg) {
+      @include mq(xl) {
         @include grid-cont(a-rep, 20vh, 40vw, 2, 2);
       }
 
+      @include mq(lg) {
+        @include grid-cont(a-rep, 20vh, 38vw, 2, 2);
+      }
+
       @include mq(md) {
-        @include grid-cont(r-rep, 20vh, 70vw, 4);
+        @include grid-cont(r-rep, 20vh, 100%, 4);
       }
 
       @include mq(xxs) {
@@ -23,17 +27,17 @@ main {
 
   .wrap-branch {
     .grid-cont {
-      @include grid-cont(a-rep, auto, 30vw, 1, 2);
+      @include grid-cont(a-rep, auto, 665px, 1, 2);
 
-      @include mq(lg) {
+      @include mq(xl) {
         @include grid-cont(a-rep, auto, 40vw, 2, 2);
       }
 
-      @include mq(md) {
-        @include grid-cont(r-rep, auto, 70vw, 1);
+      @include mq(lg) {
+        @include grid-cont(a-rep, auto, 38vw, 2, 2);
       }
 
-      @include mq(xxs) {
+      @include mq(md) {
         @include grid-cont(r-rep, auto, 100%, 1);
       }
     }

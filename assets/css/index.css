@@ -13875,25 +13875,24 @@ main.main-document .wrap-paper p.p-pgnum {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-@media only screen and (min-width: 992px) {
-  .wrap-portfolio {
-    width: 30vw;
-  }
-}
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1399px) {
   .wrap-portfolio {
     width: 40vw;
   }
 }
+@media only screen and (max-width: 1199px) {
+  .wrap-portfolio {
+    width: 38vw;
+  }
+}
 @media only screen and (max-width: 991px) {
   .wrap-portfolio {
-    width: 70vw;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 480px) {
   .wrap-portfolio {
     height: 200px;
-    width: 100%;
   }
 }
 .wrap-portfolio .wrap-portfolio-inner {
@@ -13950,11 +13949,13 @@ main.main-document .wrap-paper p.p-pgnum {
 @media only screen and (max-width: 991px) {
   .wrap-experience {
     border-left: 5px solid rgba(102, 178, 178, 0.4);
+    padding-right: 0 !important;
   }
 }
 @media only screen and (min-width: 992px) {
   .wrap-experience.order-1 {
     border-right: 2.5px solid rgba(102, 178, 178, 0.4);
+    padding-left: 0;
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     -webkit-order: 1;
@@ -13989,6 +13990,7 @@ main.main-document .wrap-paper p.p-pgnum {
 @media only screen and (min-width: 992px) {
   .wrap-experience.order-2 {
     border-left: 2.5px solid rgba(102, 178, 178, 0.4);
+    padding-right: 0;
     -webkit-box-ordinal-group: 3;
     -moz-box-ordinal-group: 3;
     -webkit-order: 2;
@@ -45182,22 +45184,29 @@ header [class*=gcol]:nth-child(even) {
 
 main .cont:first-child .grid-cont {
   -ms-grid-rows: (20vh) [2];
-  -ms-grid-columns: (30vw) [2];
-  grid-template: repeat(2, 20vh)/repeat(2, 30vw);
+  -ms-grid-columns: (655px) [2];
+  grid-template: repeat(2, 20vh)/repeat(2, 655px);
   grid-gap: 20px;
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1399px) {
   main .cont:first-child .grid-cont {
     -ms-grid-rows: (20vh) [2];
     -ms-grid-columns: (40vw) [2];
     grid-template: repeat(2, 20vh)/repeat(2, 40vw);
   }
 }
+@media only screen and (max-width: 1199px) {
+  main .cont:first-child .grid-cont {
+    -ms-grid-rows: (20vh) [2];
+    -ms-grid-columns: (38vw) [2];
+    grid-template: repeat(2, 20vh)/repeat(2, 38vw);
+  }
+}
 @media only screen and (max-width: 991px) {
   main .cont:first-child .grid-cont {
     -ms-grid-rows: (20vh) [4];
-    -ms-grid-columns: 70vw;
-    grid-template: repeat(4, 20vh)/70vw;
+    -ms-grid-columns: 100%;
+    grid-template: repeat(4, 20vh)/100%;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -45209,24 +45218,24 @@ main .cont:first-child .grid-cont {
 }
 main .wrap-branch .grid-cont {
   -ms-grid-rows: (auto) [2];
-  -ms-grid-columns: (30vw) [2];
-  grid-template: repeat(2, auto)/repeat(2, 30vw);
+  -ms-grid-columns: (665px) [2];
+  grid-template: repeat(2, auto)/repeat(2, 665px);
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1399px) {
   main .wrap-branch .grid-cont {
     -ms-grid-rows: (auto) [2];
     -ms-grid-columns: (40vw) [2];
     grid-template: repeat(2, auto)/repeat(2, 40vw);
   }
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1199px) {
   main .wrap-branch .grid-cont {
-    -ms-grid-rows: (auto) [1];
-    -ms-grid-columns: 70vw;
-    grid-template: repeat(1, auto)/70vw;
+    -ms-grid-rows: (auto) [2];
+    -ms-grid-columns: (38vw) [2];
+    grid-template: repeat(2, auto)/repeat(2, 38vw);
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 991px) {
   main .wrap-branch .grid-cont {
     -ms-grid-rows: (auto) [1];
     -ms-grid-columns: 100%;
