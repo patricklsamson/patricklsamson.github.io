@@ -44870,7 +44870,7 @@ header i {
   margin: 8px;
   color: #353b41;
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 767px) {
   header i.fa-2x {
     font-size: 1.5em;
   }
@@ -44948,7 +44948,7 @@ header svg {
 header svg path {
   fill: #353b41;
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 767px) {
   header svg {
     width: 1.5em;
   }
@@ -45100,7 +45100,7 @@ main {
   height: 2em;
   margin: 8px;
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 767px) {
   #api,
 #rwd,
 #caspio,

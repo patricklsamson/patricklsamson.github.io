@@ -21,7 +21,7 @@ header {
     margin: 8px;
     color: hsl(210, 10%, 23%);
 
-    @include mq(xs) {
+    @include mq(sm) {
       &.fa-2x {
         font-size: 1.5em;
       }
@@ -129,7 +129,7 @@ header {
       fill: hsl(210, 10%, 23%);
     }
 
-    @include mq(xs) {
+    @include mq(sm) {
       width: 1.5em;
     }
 
@@ -325,7 +325,7 @@ main {
   height: 2em;
   margin: 8px;
 
-  @include mq(xs) {
+  @include mq(sm) {
     height: 1.5em;
   }
 }
