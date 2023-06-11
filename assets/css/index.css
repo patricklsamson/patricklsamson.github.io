@@ -44823,7 +44823,7 @@ form textarea {
 }
 form input[type=submit] {
   background: #66b2b2;
-  border: 4px solid transparent;
+  border: 2px solid transparent;
   color: #353b41;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
@@ -44834,7 +44834,7 @@ form input[type=submit] {
   transition: all 0.5s;
 }
 form input[type=submit]:hover {
-  border: 4px solid #f9fafb;
+  border: 2px solid #f9fafb;
 }
 form #message-notice {
   -webkit-transition: all 0.5s;
