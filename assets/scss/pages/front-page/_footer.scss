@@ -12,5 +12,14 @@ footer {
   .copyright {
     background: $dgray;
     color: $white;
+
+    a {
+      text-decoration: underline;
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
   }
 }

@@ -45249,5 +45249,12 @@ footer .copyright {
   background: #353b41;
   color: #f9fafb;
 }
+footer .copyright a {
+  text-decoration: underline;
+  color: #f9fafb;
+}
+footer .copyright a:hover {
+  color: #f9fafb;
+}
 
 /*# sourceMappingURL=index.css.map */
