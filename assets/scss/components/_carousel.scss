@@ -1,7 +1,23 @@
 @use "../abstracts" as *;
 
-.item {
-  margin: auto;
+.owl-item {
+  & + .active {
+    .item {
+      margin-right: 0;
+    }
+  }
+
+  &.active {
+    & + .active {
+      .item {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .item {
+    margin: auto;
+  }
 }
 
 .owl-dots {

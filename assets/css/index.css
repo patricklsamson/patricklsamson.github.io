@@ -44731,7 +44731,13 @@ nav .menu-container ul a {
   height: 0;
 }
 
-.item {
+.owl-item + .active .item {
+  margin-right: 0;
+}
+.owl-item.active + .active .item {
+  margin-left: 0;
+}
+.owl-item .item {
   margin: auto;
 }
 
