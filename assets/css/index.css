@@ -45026,6 +45026,18 @@ main {
   }
 }
 
+#journal-2 {
+  background-image: url("../img/journal-2.JPG");
+}
+
+#todos-nest {
+  background-image: url("../img/todos-nest.JPG");
+}
+
+#portfolio-api {
+  background-image: url("../img/portfolio-api.JPG");
+}
+
 #stock {
   background-image: url("../img/stock.JPG");
 }

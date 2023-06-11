@@ -250,6 +250,18 @@ main {
   }
 }
 
+#journal-2 {
+  @include bg($journal-2);
+}
+
+#todos-nest {
+  @include bg($todos-nest);
+}
+
+#portfolio-api {
+  @include bg($portfolio-api);
+}
+
 #stock {
   @include bg($stock);
 }
