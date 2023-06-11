@@ -45148,8 +45148,8 @@ header a:hover {
 header [class*=gcol] {
   color: #f9fafb;
   font-size: 30px;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
   border-bottom: 2px solid #353b41;
 }
 header [class*=gcol]:last-child, header [class*=gcol]:nth-last-child(2) {

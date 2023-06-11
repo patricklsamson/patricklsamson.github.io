@@ -26,8 +26,8 @@ header {
   @include all(gcol) {
     color: $white;
     font-size: 30px;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
     border-bottom: 2px solid $dgray;
 
     &:last-child,
