@@ -3,20 +3,20 @@
 main {
   .cont:first-child {
     .grid-cont {
-      @include grid-cont(a-rep, 20vh, 655px, 2, 2) {
+      @include grid-cont(a-rep, 180px, 655px, 2, 2) {
         grid-gap: 20px;
       }
 
       @include mq(xl) {
-        @include grid-cont(a-rep, 20vh, 40vw, 2, 2);
+        @include grid-cont(a-rep, 180px, 40vw, 2, 2);
       }
 
       @include mq(lg) {
-        @include grid-cont(a-rep, 20vh, 38vw, 2, 2);
+        @include grid-cont(a-rep, 180px, 38vw, 2, 2);
       }
 
       @include mq(md) {
-        @include grid-cont(r-rep, 20vh, 100%, 4);
+        @include grid-cont(r-rep, 180px, 100%, 4);
       }
 
       @include mq(xxs) {

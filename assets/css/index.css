@@ -13862,7 +13862,7 @@ main.main-document .wrap-paper p.p-pgnum {
 .wrap-portfolio {
   border: 5px solid rgba(102, 178, 178, 0.4);
   background: transparent;
-  height: 20vh;
+  height: 180px;
   color: #f9fafb;
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
@@ -45189,30 +45189,30 @@ header [class*=gcol]:nth-child(even) {
 }
 
 main .cont:first-child .grid-cont {
-  -ms-grid-rows: (20vh) [2];
+  -ms-grid-rows: (180px) [2];
   -ms-grid-columns: (655px) [2];
-  grid-template: repeat(2, 20vh)/repeat(2, 655px);
+  grid-template: repeat(2, 180px)/repeat(2, 655px);
   grid-gap: 20px;
 }
 @media only screen and (max-width: 1399px) {
   main .cont:first-child .grid-cont {
-    -ms-grid-rows: (20vh) [2];
+    -ms-grid-rows: (180px) [2];
     -ms-grid-columns: (40vw) [2];
-    grid-template: repeat(2, 20vh)/repeat(2, 40vw);
+    grid-template: repeat(2, 180px)/repeat(2, 40vw);
   }
 }
 @media only screen and (max-width: 1199px) {
   main .cont:first-child .grid-cont {
-    -ms-grid-rows: (20vh) [2];
+    -ms-grid-rows: (180px) [2];
     -ms-grid-columns: (38vw) [2];
-    grid-template: repeat(2, 20vh)/repeat(2, 38vw);
+    grid-template: repeat(2, 180px)/repeat(2, 38vw);
   }
 }
 @media only screen and (max-width: 991px) {
   main .cont:first-child .grid-cont {
-    -ms-grid-rows: (20vh) [4];
+    -ms-grid-rows: (180px) [4];
     -ms-grid-columns: 100%;
-    grid-template: repeat(4, 20vh)/100%;
+    grid-template: repeat(4, 180px)/100%;
   }
 }
 @media only screen and (max-width: 480px) {
