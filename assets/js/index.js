@@ -16,7 +16,7 @@ doc_ready(() => {
   setTimeout(function () {
     remove_class(document.body, "p-fixed");
     remove_class(id("loader"), "animate");
-  }, 1000);
+  }, 2000);
 
   scroll_class(id("top-nav"), "bg-change");
   match_height(".mh");
