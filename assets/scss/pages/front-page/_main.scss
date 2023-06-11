@@ -18,10 +18,6 @@ main {
       @include mq(md) {
         @include grid-cont(r-rep, 180px, 100%, 4);
       }
-
-      @include mq(xxs) {
-        @include grid-cont(r-rep, 200px, 100%, 4);
-      }
     }
   }
 

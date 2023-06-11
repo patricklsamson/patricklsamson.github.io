@@ -13890,11 +13890,6 @@ main.main-document .wrap-paper p.p-pgnum {
     width: 100%;
   }
 }
-@media only screen and (max-width: 480px) {
-  .wrap-portfolio {
-    height: 200px;
-  }
-}
 .wrap-portfolio .wrap-portfolio-inner {
   -webkit-transition: transform 0.8s;
   -o-transition: transform 0.8s;
@@ -45213,13 +45208,6 @@ main .cont:first-child .grid-cont {
     -ms-grid-rows: (180px) [4];
     -ms-grid-columns: 100%;
     grid-template: repeat(4, 180px)/100%;
-  }
-}
-@media only screen and (max-width: 480px) {
-  main .cont:first-child .grid-cont {
-    -ms-grid-rows: (200px) [4];
-    -ms-grid-columns: 100%;
-    grid-template: repeat(4, 200px)/100%;
   }
 }
 main .wrap-branch .grid-cont {
