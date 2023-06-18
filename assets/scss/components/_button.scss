@@ -45,6 +45,49 @@
   }
 }
 
+.btn-cyan {
+  background: $cyan;
+  border: 2px solid transparent;
+  color: $dgray;
+
+  @include prefix(
+    (
+      border-radius: 0.5em
+    ),
+    webkit moz
+  );
+
+  @include tran;
+
+  &:hover {
+    border: 2px solid $white;
+  }
+
+  & + ul {
+    height: 0;
+
+    @include vis(hidden);
+    @include tran;
+
+    li {
+      @include vis(hidden);
+      @include tran;
+    }
+  }
+
+  &.active {
+    & + ul {
+      height: auto;
+
+      @include vis(visible);
+
+      li {
+        @include vis(visible);
+      }
+    }
+  }
+}
+
 #portfolio-btn {
   color: $white;
   @include tran;

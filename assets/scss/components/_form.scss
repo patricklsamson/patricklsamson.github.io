@@ -87,25 +87,6 @@ form {
     resize: none;
   }
 
-  input[type="submit"] {
-    background: $cyan;
-    border: 2px solid transparent;
-    color: $dgray;
-
-    @include prefix(
-      (
-        border-radius: 0.5em
-      ),
-      webkit moz
-    );
-
-    @include tran;
-
-    &:hover {
-      border: 2px solid $white;
-    }
-  }
-
   #message-notice {
     @include tran;
 
