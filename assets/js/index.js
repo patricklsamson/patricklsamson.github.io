@@ -56,6 +56,12 @@ doc_ready(() => {
     }
   });
 
+  qsel_all(".btn-cyan").forEach((button) => {
+    add_event(button, "click", function () {
+      toggle_class(this, "active");
+    })
+  });
+
   id("copyright").innerHTML = new Date().getFullYear();
 
   $(".owl-carousel").owlCarousel({
