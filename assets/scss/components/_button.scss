@@ -67,7 +67,7 @@
     height: 0;
 
     @include vis(hidden);
-    @include tran;
+    @include tran("all 0.25s");
 
     li {
       @include vis(hidden);
@@ -77,7 +77,7 @@
 
   &.active {
     & + ul {
-      height: auto;
+      height: 100%;
 
       @include vis(visible);
 

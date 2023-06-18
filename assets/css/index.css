@@ -44716,10 +44716,10 @@ nav .menu-container ul a {
   height: 0;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  transition: all 0.25s;
 }
 .btn-cyan + ul li {
   visibility: hidden;
@@ -44730,7 +44730,7 @@ nav .menu-container ul a {
   transition: all 0.5s;
 }
 .btn-cyan.active + ul {
-  height: auto;
+  height: 100%;
   visibility: visible;
   opacity: 1;
 }
