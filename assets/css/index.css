@@ -13939,7 +13939,12 @@ main.main-document .wrap-paper p.p-pgnum {
   font-weight: 900;
   position: absolute;
   margin-left: -2rem;
-  font-size: 2.75rem;
+  font-size: 2.5rem;
+  -webkit-transform: scaleX(-1) rotate(180deg);
+  -moz-transform: scaleX(-1) rotate(180deg);
+  -ms-transform: scaleX(-1) rotate(180deg);
+  -o-transform: scaleX(-1) rotate(180deg);
+  transform: scaleX(-1) rotate(180deg);
 }
 @media only screen and (max-width: 991px) {
   .wrap-experience {
@@ -13974,12 +13979,13 @@ main.main-document .wrap-paper p.p-pgnum {
     -webkit-font-smoothing: antialiased;
     font-weight: 900;
     position: absolute;
-    font-size: 2.75rem;
-    -webkit-transform: scaleX(-1);
-    -moz-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    transform: scaleX(-1);
+    font-size: 2.5rem;
+    margin-left: 0.2rem;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 @media only screen and (min-width: 992px) {
@@ -44691,6 +44697,48 @@ nav .menu-container ul a {
   text-shadow: 0 2px 5px #000;
 }
 
+.btn-cyan {
+  background: #66b2b2;
+  border: 2px solid transparent;
+  color: #353b41;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.btn-cyan:hover {
+  border: 2px solid #f9fafb;
+}
+.btn-cyan + ul {
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.btn-cyan + ul li {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.btn-cyan.active + ul {
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+}
+.btn-cyan.active + ul li {
+  visibility: visible;
+  opacity: 1;
+}
+
 #portfolio-btn {
   color: #f9fafb;
   -webkit-transition: all 0.5s;
@@ -44820,21 +44868,6 @@ form label span {
 }
 form textarea {
   resize: none;
-}
-form input[type=submit] {
-  background: #66b2b2;
-  border: 2px solid transparent;
-  color: #353b41;
-  -webkit-border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
-  border-radius: 0.5em;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-}
-form input[type=submit]:hover {
-  border: 2px solid #f9fafb;
 }
 form #message-notice {
   -webkit-transition: all 0.5s;
