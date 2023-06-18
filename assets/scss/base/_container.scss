@@ -835,7 +835,14 @@ main.main-document {
     @include fa(f126, fas, before) {
       position: absolute;
       margin-left: -2rem;
-      font-size: 2.75rem;
+      font-size: 2.5rem;
+
+      @include prefix(
+        (
+          transform: scaleX(-1) rotate(180deg),
+        ),
+        webkit moz ms o
+      );
     }
   }
 
@@ -861,11 +868,12 @@ main.main-document {
 
         @include fa(f126) {
           position: absolute;
-          font-size: 2.75rem;
+          font-size: 2.5rem;
+          margin-left: 0.2rem;
 
           @include prefix(
             (
-              transform: scaleX(-1),
+              transform: rotate(180deg),
             ),
             webkit moz ms o
           );
