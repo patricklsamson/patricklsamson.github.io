@@ -219,6 +219,12 @@ header {
       }
     }
 
+    &.kubernetes {
+      path {
+        fill: hsl(221, 77%, 55%);
+      }
+    }
+
     &.lens {
       path {
         fill: hsl(206, 60%, 52%);
