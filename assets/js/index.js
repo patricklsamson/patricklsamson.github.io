@@ -25,9 +25,11 @@ doc_ready(() => {
     991,
     function match() {
       match_height(".mh2");
+      match_height(".mh3");
     },
     function unmatch() {
       match_height(".mh2", null, true);
+      match_height(".mh3", null, true);
     }
   );
 
