@@ -7,6 +7,14 @@ footer {
     @include mq(xsup) {
       width: 75%;
     }
+
+    div {
+      & > i {
+        &[class*="fa"] {
+          color: $dcyan;
+        }
+      }
+    }
   }
 
   .copyright {

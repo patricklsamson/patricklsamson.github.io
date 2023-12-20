@@ -70,33 +70,36 @@
   }
 }
 
-form {
-  color: $white;
-
+.wrap-form {
   @include mq(xsup) {
     width: 75%;
   }
 
-  label {
-    span {
-      color: $lcyan;
-    }
-  }
+  form {
+    color: $white;
+    width: 100%;
 
-  textarea {
-    resize: none;
-  }
-
-  #message-notice {
-    @include tran;
-
-    @include vis(hidden) {
-      height: 0;
+    label {
+      span {
+        color: $lcyan;
+      }
     }
 
-    &.show {
-      @include vis(visible) {
-        height: auto;
+    textarea {
+      resize: none;
+    }
+
+    #message-notice {
+      @include tran;
+
+      @include vis(hidden) {
+        height: 0;
+      }
+
+      &.show {
+        @include vis(visible) {
+          height: auto;
+        }
       }
     }
   }
