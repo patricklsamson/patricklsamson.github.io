@@ -45043,6 +45043,15 @@ header svg.lens path {
 header svg.tailwind path {
   fill: #07b6d5;
 }
+header svg.vuejs path {
+  fill: #4fbf8d;
+}
+header svg.python path {
+  fill: #3776a9;
+}
+header svg.django path {
+  fill: #092f20;
+}
 
 main {
   background-image: url("https://images.unsplash.com/photo-1629193266680-9193cc4a0c81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80");

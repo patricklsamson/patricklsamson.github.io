@@ -236,6 +236,24 @@ header {
         fill: hsl(189, 94%, 43%);
       }
     }
+
+    &.vuejs {
+      path {
+        fill: hsl(153, 47%, 53%);
+      }
+    }
+
+    &.python {
+      path {
+        fill: hsl(207, 51%, 44%);
+      }
+    }
+
+    &.django {
+      path {
+        fill: hsl(157, 67%, 11%);
+      }
+    }
   }
 }
 
