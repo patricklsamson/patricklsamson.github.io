@@ -45168,6 +45168,7 @@ footer i {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), 0 -1px 1px rgba(0, 0, 0, 0.5);
   vertical-align: bottom;
   margin: 0 10px;
+  color: #3c7777;
 }
 footer i.fa-linkedin {
   color: #0a66c2;
@@ -45295,9 +45296,6 @@ footer {
   footer .wrap-white {
     width: 75%;
   }
-}
-footer .wrap-white div > i[class*=fa] {
-  color: #3c7777;
 }
 footer .copyright {
   background: #353b41;
