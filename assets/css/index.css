@@ -13833,6 +13833,7 @@ main.main-document .wrap-paper {
   height: 10.75in;
   margin-bottom: 0.25in;
   padding: 0.25in 0.25in 0;
+  display: none;
 }
 @media print {
   main.main-document .wrap-paper {
@@ -13841,6 +13842,9 @@ main.main-document .wrap-paper {
     margin: 0 !important;
     padding: 0 !important;
   }
+}
+main.main-document .wrap-paper.active {
+  display: block;
 }
 main.main-document .wrap-paper p.p-pgnum {
   padding: 1em 0.25in 0;
@@ -44601,8 +44605,8 @@ nav#page-nav button#page-nav-btn.active:after {
 nav#page-nav button#page-nav-btn.active ~ #page-nav-coll-wrap {
   visibility: visible;
   opacity: 1;
-  width: 180px;
-  height: 135px;
+  width: 100vw;
+  height: 100vh;
 }
 nav#page-nav #page-nav-coll-wrap {
   background: rgba(53, 59, 65, 0.9);
@@ -44632,7 +44636,7 @@ nav#page-nav #page-nav-coll-wrap {
 nav#page-nav #page-nav-coll-wrap .menu-container button {
   padding: 5px 10px;
 }
-nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-btn {
+nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-btn, nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-native-btn {
   margin-bottom: 20px;
 }
 nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-btn span::before {
@@ -44640,6 +44644,18 @@ nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-btn span::befo
 }
 nav#page-nav #page-nav-coll-wrap .menu-container button#save-page-native-btn span::before {
   content: "SAVE (Native)";
+}
+nav#page-nav #page-nav-coll-wrap .menu-container ul li span {
+  cursor: pointer;
+  color: #f9fafb;
+}
+nav#page-nav #page-nav-coll-wrap .menu-container ul li span:after {
+  content: " <--";
+  color: transparent;
+  font-family: monospace;
+}
+nav#page-nav #page-nav-coll-wrap .menu-container ul li span:hover:after, nav#page-nav #page-nav-coll-wrap .menu-container ul li span.active:after {
+  color: #f9fafb;
 }
 nav .menu-container ul {
   list-style: none;

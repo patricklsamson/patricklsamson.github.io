@@ -232,8 +232,8 @@ nav {
 
         & ~ #page-nav-coll-wrap {
           @include vis(visible) {
-            width: 180px;
-            height: 135px;
+            width: 100vw;
+            height: 100vh;
           }
         }
       }
@@ -264,9 +264,12 @@ nav {
         button {
           padding: 5px 10px;
 
-          &#save-page-btn {
+          &#save-page-btn,
+          &#save-page-native-btn {
             margin-bottom: 20px;
+          }
 
+          &#save-page-btn {
             span {
               &::before {
                 content: "SAVE (Canvas)";
@@ -278,6 +281,28 @@ nav {
             span {
               &::before {
                 content: "SAVE (Native)";
+              }
+            }
+          }
+        }
+
+        ul {
+          li {
+            span {
+              cursor: pointer;
+              color: $white;
+
+              &:after {
+                content: " <--";
+                color: transparent;
+                font-family: monospace;
+              }
+
+              &:hover,
+              &.active {
+                &:after {
+                  color: $white;
+                }
               }
             }
           }

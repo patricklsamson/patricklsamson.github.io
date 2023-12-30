@@ -714,12 +714,17 @@ main.main-document {
     height: $paper-height - $paper-margin;
     margin-bottom: $paper-margin;
     padding: $paper-margin $paper-margin 0;
+    display: none;
 
     @media print {
       width: 100% !important;
       height: 100% !important;
       margin: 0 !important;
       padding: 0 !important;
+    }
+
+    &.active {
+      display: block;
     }
 
     p.p-pgnum {
