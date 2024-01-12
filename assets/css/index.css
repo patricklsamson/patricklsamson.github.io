@@ -44984,6 +44984,9 @@ header i.fa-php {
 header i.fa-node-js {
   color: #339933;
 }
+header i.fa-python {
+  color: #3776a9;
+}
 header svg {
   width: 2em;
   vertical-align: middle;
