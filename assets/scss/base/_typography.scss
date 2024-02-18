@@ -307,6 +307,42 @@ button {
   }
 }
 
+.fs-italic {
+  font-style: italic;
+}
+
+.fs-underline {
+  text-decoration: underline;
+}
+
+.fs-italic-imp {
+  font-style: italic !important;
+}
+
+.fs-underline-imp {
+  text-decoration: underline !important;
+}
+
+@each $min-max-mq in $min-max-mqs {
+  @include mq($min-max-mq) {
+    .fs-#{$min-max-mq}-italic {
+      font-style: italic;
+    }
+
+    .fs-#{min-max-mq}-underline {
+      text-decoration: underline;
+    }
+
+    .fs-#{min-max-mq}-italic-imp {
+      font-style: italic !important;
+    }
+
+    .fs-#{min-max-mq}-underline-imp {
+      text-decoration: underline !important;
+    }
+  }
+}
+
 @for $i from 5 through 9 {
   .fs-0#{$i} {
     font-size: s.unquote("0.#{$i}rem");

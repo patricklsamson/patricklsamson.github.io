@@ -5,16 +5,17 @@
   'https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap'
 );
 
-@include font(f, "Arimo", "Arimo-Regular");
-@include font(t, "Arimo-Italic", "Arimo-Italic", 400, italic);
-@include font(t, "Arimo-Bold", "Arimo-Bold", 700, normal);
-@include font(t, "Arimo-BoldItalic", "Arimo-BoldItalic", 700, italic);
+@include font(f, f, "Arimo", "Arimo-Regular");
+@include font(f, t, "Arimo-Italic", "Arimo-Italic", 400, italic);
+@include font(f, t, "Arimo-Bold", "Arimo-Bold", 700, normal);
+@include font(f, t, "Arimo-BoldItalic", "Arimo-BoldItalic", 700, italic);
 
 @include font(f, "Tinos", "Tinos-Regular", 400, normal, v.$serif-fb);
-@include font(f, "Tinos-Italic", "Tinos-Italic", 400, italic, v.$serif-fb);
-@include font(f, "Tinos-Bold", "Tinos-Bold", 700, normal, v.$serif-fb);
+@include font(t, f, "Tinos-Italic", "Tinos-Italic", 400, italic, v.$serif-fb);
+@include font(t, f, "Tinos-Bold", "Tinos-Bold", 700, normal, v.$serif-fb);
 
 @include font(
+  t,
   f,
   "Tinos-BoldItalic",
   "Tinos-BoldItalic",
@@ -23,4 +24,4 @@
   v.$serif-fb
 );
 
-@include font(f, "Hack", "Hack-Regular", 400, normal, v.$monospace-fb);
+@include font(f, f, "Hack", "Hack-Regular", 400, normal, v.$monospace-fb);

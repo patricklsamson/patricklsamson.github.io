@@ -406,7 +406,8 @@
 }
 
 @mixin font(
-  $defaultBoldOrItalic: f,
+  $defaultHeadingBoldOrItalic: f,
+  $defaultBodyBoldOrItalic: f,
   $font-family,
   $file,
   $font-weight: 400,
@@ -431,7 +432,56 @@
     font-style: $font-style;
   }
 
-  @if $defaultBoldOrItalic == t {
+  @if $defaultHeadingBoldOrItalic == t {
+    @if $font-weight == 400 {
+      @if $font-style == italic {
+        body {
+          @for $i from 1 through 6 {
+            h#{$i},
+            .h#{$i} {
+              em,
+              i {
+                font-family: "#{$font-family}", $fallback;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @if $font-weight == 700 {
+      @if $font-style == normal {
+        body {
+          @for $i from 1 through 6 {
+            h#{$i},
+            .h#{$i} {
+              b,
+              strong {
+                font-family: "#{$font-family}", $fallback;
+              }
+            }
+          }
+        }
+      } @else if $font-style == italic {
+        body {
+          @for $i from 1 through 6 {
+            h#{$i},
+            .h#{$i} {
+              b,
+              strong {
+                & > em,
+                & > i {
+                  font-family: "#{$font-family}", $fallback;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @if $defaultBodyBoldOrItalic == t {
     @if $font-weight == 400 {
       @if $font-style == italic {
         body {
@@ -452,11 +502,13 @@
           }
         }
       } @else if $font-style == italic {
-        b,
-        strong {
-          & > em,
-          & > i {
-            font-family: "#{$font-family}", $fallback;
+        body {
+          b,
+          strong {
+            & > em,
+            & > i {
+              font-family: "#{$font-family}", $fallback;
+            }
           }
         }
       }
