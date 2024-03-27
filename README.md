@@ -1,6 +1,4 @@
-<!-- # patricklsamson.github.io -->
-
-# Portfolio
+# Patrick Edward L. Samson | Portfolio
 
 ## About Me
 
