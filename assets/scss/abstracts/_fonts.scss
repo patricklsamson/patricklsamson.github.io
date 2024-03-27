@@ -1,10 +1,6 @@
 @use "mixins" as *;
 @use "variables" as v;
 
-@import url(
-  'https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap'
-);
-
 @include font(f, f, "Arimo", "Arimo-Regular");
 @include font(f, t, "Arimo-Italic", "Arimo-Italic", 400, italic);
 @include font(f, t, "Arimo-Bold", "Arimo-Bold", 700, normal);
