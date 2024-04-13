@@ -64,7 +64,9 @@ doc_ready(() => {
     })
   });
 
-  id("copyright").innerHTML = new Date().getFullYear();
+  if (id("copyright").innerHTML === "") {
+    id("copyright").innerHTML = new Date().getFullYear();
+  }
 
   $(".owl-carousel").owlCarousel({
     loop: true,
