@@ -21,8 +21,8 @@ Development.
 
 ---
 
-My portfolio website was also optimized for Google Search Engine. Try searching
-"patrick edward samson portfolio" and wait for the search result.
+<!-- My portfolio website was also optimized for Google Search Engine. Try searching
+"patrick edward samson portfolio" and wait for the search result. -->
 
 Check it out [live](https://patricklsamson.github.io/) to know more about me!
 
