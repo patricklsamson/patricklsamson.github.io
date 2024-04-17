@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /
+
+Sitemap: https://patricklsamson.github.io/sitemap.xml
