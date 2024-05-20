@@ -1,6 +1,4 @@
 doc_ready(() => {
-  let submitted = false;
-
   top_nav();
 
   // (function (next) {
@@ -34,7 +32,6 @@ doc_ready(() => {
   );
 
   add_event(id("g-form"), "submit", () => {
-    submitted = true;
     add_class(id("message-notice"), "show");
 
     setTimeout(() => {

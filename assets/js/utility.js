@@ -250,6 +250,7 @@ function fixed_el(
     add_event(window, "scroll", function () {
       if (
         window.pageYOffset > topHeight ||
+        window.scrollY > topHeight ||
         document.documentElement.scrollTop > topHeight
       ) {
         for (i = 0; i < qsel_all(fixedElements).length; i++) {
@@ -282,6 +283,7 @@ function fixed_el(
     add_event(window, "scroll", function () {
       if (
         window.pageYOffset > topHeight ||
+        window.scrollY > topHeight ||
         document.documentElement.scrollTop > topHeight
       ) {
         for (i = 0; i < qsel_all(navLandingElements).length; i++) {
@@ -314,6 +316,7 @@ function scroll_class(element, className) {
   add_event(window, "scroll", function () {
     if (
       window.pageYOffset > element.offsetTop ||
+      window.scrollY > element.offsetTop ||
       document.documentElement.scrollTop > element.offsetTop
     ) {
       add_class(element, className);
