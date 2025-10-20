@@ -4,42 +4,48 @@
   border: none;
   background: transparent;
 
-  &:before,
-  &:after {
-    color: transparent;
-    font-weight: 700;
-    position: relative;
-    bottom: 0.05em;
-    text-shadow: 0 2px 5px transparent;
+  @include mq(mdup) {
+    &:before,
+    &:after {
+      color: transparent;
+      font-weight: 700;
+      position: relative;
+      bottom: 0.05em;
+      text-shadow: 0 2px 5px transparent;
 
-    @include tran;
-  }
+      @include tran;
+    }
 
-  &:before {
-    content: "[ ";
-  }
+    &:before {
+      content: "[ ";
+    }
 
-  &:after {
-    content: " ]";
+    &:after {
+      content: " ]";
+    }
   }
 
   &:hover {
     border: none;
     background: transparent;
 
-    &:before,
-    &:after {
-      color: $cyan;
-      text-shadow: 0 2px 5px $white-04;
-    }
-  }
-
-  &.blk-shadow {
-    &:hover {
+    @include mq(mdup) {
       &:before,
       &:after {
         color: $cyan;
-        text-shadow: 0 2px 5px #000;
+        text-shadow: 0 2px 5px $white-04;
+      }
+    }
+  }
+
+  @include mq(mdup) {
+    &.blk-shadow {
+      &:hover {
+        &:before,
+        &:after {
+          color: $cyan;
+          text-shadow: 0 2px 5px #000;
+        }
       }
     }
   }
