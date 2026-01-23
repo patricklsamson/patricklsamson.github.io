@@ -1,40 +1,44 @@
 @use "../../abstracts" as *;
 
 main {
-  .cont:first-child {
-    .grid-cont {
-      @include grid-cont(a-rep, 180px, 655px, 2, 2) {
-        grid-gap: 20px;
-      }
+  section {
+    &:nth-child(2) {
+      .cont {
+        .grid-cont {
+          @include grid-cont(a-rep, 180px, 655px, 2, 2) {
+            grid-gap: 20px;
+          }
 
-      @include mq(xl) {
-        @include grid-cont(a-rep, 180px, 40vw, 2, 2);
-      }
+          @include mq(xl) {
+            @include grid-cont(a-rep, 180px, 40vw, 2, 2);
+          }
 
-      @include mq(lg) {
-        @include grid-cont(a-rep, 180px, 38vw, 2, 2);
-      }
+          @include mq(lg) {
+            @include grid-cont(a-rep, 180px, 38vw, 2, 2);
+          }
 
-      @include mq(md) {
-        @include grid-cont(r-rep, 180px, 100%, 4);
+          @include mq(md) {
+            @include grid-cont(r-rep, 180px, 100%, 4);
+          }
+        }
       }
     }
-  }
 
-  .wrap-branch {
-    .grid-cont {
-      @include grid-cont(a-rep, auto, 665px, 1, 2);
+    .wrap-branch {
+      .grid-cont {
+        @include grid-cont(a-rep, auto, 665px, 1, 2);
 
-      @include mq(xl) {
-        @include grid-cont(a-rep, auto, 40vw, 2, 2);
-      }
+        @include mq(xl) {
+          @include grid-cont(a-rep, auto, 40vw, 2, 2);
+        }
 
-      @include mq(lg) {
-        @include grid-cont(a-rep, auto, 38vw, 2, 2);
-      }
+        @include mq(lg) {
+          @include grid-cont(a-rep, auto, 38vw, 2, 2);
+        }
 
-      @include mq(md) {
-        @include grid-cont(r-rep, auto, 100%, 1);
+        @include mq(md) {
+          @include grid-cont(r-rep, auto, 100%, 1);
+        }
       }
     }
   }

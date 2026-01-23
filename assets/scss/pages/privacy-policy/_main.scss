@@ -1,0 +1,12 @@
+@use "../../abstracts" as *;
+
+.wrap-privacy {
+  color: $white;
+  border-bottom: 1px solid $white;
+  padding-bottom: 2em;
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}

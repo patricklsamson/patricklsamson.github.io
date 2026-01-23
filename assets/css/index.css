@@ -38014,6 +38014,10 @@ nav .menu-container ul a {
   opacity: 1;
   height: auto;
 }
+.wrap-form form a {
+  color: hsl(210, 17%, 98%);
+  text-decoration: underline;
+}
 
 #slnc-logo {
   position: relative;
@@ -38372,54 +38376,54 @@ header [class*=gcol]:nth-child(even) {
   }
 }
 
-main .cont:first-child .grid-cont {
+main section:nth-child(2) .cont .grid-cont {
   -ms-grid-rows: (180px) [2];
   -ms-grid-columns: (655px) [2];
   grid-template: repeat(2, 180px)/repeat(2, 655px);
   grid-gap: 20px;
 }
 @media only screen and (max-width: 1399px) {
-  main .cont:first-child .grid-cont {
+  main section:nth-child(2) .cont .grid-cont {
     -ms-grid-rows: (180px) [2];
     -ms-grid-columns: (40vw) [2];
     grid-template: repeat(2, 180px)/repeat(2, 40vw);
   }
 }
 @media only screen and (max-width: 1199px) {
-  main .cont:first-child .grid-cont {
+  main section:nth-child(2) .cont .grid-cont {
     -ms-grid-rows: (180px) [2];
     -ms-grid-columns: (38vw) [2];
     grid-template: repeat(2, 180px)/repeat(2, 38vw);
   }
 }
 @media only screen and (max-width: 991px) {
-  main .cont:first-child .grid-cont {
+  main section:nth-child(2) .cont .grid-cont {
     -ms-grid-rows: (180px) [4];
     -ms-grid-columns: 100%;
     grid-template: repeat(4, 180px)/100%;
   }
 }
-main .wrap-branch .grid-cont {
+main section .wrap-branch .grid-cont {
   -ms-grid-rows: (auto) [2];
   -ms-grid-columns: (665px) [2];
   grid-template: repeat(2, auto)/repeat(2, 665px);
 }
 @media only screen and (max-width: 1399px) {
-  main .wrap-branch .grid-cont {
+  main section .wrap-branch .grid-cont {
     -ms-grid-rows: (auto) [2];
     -ms-grid-columns: (40vw) [2];
     grid-template: repeat(2, auto)/repeat(2, 40vw);
   }
 }
 @media only screen and (max-width: 1199px) {
-  main .wrap-branch .grid-cont {
+  main section .wrap-branch .grid-cont {
     -ms-grid-rows: (auto) [2];
     -ms-grid-columns: (38vw) [2];
     grid-template: repeat(2, auto)/repeat(2, 38vw);
   }
 }
 @media only screen and (max-width: 991px) {
-  main .wrap-branch .grid-cont {
+  main section .wrap-branch .grid-cont {
     -ms-grid-rows: (auto) [1];
     -ms-grid-columns: 100%;
     grid-template: repeat(1, auto)/100%;
@@ -38444,6 +38448,16 @@ footer .copyright a {
 }
 footer .copyright a:hover {
   color: hsl(210, 17%, 98%);
+}
+
+.wrap-privacy {
+  color: hsl(210, 17%, 98%);
+  border-bottom: 1px solid hsl(210, 17%, 98%);
+  padding-bottom: 2em;
+}
+.wrap-privacy a {
+  color: hsl(210, 17%, 98%);
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=index.css.map */
